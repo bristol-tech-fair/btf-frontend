@@ -1,5 +1,4 @@
 import { create } from '@storybook/theming/create';
-import { themes } from '@storybook/theming';
 
 const theme = create({
   brandTitle: 'BTFDS',
