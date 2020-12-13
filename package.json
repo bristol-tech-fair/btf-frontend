@@ -23,7 +23,8 @@
     "lint": "eslint --ext .jsx,.js src/",
     "lint:fix": "eslint  --ext .jsx,.js src/ --fix",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "new": "cd src/components/ && mkdir ${component} && cd ${component} && touch ${component}.jsx ${component}.stories.jsx ${component}.styles.js ${component}.test.jsx index.js"
   },
   "eslintConfig": {
     "extends": [
