@@ -1,12 +1,16 @@
 import React from 'react';
-import Colors from './colors.styles';
+import Init from './init.styles';
+import Palette from './palette.styles';
+import Spacings from './spacings.styles';
 import Typography from './typography.styles';
 
 const Theme = () => {
   return (
     <>
-      <Colors />
+      <Init />
+      <Palette />
       <Typography />
+      <Spacings />
     </>
   );
 };
