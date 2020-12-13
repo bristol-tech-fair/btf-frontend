@@ -5,7 +5,9 @@ const App = () => {
   return (
     <>
       <Theme />
-      <div>App</div>
+      <div>
+        <p>App</p>
+      </div>
     </>
   );
 };
