@@ -2,10 +2,259 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Getting started/ Theme" />
 
-# BTF - Design System
+# Theme
 
-Our design system is built with Storybook. If you'd like to learn more about Storybook take a look at their [**docs**](https://storybook.js.org/).
+Our theme is where we define global styles. This includes palette, spacings, typography and init. The files can be found at this directory:
 
-Our aim is build this site with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+```
+btf-frontend
+  | src
+    | theme
+      | index.js
+      | init.styles.js
+      | palette.styles.js
+      | spacings.styles.js
+      | typography.styles.js
+```
 
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+We're using [**styled-components**](https://styled-components.com/) a CSS in JS library to style this app. This is why our style files are `.js` not `.css`. However, unlike other CSS in JS libraries, styled-components uses the same syntax as regular css as opposed to generic JS object syntax.
+
+<br />
+
+## What's in the files?
+
+```js
+// index.js
+
+import React from 'react';
+import Init from './init.styles';
+import Palette from './palette.styles';
+import Spacings from './spacings.styles';
+import Typography from './typography.styles';
+
+const Theme = () => {
+  return (
+    <>
+      <Init />
+      <Palette />
+      <Typography />
+      <Spacings />
+    </>
+  );
+};
+
+export default Theme;
+```
+
+**index.js** - Nothing special happening here, we import all of the other theme files and export them as a single React component.
+
+<br />
+
+```js
+// init.styles.js
+
+import { createGlobalStyle } from 'styled-components';
+
+const Init = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+
+  button,
+  button:active,
+  button:focus {
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  a,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    color: inherit;
+    outline: none; /* Works in Firefox, Chrome, IE8 and above */
+  }
+
+  /* Set base as ten so rem units have a standardised base point */
+  html {
+    font-size: 10px;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+`;
+
+export default Init;
+```
+
+**init.styles.js** - This is the structure the rest of the files in the directory will use. We import `createGlobalStyle` from styled-components and pass it a template string of CSS. This file provides some default overides to allow for more consistent styling.
+
+<br />
+
+```js
+// palette.styles.js
+
+import { createGlobalStyle } from 'styled-components';
+
+const Palette = createGlobalStyle`
+  :root {
+    --lightpink: #F28383;
+    --darkpink: #BF3459;
+    --mattepink: #A65369;
+    --logopink: #F20544;
+    --lightgrey: #F2F2F2;
+    --darkgrey: #737373;
+    --darkburgundy: #440113;
+    --orange: #F29C50;
+    --lightblue: #05AFF2;
+    --midblue: #006CE6;
+    --darkblue: #272A44;
+  }
+`;
+
+export default Palette;
+```
+
+**palette.styles.js** - We're defining our colors, and all other theme variables, using [**CSS custom properties**](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties). These can be accessed anywhere we use styled-components the same way you would in CSS:
+
+`background-color: var(--lightpink):`
+
+As we've defined light pink as `#F28383` the above code will set he background color to that hex value.
+
+<br />
+
+```js
+// spacings.styles.js
+
+import { createGlobalStyle } from 'styled-components';
+
+const Spacings = createGlobalStyle`
+  :root {
+    --smallest-space: 1rem;
+    --small-space: 2rem;
+    --medium-space: 4rem;
+    --large-space: 8rem;
+    --largest-space: 16rem;
+  }
+`;
+
+export default Spacings;
+```
+
+**spacings.styles.js** - Similar to our palette file, spacings uses predefined rem values so all our components are created with consistent sizings.
+
+```js
+// typography.styles.js
+
+import { createGlobalStyle } from 'styled-components';
+
+const Typography = createGlobalStyle`
+  *,
+  button,
+  input,
+  label,
+  select,
+  button,
+  textarea {
+    font-family: "Lato", sans-serif;
+    -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale; /* Firefox */
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+    color: var(--darkblue);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 900;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    line-height: 1.1;
+
+  }
+
+  p,
+  a,
+  li,
+  button,
+  label,
+  input,
+  textarea,
+  button {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  a {
+    font-weight: 700;
+  }
+
+
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 4.8rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    h3 {
+      font-size: 3.4rem;
+    }
+  }
+`;
+
+export default Typography;
+```
+
+**typography.styles.js** - Our global typography settings. These have been configured to create default typography styles without adding any other styling to text elements.
