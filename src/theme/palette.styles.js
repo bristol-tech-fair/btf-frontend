@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const Colors = createGlobalStyle`
+const Palette = createGlobalStyle`
   :root {
     --lightpink: #F28383;
     --darkpink: #BF3459;
@@ -16,4 +16,4 @@ const Colors = createGlobalStyle`
   }
 `;
 
-export default Colors;
+export default Palette;

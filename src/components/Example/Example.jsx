@@ -1,7 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { ExampleWrapper } from './Example.styles';
 
 const Example = ({ value }) => {
-  return <p>{value}</p>;
+  return (
+    <ExampleWrapper>
+      <p>{value}</p>
+    </ExampleWrapper>
+  );
+};
+
+Example.propTypes = {
+  value: PropTypes.string.isRequired
 };
 
 export default Example;
