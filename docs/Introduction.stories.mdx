@@ -1,0 +1,96 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting started" />
+
+# BTF - Design System
+
+Our design system is built with Storybook. If you'd like to learn more about Storybook take a look at their [**docs**](https://storybook.js.org/).
+
+Our aim is build this site with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+
+That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+
+# Add a component
+
+When contributing to this project, the majority of work will be focused on adding new components.
+
+We want to keep this process consitent so we're always delivering code of the same quality and style. As such please follow these steps when creating a new component:
+
+<br />
+
+### Step 1. Create a new branch
+
+Once you know the name of your component, create a new git branch using the following command:
+
+```sh
+  git branch component/<component-name>
+```
+
+_\* Replace `<component-name>` with the actual name of the component._
+
+<br />
+
+### Step 2. Checkout your new branch
+
+Switch to the new branch with the following command:
+
+```sh
+  git checkout component/<component-name>
+```
+
+_\* Replace `<component-name>` with the actual name of the component._
+
+<br />
+
+### Step 3. Set up component directory
+
+After creating a branch, navigate to `/src/components/`.
+
+You'll then need to create a new folder and the following files:
+
+```
+src
+  | components
+    | YourComponentName
+      | YourComponentName.jsx
+      | YourComponentName.stories.jsx
+      | YourComponentName.styles.js
+      | YourComponentName.test.jsx
+      | index.js
+    ...
+  ...
+```
+
+_\* Again replace `YourComponentName` with the actual name. There's a folder called **Example** currently in the components directory which you can use as a reference._
+
+<br />
+
+### Step 4. Start building
+
+Now the files are set up you can start building the component! This step will vary, dependant on what you're actually building, so we'll walk you through what should be in each file.
+
+Feel free to work on this in whatever order you like, but try to follow our guide for what to put in each, we're going to use **Example** as a reference:
+
+```js
+// Example.jsx
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ExampleWrapper } from './Example.styles';
+
+const Example = ({ value }) => {
+  return (
+    <ExampleWrapper>
+      <p>{value}</p>
+    </ExampleWrapper>
+  );
+};
+
+Example.propTypes = {
+  value: PropTypes.string.isRequired
+};
+
+export default Example;
+```
+
+**Example.jsx** - This contains the main React code, it contains the JSX and component logic. You can add state, lifecycle hooks and other component specific logic to this file.
