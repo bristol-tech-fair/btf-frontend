@@ -1,0 +1,53 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { styled } from '@storybook/theming';
+import Theme from './index';
+
+<Meta title="Theme/Typography" />
+
+<Theme />
+
+# Typography
+
+To keep things simple our Typography styles are defined on the base html elements.
+
+That means you'll need never need anything other than the correct html tag (e.g. `h1`) to style text.
+
+<Canvas>
+  <h1>H1</h1>
+</Canvas>
+
+<Canvas>
+  <h2>H2</h2>
+</Canvas>
+
+<Canvas>
+  <h3>H3</h3>
+</Canvas>
+
+<Canvas>
+  <h4>H4</h4>
+</Canvas>
+
+<Canvas>
+  <p>p</p>
+</Canvas>
+
+<Canvas>
+  <p>
+    <strong>p > strong</strong>
+  </p>
+</Canvas>
+
+<Canvas>
+  <p>
+    <em>p > em</em>
+  </p>
+</Canvas>
+
+<Canvas>
+  <a>a</a>
+</Canvas>
+
+<Canvas>
+  <button>button</button>
+</Canvas>

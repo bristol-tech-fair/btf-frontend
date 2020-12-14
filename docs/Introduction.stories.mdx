@@ -1,4 +1,11 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import ProjectBoard from './assets/project-board.png';
+import AssignYourself from './assets/assign-yourself.png';
+import ComponentCommand from './assets/component-command.png';
+import ComponentCommandResult from './assets/component-command-result.png';
+import ComponentExample from './assets/component-example.png';
+import PushCommits from './assets/push-commits.png';
+import AssignReviewer from './assets/assign-reviewer.png';
 
 <Meta title="Getting started" />
 
@@ -10,72 +17,80 @@ Our aim is build this site with a [**component-driven**](https://componentdriven
 
 That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
 
+If you have any questions please get in touch via the [WebDev101 Slack Channel](https://codehubbs.slack.com/archives/C8GT81UF3)
+
 <br />
 
 ## Adding components
 
 When contributing to this project, the majority of work will be focused on adding new components.
 
-We want to keep this process consitent so we're always delivering code of the same quality and style. As such please follow these steps when creating a new component:
+We want to keep this process consitent so we're always delivering code of the same quality and style.
+
+As such please follow these steps when creating a new component:
 
 <br />
 
-### Step 1. Create a new branch
+### Step 1. Pick a component to work on
 
-Once you know the name of your component, create a new git branch using the following command:
+Visit the [Component Library](https://github.com/orgs/bristol-tech-fair/projects/1) project on Github.
+
+<img src={ProjectBoard} />
+
+Select a component from the to do list, and set yourself as an assignee.
+
+<img src={AssignYourself} />
+
+<br />
+<br />
+
+### Step 2. Generate a new component
+
+To make sure everyone's setting up their files correctly, I've created a script to generate the correct files for a new component.
 
 ```sh
-  git branch component/<component-name>
+new=<component-name> yarn component
 ```
 
-_\* Replace `<component-name>` with the actual name of the component._
+_\*Replace `<component-name>` with the actual name of your component. As shown below..._
+
+<img src={ComponentCommand} />
+
+After executing this command you should see something like this printed out in your terminal:
+
+<img src={ComponentCommandResult} />
+
+This command is doing a number of things:
+
+1. Create and checkout a new git branch with the component name you passed in.
+2. Creates a new folder in `src/components/` with the name of the component.
+3. Builds a set of empty starter files for your component.
+4. Commits all these new changes to git and pushes them to the repo.
+
+This takes out a lot of the boring set up and allows you to start building your component immediatley!
 
 <br />
 
-### Step 2. Checkout your new branch
+### Step 3. Start building!
 
-Switch to the new branch with the following command:
+Now the files are set up you can start building your component.
 
-```sh
-  git checkout component/<component-name>
-```
+This process will vary depdending on the type and complexity of the component you're building.
 
-_\* Replace `<component-name>` with the actual name of the component._
+So instead of giving you a detailed walkthrough we've listed what you should be putting in each of your new files.
 
-<br />
+The command from the previous step will have created a folder in `src/components/` that looks something like this:
 
-### Step 3. Set up component directory
+<img src={ComponentExample} />
 
-After creating a branch, navigate to `/src/components/`.
-
-You'll then need to create a new folder and the following files:
-
-```
-src
-  | components
-    | YourComponentName
-      | YourComponentName.jsx
-      | YourComponentName.stories.jsx
-      | YourComponentName.styles.js
-      | YourComponentName.test.jsx
-      | index.js
-    ...
-  ...
-```
-
-_\* Again replace `YourComponentName` with the actual name. There's a folder called **Example** currently in the components directory which you can use as a reference._
+_\*`Example` will be replaced with the name of your component. I'm also using a custom icon set so yours may look a bit different._
 
 <br />
+<hr />
 
-### Step 4. Start building
-
-Now the files are set up you can start building the component! This step will vary, dependant on what you're actually building, so we'll walk you through what should be in each file.
-
-Feel free to work on this in whatever order you like, but try to follow our guide for what to put in each, we're going to use **Example** as a reference:
+**Example.jsx** - This is the main component file. It contains the JSX, state, PropTypes and hooks the component uses.
 
 ```js
-// Example.jsx
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ExampleWrapper } from './Example.styles';
@@ -95,4 +110,132 @@ Example.propTypes = {
 export default Example;
 ```
 
-**Example.jsx** - This contains the main React code, it contains the JSX and component logic. You can add state, lifecycle hooks and other component specific logic to this file.
+<hr />
+
+**Example.stories.jsx** - This file renders the component, along with any props you
+pass to it, within storybook.
+
+You'll be able to see "Example" in the left hand side
+to see what this looks like.
+
+```js
+import React from 'react';
+import Example from './Example';
+
+export default {
+  title: 'Components/Example',
+  component: Example
+};
+
+export const HelloWorld = () => <Example value="Hello world!" />;
+```
+
+<hr />
+
+**Example.styles.js** - We're using [**styled-components**](https://styled-components.com/) to style our components, it's a CSS in JS library which is why you won't see any CSS/SCSS files in this project.
+
+The styles you create in this file should only be for this component. Global styles are defined by our [**theme**](http://localhost:6006/?path=/story/theme-structure--page).
+
+```js
+import styled from 'styled-components';
+
+export const ExampleWrapper = styled.div`
+  padding: var(--small-space);
+  border: 0.1rem solid var(--logopink);
+`;
+```
+
+_\* If you've never used styled components before make sure to read their documentation and feel free to ask questions on the WebDev101 Slack channel._
+
+<br />
+<hr />
+
+**Example.test.jsx** - Arguably the most important file of them all! This is where we test our components behaviour and functionality.
+
+We're using Jest and React Testing Library, the default create-react-app test packages.
+
+If you've never written tests with these tools take a look at this [**tutorial**](https://www.robinwieruch.de/react-testing-library).
+
+```js
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+
+import Example from './Example';
+
+describe('Example', () => {
+  test('renders Example component', () => {
+    render(<Example value="Hello" />);
+
+    expect(screen.getByText('Hello'));
+  });
+});
+```
+
+<hr />
+
+**index.js** - All this file does is import and then export the `Example.jsx`.
+
+This is a stylistic choice and doesn't affect functionality.
+
+When it comes to adding this component to pages it means we can import it with `'./components/Example'` instead of `'./components/Example/Example'`.
+
+```js
+import Example from './Example';
+
+export default Example;
+```
+
+<br />
+
+### Step 4. Commit regularly
+
+While you're building your component make sure to commit regularly.
+
+Try to use semantic commit messages so it's obvious what's included in your commit.
+
+```
+feat: (new feature for the user, not a new feature for build script)
+fix: (bug fix for the user, not a fix to a build script)
+docs: (changes to the documentation)
+style: (formatting, missing semi colons, etc; no production code change)
+refactor: (refactoring production code, eg. renaming a variable)
+test: (adding missing tests, refactoring tests; no production code change)
+chore: (updating grunt tasks etc; no production code change)
+```
+
+For example when you've added tests, your commit may look like this:
+
+```
+git commit -m "test: added test for Example component"
+```
+
+<br />
+
+### Step 5. Push your changes and create a pull request
+
+Once you've got all your files ready, push your changes to Github with:
+
+```
+git push
+```
+
+You should then visit the [**Github repo**](https://github.com/bristol-tech-fair/btf-frontend). A message to create a pull request should be visible, as shown below:
+
+<img src={PushCommits} />
+
+Click the **Compare & pull request** button, it'll take you to this page:
+
+<img src={AssignReviewer} />
+
+There's a few things to do here:
+
+1. Link to the issue. Go to the issue you assigned yourself to earlier, it'll have a mumeric Id: like #14 in the example.
+2. Type `Closes #14` as the first line, this will link the pull request to your issue.
+3. Provide a description of the work you've done, please be descriptive here.
+4. Assign `robtf9` as a reviewer. That's my account and I'll check over the code before merging it into our main branch.
+
+<br />
+
+### Step 6. Your done!
+
+Unless there are requested changes to your PR, your work is now finished! Thanks for your contribution and feel free to pick a new component to work on.

@@ -16,6 +16,14 @@ const Typography = createGlobalStyle`
     color: var(--darkblue);
   }
 
+  pre {
+    font-family: monospace;
+
+    span.plain-text {
+      color: var(--lightgrey) !important;
+    }
+  }
+
   h1,
   h2,
   h3,
@@ -52,7 +60,7 @@ const Typography = createGlobalStyle`
   input,
   textarea,
   button {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.4rem;
   }
@@ -62,8 +70,26 @@ const Typography = createGlobalStyle`
   }
 
   a {
+    cursor: pointer;
     font-weight: 700;
+    color: var(--darkburgundy);
+
+    &:hover {
+      color: var(--logopink);
+    }
   }
+
+  button {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--lightblue);
+
+    &:hover {
+      color: var(--logopink);
+    }
+  }
+
+
 
 
   @media (min-width: 600px) {

@@ -6,7 +6,4 @@ export default {
   component: Example
 };
 
-const Template = (args) => <Example {...args} />;
-
-export const HelloWorld = Template.bind({});
-HelloWorld.args = { value: 'Hello world!' };
+export const HelloWorld = () => <Example value="Hello world!" />;

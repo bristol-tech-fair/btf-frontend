@@ -1,0 +1,83 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { styled } from '@storybook/theming';
+import Theme from './index';
+
+<Meta title="Theme/Spacings" />
+
+# Spacings
+
+Predefined spacings keep our sizings consistent through out the application. Please only ever use the spacings defined below.
+
+<br />
+<br />
+
+### How to use the palette
+
+When creating components you'll want to use these spacings in your code.
+
+Adding them in to your `Component.styles.js` file is simple, click the 'copy' button beneath the space value.
+
+And paste it where you would normally add your pixel or rem value.
+
+```js
+import styled from 'styled-components';
+
+export const ExampleWrapper = styled.div`
+  padding: var(--small-space);
+`;
+```
+
+<Theme />
+
+export const SmallestSpace = styled.div`
+  padding: var(--smallest-space);
+  background-color: var(--lightgrey);
+`;
+
+export const SmallSpace = styled.div`
+  padding: var(--small-space);
+  background-color: var(--lightgrey);
+`;
+
+export const MediumSpace = styled.div`
+  padding: var(--medium-space);
+  background-color: var(--lightgrey);
+`;
+
+export const LargeSpace = styled.div`
+  padding: var(--large-space);
+  background-color: var(--lightgrey);
+`;
+
+export const LargestSpace = styled.div`
+  padding: var(--largest-space);
+  background-color: var(--lightgrey);
+`;
+
+<Canvas>
+  <SmallestSpace>
+    <p>
+      This element has a padding value of: <pre>var(--smallest-space)</pre>
+    </p>
+  </SmallestSpace>
+  <SmallSpace>
+    <p>
+      This element has a padding value of: <pre>var(--small-space)</pre>
+    </p>
+  </SmallSpace>
+  <MediumSpace>
+    <p>
+      This element has a padding value of: <pre>var(--medium-space)</pre>
+    </p>
+  </MediumSpace>
+  <LargeSpace>
+    <p>
+      This element has a padding value of: <pre>var(--large-space)</pre>
+    </p>
+  </LargeSpace>
+  <LargestSpace>
+    <p>
+      This element has a padding value of: <pre>var(--largest-space)</pre>
+    </p>
+  </LargestSpace>
+</Canvas>

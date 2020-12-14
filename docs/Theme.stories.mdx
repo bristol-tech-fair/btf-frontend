@@ -1,8 +1,8 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="Theme / Structure" />
+<Meta title="Theme / Intro" />
 
-# Theme
+# Intro to the Theme
 
 Our theme is where we define global styles. This includes palette, spacings, typography and init. The files can be found at this directory:
 
@@ -18,6 +18,8 @@ btf-frontend
 ```
 
 We're using [**styled-components**](https://styled-components.com/) a CSS in JS library to style this app. This is why our style files are `.js` not `.css`. However, unlike other CSS in JS libraries, styled-components uses the same syntax as regular css as opposed to generic JS object syntax.
+
+_**You shouldn't need to edit these files!**_ - We've included this page so you can understand what's going on under the hood. To understand how to make use of theme in your code, take a look at the specific sections in the sidebar.
 
 <br />
 
@@ -153,6 +155,8 @@ export default Spacings;
 ```
 
 **spacings.styles.js** - Similar to our palette file, spacings uses predefined rem values so all our components are created with consistent sizings.
+
+<br />
 
 ```js
 // typography.styles.js
