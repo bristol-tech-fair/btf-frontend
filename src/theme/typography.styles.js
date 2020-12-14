@@ -51,7 +51,11 @@ const Typography = createGlobalStyle`
   h4 {
     font-size: 1.8rem;
     line-height: 1.1;
+  }
 
+  h5 {
+    font-size: 1.2rem;
+    line-height: 1.1;
   }
 
   p,
@@ -91,12 +95,9 @@ const Typography = createGlobalStyle`
     }
   }
 
-
-
-
   @media (min-width: 600px) {
     h1 {
-      font-size: 4rem;
+      font-size: 4.2rem;
     }
 
     h2 {
@@ -104,7 +105,7 @@ const Typography = createGlobalStyle`
     }
 
     h3 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
     }
   }
 
@@ -114,11 +115,11 @@ const Typography = createGlobalStyle`
     }
 
     h2 {
-      font-size: 4rem;
+      font-size: 3.6rem;
     }
 
     h3 {
-      font-size: 3.4rem;
+      font-size: 2.8rem;
     }
   }
 `;
