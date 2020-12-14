@@ -7,6 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 To run this project you will need Node.js and Yarn v1 installed.
 
 [**Install node**](https://nodejs.org/en/)
+
+<br />
+
 [**Install Yarn v1**](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
 
 Node handles our build tools, yarn is our package manager and used to run scripts.
@@ -48,4 +51,4 @@ More about storybook [here](https://storybook.js.org/).
 
 Our component generator script, replace `<component-name>` with the actual name of your component. This will take care of creating the correct files and git branches for you.
 
-Any questions please get in touch with a member of the [lead team](https://github.com/orgs/bristol-tech-fair/teams/lead-team).
+Any questions please start on discussion with the [lead team](https://github.com/orgs/bristol-tech-fair/teams/lead-team).
