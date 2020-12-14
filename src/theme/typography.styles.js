@@ -28,7 +28,8 @@ const Typography = createGlobalStyle`
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5 {
     font-family: "Rubik", sans-serif;
     font-weight: 800;
   }
