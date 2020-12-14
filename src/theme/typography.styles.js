@@ -8,7 +8,7 @@ const Typography = createGlobalStyle`
   select,
   button,
   textarea {
-    font-family: "Lato", sans-serif;
+    font-family: "Karla", sans-serif;
     -webkit-font-smoothing: antialiased; /* Chrome, Safari */
     -moz-osx-font-smoothing: grayscale; /* Firefox */
     text-rendering: optimizeLegibility;
@@ -19,6 +19,7 @@ const Typography = createGlobalStyle`
   pre {
     font-family: monospace;
 
+    // Fix for storybook styles.
     span.plain-text {
       color: var(--lightgrey) !important;
     }
@@ -28,7 +29,8 @@ const Typography = createGlobalStyle`
   h2,
   h3,
   h4 {
-    font-weight: 900;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
   }
 
   h1 {
@@ -66,12 +68,12 @@ const Typography = createGlobalStyle`
   }
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   a {
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--darkburgundy);
 
     &:hover {
@@ -81,7 +83,7 @@ const Typography = createGlobalStyle`
 
   button {
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--lightblue);
 
     &:hover {
