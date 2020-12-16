@@ -8,7 +8,7 @@ const Typography = createGlobalStyle`
   select,
   button,
   textarea {
-    font-family: "Lato", sans-serif;
+    font-family: "Karla", sans-serif;
     -webkit-font-smoothing: antialiased; /* Chrome, Safari */
     -moz-osx-font-smoothing: grayscale; /* Firefox */
     text-rendering: optimizeLegibility;
@@ -19,6 +19,7 @@ const Typography = createGlobalStyle`
   pre {
     font-family: monospace;
 
+    // Fix for storybook styles.
     span.plain-text {
       color: var(--lightgrey) !important;
     }
@@ -27,8 +28,10 @@ const Typography = createGlobalStyle`
   h1,
   h2,
   h3,
-  h4 {
-    font-weight: 900;
+  h4,
+  h5 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
   }
 
   h1 {
@@ -49,7 +52,11 @@ const Typography = createGlobalStyle`
   h4 {
     font-size: 1.8rem;
     line-height: 1.1;
+  }
 
+  h5 {
+    font-size: 1.2rem;
+    line-height: 1.1;
   }
 
   p,
@@ -66,12 +73,12 @@ const Typography = createGlobalStyle`
   }
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   a {
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--darkburgundy);
 
     &:hover {
@@ -81,7 +88,7 @@ const Typography = createGlobalStyle`
 
   button {
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--lightblue);
 
     &:hover {
@@ -89,12 +96,9 @@ const Typography = createGlobalStyle`
     }
   }
 
-
-
-
   @media (min-width: 600px) {
     h1 {
-      font-size: 4rem;
+      font-size: 4.2rem;
     }
 
     h2 {
@@ -102,7 +106,7 @@ const Typography = createGlobalStyle`
     }
 
     h3 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
     }
   }
 
@@ -112,11 +116,11 @@ const Typography = createGlobalStyle`
     }
 
     h2 {
-      font-size: 4rem;
+      font-size: 3.6rem;
     }
 
     h3 {
-      font-size: 3.4rem;
+      font-size: 2.8rem;
     }
   }
 `;

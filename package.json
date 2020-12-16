@@ -24,7 +24,7 @@
     "lint:fix": "eslint  --ext .jsx,.js src/ --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "precomponent": "git checkout main && git branch component/${new} &&  git checkout component/${new}",
+    "precomponent": "git checkout develop && git branch component/${new} &&  git checkout component/${new}",
     "component": "cd src/components/ && mkdir ${new} && cd ${new} && touch ${new}.jsx ${new}.stories.jsx ${new}.styles.js ${new}.test.jsx index.js && cd ../..",
     "postcomponent": "git add . && git commit -m \"chore: intialise ${new} component\" && git push -u origin HEAD"
   },
