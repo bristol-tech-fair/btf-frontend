@@ -44,12 +44,41 @@ Select a component from the to do list, and set yourself as an assignee.
 <br />
 <br />
 
-### Step 2. Generate a new component
+### Step 2. Set up git branch and remote
+
+Once you've picked your component and assigned yourself on Github you need to create a branch to work on.
+
+First make sure you're currently set to the `develop` branch.
+
+```sh
+git checkout develop
+```
+
+Next create and checkout a new branch using the name of your component:
+
+```sh
+git checkout -b component/<component-name>
+```
+
+_\*Replace `<component-name>` with the actual name of your component._
+
+<br />
+
+Finally, set up a remote for your branch using the following command:
+
+```sh
+git push -u origin HEAD
+```
+
+<br />
+<br />
+
+### Step 3. Generate a new component
 
 To make sure everyone's setting up their files correctly, I've created a script to generate the correct files for a new component.
 
 ```sh
-new=<component-name> yarn component
+yarn component <component-name>
 ```
 
 _\*Replace `<component-name>` with the actual name of your component. As shown below..._
@@ -71,7 +100,7 @@ This takes out a lot of the boring set up and allows you to start building your 
 
 <br />
 
-### Step 3. Start building!
+### Step 4. Start building!
 
 Now the files are set up you can start building your component.
 
@@ -187,7 +216,7 @@ export default Example;
 
 <br />
 
-### Step 4. Commit regularly
+### Step 5. Commit regularly
 
 While you're building your component make sure to commit regularly.
 
@@ -211,7 +240,7 @@ git commit -m "test: added test for Example component"
 
 <br />
 
-### Step 5. Push your changes and create a pull request
+### Step 6. Push your changes and create a pull request
 
 Once you've got all your files ready, push your changes to Github with:
 
