@@ -4,9 +4,8 @@ import TextButton from './TextButton';
 
 describe('TextButton', () => {
   test('renders TextButton component', () => {
-    render(<TextButton content="Text button"/>);
+    render(<TextButton content="Text button" />);
 
     expect(screen.getByRole('button')).toHaveTextContent('Text button');
   });
 });
-
