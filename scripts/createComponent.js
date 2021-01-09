@@ -103,3 +103,5 @@ fs.writeFile(
     if (err) throw err;
   }
 );
+
+console.log(`Component files created for ${name}`);
