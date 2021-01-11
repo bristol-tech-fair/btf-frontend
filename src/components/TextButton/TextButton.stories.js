@@ -6,4 +6,6 @@ export default {
   component: TextButton
 };
 
-export const TxtButton = () => <TextButton content="Text button" />;
+export const TxtButton = () => (
+  <TextButton content="Text button" type="button" />
+);
