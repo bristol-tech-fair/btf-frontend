@@ -97,9 +97,11 @@ fs.writeFile(
 
 // story file
 fs.writeFile(
-  `./src/components/${process.argv[2]}/${process.argv[2]}.stories.js`,
+  `./src/components/${process.argv[2]}/${process.argv[2]}.stories.jsx`,
   story,
   (err) => {
     if (err) throw err;
   }
 );
+
+console.log(`Component files created for ${name}`);

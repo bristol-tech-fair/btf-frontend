@@ -19,13 +19,13 @@
     "prestart": "yarn lint",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "lint": "eslint --ext .jsx,.js src/",
     "lint:fix": "eslint  --ext .jsx,.js src/ --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "component": "node scripts/createComponent.js",
-    "postcomponent": "yarn test"
+    "postcomponent": "yarn test --watchAll=false"
   },
   "eslintConfig": {
     "extends": [
