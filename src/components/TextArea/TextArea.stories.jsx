@@ -6,4 +6,12 @@ export default {
   component: TextArea
 };
 
-export const HelloWorld = () => <TextArea value="Hello world!" />;
+export const TxtArea = () => (
+  <TextArea
+    id="textarea1"
+    name="textarea"
+    labelText="Label"
+    placeholder="Input text"
+    value="Input"
+  />
+);
