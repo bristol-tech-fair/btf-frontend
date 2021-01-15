@@ -6,6 +6,10 @@ export default {
   component: PrimaryButton
 };
 
-export const TestPrimaryButton = () => {
-  return <PrimaryButton value="Primary button" />;
+export const PrimaryButtonWithContent = () => {
+  return <PrimaryButton content="Click Me!" />;
+};
+
+export const PrimarySubmitButtonWithContent = () => {
+  return <PrimaryButton content="Submit" type="submit" />;
 };
