@@ -7,9 +7,5 @@ export default {
 };
 
 export const PrimaryButtonWithContent = () => {
-  return <PrimaryButton content="Click Me!" />;
-};
-
-export const PrimarySubmitButtonWithContent = () => {
-  return <PrimaryButton content="Submit" type="submit" />;
+  return <PrimaryButton content="Primary button" />;
 };
