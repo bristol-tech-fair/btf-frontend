@@ -2,16 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextAreaWrapper } from './TextArea.styles';
 
-const TextArea = ({ value }) => {
+const TextArea = ({
+  id,
+  name,
+  labelText,
+  placeholder,
+  value,
+  handleOnChange
+}) => {
   return (
     <TextAreaWrapper>
-      <p>{value}</p>
+      <label htmlFor={id}>{labelText}</label>
+      <textarea
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={handleOnChange}
+      />
     </TextAreaWrapper>
   );
 };
 
 TextArea.propTypes = {
-  value: PropTypes.string.isRequired
+  id: PropTypes.string,
+  name: PropTypes.string,
+  labelText: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  handleOnChange: PropTypes.func
 };
 
 export default TextArea;
