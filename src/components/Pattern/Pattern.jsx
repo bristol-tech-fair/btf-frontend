@@ -8,7 +8,7 @@ const Pattern = ({ color = 'midblue', size = 'M' }) => {
   let patternColor;
 
   // validate size prop ('M' if validation fails)
-  if (['L', 'l', 'M', 'm', 'S', 's'].includes(size)) {
+  if (['L', 'M', 'S'].includes(size.toUpperCase())) {
     patternSize = size.toUpperCase();
   } else {
     patternSize = 'M';
@@ -28,7 +28,7 @@ const Pattern = ({ color = 'midblue', size = 'M' }) => {
       'lightblue',
       'midblue',
       'darkblue'
-    ].includes(color)
+    ].includes(color.toLowerCase())
   ) {
     patternColor = color.toLowerCase();
   } else {
