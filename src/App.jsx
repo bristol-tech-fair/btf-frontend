@@ -12,9 +12,9 @@ const App = () => {
       <h4>h4</h4>
       <p>p</p>
       <a href="#/">a</a>
-      <Pattern color="#05AFF2" size="L" />
-      <Pattern color="#006CE6" size="L" />
-      <Pattern color="#F20544" size="L" />
+      <Pattern color="midblue" size="M" />{' '}
+      {/* color: 'lightpink' || 'darkpink' || 'mattepink' || 'logopink' || 'lightgrey' || 'darkgrey' || 'darkburgundy' || 'orange' || 'lightblue' || 'midblue' || 'darkblue' */}
+      {/* size: 'L' || 'M' || 'S' */}
     </>
   );
 };
