@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TertiaryButtonWrapper } from './TertiaryButton.styles';
 
-const TertiaryButton = ({ value }) => {
+const TertiaryButton = ({ value, colour }) => {
   return (
-    <TertiaryButtonWrapper>
+    <TertiaryButtonWrapper colour={colour}>
       <p>{value}</p>
     </TertiaryButtonWrapper>
   );
 };
 
 TertiaryButton.propTypes = {
-  value: PropTypes.string.isRequired
+  value: PropTypes.string.isRequired,
+  colour: 'blue'
 };
 
 export default TertiaryButton;
