@@ -6,4 +6,4 @@ export default {
   component: TertiaryButton
 };
 
-export const HelloWorld = () => <TertiaryButton value="Hello world!" />;
+export const HelloWorld = () => <TertiaryButton value="Tertiary Button" />;

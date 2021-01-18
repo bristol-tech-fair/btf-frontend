@@ -5,8 +5,8 @@ import TertiaryButton from './TertiaryButton';
 
 describe('TertiaryButton', () => {
   test('renders TertiaryButton component', () => {
-    render(<TertiaryButton value="Hello" />);
+    render(<TertiaryButton value="Tertiary Button" />);
 
-    expect(screen.getByText('Hello'));
+    expect(screen.getByText('Tertiary Button'));
   });
 });
