@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const IconsWrapper = styled.div`
-  padding: var(--small-space);
-  border: 0.1rem solid var(--logopink);
+export const svg = styled.svg`
+  disply: 'inline-block,
+  verticalAlign: 'middle',
 `;
