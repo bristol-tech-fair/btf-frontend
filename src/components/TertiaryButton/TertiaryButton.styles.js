@@ -11,7 +11,7 @@ export const TertiaryButtonWrapper = styled.div`
   border-radius: 100px;
 
   p {
-    color: var(--lightblue);
-    /* color: rgb(242, 5, 68); */
+    color: ${(prop) =>
+      prop.colour === 'blue' ? 'var(--lightblue)' : 'var(--logopink)'};
   }
 `;

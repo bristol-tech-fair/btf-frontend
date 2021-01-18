@@ -5,7 +5,7 @@ import { TertiaryButtonWrapper } from './TertiaryButton.styles';
 const TertiaryButton = ({ value, colour }) => {
   return (
     <TertiaryButtonWrapper colour={colour}>
-      <p>{value}</p>
+      <button type="submit">{value}</button>
     </TertiaryButtonWrapper>
   );
 };
