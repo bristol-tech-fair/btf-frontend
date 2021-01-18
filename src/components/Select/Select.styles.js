@@ -6,6 +6,7 @@ export const SelectWrapper = styled.div`
 `;
 
 export const SelectLabel = styled.label`
+  display: block;
   font-weight: bold;
 `;
 
@@ -15,6 +16,8 @@ export const SelectDropdown = styled.select`
   border-radius: 4px;
   background-color: var(--lightgrey);
   color: var(--darkgrey);
+  padding: var(--smallest-space);
+  padding-left: 0;
+  width: 100%;
+  max-width: 500px;
 `;
-
-export const SelectOption = styled.option``;
