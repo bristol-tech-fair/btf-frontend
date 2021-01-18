@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextButtonWrapper } from './TextButton.styles';
 
-const TextButton = ({ content }) => {
+const TextButton = ({ content, type = 'button', onClick }) => {
   return (
-    <TextButtonWrapper>
-      <button type="button">{content}</button>
-    </TextButtonWrapper>
+    <button type={type === 'submit' ? 'submit' : 'button'} onClick={onClick}>
+      {content}
+    </button>
   );
 };
 
 TextButton.propTypes = {
-  content: PropTypes.string.isRequired
+  content: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['submit', 'button']),
+  onClick: PropTypes.func
 };
 export default TextButton;
