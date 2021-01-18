@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SelectWrapper, SelectLabel, SelectDropdown } from './Select.styles';
+import { SelectWrapper, SelectDropdown } from './Select.styles';
 
 const Select = ({ value }) => {
   return (
     <SelectWrapper>
-      <SelectLabel>
-        <label htmlFor="select">{value}</label>
-      </SelectLabel>
+      <label htmlFor="select">{value}</label>
 
       <SelectDropdown name="select" id="select">
         <option value="selectInstruction">Select an option...</option>

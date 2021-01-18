@@ -5,11 +5,6 @@ export const SelectWrapper = styled.div`
   border: 0.1rem solid var(--logopink);
 `;
 
-export const SelectLabel = styled.label`
-  display: block;
-  font-weight: bold;
-`;
-
 export const SelectDropdown = styled.select`
   display: block;
   border: 0.1rem solid var(--lightblue);
