@@ -6,4 +6,4 @@ export default {
   component: Select
 };
 
-export const HelloWorld = () => <Select value="Greetings!" />;
+export const HelloWorld = () => <Select value="Example label" />;
