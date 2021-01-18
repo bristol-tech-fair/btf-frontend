@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SelectWrapper, SelectLabel, SelectDropdown } from './Select.styles';
+import {
+  SelectWrapper,
+  SelectLabel,
+  SelectDropdown,
+  SelectOption
+} from './Select.styles';
 
 const Select = ({ value }) => {
   return (
@@ -8,10 +13,12 @@ const Select = ({ value }) => {
       <SelectLabel htmlFor="select">{value}</SelectLabel>
 
       <SelectDropdown name="select" id="select">
-        <option value="selectInstruction">Select an option...</option>
-        <option value="example1">1</option>
-        <option value="example2">2</option>
-        <option value="example3">3</option>
+        <SelectOption value="selectInstruction">
+          Select an option...
+        </SelectOption>
+        <SelectOption value="example1">1</SelectOption>
+        <SelectOption value="example2">2</SelectOption>
+        <SelectOption value="example3">3</SelectOption>
       </SelectDropdown>
     </SelectWrapper>
   );
