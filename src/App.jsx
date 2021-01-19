@@ -12,9 +12,6 @@ const App = () => {
       <h4>h4</h4>
       <p>p</p>
       <a href="#/">a</a>
-      <Pattern color="midblue" size="M" />{' '}
-      {/* color: 'lightpink' || 'darkpink' || 'mattepink' || 'logopink' || 'lightgrey' || 'darkgrey' || 'darkburgundy' || 'orange' || 'lightblue' || 'midblue' || 'darkblue' */}
-      {/* size: 'L' || 'M' || 'S' */}
     </>
   );
 };
