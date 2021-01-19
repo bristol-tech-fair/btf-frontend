@@ -1,17 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { RobotWrapper } from './Robot.styles';
+import robotImg from './Robot.png';
 
-const Robot = ({ value }) => {
-  return (
-    <RobotWrapper>
-      <p>{value}</p>
-    </RobotWrapper>
-  );
-};
-
-Robot.propTypes = {
-  value: PropTypes.string.isRequired
+const Robot = () => {
+  return <img src={robotImg} alt="Robot Logo" />;
 };
 
 export default Robot;

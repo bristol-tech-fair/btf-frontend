@@ -6,4 +6,4 @@ export default {
   component: Robot
 };
 
-export const HelloWorld = () => <Robot value="Hello world!" />;
+export const RobotLogo = () => <Robot />;

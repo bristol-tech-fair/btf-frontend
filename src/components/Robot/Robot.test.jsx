@@ -5,7 +5,7 @@ import Robot from './Robot';
 
 describe('Robot', () => {
   test('renders Robot component', () => {
-    render(<Robot value="Hello" />);
+    render(<Robot />);
 
     expect(screen.getByText('Hello'));
   });
