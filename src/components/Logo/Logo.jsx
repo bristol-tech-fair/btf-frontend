@@ -2,16 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LogoWrapper } from './Logo.styles';
 
-const Logo = ({ value }) => {
-  return (
-    <LogoWrapper>
-      <p>{value}</p>
-    </LogoWrapper>
-  );
+const Logo = ({ color }) => {
+  return <LogoWrapper color={color} />;
 };
 
 Logo.propTypes = {
-  value: PropTypes.string.isRequired
+  color: PropTypes.oneOf(['red', 'blue'])
 };
 
 export default Logo;

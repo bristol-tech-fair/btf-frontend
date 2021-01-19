@@ -6,4 +6,4 @@ export default {
   component: Logo
 };
 
-export const HelloWorld = () => <Logo value="Hello world!" />;
+export const RedLogo = () => <Logo color="red" />;
