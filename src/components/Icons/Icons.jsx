@@ -2,18 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { svg } from './Icons.styles';
 
-const Icon = (props) => {
-  const {
-    width,
-    height,
-    viewBox,
-    fill,
-    icon,
-    stroke,
-    strokeWidth,
-    strokeLinecap,
-    strokeLinejoin
-  } = props;
+const Icon = ({
+  width,
+  height,
+  viewBox,
+  fill,
+  icon,
+  stroke,
+  strokeWidth,
+  strokeLinecap,
+  strokeLinejoin
+}) => {
   return (
     <svg
       style={svg.svg}
