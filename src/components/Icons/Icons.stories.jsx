@@ -7,6 +7,9 @@ export default {
   component: Icons
 };
 
+/** List of props to pass:
+ * width,height,viewBox,fill,icon,stroke,strokeWidth,strokeLinecap,strokeLinejoin
+ * 'icon' is the only one required */
 export const File = () => <Icons icon={ICONS.File} />;
 export const Heart = () => (
   <Icons icon={ICONS.Heart} stroke="var(--lightpink)" />
