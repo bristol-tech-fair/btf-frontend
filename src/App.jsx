@@ -1,6 +1,5 @@
 import React from 'react';
 import Theme from './theme';
-import Pattern from './components/Pattern';
 
 const App = () => {
   return (
