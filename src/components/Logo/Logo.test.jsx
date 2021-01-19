@@ -1,12 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import Logo from './Logo';
 
 describe('Logo', () => {
   test('renders Logo component', () => {
-    render(<Logo value="Hello" />);
+    const { getByAltText } = render(<Logo color="red" />);
 
-    expect(screen.getByText('Hello'));
+    expect(getByAltText('Bristol Tech Fair Logo')).toBeTruthy();
   });
 });
