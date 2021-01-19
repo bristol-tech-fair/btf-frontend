@@ -6,7 +6,7 @@ export default {
   component: TextArea
 };
 
-export const TxtArea = () => (
+export const TextAreaDefaultView = () => (
   <TextArea
     id="textarea1"
     name="textarea"
