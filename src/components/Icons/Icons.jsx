@@ -36,11 +36,11 @@ const Icon = ({
 Icon.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  viewBox: PropTypes.number,
+  viewBox: PropTypes.string,
   icon: PropTypes.string.isRequired,
   fill: PropTypes.string,
   stroke: PropTypes.string,
-  strokeWidth: PropTypes.number,
+  strokeWidth: PropTypes.string,
   strokeLinecap: PropTypes.string,
   strokeLinejoin: PropTypes.string
 };
