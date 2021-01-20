@@ -34,7 +34,7 @@ Robot.propTypes = {
   path: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  viewBox: PropTypes.number
+  viewBox: PropTypes.string
 };
 
 Robot.defaultProps = {
