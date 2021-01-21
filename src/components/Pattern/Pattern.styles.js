@@ -4,6 +4,6 @@ export const PatternWrapper = styled.div`
   /* padding: var(--small-space);
   border: 0.1rem solid var(--logopink); */
   .pattern-bg {
-    fill: ${({ color }) => color};
+    fill: ${({ color }) => `var(--${color})`};
   }
 `;

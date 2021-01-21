@@ -6,9 +6,9 @@ export default {
   component: Pattern
 };
 
-export const SmallPattern = () => <Pattern color="darkgrey" size="S" />;
-export const MediumPattern = () => <Pattern color="orange" size="M" />;
-export const LargePattern = () => <Pattern color="lightblue" size="L" />;
+export const SmallPattern = () => <Pattern color="midblue" size="S" />;
+export const MediumPattern = () => <Pattern color="logopink" size="M" />;
+export const LargePattern = () => <Pattern color="mattepink" size="L" />;
 
 /*
   color: 'lightpink' || 'darkpink' || 'mattepink' || 'logopink' || 'lightgrey' || 'darkgrey' || 'darkburgundy' || 'orange' || 'lightblue' || 'midblue' || 'darkblue'
