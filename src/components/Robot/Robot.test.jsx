@@ -7,7 +7,6 @@ describe('Robot', () => {
   test('renders Robot component', () => {
     render(<Robot path="" />);
 
-    // expect(screen.getByText('Hello'));
     screen.debug();
   });
 });

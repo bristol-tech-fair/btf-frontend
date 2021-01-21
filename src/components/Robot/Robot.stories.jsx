@@ -7,7 +7,7 @@ export default {
   component: Robot
 };
 /** Props: 'path' - required
- * height, width, viewBox
+ * height, width, viewBox - optional
  */
 export const RobotTest = () => <Robot path={ROBOPATH.Robopath} />;
 export const RobotTest2 = () => (
