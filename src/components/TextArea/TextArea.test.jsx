@@ -22,8 +22,14 @@ describe('TextArea', () => {
   });
   test('calls onchange prop when text changed', () => {
     const handleChange = jest.fn();
-    render(<TextArea labelText="Label text" placeholder="Input text" onChange={handleChange}/>);
-    fireEvent.change(screen.getByRole('textarea'));
+    render(
+      <TextArea
+        labelText="Label text"
+        placeholder="Input text"
+        onChange={handleChange}
+      />
+    );
+    fireEvent.change(screen.getByRole('textbox'));
 
     expect(handleChange).toHaveBeenCalledTimes(1);
   });
