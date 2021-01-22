@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { toHaveStyle } from '@testing-library/jest-dom';
+import '@testing-library/jest-dom';
 
 import Logo from './Logo';
 
