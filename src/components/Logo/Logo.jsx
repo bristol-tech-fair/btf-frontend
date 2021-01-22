@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LogoWrapper } from './Logo.styles';
 
-const Logo = ({ color }) => {
-  return <LogoWrapper color={color} />;
+const Logo = ({ width, height }) => {
+  return <LogoWrapper width={width} height={height} />;
 };
 
 Logo.propTypes = {
-  color: PropTypes.oneOf(['red', 'blue'])
+  width: PropTypes.number,
+  height: PropTypes.number
 };
 
 export default Logo;

@@ -6,4 +6,5 @@ export default {
   component: Logo
 };
 
-export const RedLogo = () => <Logo color="red" />;
+export const DefaultLogo = () => <Logo />;
+export const LogoWithWidthAndHeight = () => <Logo width={10} height={6} />;
