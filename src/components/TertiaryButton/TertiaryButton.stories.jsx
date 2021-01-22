@@ -7,5 +7,5 @@ export default {
 };
 
 export const HelloWorld = () => (
-  <TertiaryButton value="Tertiary Button" colour="blue" />
+  <TertiaryButton content="Tertiary Button" colour="blue" />
 );

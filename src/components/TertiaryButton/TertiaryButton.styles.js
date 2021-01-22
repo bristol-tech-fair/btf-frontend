@@ -10,7 +10,7 @@ export const TertiaryButtonWrapper = styled.div`
   box-sizing: border-box;
   border-radius: 100px;
 
-  p {
+  button {
     color: ${(prop) =>
       prop.colour === 'blue' ? 'var(--lightblue)' : 'var(--logopink)'};
   }
