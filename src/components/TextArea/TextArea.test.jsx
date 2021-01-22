@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
 import TextArea from './TextArea';
 
@@ -18,5 +19,12 @@ describe('TextArea', () => {
     render(<TextArea labelText="Label text" placeholder="Input text" />);
 
     expect(screen.getByPlaceholderText('Input text'));
+  });
+  test('calls onchange prop when text changed', () => {
+    const handleChange = jest.fn();
+    render(<TextArea labelText="Label text" placeholder="Input text" onChange={handleChange}/>);
+    fireEvent.change(screen.getByRole('textarea'));
+
+    expect(handleChange).toHaveBeenCalledTimes(1);
   });
 });
