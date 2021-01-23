@@ -6,4 +6,10 @@ export default {
   component: BookCard
 };
 
-export const HelloWorld = () => <BookCard value="Hello world!" />;
+export const SampleBookCard = () => (
+  <BookCard
+    title="Book of Making"
+    author="J. Doe"
+    cover="https://images-na.ssl-images-amazon.com/images/I/51P6nn6+FyL._SX258_BO1,204,203,200_.jpg"
+  />
+);

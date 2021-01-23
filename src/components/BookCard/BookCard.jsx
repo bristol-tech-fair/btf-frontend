@@ -2,16 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BookCardWrapper } from './BookCard.styles';
 
-const BookCard = ({ value }) => {
+const BookCard = ({ title, author, cover }) => {
   return (
     <BookCardWrapper>
-      <p>{value}</p>
+      <img src={cover} alt={title} />
+      <h3>{title}</h3>
+      <span>by {author}</span>
     </BookCardWrapper>
   );
 };
 
 BookCard.propTypes = {
-  value: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired
 };
 
 export default BookCard;
