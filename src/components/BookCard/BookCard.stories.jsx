@@ -10,6 +10,6 @@ export const SampleBookCard = () => (
   <BookCard
     title="Book of Making"
     author="J. Doe"
-    cover="https://images-na.ssl-images-amazon.com/images/I/51P6nn6+FyL._SX258_BO1,204,203,200_.jpg"
+    cover="https://images.ctfassets.net/mu8m5cabjuvl/4cVpVyakl6rf73Y9nTZPv/7ced6b18c56bfb903de80b193892e27f/Book-of-Making-Volume01-COVER-landscape.jpg?w=800"
   />
 );
