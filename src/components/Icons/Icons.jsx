@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SVG, PATH } from './Icons.styles';
 
-const Icon = ({ width, fill, height, icon, stroke }) => {
+const Icon = ({ width, filled, height, icon, stroke }) => {
   return (
     <>
-      <SVG width={width} height={height} fill={fill}>
+      <SVG width={width} height={height} filled={filled}>
         <PATH d={icon} stroke={stroke} />
       </SVG>
     </>
@@ -15,7 +15,7 @@ Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  fill: PropTypes.string,
+  filled: PropTypes.string,
   stroke: PropTypes.string
 };
 

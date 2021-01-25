@@ -8,19 +8,19 @@ export default {
 };
 
 /*
- * "width & height": will define size of the icon;
- * "icon": will import specific icon from the list;
- * "stroke & fill": define color of the icon
+ * "width={30} & height={30}": will define size of the icon;
+ * "icon={ICON.iconName}": will import specific icon from the list;
+ * "isPink" & "filled": define color of the stroke and fill
  */
 export const File = () => <Icons icon={ICONS.File} />;
 export const Heart = () => (
-  <Icons icon={ICONS.Heart} stroke="var(--lightpink)" />
+  <Icons icon={ICONS.Heart} isPink/>
 );
 export const HeartFull = () => (
   <Icons
     icon={ICONS.HeartFull}
-    stroke="var(--lightpink)"
-    fill="var(--lightpink)"
+    isPink
+    filled
   />
 );
 export const Youtube = () => <Icons icon={ICONS.Youtube} />;
