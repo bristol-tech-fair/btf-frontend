@@ -13,16 +13,8 @@ export default {
  * "isPink" & "filled": define color of the stroke and fill
  */
 export const File = () => <Icons icon={ICONS.File} />;
-export const Heart = () => (
-  <Icons icon={ICONS.Heart} isPink/>
-);
-export const HeartFull = () => (
-  <Icons
-    icon={ICONS.HeartFull}
-    isPink
-    filled
-  />
-);
+export const Heart = () => <Icons icon={ICONS.Heart} isPink />;
+export const HeartFull = () => <Icons icon={ICONS.HeartFull} isPink filled />;
 export const Youtube = () => <Icons icon={ICONS.Youtube} />;
 export const Message = () => <Icons icon={ICONS.Message} />;
 export const Clock = () => <Icons icon={ICONS.Clock} />;
