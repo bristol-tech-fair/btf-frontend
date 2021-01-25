@@ -1,59 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { svg } from './Icons.styles';
+import { SVG, PATH } from './Icons.styles';
 
-const Icon = ({
-  width,
-  height,
-  viewBox,
-  fill,
-  icon,
-  stroke,
-  strokeWidth,
-  strokeLinecap,
-  strokeLinejoin
-}) => {
+const Icon = ({ width, fill, height, icon, stroke }) => {
   return (
-    <svg
-      style={svg.svg}
-      width={width}
-      height={height}
-      viewBox={viewBox}
-      fill={fill}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d={icon}
-        stroke={stroke}
-        strokeWidth={strokeWidth}
-        strokeLinecap={strokeLinecap}
-        strokeLinejoin={strokeLinejoin}
-      />
-    </svg>
+    <>
+      <SVG width={width} height={height} fill={fill}>
+        <PATH d={icon} stroke={stroke} />
+      </SVG>
+    </>
   );
 };
-
 Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  viewBox: PropTypes.string,
-  icon: PropTypes.string.isRequired,
   fill: PropTypes.string,
-  stroke: PropTypes.string,
-  strokeWidth: PropTypes.string,
-  strokeLinecap: PropTypes.string,
-  strokeLinejoin: PropTypes.string
-};
-
-Icon.defaultProps = {
-  width: 22,
-  height: 22,
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'var(--lightblue)',
-  strokeWidth: '2',
-  strokeLinecap: 'round',
-  strokeLinejoin: 'round'
+  stroke: PropTypes.string
 };
 
 export default Icon;
