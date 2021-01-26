@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SelectWrapper, select } from './Select.styles';
+import { SelectWrapper, LabelWrapper, select } from './Select.styles';
 
 const Select = ({ name, label, onBlur, options, defaultValue }) => {
   return (
     <SelectWrapper>
-      <label htmlFor={name}>{label}</label>
+      <LabelWrapper>
+        <label htmlFor={name}>{label}</label>
+      </LabelWrapper>
 
       <select name={name} id={name} onBlur={onBlur} value={defaultValue}>
         {options.map(({ optionValue, optionLabel }) => (

@@ -6,7 +6,7 @@ export default {
   component: Select
 };
 
-export const HelloWorld = () => (
+export const Fruit = () => (
   <Select
     name="Fruit"
     label="Choose a fruit"
@@ -16,6 +16,23 @@ export const HelloWorld = () => (
       { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
       { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
       { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
+    ]}
+    onBlur={() => {
+      console.log('Success!');
+    }}
+  />
+);
+
+export const Example = () => (
+  <Select
+    name="Example name"
+    label="Example label"
+    defaultValue="Example default value"
+    options={[
+      { optionValue: '1', optionLabel: '1' },
+      { optionValue: '2', optionLabel: '2' },
+      { optionValue: '3', optionLabel: '3' },
+      { optionValue: '4', optionLabel: '4' }
     ]}
     onBlur={() => {
       console.log('Success!');
