@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SVG = styled.svg.attrs((props) => ({
   fill: props.filled ? 'var(--lightpink)' : 'none',
-  viewBox: props.viewBox || '0 0 24 24',
+  viewBox: '0 0 24 24',
   height: props.height || '22',
   width: props.width || '22',
   version: '1.1',
@@ -11,8 +11,9 @@ export const SVG = styled.svg.attrs((props) => ({
 }))``;
 
 export const PATH = styled.path.attrs((props) => ({
-  strokeWidth: props.strokeWidth || '2',
+  strokeWidth: '2',
   stroke: props.isPink ? 'var(--lightpink)' : 'var(--lightblue)',
-  strokeLinecap: props.strokeLinecap || 'round',
-  strokeLinejoin: props.strokeLinejoin || 'round'
+  d: props.icon || '',
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round'
 }))``;

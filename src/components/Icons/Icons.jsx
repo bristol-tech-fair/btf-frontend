@@ -6,7 +6,7 @@ const Icon = ({ width, filled, height, icon, isPink }) => {
   return (
     <>
       <SVG width={width} height={height} filled={filled}>
-        <PATH d={icon} isPink={isPink} />
+        <PATH icon={icon} isPink={isPink} />
       </SVG>
     </>
   );
