@@ -1,24 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SelectWrapper, SelectDropdown } from './Select.styles';
+import { SelectWrapper, select } from './Select.styles';
 
-const Select = ({ value }) => {
+const Select = ({ name, label, onBlur, options, defaultValue }) => {
   return (
     <SelectWrapper>
-      <label htmlFor="select">{value}</label>
+      <label htmlFor={name}>{label}</label>
 
-      <SelectDropdown name="select" id="select">
-        <option value="selectInstruction">Select an option...</option>
-        <option value="example1">1</option>
-        <option value="example2">2</option>
-        <option value="example3">3</option>
-      </SelectDropdown>
+      <select name={name} id={name} onBlur={onBlur} value={defaultValue}>
+        {options.map(({ optionValue, optionLabel }) => (
+          <option
+            key={optionLabel.id}
+            className="select--option"
+            value={optionValue}
+          >
+            {optionLabel}
+          </option>
+        ))}
+      </select>
     </SelectWrapper>
   );
 };
 
 Select.propTypes = {
-  value: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  defaultValue: PropTypes.string,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      optionValue: PropTypes.string.isRequired,
+      optionLabel: PropTypes.string.isRequired
+    })
+  ).isRequired,
+  onBlur: PropTypes.func.isRequired
 };
 
 export default Select;

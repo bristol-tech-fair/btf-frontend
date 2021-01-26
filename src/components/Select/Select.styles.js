@@ -5,7 +5,7 @@ export const SelectWrapper = styled.div`
   border: 0.1rem solid var(--logopink);
 `;
 
-export const SelectDropdown = styled.select`
+export const select = styled.select`
   display: block;
   border: 0.1rem solid var(--lightblue);
   border-radius: 4px;
