@@ -9,7 +9,8 @@ export const SecondaryButtonWrapper = styled.button`
   align-items: center;
   background: var(--lightblue);
   color: var(--lightgrey);
-  padding: var(--small-space);
+  font-weight: 700;
+  padding: var(--smallest-space) var(--small-space);
   border-radius: 6.25rem;
   &:hover {
     background: var(--logopink);
