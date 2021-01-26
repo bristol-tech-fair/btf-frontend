@@ -1,3 +1,3 @@
 import styled from 'styled-components';
 
-export const RobotWrapper = styled.div``;
+export const SVG = styled.svg.attrs(() => ({}))``;

@@ -6,15 +6,11 @@ export default {
   title: 'Components/Robot',
   component: Robot
 };
-/** Props: 'path' - required
- * height, width, viewBox - optional
+/*
+ * "height=''  width=''" : resize image
+ * path={ROBOPATH.Robopath} path of the image
  */
 export const RobotTest = () => <Robot path={ROBOPATH.Robopath} />;
 export const RobotTest2 = () => (
-  <Robot
-    path={ROBOPATH.Robopath}
-    height="200"
-    width="194"
-    viewBox="0 0 200 194"
-  />
+  <Robot path={ROBOPATH.Robopath} width="200" height="194" />
 );
