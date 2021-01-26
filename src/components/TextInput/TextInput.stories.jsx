@@ -8,10 +8,10 @@ export default {
 
 export const textInput = () => (
   <TextInput
-    id="textinput"
-    name="textinput"
+    id="textInput"
+    name="textInput"
     label="Label"
-    placeholder="Input text"
+    placeholder="Input"
     value="Input"
   />
 );

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TextInputWrapper = styled.div`
   input {
+    position: absolute;
     padding: var(--small-space);
     border: 0.1rem solid var(--lightblue);
     background: var(--lightgrey);
@@ -19,5 +20,6 @@ export const TextInputWrapper = styled.div`
 
   placeholder {
     color: var(--darkgrey);
+    font-size: 1rem;
   }
 `;
