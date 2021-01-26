@@ -5,7 +5,7 @@ import SecondaryButton from './SecondaryButton';
 
 describe('SecondaryButton', () => {
   test('renders SecondaryButton component', () => {
-    render(<SecondaryButton value="Hello" />);
+    render(<SecondaryButton content="Hello" />);
 
     expect(screen.getByText('Hello'));
   });
