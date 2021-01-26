@@ -7,4 +7,9 @@ export const TextInputWrapper = styled.div`
     background: #f2f2f2;
     border-radius: 0.5rem;
   }
+
+  label {
+    display: flex;
+    align-items: center;
+  }
 `;
