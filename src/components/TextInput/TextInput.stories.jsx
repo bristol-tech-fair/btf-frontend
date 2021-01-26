@@ -10,7 +10,7 @@ export const textInput = () => (
   <TextInput
     id="textinput"
     name="textinput"
-    labelText="Label"
+    label="Label"
     placeholder="Input text"
     value="Input"
   />
