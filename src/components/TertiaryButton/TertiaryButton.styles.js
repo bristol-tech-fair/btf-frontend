@@ -17,6 +17,6 @@ export const TertiaryButtonWrapper = styled.button`
   &:active,
   &:focus {
     color: var(--logopink);
-    box-shadow: 0 0 0 0.4rem var(--logopink);
+    box-shadow: 0 0 0 0.2rem var(--logopink);
   }
 `;
