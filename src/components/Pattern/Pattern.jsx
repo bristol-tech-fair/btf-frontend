@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PatternWrapper } from './Pattern.styles';
 import { smallSVG, mediumSVG, largeSVG } from './Pattern.svgs';
-// import mediumSVG from './Pattern.svgs';
-// import largeSVG from './Pattern.svgs';
 
 const Pattern = ({ color = 'midblue', size = 'M' }) => {
   let svg;
