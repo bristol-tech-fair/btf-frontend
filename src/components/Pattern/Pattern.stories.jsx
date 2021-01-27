@@ -8,7 +8,7 @@ export default {
 
 export const SmallPattern = () => <Pattern color="midblue" size="S" />;
 export const MediumPattern = () => <Pattern color="logopink" size="M" />;
-export const LargePattern = () => <Pattern color="mattepink" size="L" />;
+export const LargePattern = () => <Pattern color="darkgrey" size="L" />;
 
 /*
   color: 'lightpink' || 'darkpink' || 'mattepink' || 'logopink' || 'lightgrey' || 'darkgrey' || 'darkburgundy' || 'orange' || 'lightblue' || 'midblue' || 'darkblue'
