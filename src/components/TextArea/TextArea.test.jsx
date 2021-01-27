@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, cleanup, getAllByLabelText } from '@testing-library/react';
+import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import TextArea from './TextArea';
@@ -29,16 +29,16 @@ describe('TextArea', () => {
         id="textarea"
         labelText="label text"
         placeholder="input text"
-        value ="original text"
+        value="original text"
         onChange={handleChange}
       />
     );
     screen.debug();
-    //screen.getByRole('');
+    // screen.getByRole('');
     fireEvent.change(screen.getByRole('textbox'), {
-      target: {value:"modified text"}, 
+      target: { value: 'modified text' }
     });
     screen.debug();
-    //expect(handleChange).toHaveBeenCalledTimes(1);
+    // expect(handleChange).toHaveBeenCalledTimes(1);
   });
 });

@@ -2,14 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextAreaWrapper } from './TextArea.styles';
 
-const TextArea = ({
-  id,
-  name,
-  labelText,
-  placeholder,
-  value,
-  onChange
-}) => {
+const TextArea = ({ id, name, labelText, placeholder, value, onChange }) => {
   return (
     <TextAreaWrapper>
       <label htmlFor={id}>{labelText}</label>
