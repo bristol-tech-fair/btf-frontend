@@ -1,8 +1,10 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, cleanup, getAllByLabelText } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import TextArea from './TextArea';
+
+afterEach(cleanup);
 
 describe('TextArea', () => {
   test('renders the correct label text', () => {
@@ -20,17 +22,23 @@ describe('TextArea', () => {
 
     expect(screen.getByPlaceholderText('Input text'));
   });
-  test('calls onchange prop when text changed', () => {
+  test('calls onChange prop when text changed', () => {
     const handleChange = jest.fn();
     render(
       <TextArea
-        labelText="Label text"
-        placeholder="Input text"
+        id="textarea"
+        labelText="label text"
+        placeholder="input text"
+        value ="original text"
         onChange={handleChange}
       />
     );
-    fireEvent.change(screen.getByRole('textbox'));
-
-    expect(handleChange).toHaveBeenCalledTimes(1);
+    screen.debug();
+    //screen.getByRole('');
+    fireEvent.change(screen.getByRole('textbox'), {
+      target: {value:"modified text"}, 
+    });
+    screen.debug();
+    //expect(handleChange).toHaveBeenCalledTimes(1);
   });
 });

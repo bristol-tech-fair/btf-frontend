@@ -8,7 +8,7 @@ const TextArea = ({
   labelText,
   placeholder,
   value,
-  handleOnChange
+  onChange
 }) => {
   return (
     <TextAreaWrapper>
@@ -18,7 +18,7 @@ const TextArea = ({
         name={name}
         placeholder={placeholder}
         value={value}
-        onChange={handleOnChange}
+        onChange={onChange}
       />
     </TextAreaWrapper>
   );
@@ -30,7 +30,7 @@ TextArea.propTypes = {
   labelText: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  handleOnChange: PropTypes.func
+  onChange: PropTypes.func
 };
 
 export default TextArea;
