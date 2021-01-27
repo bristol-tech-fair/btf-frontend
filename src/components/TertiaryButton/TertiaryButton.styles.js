@@ -1,17 +1,11 @@
 import styled from 'styled-components';
 
-export const TertiaryButtonWrapper = styled.div`
-  padding: var(--smallest-space);
+export const TertiaryButtonWrapper = styled.button`
+  padding: var(--smallest-space) var(--medium-space);
+
   text-align: center;
 
-  border: 1px solid;
-  border-color: ${(prop) =>
-    prop.colour === 'blue' ? 'var(--lightblue)' : 'var(--logopink)'};
-  box-sizing: border-box;
-  border-radius: 100px;
-
-  button {
-    color: ${(prop) =>
-      prop.colour === 'blue' ? 'var(--lightblue)' : 'var(--logopink)'};
-  }
+  border: 0.1rem solid;
+  border-color: var(--lightblue);
+  border-radius: 10rem;
 `;

@@ -6,6 +6,6 @@ export default {
   component: TertiaryButton
 };
 
-export const HelloWorld = () => (
-  <TertiaryButton content="Tertiary Button" colour="blue" />
+export const tertiaryButtonWithContent = () => (
+  <TertiaryButton content="Tertiary Button" colour="not blue" />
 );
