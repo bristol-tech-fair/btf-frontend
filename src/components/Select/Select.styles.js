@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const SelectWrapper = styled.div`
-  padding: var(--small-space);
-  border: 0.1rem solid var(--logopink);
   display: flex;
   flex-flow: column;
   position: relative;
 
   select {
     font-size: 1.6rem;
+    cursor: pointer;
     border: 0.1rem solid var(--lightblue);
     border-radius: 0.4rem;
     background-color: var(--lightgrey);
@@ -22,7 +21,7 @@ export const SelectWrapper = styled.div`
     content: ' ';
     display: block;
     position: absolute;
-    top: 7rem;
+    top: 5.2rem;
     right: var(--medium-space);
     width: 0;
     height: 0;

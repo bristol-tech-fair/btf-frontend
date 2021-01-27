@@ -34,7 +34,7 @@ export const Example = () => (
       { optionValue: '3', optionLabel: '3' },
       { optionValue: '4', optionLabel: '4' }
     ]}
-    onBlur={() => {
+    onChange={() => {
       console.log('Success!');
     }}
   />
