@@ -11,9 +11,8 @@ describe('Pattern', () => {
     const svg = container.querySelector('svg');
     const paths = container.querySelectorAll('path');
 
-    // expect(screen.getByText('Hello'));
     screen.debug();
     expect(svg).toHaveAttribute('width', '1377'); // S: 451 || M: 938 || L: 1377
-    expect(paths[0].classList.contains('logopink')).toBe(true);
+    expect(paths[0].classList.contains('pattern-bg')).toBe(true);
   });
 });

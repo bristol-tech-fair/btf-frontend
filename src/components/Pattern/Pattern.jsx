@@ -7,23 +7,18 @@ import { smallSVG, mediumSVG, largeSVG } from './Pattern.svgs';
 
 const Pattern = ({ color = 'midblue', size = 'M' }) => {
   let svg;
-  let patternSize;
 
-  // validate size prop ('M' if validation fails)
-  if (['L', 'M', 'S'].includes(size.toUpperCase())) {
-    patternSize = size.toUpperCase();
-  } else {
-    patternSize = 'M';
-  }
-
-  switch (patternSize) {
+  switch (size) {
     case 'S':
+    case 's':
       svg = smallSVG;
       break;
     case 'M':
+    case 'm':
       svg = mediumSVG;
       break;
     case 'L':
+    case 'l':
       svg = largeSVG;
       break;
     default:
@@ -50,7 +45,7 @@ Pattern.propTypes = {
     'midblue',
     'darkblue'
   ]),
-  size: PropTypes.string.isRequired
+  size: PropTypes.oneOf(['S', 's', 'M', 'm', 'L', 'l'])
 };
 
 export default Pattern;
