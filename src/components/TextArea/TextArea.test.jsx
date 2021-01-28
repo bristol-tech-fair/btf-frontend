@@ -34,11 +34,10 @@ describe('TextArea', () => {
       />
     );
     screen.debug();
-    // screen.getByRole('');
     fireEvent.change(screen.getByRole('textbox'), {
       target: { value: 'modified text' }
     });
     screen.debug();
-    // expect(handleChange).toHaveBeenCalledTimes(1);
+    expect(handleChange).toHaveBeenCalledTimes(1);
   });
 });

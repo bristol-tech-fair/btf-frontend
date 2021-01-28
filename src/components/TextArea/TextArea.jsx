@@ -18,11 +18,11 @@ const TextArea = ({ id, name, labelText, placeholder, value, onChange }) => {
 };
 
 TextArea.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  labelText: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  labelText: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func
 };
 
