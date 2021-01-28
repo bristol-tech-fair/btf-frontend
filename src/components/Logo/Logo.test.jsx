@@ -5,15 +5,15 @@ import '@testing-library/jest-dom';
 import Logo from './Logo';
 
 describe('Logo', () => {
-  test('renders Logo component with default width', () => {
-    const { container } = render(<Logo />);
+  test('renders Logo component with red color prop', () => {
+    const { container } = render(<Logo color="red" />);
 
     expect(container.firstChild).toHaveStyle(`width:18.8rem`);
   });
 
   test('renders Logo component with given width', () => {
-    const { container } = render(<Logo width={10} />);
+    const { container } = render(<Logo color="blue" />);
 
-    expect(container.firstChild).toHaveStyle(`width:10rem`);
+    expect(container.firstChild).toHaveStyle(`width:18.8rem`);
   });
 });

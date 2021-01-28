@@ -3,12 +3,12 @@ import LogoRed from '../../images/logoRed.png';
 import LogoBlue from '../../images/logoBlue.png';
 
 export const LogoWrapper = styled.div`
-  background-image: url(${LogoRed});
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: ${(props) => (props.width ? `${props.width}rem` : '18.8rem')};
-  height: ${(props) => (props.height ? `${props.height}rem` : '8.2rem')};
+  background: url(${(props) => (props.color === 'red' ? LogoRed : LogoBlue)}) 0
+    0 / contain no-repeat;
+  width: 18.8rem;
+  height: 8.2rem;
   &:hover {
-    background-image: url(${LogoBlue});
+    background: url(${(props) => (props.color === 'red' ? LogoBlue : LogoRed)})
+      0 0 / contain no-repeat;
   }
 `;
