@@ -3,10 +3,10 @@ import { render, screen } from '@testing-library/react';
 
 import Icons from './Icons';
 
-describe('Icons', () => {
-  test('renders Icons component', () => {
-    render(<Icons icon="Menu" />);
+describe('Icon', () => {
+  test('renders Icon component', () => {
+    render(<Icons value="Hello" />);
 
-    screen.debug();
+    expect(screen.getByText('Hello'));
   });
 });

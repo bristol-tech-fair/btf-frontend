@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SVG, PATH } from './Icons.styles';
+import { IconWrapper } from './Icons.styles';
 
-const Icon = ({ width, filled, height, icon, isPink }) => {
+const Icons = ({ value }) => {
   return (
-    <>
-      <SVG width={width} height={height} filled={filled}>
-        <PATH icon={icon} isPink={isPink} />
-      </SVG>
-    </>
+    <IconWrapper>
+      <p>{value}</p>
+    </IconWrapper>
   );
 };
-Icon.propTypes = {
-  icon: PropTypes.string.isRequired,
-  width: PropTypes.number,
-  height: PropTypes.number,
-  filled: PropTypes.string,
-  isPink: PropTypes.string
+
+Icons.propTypes = {
+  value: PropTypes.string.isRequired
 };
 
-export default Icon;
+export default Icons;
