@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ExampleWrapper } from './Example.styles';
-import { File, Heart, ArrowCircleLeft } from '../Icons';
+import { File, Heart, ArrowCircleLeft, HeartFull, Share } from '../Icons';
 
 const Example = ({ value }) => {
   return (
@@ -9,7 +9,9 @@ const Example = ({ value }) => {
       <p>{value}</p>
       <File />
       <Heart />
+      <HeartFull />
       <ArrowCircleLeft />
+      <Share />
     </ExampleWrapper>
   );
 };
