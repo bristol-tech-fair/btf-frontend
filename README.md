@@ -45,8 +45,8 @@ Starts the design system which you will be able to open on [http://localhost:600
 
 More about storybook [here](https://storybook.js.org/).
 
-## `new=<component-name> yarn component`
+## `yarn component <component-name>`
 
-Our component generator script, replace `<component-name>` with the actual name of your component. This will take care of creating the correct files and git branches for you.
+Our component generator script, replace `<component-name>` with the actual name of your component. This will take care of creating the correct files for you.
 
 Any questions please start on discussion with the [lead team](https://github.com/orgs/bristol-tech-fair/teams/lead-team).
