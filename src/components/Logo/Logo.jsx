@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LogoWrapper } from './Logo.styles';
 
-const Logo = ({ color }) => {
+const Logo = ({ color = 'red' }) => {
   return <LogoWrapper color={color} />;
 };
 
