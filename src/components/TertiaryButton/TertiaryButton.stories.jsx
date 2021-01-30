@@ -7,5 +7,5 @@ export default {
 };
 
 export const tertiaryButtonWithContent = () => (
-  <TertiaryButton content="Tertiary Button" colour="not blue" />
+  <TertiaryButton content="Tertiary Button" />
 );
