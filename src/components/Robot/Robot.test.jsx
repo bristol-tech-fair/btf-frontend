@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import Robot from './Robot';
+import StandingRobot from './Robot';
 
-describe('Robot', () => {
-  test('renders Robot component', () => {
-    render(<Robot path="" />);
+describe('StandingRobot', () => {
+  test('renders StandingRobot component', () => {
+    render(<StandingRobot />);
 
     screen.debug();
   });
