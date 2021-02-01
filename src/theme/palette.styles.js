@@ -13,6 +13,7 @@ const Palette = createGlobalStyle`
     --lightblue: #05AFF2;
     --midblue: #006CE6;
     --darkblue: #272A44;
+    --white: #FFFFFF;
   }
 `;
 
