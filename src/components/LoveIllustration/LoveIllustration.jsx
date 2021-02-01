@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { LoveIllustrationWrapper } from './LoveIllustration.styles';
 
-const LoveIllustration = ({ value }) => {
+const LoveIllustration = () => {
   return (
     <LoveIllustrationWrapper>
       <title id="loveTitle">Love Illustration</title>
@@ -19,13 +18,10 @@ const LoveIllustration = ({ value }) => {
           fill="#F2F2F2"
         />
       </svg>
-      <p> {value} </p>
     </LoveIllustrationWrapper>
   );
 };
 
-LoveIllustration.propTypes = {
-  value: PropTypes.string.isRequired
-};
+LoveIllustration.propTypes = {};
 
 export default LoveIllustration;
