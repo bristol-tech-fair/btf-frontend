@@ -11,6 +11,7 @@ const Palette = createGlobalStyle`
     --darkburgundy: #440113;
     --orange: #F29C50;
     --lightblue: #05AFF2;
+    --greyblue: #36A9E1;
     --midblue: #006CE6;
     --darkblue: #272A44;
   }
