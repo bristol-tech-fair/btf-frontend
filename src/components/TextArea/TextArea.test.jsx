@@ -1,43 +1,37 @@
-import React from 'react';
-import { render, screen, fireEvent, cleanup } from '@testing-library/react';
+import React, { useState } from 'react';
+import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-
 import TextArea from './TextArea';
 
-afterEach(cleanup);
+const MockInput = () => {
+  const [value, setValue] = useState('');
 
-describe('TextArea', () => {
-  test('renders the correct label text', () => {
-    render(<TextArea labelText="Label text" placeholder="Input text" />);
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
-    expect(screen.getByText('Label text'));
-  });
-  test('renders a textarea input', () => {
-    render(<TextArea labelText="Label text" placeholder="Input text" />);
+  return (
+    <TextArea
+      name="test"
+      id="test"
+      value={value}
+      labelText="Label"
+      onChange={handleChange}
+    />
+  );
+};
 
-    expect(TextArea).toBeDefined();
-  });
-  test('renders the correct placeholder text', () => {
-    render(<TextArea labelText="Label text" placeholder="Input text" />);
+const setup = () => {
+  const utils = render(<MockInput />);
+  const input = utils.getByLabelText('Label');
+  return {
+    input,
+    ...utils
+  };
+};
 
-    expect(screen.getByPlaceholderText('Input text'));
-  });
-  test('calls onChange prop when text changed', () => {
-    const handleChange = jest.fn();
-    render(
-      <TextArea
-        id="textarea"
-        labelText="label text"
-        placeholder="input text"
-        value="original text"
-        onChange={handleChange}
-      />
-    );
-    screen.debug();
-    fireEvent.change(screen.getByRole('textbox'), {
-      target: { value: 'modified text' }
-    });
-    screen.debug();
-    expect(handleChange).toHaveBeenCalledTimes(1);
-  });
+test('It should change value when new input received', () => {
+  const { input } = setup();
+  fireEvent.change(input, { target: { value: 'Hello!' } });
+  expect(input.value).toBe('Hello!');
 });
