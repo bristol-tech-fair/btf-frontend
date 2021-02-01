@@ -6,4 +6,4 @@ export default {
   component: LoveIllustration
 };
 
-export const HelloWorld = () => <LoveIllustration value="Hello world!" />;
+export const HelloWorld = () => <LoveIllustration value="LOVE" />;
