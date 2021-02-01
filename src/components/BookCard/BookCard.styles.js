@@ -9,6 +9,8 @@ export const BookCardWrapper = styled.div`
   overflow: hidden;
   display: inline-block;
   text-align: center;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
 
   & > img {
     height: 14rem;
@@ -24,5 +26,10 @@ export const BookCardWrapper = styled.div`
   & > span {
     font-size: 1.6rem;
     font-weight: 700;
+  }
+
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
   }
 `;
