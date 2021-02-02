@@ -1,5 +1,5 @@
 import React from 'react';
-import { SVG } from './Robot.styles';
+import { SVG } from '../Illustration.styles';
 
 const StandingRobot = () => {
   return (
