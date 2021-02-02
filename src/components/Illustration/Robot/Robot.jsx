@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVG } from '../Illustration.styles';
 
-const StandingRobot = () => {
+const Robot = () => {
   return (
     <SVG>
       <title id="robotTitle">Image of the Robot</title>
@@ -223,4 +223,4 @@ const StandingRobot = () => {
   );
 };
 
-export default StandingRobot;
+export default Robot;
