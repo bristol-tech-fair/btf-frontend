@@ -1,15 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { LoveIllustrationWrapper } from './LoveIllustration.styles';
 
-const LoveIllustration = () => {
+// passing the props
+const LoveIllustration = ({ path, width, height, viewBox }) => {
   return (
     <LoveIllustrationWrapper>
       <title id="loveTitle">Love Illustration</title>
       <desc id="loveDesc"> Blue and pink love sign. </desc>
       <svg
-        width="340"
-        height="162"
-        viewBox="0 0 340 162"
+        width={width}
+        height={height}
+        viewBox={viewBox}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -22,6 +24,17 @@ const LoveIllustration = () => {
   );
 };
 
-LoveIllustration.propTypes = {};
+LoveIllustration.propTypes = {
+  path: PropTypes.string.isRequired,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  viewBox: PropTypes.string
+};
+
+LoveIllustration.defaultProps = {
+  width: '340',
+  height: '162',
+  viewBox: '0 0 340 162'
+};
 
 export default LoveIllustration;
