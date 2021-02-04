@@ -1,7 +1,7 @@
 import React from 'react';
 import { SVG } from '../Illustrations.styles';
 
-const LayingRobot = () => {
+const LyingRobot = () => {
   return (
     <SVG width="314" height="195" viewBox="0 0 314 195">
       <title>Image of the robot</title>
@@ -232,4 +232,4 @@ const LayingRobot = () => {
   );
 };
 
-export default LayingRobot;
+export default LyingRobot;
