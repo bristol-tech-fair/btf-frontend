@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LoveIllustrationWrapper = styled.svg.attrs((props) => ({
+export const SVG = styled.svg.attrs((props) => ({
   fill: 'none',
   viewBox: props.viewBox || '0 0 340 162',
   height: props.height || '162',
