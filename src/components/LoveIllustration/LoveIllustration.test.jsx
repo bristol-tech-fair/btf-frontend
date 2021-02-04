@@ -8,6 +8,5 @@ describe('LoveIllustration', () => {
     render(<LoveIllustration />);
 
     screen.debug();
-
   });
 });
