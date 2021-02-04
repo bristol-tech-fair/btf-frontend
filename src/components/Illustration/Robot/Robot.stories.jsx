@@ -1,8 +1,8 @@
 import React from 'react';
-import StandingRobot from './Robot';
+import Robot from './Robot';
 
 export default {
   title: 'Components/Robot',
-  component: StandingRobot
+  component: Robot
 };
-export const RobotTest = () => <StandingRobot />;
+export const RobotTest = () => <Robot />;

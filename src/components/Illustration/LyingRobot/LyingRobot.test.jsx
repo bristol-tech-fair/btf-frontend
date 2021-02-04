@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 
 import LyingRobot from './LyingRobot';
 
-describe('LayingRobot', () => {
+describe('LyingRobot', () => {
   test('renders LyingRobot component', () => {
     render(<LyingRobot />);
 

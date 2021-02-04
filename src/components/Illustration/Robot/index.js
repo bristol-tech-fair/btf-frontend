@@ -1,3 +1,3 @@
-import StandingRobot from './Robot';
+import Robot from './Robot';
 
-export default StandingRobot;
+export default Robot;
