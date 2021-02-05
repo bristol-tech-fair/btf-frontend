@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SVG } from './LoveIllustration.styles';
+import { SVG } from '../Illustrations.styles';
 
 // passing the props
 const LoveIllustration = ({ width, height, viewBox }) => {
