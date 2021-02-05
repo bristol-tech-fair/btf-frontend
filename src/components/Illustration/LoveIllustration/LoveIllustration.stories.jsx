@@ -6,4 +6,4 @@ export default {
   component: LoveIllustration
 };
 
-export const loveIllustration = () => <LoveIllustration value="LOVE" />;
+export const loveIllustrationTest = () => <LoveIllustration />;
