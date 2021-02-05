@@ -4,8 +4,8 @@ import { SVG } from '../Illustrations.styles';
 const Robot = () => {
   return (
     <SVG>
-      <title id="robotTitle">Image of the Robot</title>
-      <desc id="robotDesc">
+      <title id="imgTitle">Image of the Robot</title>
+      <desc id="imgDesc">
         Blue and pink color robot with a love sign on his chest hold his arms
         wide open.
       </desc>

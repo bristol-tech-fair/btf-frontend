@@ -4,8 +4,8 @@ import { SVG } from '../Illustrations.styles';
 const LyingRobot = () => {
   return (
     <SVG width="314" height="195" viewBox="0 0 314 195">
-      <title>Image of the robot</title>
-      <desc id="robotDesc">
+      <title id="imgTitle">Image of the robot</title>
+      <desc id="imgDesc">
         Blue and pink color robot with a love sign on his chest is lying on the
         side propped up on the elbow with hand supporting the head.
       </desc>
