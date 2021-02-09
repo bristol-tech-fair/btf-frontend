@@ -8,11 +8,7 @@ export const SelectWrapper = styled.div`
   select {
     font-size: 1.6rem;
     cursor: pointer;
-    border: 0.1rem solid var(--lightblue);
-    border-radius: 0.4rem;
-    background-color: var(--lightgrey);
     color: var(--darkgrey);
-    padding: var(--small-space) var(--smallest-space);
     -moz-appearance: none;
     -webkit-appearance: none;
   }
