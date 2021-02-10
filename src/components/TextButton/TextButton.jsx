@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TextButtonWrapper } from './TextButton.styles';
 
 const TextButton = ({ content, type = 'button', onClick }) => {
   return (
-    <button type={type === 'submit' ? 'submit' : 'button'} onClick={onClick}>
+    <TextButtonWrapper
+      type={type === 'submit' ? 'submit' : 'button'}
+      onClick={onClick}
+    >
       {content}
-    </button>
+    </TextButtonWrapper>
   );
 };
 
@@ -14,4 +18,5 @@ TextButton.propTypes = {
   type: PropTypes.oneOf(['submit', 'button']),
   onClick: PropTypes.func
 };
+
 export default TextButton;
