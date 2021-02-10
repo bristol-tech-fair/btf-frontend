@@ -1,30 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PatternWrapper } from './Pattern.styles';
-import { smallSVG, mediumSVG, largeSVG } from './Pattern.svgs';
+import { SmallSVG, MediumSVG, LargeSVG } from './Pattern.svgs';
 
 const Pattern = ({ color = 'midblue', size = 'M' }) => {
-  let svg;
+  // const Pattern = ({ color = 'midblue' }) => {
+  let Svg;
 
   switch (size) {
     case 'S':
     case 's':
-      svg = smallSVG;
+      Svg = SmallSVG;
       break;
     case 'M':
     case 'm':
-      svg = mediumSVG;
+      Svg = MediumSVG;
       break;
     case 'L':
     case 'l':
-      svg = largeSVG;
+      Svg = LargeSVG;
       break;
     default:
   }
 
   return (
     <PatternWrapper color={color}>
-      <div dangerouslySetInnerHTML={svg} />
+      <Svg />
     </PatternWrapper>
   );
 };
