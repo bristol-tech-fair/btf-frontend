@@ -1,9 +1,9 @@
 import React from 'react';
-import ResourceCard from './ResourceCard';
+import Card from './ResourceCard';
 
 export default {
   title: 'Components/ResourceCard',
-  component: ResourceCard
+  component: Card
 };
 
-export const HelloWorld = () => <ResourceCard value="Hello world!" />;
+export const HelloWorld = () => <Card />;
