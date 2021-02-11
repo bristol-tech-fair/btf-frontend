@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const BookCardWrapper = styled.div`
+export const BookCardWrapper = styled(Link)`
   width: 24rem;
   height: 30.9rem;
   background: #ffffff;
@@ -28,8 +29,13 @@ export const BookCardWrapper = styled.div`
     font-weight: 700;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     transform: translateY(-1rem);
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.3rem var(--lightblue);
   }
 `;
