@@ -32,7 +32,7 @@ export const BookCardWrapper = styled(Link)`
   &:hover,
   &:active {
     transform: translateY(-1rem);
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
   }
 
   &:focus {
