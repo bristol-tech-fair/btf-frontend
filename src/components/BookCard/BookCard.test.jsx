@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-add;
+
 import BookCard from './BookCard';
 
 describe('BookCard', () => {
