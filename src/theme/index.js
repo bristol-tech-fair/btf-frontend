@@ -3,6 +3,7 @@ import Init from './init.styles';
 import Palette from './palette.styles';
 import Spacings from './spacings.styles';
 import Typography from './typography.styles';
+import Shadows from './shadows.styles';
 
 const Theme = () => {
   return (
@@ -11,6 +12,7 @@ const Theme = () => {
       <Palette />
       <Typography />
       <Spacings />
+      <Shadows />
     </>
   );
 };
