@@ -2,28 +2,28 @@ import { Meta, Source } from '@storybook/addon-docs/blocks';
 import { styled } from '@storybook/theming';
 import Theme from './index';
 
-<Meta title="Theme/Palette" />
+<Meta title="Theme/Shadows" />
 
-# Palette
+# Shadows
 
-A predefined color palette helps to ensure brand consistency across the application. Please only use the colors defined below.
+A predefined set of box shadows helps to ensure brand consistency across the application. Please only use the shadows defined below.
 
 <br />
 <br />
 
-### How to use the palette
+### How to use the shadows
 
-When creating components you'll want to use these colors in your code.
+When creating components you'll want to use these shadows in your code.
 
-Adding them in to your `Component.styles.js` file is simple, click the 'copy' button beneath the color.
+Adding them in to your `Component.styles.js` file is simple, click the 'copy' button beneath the shadow.
 
-And paste it where you would normally add your hexcode or rgb value.
+And paste it where you would normally add your `box-shadow` value.
 
 ```js
 import styled from 'styled-components';
 
 export const ExampleWrapper = styled.div`
-  border: 0.1rem solid var(--logopink);
+  box-shadow: var(--card-shadow);
 `;
 ```
 
@@ -32,129 +32,34 @@ export const ExampleWrapper = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 80px;
 `;
 
-export const LightPink = styled.div`
+export const CardShadow = styled.div`
   border-radius: 5px;
   width: 100%;
   padding-bottom: 100%;
-  background-color: var(--lightpink);
-`;
-
-export const DarkPink = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--darkpink);
-`;
-
-export const MattePink = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--mattepink);
-`;
-
-export const LogoPink = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--logopink);
-`;
-
-export const LightGrey = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
+  margin-bottom: 40px;
   background-color: var(--lightgrey);
+  box-shadow: var(--card-shadow);
 `;
 
-export const DarkGrey = styled.div`
+export const ModalShadow = styled.div`
   border-radius: 5px;
   width: 100%;
   padding-bottom: 100%;
-  background-color: var(--darkgrey);
-`;
-
-export const DarkBurgundy = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--darkburgundy);
-`;
-
-export const Orange = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--orange);
-`;
-
-export const LightBlue = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--lightblue);
-`;
-
-export const MidBlue = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--midblue);
-`;
-
-export const DarkBlue = styled.div`
-  border-radius: 5px;
-  width: 100%;
-  padding-bottom: 100%;
-  background-color: var(--darkblue);
+  margin-bottom: 40px;
+  background-color: var(--lightgrey);
+  box-shadow: var(--modal-shadow);
 `;
 
 <Grid>
   <div>
-    <LightPink />
-    <Source language="css" code="var(--lightpink)" />
+    <CardShadow />
+    <Source language="css" code="var(--card-shadow)" />
   </div>
   <div>
-    <DarkPink />
-    <Source language="css" code="var(--darkpink)" />
-  </div>
-  <div>
-    <MattePink />
-    <Source language="css" code="var(--mattepink)" />
-  </div>
-  <div>
-    <LogoPink />
-    <Source language="css" code="var(--logopink)" />
-  </div>
-  <div>
-    <LightGrey />
-    <Source language="css" code="var(--lightgrey)" />
-  </div>
-  <div>
-    <DarkGrey />
-    <Source language="css" code="var(--darkgrey)" />
-  </div>
-  <div>
-    <DarkBurgundy />
-    <Source language="css" code="var(--darkburgundy)" />
-  </div>
-  <div>
-    <Orange />
-    <Source language="css" code="var(--orange)" />
-  </div>
-  <div>
-    <LightBlue />
-    <Source language="css" code="var(--lightblue)" />
-  </div>
-  <div>
-    <MidBlue />
-    <Source language="css" code="var(--midblue)" />
-  </div>
-  <div>
-    <DarkBlue />
-    <Source language="css" code="var(--darkblue)" />
+    <ModalShadow />
+    <Source language="css" code="var(--modal-shadow)" />
   </div>
 </Grid>
