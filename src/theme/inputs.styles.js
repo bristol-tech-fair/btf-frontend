@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const InputWrapper = styled.div`
+const InputWrapper = styled.div`
   input,
   textarea,
   select {
@@ -15,3 +15,5 @@ export const InputWrapper = styled.div`
     font-size: 1rem;
   }
 `;
+
+export default InputWrapper;
