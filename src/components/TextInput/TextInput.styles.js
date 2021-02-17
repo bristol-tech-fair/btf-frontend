@@ -1,18 +1,7 @@
 import styled from 'styled-components';
+import InputWrapper from '../../theme/inputs.styles';
 
-export const TextInputWrapper = styled.div`
+export const TextInputWrapper = styled(InputWrapper)`
   display: flex;
   flex-direction: column;
-
-  input {
-    padding: var(--small-space);
-    border: 0.1rem solid var(--lightblue);
-    background: var(--lightgrey);
-    border-radius: 0.5rem;
-  }
-
-  placeholder {
-    color: var(--darkgrey);
-    font-size: 1rem;
-  }
 `;
