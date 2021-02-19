@@ -6,4 +6,4 @@ export default {
   component: NavLink
 };
 
-export const HelloWorld = () => <NavLink value="Hello world!" />;
+export const NavLinkText = () => <NavLink value="Nav link" />;
