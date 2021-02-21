@@ -6,4 +6,13 @@ export default {
   component: Card
 };
 
-export const CardTest = () => <Card />;
+export const CardTest = () => (
+  <Card
+    title="First title"
+    category="maths"
+    ageMin="6"
+    ageMax="18"
+    rating="4"
+    pattern="SmallOrange"
+  />
+);
