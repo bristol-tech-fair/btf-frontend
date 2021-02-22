@@ -14,6 +14,10 @@ export const Pattern = styled.div`
 `;
 
 export const CardWrapper = styled.div`
+  /**
+  Border color is based on the Pattern used, ned to be refactored
+  when patterns would be ready to use
+   */
   border: ${(props) => {
     if (props.color === 'SmallOrange') {
       return '.1rem solid var(--orange)';
@@ -42,6 +46,7 @@ export const CardWrapper = styled.div`
   height: 35.1rem;
   width: 24rem;
   text-transform: capitalize;
+  transition: all 0.2s ease-out;
   &:hover {
     cursor: pointer;
     transform: translate(0rem, -0.7rem);
