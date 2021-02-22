@@ -77,6 +77,6 @@ ResourceCard.propTypes = {
   title: PropTypes.string.isRequired,
   ageMin: PropTypes.number.isRequired,
   ageMax: PropTypes.number.isRequired,
-  rating: PropTypes.oneOf([...new Array(6)].map((_, i) => i))
+  rating: PropTypes.oneOf(['0', '1', '2', '3', '4', '5'])
 };
 export default ResourceCard;
