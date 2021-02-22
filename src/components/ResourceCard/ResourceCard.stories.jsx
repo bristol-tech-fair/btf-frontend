@@ -10,9 +10,9 @@ export const CardTest = () => (
   <Card
     title="First title"
     category="maths"
-    ageMin="6"
-    ageMax="18"
-    rating="4"
+    ageMin={6}
+    ageMax={18}
+    rating={2}
     pattern="SmallOrange"
   />
 );
