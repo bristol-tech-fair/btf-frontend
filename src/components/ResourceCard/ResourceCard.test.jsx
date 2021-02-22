@@ -5,8 +5,10 @@ import ResourceCard from './ResourceCard';
 
 describe('ResourceCard', () => {
   test('renders ResourceCard component', () => {
-    render(<ResourceCard title="Testing title" ageMin="6" ageMax="18" />);
+    render(<ResourceCard title="First title" category="maths" />);
 
+    expect(screen.getByText('First title'));
+    expect(screen.getByText('maths'));
     screen.debug();
   });
 });
