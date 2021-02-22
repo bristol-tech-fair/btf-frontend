@@ -1,18 +1,18 @@
 import React from 'react';
-import Card from './ResourceCard';
+import ResourceCard from './ResourceCard';
 
 export default {
   title: 'Components/ResourceCard',
-  component: Card
+  component: ResourceCard
 };
 
 export const CardTest = () => (
-  <Card
+  <ResourceCard
     title="First title"
     category="maths"
-    ageMin={6}
-    ageMax={18}
-    rating={2}
+    ageMin="6"
+    ageMax="18"
+    rating="2"
     pattern="SmallOrange"
   />
 );
