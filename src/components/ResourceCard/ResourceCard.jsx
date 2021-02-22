@@ -67,16 +67,16 @@ const ResourceCard = ({ category, title, ageMin, ageMax, rating, pattern }) => {
 };
 
 ResourceCard.propTypes = {
-  category: PropTypes.oneOf(['coding', 'maths', 'electronics']),
+  category: PropTypes.oneOf(['coding', 'maths', 'electronics']).isRequired,
   pattern: PropTypes.oneOf([
     'SmallOrange',
     'SmallMidblue',
     'SmallLogopink',
     'SmallLightblue'
-  ]),
+  ]).isRequired,
   title: PropTypes.string.isRequired,
   ageMin: PropTypes.number.isRequired,
   ageMax: PropTypes.number.isRequired,
-  rating: PropTypes.oneOf(['0', '1', '2', '3', '4', '5'])
+  rating: PropTypes.oneOf([...new Array(6)].map((_, i) => i))
 };
 export default ResourceCard;

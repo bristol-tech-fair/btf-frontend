@@ -5,8 +5,8 @@ import ResourceCard from './ResourceCard';
 
 describe('ResourceCard', () => {
   test('renders ResourceCard component', () => {
-    render(<ResourceCard value="Hello" />);
+    render(<ResourceCard title="Testing title" ageMin="6" ageMax="18" />);
 
-    expect(screen.getByText('Hello'));
+    screen.debug();
   });
 });
