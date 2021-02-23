@@ -21,21 +21,51 @@ function Router() {
   return (
     <>
       <Switch location={background || location}>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/policy" exact component={Policy} />
-        <Route path="/terms" exact component={Terms} />
-        <Route path="/books" component={Books} />
-        <Route path="/clubs" component={Clubs} />
-        <Route path="/competetions" component={Competetions} />
-        <Route path="/codeofconduct" component={CodeOfConduct} />
-        <Route path="/events" component={Events} />
-        <Route exact path="/resources" component={Resources} />
-        <Route path="/resources/:title" component={ResourcePage} />
-        <Route exact path="/posts" component={Posts} />
-        <Route path="/posts/:title" component={PostPage} />
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/policy">
+          <Policy />
+        </Route>
+        <Route path="/terms">
+          <Terms />
+        </Route>
+        <Route path="/books">
+          <Books />
+        </Route>
+        <Route path="/clubs">
+          <Clubs />
+        </Route>
+        <Route path="/competetions">
+          <Competetions />
+        </Route>
+        <Route path="/codeofconduct">
+          <CodeOfConduct />
+        </Route>
+        <Route path="/events">
+          <Events />
+        </Route>
+        <Route exact path="/resources">
+          <Resources />
+        </Route>
+        <Route path="/resources/:title">
+          <ResourcePage />
+        </Route>
+        <Route exact path="/posts">
+          <Posts />
+        </Route>
+        <Route path="/posts/:title">
+          <PostPage />
+        </Route>
       </Switch>
-      {background && <Route path="/addresources" component={AddResource} />}
+      {background && (
+        <Route path="/addresources">
+          <AddResource />
+        </Route>
+      )}
     </>
   );
 }

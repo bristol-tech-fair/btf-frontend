@@ -7,7 +7,7 @@ const Footer = () => {
     <FooterWrapper>
       <div className="footerdiv">
         <NavLink path="/about" value="About" />
-        <NavLink path="/contact" value="Contact" />
+        <NavLink path="#" value="Contact" />
       </div>
       <div className="footerdiv">
         <NavLink path="/codeofconduct" value="Code Of Conduct" />

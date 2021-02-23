@@ -1,25 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import PageContainer from '../components/PageContainer';
+import TertiaryButton from '../components/TertiaryButton';
 
-const ResourcePage = ({ match }) => {
+const ResourcePage = () => {
+  const location = useLocation();
+  const { title } = useParams();
   return (
     <PageContainer direction="column">
       <h1>Resource Page</h1>
       <p>
         <strong>Book Title: </strong>
-        {match.params.title}
+        {title}
       </p>
+      <Link
+        to={{
+          pathname: '/addresources',
+          state: { background: location }
+        }}
+      >
+        <TertiaryButton content="Submit" />
+      </Link>
     </PageContainer>
   );
-};
-
-ResourcePage.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      title: PropTypes.node
-    }).isRequired
-  }).isRequired
 };
 
 export default ResourcePage;

@@ -1,25 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
+
 import PageContainer from '../components/PageContainer';
 
-const PostPage = ({ match }) => {
+const PostPage = () => {
+  const { title } = useParams();
   return (
     <PageContainer direction="column">
       <h1>Post Page</h1>
       <p>
         <strong>Post Title: </strong>
-        {match.params.title}
+        {title}
       </p>
     </PageContainer>
   );
-};
-
-PostPage.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      title: PropTypes.node
-    }).isRequired
-  }).isRequired
 };
 
 export default PostPage;
