@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowCircleRight from './ArrowCircleRight';
 
 export default {
-  title: 'Components/ArrowCircleRight',
+  title: 'Components/Icons/ArrowCircleRight',
   component: ArrowCircleRight
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import HeartFull from './HeartFull';
 
 export default {
-  title: 'Components/HeartFull',
+  title: 'Components/Icons/HeartFull',
   component: HeartFull
 };
 
