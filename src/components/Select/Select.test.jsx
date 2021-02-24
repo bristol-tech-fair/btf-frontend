@@ -4,32 +4,24 @@ import '@testing-library/jest-dom/extend-expect';
 
 import Select from './Select';
 
-describe('Select', () => {
-  test('renders Select component', () => {
-    render(<Select value="Hello" />);
+test('onBlur prop called when clicking away from component', () => {
+  const handleChange = jest.fn();
 
-    expect(screen.getByText('Hello'));
-  });
+  render(
+    <Select
+      name="test name"
+      label="test label"
+      value="test default value"
+      options={[
+        { optionValue: 'a', optionLabel: 'b' },
+        { optionValue: 'c', optionLabel: 'd' },
+        { optionValue: 'e', optionLabel: 'f' }
+      ]}
+      onBlur={handleChange}
+    />
+  );
 
-  test('onBlur prop called when clicking away from component', () => {
-    const handleChange = jest.fn();
+  fireEvent.blur(screen.getByRole('select'));
 
-    render(
-      <Select
-        name="test name"
-        label="test label"
-        defaultValue="test default value"
-        options={[
-          { optionValue: 'a', optionLabel: 'b' },
-          { optionValue: 'c', optionLabel: 'd' },
-          { optionValue: 'e', optionLabel: 'f' }
-        ]}
-        onBlur={handleChange}
-      />
-    );
-
-    fireEvent.blur(screen.getByRole('select'));
-
-    expect(handleChange).toHaveBeenCalledTimes(1);
-  });
+  expect(handleChange).toHaveBeenCalledTimes(1);
 });
