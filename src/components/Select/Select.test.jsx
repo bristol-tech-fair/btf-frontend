@@ -15,7 +15,9 @@ test('Label correctly associated with select component by screenreader', () => {
         { optionValue: 'c', optionLabel: 'd' },
         { optionValue: 'e', optionLabel: 'f' }
       ]}
-      onBlur={() => { console.log('I am working!') }}
+      onBlur={() => {
+        console.log('I am working!');
+      }}
     />
   );
 
