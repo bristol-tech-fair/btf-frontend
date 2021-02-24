@@ -22,7 +22,7 @@ describe('Select', () => {
         options={[
           { optionValue: 'a', optionLabel: 'b' },
           { optionValue: 'c', optionLabel: 'd' },
-          { optionValue: 'e', optionLabel: 'f' },
+          { optionValue: 'e', optionLabel: 'f' }
         ]}
         onBlur={handleChange}
       />
