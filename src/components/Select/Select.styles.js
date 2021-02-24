@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-// import InputWrapper from '../../theme/inputs.styles';
 
-// export const SelectWrapper = styled(InputWrapper)`
 export const SelectWrapper = styled.div`
   display: flex;
   flex-flow: column;
