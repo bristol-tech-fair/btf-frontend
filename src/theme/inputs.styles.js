@@ -4,7 +4,7 @@ const InputWrapper = styled.div`
   input,
   textarea,
   select {
-    padding: var(--small-space) var(--smallest-space);
+    padding: var(--small-space);
     border: 0.1rem solid var(--lightblue);
     background: var(--lightgrey);
     border-radius: 0.5rem;
