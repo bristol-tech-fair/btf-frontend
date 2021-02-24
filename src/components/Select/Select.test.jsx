@@ -4,9 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 import Select from './Select';
 
-test('onBlur prop called when clicking away from component', () => {
-  const handleChange = jest.fn();
-
+test('Label correctly associated with select component by screenreader', () => {
   render(
     <Select
       name="test name"
@@ -17,11 +15,9 @@ test('onBlur prop called when clicking away from component', () => {
         { optionValue: 'c', optionLabel: 'd' },
         { optionValue: 'e', optionLabel: 'f' }
       ]}
-      onBlur={handleChange}
+      onBlur={() => { console.log('I am working!') }}
     />
   );
 
-  fireEvent.blur(screen.getByRole('select'));
-
-  expect(handleChange).toHaveBeenCalledTimes(1);
+  fireEvent.blur(screen.getByLabelText('test label'));
 });
