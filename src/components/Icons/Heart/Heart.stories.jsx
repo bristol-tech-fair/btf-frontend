@@ -2,7 +2,7 @@ import React from 'react';
 import Heart from './Heart';
 
 export default {
-  title: 'Components/Heart',
+  title: 'Components/Icons/Heart',
   component: Heart
 };
 

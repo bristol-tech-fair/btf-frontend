@@ -2,7 +2,7 @@ import React from 'react';
 import Twitter from './Twitter';
 
 export default {
-  title: 'Components/Twitter',
+  title: 'Components/Icons/Twitter',
   component: Twitter
 };
 

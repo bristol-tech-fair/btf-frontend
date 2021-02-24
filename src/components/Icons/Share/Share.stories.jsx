@@ -2,7 +2,7 @@ import React from 'react';
 import Share from './Share';
 
 export default {
-  title: 'Components/Share',
+  title: 'Components/Icons/Share',
   component: Share
 };
 
