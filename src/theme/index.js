@@ -12,7 +12,6 @@ const Theme = () => {
       <Palette />
       <Typography />
       <Spacings />
-      <InputWrapper />
     </>
   );
 };
