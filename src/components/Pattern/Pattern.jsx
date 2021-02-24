@@ -4,7 +4,6 @@ import { PatternWrapper } from './Pattern.styles';
 import { SmallSVG, MediumSVG, LargeSVG } from './Pattern.svgs';
 
 const Pattern = ({ color = 'midblue', size = 'M' }) => {
-  // const Pattern = ({ color = 'midblue' }) => {
   let Svg;
 
   switch (size) {
