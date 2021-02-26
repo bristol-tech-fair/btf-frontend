@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SVG } from '../Pattern.styles';
-
+// Component below has own view-box property as it doesnt have to be modified. All <path> tags must have some className as it will be used to modify color in the future.
 const Small = ({ color }) => {
   return (
     <SVG viewBox="0 0 308 203" color={color}>

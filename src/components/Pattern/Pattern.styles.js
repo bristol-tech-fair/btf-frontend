@@ -6,6 +6,7 @@ export const PatternWrapper = styled.div`
   }
 `;
 
+// Styling component is used  as global (reusable) styling for large, Medium, Small banners.
 export const SVG = styled.svg.attrs(() => ({
   height: 'inherit',
   width: 'inherit',
