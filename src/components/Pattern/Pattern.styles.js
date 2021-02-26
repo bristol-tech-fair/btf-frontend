@@ -5,3 +5,17 @@ export const PatternWrapper = styled.div`
     fill: ${({ color }) => `var(--${color})`};
   }
 `;
+
+export const SVG = styled.svg.attrs(() => ({
+  height: 'inherit',
+  width: 'inherit',
+  version: '1.1',
+  xmlns: 'http://www.w3.org/2000/svg',
+  xmlnsXlink: 'http://www.w3.org/1999/xlink'
+}))`
+  fill: ${({ color }) => `var(--${color})`};
+  // Delete class styling below. It is only for testing purpose.
+  .pattern-color {
+    fill: green;
+  }
+`;
