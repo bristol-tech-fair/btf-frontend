@@ -8,11 +8,10 @@ export default {
 
 export const CardTest = () => (
   <ResourceCard
-    title="First title"
-    category="maths"
-    ageMin="6"
-    ageMax="18"
+    title="Title first line, second line, third line."
+    category="Electronics"
+    ages={['6', '16']}
     rating="2"
-    pattern="SmallOrange"
+    color="lightblue"
   />
 );

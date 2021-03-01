@@ -7,8 +7,6 @@ import {
   ContentRating,
   Content,
   ContentInfo,
-  InfoCategory,
-  InfoAges,
   RatingOne,
   RatingTwo,
   RatingThree,
@@ -16,44 +14,31 @@ import {
   RatingFive
 } from './ResourceCard.styles';
 import { Heart, HeartFull } from '../Icons';
-import SmallOrange from './Orange';
+import { Small } from '../Pattern';
 
-const ResourceCard = ({ category, title, ageMin, ageMax, rating, pattern }) => {
+const ResourceCard = ({ category, title, ages, rating, color }) => {
   const condition = rating;
-  const color = pattern;
+  let age = '';
+  if (ages) {
+    age = ages
+      .slice(0, 2)
+      .map((value) => value)
+      .join('-');
+  }
+
   return (
-    /**
-        Resorurce Card border color must match
-        color of used PATTERN
-     */
     <CardWrapper color={color}>
-      {/**
-       * Imported PATTERN is biger than container
-       * whitch supose to hold it.
-       * Each pattern must INHERIT width and height of container
-       */}
-      <Pattern>
-        {/**
-         * Need to set pattern as props
-         */}
-        {color === 'SmallOrange' ? (
-          <SmallOrange />
-        ) : (
-          <p>something went wrong</p>
-        )}
-      </Pattern>
       <Content>
+        <Pattern>
+          <Small color={color} />
+        </Pattern>
         <ContentInfo>
-          <InfoCategory>{category}</InfoCategory>
-          <InfoAges>
-            Ages: {ageMin}-{ageMax}
-          </InfoAges>
+          <p>
+            <strong>{category}</strong>
+          </p>
+          <p>Ages: {age}</p>
         </ContentInfo>
         <ContentTitle>{title}</ContentTitle>
-        {/**
-         * Rating is set by passing props
-         *
-         */}
         <ContentRating>
           <RatingOne>{condition > 0 ? <HeartFull /> : <Heart />}</RatingOne>
           <RatingTwo>{condition > 1 ? <HeartFull /> : <Heart />}</RatingTwo>
@@ -68,15 +53,21 @@ const ResourceCard = ({ category, title, ageMin, ageMax, rating, pattern }) => {
 
 ResourceCard.propTypes = {
   category: PropTypes.oneOf(['coding', 'maths', 'electronics']).isRequired,
-  pattern: PropTypes.oneOf([
-    'SmallOrange',
-    'SmallMidblue',
-    'SmallLogopink',
-    'SmallLightblue'
-  ]).isRequired,
   title: PropTypes.string.isRequired,
-  ageMin: PropTypes.number.isRequired,
-  ageMax: PropTypes.number.isRequired,
-  rating: PropTypes.oneOf(['0', '1', '2', '3', '4', '5'])
+  ages: PropTypes.arrayOf(PropTypes.number).isRequired,
+  rating: PropTypes.oneOf(['0', '1', '2', '3', '4', '5']),
+  color: PropTypes.oneOf([
+    'lightpink',
+    'darkpink',
+    'mattepink',
+    'logopink',
+    'lightgrey',
+    'darkgrey',
+    'darkburgundy',
+    'orange',
+    'lightblue',
+    'midblue',
+    'darkblue'
+  ]).isRequired
 };
 export default ResourceCard;
