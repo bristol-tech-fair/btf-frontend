@@ -15,10 +15,11 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
   const condition = rating;
   let age = '';
   if (ages) {
-    age = ages
-      .slice(0, 2)
-      .map((value) => value)
-      .join('-');
+    if (ages.length > 2) {
+      age = 'error';
+    } else {
+      age = ages.map((value) => value).join('-');
+    }
   }
 
   return (
