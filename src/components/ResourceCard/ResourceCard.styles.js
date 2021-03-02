@@ -29,7 +29,7 @@ export const CardWrapper = styled.div`
   border: ${({ color }) => `0.1rem solid var(--${color})`};
   box-sizing: border-box;
   border-radius: var(--smallest-space);
-  transition: all 0.2s ease-out;
+  transition: all 0.2s ease;
   &:hover {
     cursor: pointer;
     transform: translate(0rem, -0.7rem);
