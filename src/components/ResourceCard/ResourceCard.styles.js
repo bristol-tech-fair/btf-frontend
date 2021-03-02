@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-export const CardWrapper232 = styled.div``;
-
 export const Pattern = styled.div`
   border-radius: var(--smallest-space) var(--smallest-space) 0 0;
   height: 15.8rem;

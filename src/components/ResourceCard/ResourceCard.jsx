@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {
   CardWrapper,
   Pattern,
+  Content,
   ContentTitle,
   ContentRating,
-  Content,
   ContentInfo
 } from './ResourceCard.styles';
 import { Heart, HeartFull } from '../Icons';
