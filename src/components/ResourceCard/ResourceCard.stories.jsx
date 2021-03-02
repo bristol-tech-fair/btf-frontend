@@ -10,7 +10,7 @@ export const CardTest = () => (
   <ResourceCard
     title="Title first line, second line, third line."
     category="Electronics"
-    ages={['6', '16']}
+    ages={[6, 18]}
     rating="2"
     color="lightblue"
   />
