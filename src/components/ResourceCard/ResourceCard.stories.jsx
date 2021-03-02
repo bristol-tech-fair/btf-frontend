@@ -11,7 +11,7 @@ export const CardTest = () => (
     title="Title first line, second line, third line."
     category="Electronics"
     ages={[6, 18]}
-    rating="2"
+    rating="3"
     color="lightblue"
   />
 );

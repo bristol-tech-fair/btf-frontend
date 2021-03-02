@@ -6,12 +6,7 @@ import {
   ContentTitle,
   ContentRating,
   Content,
-  ContentInfo,
-  RatingOne,
-  RatingTwo,
-  RatingThree,
-  RatingFour,
-  RatingFive
+  ContentInfo
 } from './ResourceCard.styles';
 import { Heart, HeartFull } from '../Icons';
 import { Small } from '../Pattern';
@@ -40,11 +35,11 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
         </ContentInfo>
         <ContentTitle>{title}</ContentTitle>
         <ContentRating>
-          <RatingOne>{condition > 0 ? <HeartFull /> : <Heart />}</RatingOne>
-          <RatingTwo>{condition > 1 ? <HeartFull /> : <Heart />}</RatingTwo>
-          <RatingThree>{condition > 2 ? <HeartFull /> : <Heart />}</RatingThree>
-          <RatingFour>{condition > 3 ? <HeartFull /> : <Heart />}</RatingFour>
-          <RatingFive>{condition > 4 ? <HeartFull /> : <Heart />}</RatingFive>
+          {condition > 0 ? <HeartFull /> : <Heart />}
+          {condition > 1 ? <HeartFull /> : <Heart />}
+          {condition > 2 ? <HeartFull /> : <Heart />}
+          {condition > 3 ? <HeartFull /> : <Heart />}
+          {condition > 4 ? <HeartFull /> : <Heart />}
         </ContentRating>
       </Content>
     </CardWrapper>
