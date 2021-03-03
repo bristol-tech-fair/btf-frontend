@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 /*
-TODO   Use code below to style Patter nomponent when ready
+TODO   Use code below to style Pattern component when ready
 export const Pattern = styled.div`
   display: flex;
   border-radius: var(--smallest-space) var(--smallest-space) 0 0;

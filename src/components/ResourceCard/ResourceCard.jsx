@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Content,
-  Pattern,
   ContentTitle,
   ContentRating,
   ContentInfo
 } from './ResourceCard.styles';
 import { Heart, HeartFull } from '../Icons';
 /*
-TODO    Import Pattern component
+TODO    Import Pattern component and style
 // import { Small } from '../Pattern';
 */
 const ResourceCard = ({ category, title, ages, rating, color }) => {
@@ -27,7 +26,7 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
     <Content color={color}>
       <Pattern>
         {/*
-      // TODO Insert Patter component
+      // TODO Insert Pattern component
        ////<Small color={color} />
        */}
       </Pattern>
