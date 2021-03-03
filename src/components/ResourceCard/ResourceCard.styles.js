@@ -52,7 +52,6 @@ export const Content = styled.div`
 `;
 
 export const ContentInfo = styled.div`
-  color: var(--darkblue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,6 +59,7 @@ export const ContentInfo = styled.div`
   position: absolute;
   top: 11rem;
   margin: var(--small-space) 0;
+  color: var(--darkblue);
   text-transform: capitalize;
 `;
 
