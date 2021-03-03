@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+/*
+TODO   Use code below to style Patter nomponent when ready
 export const Pattern = styled.div`
   display: flex;
   border-radius: var(--smallest-space) var(--smallest-space) 0 0;
@@ -15,7 +17,7 @@ export const Pattern = styled.div`
     fill: var(--white);
   }
 `;
-
+*/
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -41,9 +43,12 @@ export const Content = styled.div`
     filter: drop-shadow(
       0 var(--smallest-space) var(--smallest-space) rgba(0, 0, 0, 0.1)
     );
-    & ${Pattern} {
+    /*
+    TODO When Pattern component would be ready to use code below and add $ sign before {Pattern}
+    & {Pattern} {
       opacity: 1;
     }
+     */
   }
 `;
 

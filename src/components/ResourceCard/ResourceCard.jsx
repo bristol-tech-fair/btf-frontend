@@ -8,8 +8,10 @@ import {
   ContentInfo
 } from './ResourceCard.styles';
 import { Heart, HeartFull } from '../Icons';
-import { Small } from '../Pattern';
-
+/*
+TODO    Import Pattern component
+// import { Small } from '../Pattern';
+*/
 const ResourceCard = ({ category, title, ages, rating, color }) => {
   const condition = rating;
   let age = '';
@@ -24,7 +26,10 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
   return (
     <Content color={color}>
       <Pattern>
-        <Small color={color} />
+        {/*
+      // TODO Insert Patter component
+       ////<Small color={color} />
+       */}
       </Pattern>
       <ContentInfo>
         <p>
