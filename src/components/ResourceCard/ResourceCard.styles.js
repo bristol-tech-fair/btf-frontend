@@ -25,7 +25,6 @@ export const Content = styled.div`
   align-items: center;
   position: absolute;
   padding: var(--largest-space) var(--smallest-space) var(--medium-space);
-  position: absolute;
   width: 24rem;
   height: 35.1rem;
   left: 0;
