@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  CardWrapper,
-  Pattern,
   Content,
+  Pattern,
   ContentTitle,
   ContentRating,
   ContentInfo
@@ -23,27 +22,25 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
   }
 
   return (
-    <CardWrapper color={color}>
-      <Content>
-        <Pattern>
-          <Small color={color} />
-        </Pattern>
-        <ContentInfo>
-          <p>
-            <strong>{category}</strong>
-          </p>
-          <p>Ages: {age}</p>
-        </ContentInfo>
-        <ContentTitle>{title}</ContentTitle>
-        <ContentRating>
-          {condition > 0 ? <HeartFull /> : <Heart />}
-          {condition > 1 ? <HeartFull /> : <Heart />}
-          {condition > 2 ? <HeartFull /> : <Heart />}
-          {condition > 3 ? <HeartFull /> : <Heart />}
-          {condition > 4 ? <HeartFull /> : <Heart />}
-        </ContentRating>
-      </Content>
-    </CardWrapper>
+    <Content color={color}>
+      <Pattern>
+        <Small color={color} />
+      </Pattern>
+      <ContentInfo>
+        <p>
+          <strong>{category}</strong>
+        </p>
+        <p>Ages: {age}</p>
+      </ContentInfo>
+      <ContentTitle>{title}</ContentTitle>
+      <ContentRating>
+        {condition > 0 ? <HeartFull /> : <Heart />}
+        {condition > 1 ? <HeartFull /> : <Heart />}
+        {condition > 2 ? <HeartFull /> : <Heart />}
+        {condition > 3 ? <HeartFull /> : <Heart />}
+        {condition > 4 ? <HeartFull /> : <Heart />}
+      </ContentRating>
+    </Content>
   );
 };
 

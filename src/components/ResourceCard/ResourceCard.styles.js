@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Pattern = styled.div`
+  display: flex;
   border-radius: var(--smallest-space) var(--smallest-space) 0 0;
   height: 15.8rem;
   position: absolute;
@@ -15,7 +16,13 @@ export const Pattern = styled.div`
   }
 `;
 
-export const CardWrapper = styled.div`
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: var(--largest-space) var(--smallest-space) var(--medium-space);
   position: absolute;
   width: 24rem;
   height: 35.1rem;
@@ -38,19 +45,6 @@ export const CardWrapper = styled.div`
       opacity: 1;
     }
   }
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  padding: var(--largest-space) var(--smallest-space) var(--medium-space);
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
 `;
 
 export const ContentInfo = styled.div`
