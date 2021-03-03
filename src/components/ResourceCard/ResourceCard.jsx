@@ -24,12 +24,11 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
 
   return (
     <Content color={color}>
-      <Pattern>
-        {/*
+      {/*
       // TODO Insert Pattern component
-       ////<Small color={color} />
+       ////<Pattern><Small color={color} /></Pattern>
        */}
-      </Pattern>
+
       <ContentInfo>
         <p>
           <strong>{category}</strong>
