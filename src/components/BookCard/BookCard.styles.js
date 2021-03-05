@@ -2,9 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const BookCardWrapper = styled(Link)`
-  width: 24rem;
-  height: 30.9rem;
-  background: #ffffff;
+  background: var(--white);
   border: 0.1rem solid var(--lightblue);
   border-radius: 1rem;
   overflow: hidden;
