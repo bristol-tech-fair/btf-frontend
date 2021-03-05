@@ -2,7 +2,7 @@ import React from 'react';
 import Youtube from './Youtube';
 
 export default {
-  title: 'Components/Youtube',
+  title: 'Components/Icons/Youtube',
   component: Youtube
 };
 

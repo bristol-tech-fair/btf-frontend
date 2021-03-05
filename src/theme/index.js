@@ -1,6 +1,7 @@
 import React from 'react';
 import Init from './init.styles';
 import Palette from './palette.styles';
+import Shadows from './shadows.styles';
 import Spacings from './spacings.styles';
 import Typography from './typography.styles';
 import Shadows from './shadows.styles';

@@ -2,7 +2,7 @@ import React from 'react';
 import Facebook from './Facebook';
 
 export default {
-  title: 'Components/Facebook',
+  title: 'Components/Icons/Facebook',
   component: Facebook
 };
 
