@@ -1,36 +1,28 @@
 import styled from 'styled-components';
 
-/*
-TODO   Use code below to style Pattern component when ready
-export const Pattern = styled.div`
+export const Banner = styled.div`
   display: flex;
+  align-self: flex-start;
   border-radius: var(--smallest-space) var(--smallest-space) 0 0;
-  height: 15.8rem;
   position: absolute;
   left: 0;
   right: 0;
-  top: 0.02%;
-  bottom: 0.03%;
+  top: 0;
+  bottom: 0;
   opacity: 0.6;
   overflow: hidden;
-  .pattern-color {
-    fill: var(--white);
-  }
 `;
-*/
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
   padding: var(--largest-space) var(--smallest-space) var(--medium-space);
-  width: 24rem;
+  max-width: 30.8rem;
+  min-width: 24rem;
   height: 35.1rem;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  position: relative;
   background: var(--white);
   border: ${({ color }) => `0.1rem solid var(--${color})`};
   box-sizing: border-box;
@@ -39,15 +31,10 @@ export const Content = styled.div`
   &:hover {
     cursor: pointer;
     transform: translate(0rem, -0.7rem);
-    filter: drop-shadow(
-      0 var(--smallest-space) var(--smallest-space) rgba(0, 0, 0, 0.1)
-    );
-    /*
-    TODO When Pattern component would be ready to use code below and add $ sign before {Pattern}
-    & {Pattern} {
-      opacity: 1;
-    }
-     */
+    box-shadow: var(--card-shadow);
+  }
+  &:hover ${Banner} {
+    opacity: 1;
   }
 `;
 
@@ -55,33 +42,25 @@ export const ContentInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  order: 0;
   position: absolute;
-  top: 11rem;
+  top: 12rem;
   margin: var(--small-space) 0;
   color: var(--darkblue);
   text-transform: capitalize;
 `;
 
 export const ContentTitle = styled.h3`
-  flex: none;
-  order: 1;
-  flex-grow: 0;
   text-align: center;
-  margin: var(--small-space) 0;
+  margin-top: var(--small-space);
 `;
 
 export const ContentRating = styled.div`
   display: flex;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
   top: 28.7rem;
   width: var(--largest-space);
-  left: var(--medium-space);
   margin: var(--small-space) 0;
   padding: 0;
 `;
