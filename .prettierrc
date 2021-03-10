@@ -1,5 +1,7 @@
 {
   "semi": true,
   "singleQuote": true,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "endOfLine": "auto",
+  "useTabs": false
 }
