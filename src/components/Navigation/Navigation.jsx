@@ -1,22 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { NavigationWrapper } from './Navigation.styles';
 
 import Logo from '../Logo';
+import NavLink from '../NavLink';
 import TextButton from '../TextButton';
 
-const Navigation = ({ value }) => {
+const Navigation = () => {
   return (
     <NavigationWrapper>
       <Logo color="red" />
-      <p>{value}</p>
+      <NavLink content="Learning Resources" />
+      <NavLink content="Book List" />
+      <NavLink content="Events" />
+      <NavLink content="Clubs" />
+      <NavLink content="Competitions" />
+      <NavLink content="Support Groups" />
+      <NavLink content="Posts" />
       <TextButton content="Add a resource" />
     </NavigationWrapper>
   );
-};
-
-Navigation.propTypes = {
-  value: PropTypes.string.isRequired
 };
 
 export default Navigation;
