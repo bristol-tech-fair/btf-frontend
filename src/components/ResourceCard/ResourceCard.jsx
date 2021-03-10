@@ -14,8 +14,8 @@ const ResourceCard = ({ category, title, ages, rating, color, to }) => {
   const condition = rating;
   let age = '';
   if (ages) {
-    if (ages.length > 2) {
-      age = 'error';
+    if (ages.length > 2 || ages.length < 2) {
+      age = 'No specific age';
     } else {
       age = ages.map((value) => value).join('-');
     }
