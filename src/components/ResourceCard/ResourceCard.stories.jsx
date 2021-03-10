@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ResourceCard from './ResourceCard';
 
 export default {
@@ -7,11 +8,14 @@ export default {
 };
 
 export const CardTest = () => (
-  <ResourceCard
-    title="Title first line, second line, third line."
-    category="Electronics"
-    ages={[6, 18]}
-    rating="3"
-    color="lightblue"
-  />
+  <Router>
+    <ResourceCard
+      title="Title first line, second line, third line."
+      category="Electronics"
+      ages={[6, 18]}
+      rating="3"
+      color="midblue"
+      to="/"
+    />
+  </Router>
 );

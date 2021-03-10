@@ -10,7 +10,7 @@ import {
 import { Heart, HeartFull } from '../Icons';
 import { Small } from '../Banners';
 
-const ResourceCard = ({ category, title, ages, rating, color }) => {
+const ResourceCard = ({ category, title, ages, rating, color, to }) => {
   const condition = rating;
   let age = '';
   if (ages) {
@@ -22,7 +22,7 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
   }
 
   return (
-    <Content color={color}>
+    <Content color={color} to={to}>
       <Banner>
         <Small color={color} />
       </Banner>
@@ -47,6 +47,7 @@ const ResourceCard = ({ category, title, ages, rating, color }) => {
 ResourceCard.propTypes = {
   category: PropTypes.oneOf(['coding', 'maths', 'electronics']).isRequired,
   title: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
   ages: PropTypes.arrayOf(PropTypes.number).isRequired,
   rating: PropTypes.oneOf(['0', '1', '2', '3', '4', '5']),
   color: PropTypes.oneOf([

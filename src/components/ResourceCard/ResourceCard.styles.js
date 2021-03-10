@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Banner = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ export const Banner = styled.div`
   overflow: hidden;
 `;
 
-export const Content = styled.div`
+export const Content = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,10 +29,14 @@ export const Content = styled.div`
   box-sizing: border-box;
   border-radius: var(--smallest-space);
   transition: all 0.2s ease;
-  &:hover {
-    cursor: pointer;
+  cursor: pointer;
+  &:hover,
+  &:active {
     transform: translate(0rem, -0.7rem);
     box-shadow: var(--card-shadow);
+  }
+  &:focus {
+    box-shadow: ${({ color }) => `0 0 0 0.3rem var(--${color})`};
   }
   &:hover ${Banner} {
     opacity: 1;
