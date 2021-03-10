@@ -1,0 +1,65 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+import { styled } from '@storybook/theming';
+import Theme from './index';
+
+<Meta title="Theme/Shadows" />
+
+# Shadows
+
+A predefined set of box shadows helps to ensure brand consistency across the application. Please only use the shadows defined below.
+
+<br />
+<br />
+
+### How to use the shadows
+
+When creating components you'll want to use these shadows in your code.
+
+Adding them in to your `Component.styles.js` file is simple, click the 'copy' button beneath the shadow.
+
+And paste it where you would normally add your `box-shadow` value.
+
+```js
+import styled from 'styled-components';
+
+export const ExampleWrapper = styled.div`
+  box-shadow: var(--card-shadow);
+`;
+```
+
+<Theme />
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 80px;
+`;
+
+export const CardShadow = styled.div`
+  border-radius: 5px;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 40px;
+  background-color: var(--lightgrey);
+  box-shadow: var(--card-shadow);
+`;
+
+export const ModalShadow = styled.div`
+  border-radius: 5px;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 40px;
+  background-color: var(--lightgrey);
+  box-shadow: var(--modal-shadow);
+`;
+
+<Grid>
+  <div>
+    <CardShadow />
+    <Source language="css" code="var(--card-shadow)" />
+  </div>
+  <div>
+    <ModalShadow />
+    <Source language="css" code="var(--modal-shadow)" />
+  </div>
+</Grid>
