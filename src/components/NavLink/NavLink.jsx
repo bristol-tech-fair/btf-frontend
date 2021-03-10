@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLinkWrapper } from './NavLink.styles';
 
-const NavLink = ({ value, path }) => {
-  return <NavLinkWrapper to={path}>{value}</NavLinkWrapper>;
+const NavLink = ({ content, path }) => {
+  return <NavLinkWrapper to={path}>{content}</NavLinkWrapper>;
 };
 
 NavLink.propTypes = {
-  value: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired
 };
 

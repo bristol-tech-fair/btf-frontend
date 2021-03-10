@@ -5,7 +5,7 @@ import NavLink from './NavLink';
 
 describe('NavLink', () => {
   test('renders NavLink component', () => {
-    render(<NavLink value="Hello" />);
+    render(<NavLink content="Hello" />);
 
     expect(screen.getByText('Hello'));
   });
