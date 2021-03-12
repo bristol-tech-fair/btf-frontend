@@ -10,7 +10,7 @@ export default {
 export const CardTest = () => (
   <Router>
     <ResourceCard
-      title="It is <h2> tag. Should we use <h3> tag ??"
+      title="It is <h2> tag with media query to keep font size 2.8rem."
       category="Electronics"
       ages="6-10"
       rating="1"

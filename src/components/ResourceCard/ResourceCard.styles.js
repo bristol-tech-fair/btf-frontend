@@ -42,9 +42,9 @@ export const Content = styled(Link)`
   &:hover ${Banner} {
     opacity: 1;
   }
-  ${mediaQuery.desktop} {
+  ${mediaQuery.tablet} {
     h2 {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
     }
   }
 `;
@@ -67,7 +67,7 @@ export const ContentAges = styled.p`
 
 export const ContentTitle = styled.h2`
   position: absolute;
-  top: 55.45%;
+  top: 52.45%;
   text-align: center;
   line-height: 130%;
   margin: var(--smallest-space);
