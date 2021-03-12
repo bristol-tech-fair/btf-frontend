@@ -10,10 +10,10 @@ export default {
 export const CardTest = () => (
   <Router>
     <ResourceCard
-      title="Title first line, second line, third line."
+      title="It is <h2> tag. Should we use <h3> tag ??"
       category="Electronics"
       ages="6-10"
-      rating="3"
+      rating="1"
       color="midblue"
       to="/"
     />

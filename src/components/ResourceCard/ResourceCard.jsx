@@ -5,7 +5,8 @@ import {
   Content,
   ContentTitle,
   ContentRating,
-  ContentInfo
+  ContentCategory,
+  ContentAges
 } from './ResourceCard.styles';
 import { Heart, HeartFull } from '../Icons';
 import { Small } from '../Banners';
@@ -18,12 +19,10 @@ const ResourceCard = ({ category, title, ages, rating, color, to }) => {
       <Banner>
         <Small color={color} />
       </Banner>
-      <ContentInfo>
-        <p>
-          <strong>{category}</strong>
-        </p>
-        <p>Ages: {ages}</p>
-      </ContentInfo>
+      <ContentCategory>
+        <strong>{category}</strong>
+      </ContentCategory>
+      <ContentAges>Ages: {ages}</ContentAges>
       <ContentTitle>{title}</ContentTitle>
       <ContentRating>
         {condition > 0 ? <HeartFull /> : <Heart />}
