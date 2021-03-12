@@ -12,14 +12,6 @@ import { Small } from '../Banners';
 
 const ResourceCard = ({ category, title, ages, rating, color, to }) => {
   const condition = rating;
-  let age = '';
-  if (ages) {
-    if (ages.length > 2 || ages.length < 2) {
-      age = 'No specific age';
-    } else {
-      age = ages.map((value) => value).join('-');
-    }
-  }
 
   return (
     <Content color={color} to={to}>
@@ -30,7 +22,7 @@ const ResourceCard = ({ category, title, ages, rating, color, to }) => {
         <p>
           <strong>{category}</strong>
         </p>
-        <p>Ages: {age}</p>
+        <p>Ages: {ages}</p>
       </ContentInfo>
       <ContentTitle>{title}</ContentTitle>
       <ContentRating>
@@ -48,7 +40,7 @@ ResourceCard.propTypes = {
   category: PropTypes.oneOf(['coding', 'maths', 'electronics']).isRequired,
   title: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
-  ages: PropTypes.arrayOf(PropTypes.number).isRequired,
+  ages: PropTypes.string.isRequired,
   rating: PropTypes.oneOf(['0', '1', '2', '3', '4', '5']),
   color: PropTypes.oneOf([
     'lightpink',
