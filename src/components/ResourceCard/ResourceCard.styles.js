@@ -23,7 +23,9 @@ export const Content = styled(Link)`
   border-radius: var(--smallest-space);
   position: absolute;
   left: 0;
-  top: 1rem;
+  right: 0;
+  top: 0;
+  bottom: 0;
   width: 32.8rem;
   height: 44rem;
   transition: all 0.2s ease;
