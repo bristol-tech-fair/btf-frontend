@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Terms from '../pages/Terms';
@@ -14,13 +14,13 @@ import Posts from '../pages/Posts';
 import PostPage from '../pages/PostPage';
 import CodeOfConduct from '../pages/CodeOfConduct';
 import AddResource from '../pages/AddResource';
+import ModalContext from '../context/ModalContext';
 
 function Router() {
-  const location = useLocation();
-  const background = location.state && location.state.background;
+  const { modalOn } = useContext(ModalContext);
   return (
     <>
-      <Switch location={background || location}>
+      <Switch>
         <Route path="/" exact>
           <Home />
         </Route>
@@ -61,11 +61,7 @@ function Router() {
           <PostPage />
         </Route>
       </Switch>
-      {background && (
-        <Route path="/addresources">
-          <AddResource />
-        </Route>
-      )}
+      {modalOn && <AddResource />}
     </>
   );
 }

@@ -1,11 +1,12 @@
-import React from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
 import PageContainer from '../components/PageContainer';
 import TertiaryButton from '../components/TertiaryButton';
+import ModalContext from '../context/ModalContext';
 
 const ResourcePage = () => {
-  const location = useLocation();
   const { title } = useParams();
+  const { setModalOn } = useContext(ModalContext);
   return (
     <PageContainer direction="column">
       <h1>Resource Page</h1>
@@ -13,14 +14,7 @@ const ResourcePage = () => {
         <strong>Book Title: </strong>
         {title}
       </p>
-      <Link
-        to={{
-          pathname: '/addresources',
-          state: { background: location }
-        }}
-      >
-        <TertiaryButton content="Submit" />
-      </Link>
+      <TertiaryButton content="Submit" onClick={() => setModalOn(true)} />
     </PageContainer>
   );
 };

@@ -1,28 +1,26 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
 import ModalContainer from '../components/ModalContainer';
 import PrimaryButton from '../components/PrimaryButton';
 import PageContainer from '../components/PageContainer';
+import ModalContext from '../context/ModalContext';
 
 const AddResource = () => {
-  const [modelContent, setModelContent] = useState('');
-
-  const history = useHistory();
-  const closeModal = (e) => {
-    e.stopPropagation();
-    history.goBack();
+  const [modalContent, setModalContent] = useState('');
+  const { setModalOn } = useContext(ModalContext);
+  const closeModal = () => {
+    setModalOn(false);
   };
 
   return (
     <ModalContainer>
-      {!modelContent ? (
+      {!modalContent ? (
         <PageContainer direction="column">
           <PrimaryButton content="Close" onClick={closeModal} />
           <h1>form</h1>
           <PrimaryButton
             content="submit"
             type="submit"
-            onClick={() => setModelContent('thankyou')}
+            onClick={() => setModalContent('thankyou')}
           />
         </PageContainer>
       ) : (
