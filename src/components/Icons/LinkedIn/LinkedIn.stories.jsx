@@ -2,7 +2,7 @@ import React from 'react';
 import LinkedIn from './LinkedIn';
 
 export default {
-  title: 'Components/LinkedIn',
+  title: 'Components/Icons/LinkedIn',
   component: LinkedIn
 };
 
