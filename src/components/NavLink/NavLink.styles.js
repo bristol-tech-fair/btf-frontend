@@ -1,18 +1,16 @@
 import styled from 'styled-components';
+import { NavLink as Link } from 'react-router-dom';
 
-export const NavLinkWrapper = styled.div`
-  font-size: 1.6rem;
-  line-height: 2.08rem;
-  text-align: center;
-  color: var(--darkburgundy);
-  padding: var(--small-space);
+export const NavLinkWrapper = styled(Link)`
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 
-  &:hover {
-    color: var(--darkpink);
+  &.active {
+    color: var(--logopink);
   }
 
-  &:active,
-  &:focus {
-    color: var(--darkpink);
+  &:hover {
+    color: var(--lightblue);
   }
 `;
