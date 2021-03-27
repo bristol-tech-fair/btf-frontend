@@ -1,22 +1,39 @@
-import React from 'react';
-import { NavigationWrapper } from './Navigation.styles';
-
+import React, { useState } from 'react';
+import {
+  NavigationWrapper,
+  NavMenu,
+  EndLink,
+  MenuIcon
+} from './Navigation.styles';
 import Logo from '../Logo';
 import NavLink from '../NavLink';
 import TextButton from '../TextButton';
+import { Menu, Cross } from '../Icons';
 
 const Navigation = () => {
+  const [click, setClick] = useState(false);
   return (
     <NavigationWrapper>
-      <Logo color="red" />
-      <NavLink content="Learning Resources" />
-      <NavLink content="Book List" />
-      <NavLink content="Events" />
-      <NavLink content="Clubs" />
-      <NavLink content="Competitions" />
-      <NavLink content="Support Groups" />
-      <NavLink content="Posts" />
-      <TextButton content="Add a resource" />
+      <NavLink path="/" content={<Logo color="red" />} />
+      <NavMenu click={click}>
+        <NavLink path="/resources" content="Learning Resources" />
+        <NavLink path="/books" content="Book List" />
+        <NavLink path="/events" content="Events" />
+        <NavLink path="/clubs" content="Clubs" />
+        <NavLink path="/competitions" content="Competitions" />
+        <NavLink path="/supportgroups" content="Support Groups" />
+        <NavLink path="/posts" content="Posts" />
+      </NavMenu>
+      <EndLink>
+        <TextButton content="Add a resource" />
+        <MenuIcon>
+          <TextButton
+            content={click ? <Cross /> : <Menu />}
+            type="button"
+            onClick={() => setClick(!click)}
+          />
+        </MenuIcon>
+      </EndLink>
     </NavigationWrapper>
   );
 };
