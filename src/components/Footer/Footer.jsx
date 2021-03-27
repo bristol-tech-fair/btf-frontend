@@ -1,17 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { FooterWrapper } from './Footer.styles';
+import { FooterWrapper, Image, Text, Icons, Rights } from './Footer.styles';
+import { Robot } from '../Illustration';
+import { Twitter, Facebook, LinkedIn } from '../Icons';
 
-const Footer = ({ value }) => {
+const Footer = () => {
   return (
     <FooterWrapper>
-      <p>{value}</p>
+      <Text>
+        <p>About</p>
+        <p>Contact</p>
+        <p>Code of conduct</p>
+        <p>Cookie policy</p>
+        <p>Terms & Conditions</p>
+        <Icons>
+          <Twitter />
+          <Facebook />
+          <LinkedIn />
+        </Icons>
+        <Rights>All rights reserved. Bristol Tech Fair 2020 </Rights>
+      </Text>
+      <Image>
+        <Robot />
+      </Image>
     </FooterWrapper>
   );
-};
-
-Footer.propTypes = {
-  value: PropTypes.string.isRequired
 };
 
 export default Footer;
