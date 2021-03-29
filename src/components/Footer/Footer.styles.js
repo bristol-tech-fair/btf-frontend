@@ -12,13 +12,11 @@ export const Image = styled.div`
   display: none;
   right: 2.7rem;
   top: calc(-1 * var(--medium-space));
-  width: 30.6rem;
-  height: 30.1rem;
   transform: rotate(12deg);
 
   svg {
-    height: 301px;
-    width: 309px;
+    width: 30.6rem;
+    height: 30.1rem;
   }
 
   ${mediaQuery.tablet} {
@@ -44,7 +42,6 @@ export const Text = styled.div`
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  width: 22.7rem;
   height: 23.215rem;
   left: var(--medium-space);
   top: var(--medium-space);
