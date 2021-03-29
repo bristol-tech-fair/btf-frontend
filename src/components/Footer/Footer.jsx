@@ -6,7 +6,6 @@ import { Twitter, Facebook, LinkedIn } from '../Icons';
 const Footer = () => {
   return (
     <FooterWrapper>
-      <a href="/">About is testing link</a>
       <Text>
         <a href="/">About</a>
         <a href="/">Contacts</a>
