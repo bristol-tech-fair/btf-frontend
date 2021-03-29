@@ -41,10 +41,6 @@ export const Icons = styled.div`
     }
   }
 `;
-export const Thelinks = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-`;
 
 export const Text = styled.div`
   display: flex;
@@ -52,20 +48,27 @@ export const Text = styled.div`
   justify-content: space-between;
   position: absolute;
   height: 23.215rem;
-  left: var(--medium-space);
+  left: var(--small-space);
   top: var(--medium-space);
 
   p {
     font-size: 1.2rem;
     color: var(--white);
   }
+
+  ${mediaQuery.desktop} {
+    left: var(--medium-space);
+  }
 `;
 
 export const FooterWrapper = styled.div`
   background-color: var(--orange);
   position: relative;
-  height: 31.2rem;
-  max-width: 140.7rem;
+  height: 30rem;
   display: flex;
   justify-content: space-between;
+
+  ${mediaQuery.desktop} {
+    height: 31.2rem;
+  }
 `;
