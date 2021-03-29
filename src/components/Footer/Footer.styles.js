@@ -5,6 +5,7 @@ import mediaQuery from '../../utils/mediaQuery';
 export const StyledLink = styled(NavLink)`
   color: var(--white);
   font-weight: 400;
+  align-self: flex-start;
 `;
 
 export const Image = styled.div`
@@ -39,6 +40,10 @@ export const Icons = styled.div`
       stroke: var(--lightblue);
     }
   }
+`;
+export const Thelinks = styled.div`
+  display: inline-flex;
+  flex-direction: column;
 `;
 
 export const Text = styled.div`
