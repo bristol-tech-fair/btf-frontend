@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterWrapper, Image, Text, Icons } from './Footer.styles';
+import { FooterWrapper, Image, Text, Icons, StyledLink } from './Footer.styles';
 import { Robot } from '../Illustration';
 import { Twitter, Facebook, LinkedIn } from '../Icons';
 
@@ -7,21 +7,21 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <Text>
-        <a href="/">About</a>
-        <a href="/">Contacts</a>
-        <a href="/">Code of conduct</a>
-        <a href="/">Cookie policy</a>
-        <a href="/">Terms & Conditions</a>
+        <StyledLink to="/about">About</StyledLink>
+        <StyledLink to="/contacts">Contacts</StyledLink>
+        <StyledLink to="/codeofconducts">Code of conducts</StyledLink>
+        <StyledLink to="/cookiepolicy">Cookie policy</StyledLink>
+        <StyledLink to="/termsandconditions">Terms & conditions</StyledLink>
         <Icons>
-          <a href="/">
+          <StyledLink to="/">
             <Twitter />
-          </a>
-          <a href="/">
+          </StyledLink>
+          <StyledLink to="/">
             <Facebook />
-          </a>
-          <a href="/">
+          </StyledLink>
+          <StyledLink to="/">
             <LinkedIn />
-          </a>
+          </StyledLink>
         </Icons>
         <p>All rights reserved. Bristol Tech Fair 2020 </p>
       </Text>
