@@ -28,12 +28,16 @@ export const Icons = styled.div`
   display: flex;
   max-width: 11.2rem;
   justify-content: space-between;
+
   ${StyledLink} svg {
     vertical-align: middle;
-  }
+    path {
+      stroke: white;
+    }
 
-  ${StyledLink} path {
-    stroke: white;
+    &:hover path {
+      stroke: var(--lightblue);
+    }
   }
 `;
 
