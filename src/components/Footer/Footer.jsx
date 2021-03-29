@@ -9,9 +9,9 @@ const Footer = () => {
       <Text>
         <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/contacts">Contacts</StyledLink>
-        <StyledLink to="/codeofconducts">Code of conducts</StyledLink>
-        <StyledLink to="/cookiepolicy">Cookie policy</StyledLink>
-        <StyledLink to="/termsandconditions">Terms & conditions</StyledLink>
+        <StyledLink to="/codeofconducts">Code of Conduct</StyledLink>
+        <StyledLink to="/cookiepolicy">Cookie Policy</StyledLink>
+        <StyledLink to="/termsandconditions">Terms & Conditions</StyledLink>
         <Icons>
           <StyledLink to="/">
             <Twitter />

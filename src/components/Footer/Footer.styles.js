@@ -12,7 +12,14 @@ export const Image = styled.div`
   display: none;
   right: 2.7rem;
   top: calc(-1 * var(--medium-space));
+  width: 30.6rem;
+  height: 30.1rem;
   transform: rotate(12deg);
+
+  svg {
+    height: 301px;
+    width: 309px;
+  }
 
   ${mediaQuery.tablet} {
     display: flex;
