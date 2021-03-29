@@ -5,11 +5,9 @@ export const Image = styled.div`
   position: absolute;
   display: none;
   right: 2.7rem;
-  top: -4rem;
-  border: 0.1rem solid var(--midblue);
+  top: calc(-1 * var(--medium-space));
 
   ${mediaQuery.tablet} {
-    border: 5px solid black;
     display: flex;
   }
 `;
@@ -18,12 +16,9 @@ export const Icons = styled.div`
   display: flex;
   max-width: 11.2rem;
   justify-content: space-between;
-  border: 0.1rem solid var(--midblue);
-`;
-
-export const Rights = styled.p`
-  font-size: 1.2rem;
-  color: var(--white);
+  a svg {
+    vertical-align: middle;
+  }
 `;
 
 export const Text = styled.div`
@@ -33,9 +28,22 @@ export const Text = styled.div`
   position: absolute;
   width: 22.7rem;
   height: 23.215rem;
-  left: 4rem;
-  top: 4rem;
-  border: 0.1rem solid var(--logopink);
+  left: var(--medium-space);
+  top: var(--medium-space);
+
+  a {
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  a > svg > path {
+    stroke: var(--white);
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: var(--white);
+  }
 `;
 
 export const FooterWrapper = styled.div`
@@ -44,6 +52,5 @@ export const FooterWrapper = styled.div`
   height: 31.2rem;
   max-width: 140.7rem;
   display: flex;
-  flex: 1 1;
   justify-content: space-between;
 `;

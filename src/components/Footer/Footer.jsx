@@ -1,23 +1,30 @@
 import React from 'react';
-import { FooterWrapper, Image, Text, Icons, Rights } from './Footer.styles';
+import { FooterWrapper, Image, Text, Icons } from './Footer.styles';
 import { Robot } from '../Illustration';
 import { Twitter, Facebook, LinkedIn } from '../Icons';
 
 const Footer = () => {
   return (
     <FooterWrapper>
+      <a href="/">About is testing link</a>
       <Text>
-        <p>About</p>
-        <p>Contact</p>
-        <p>Code of conduct</p>
-        <p>Cookie policy</p>
-        <p>Terms & Conditions</p>
+        <a href="/">About</a>
+        <a href="/">Contacts</a>
+        <a href="/">Code of conduct</a>
+        <a href="/">Cookie policy</a>
+        <a href="/">Terms & Conditions</a>
         <Icons>
-          <Twitter />
-          <Facebook />
-          <LinkedIn />
+          <a href="/">
+            <Twitter />
+          </a>
+          <a href="/">
+            <Facebook />
+          </a>
+          <a href="/">
+            <LinkedIn />
+          </a>
         </Icons>
-        <Rights>All rights reserved. Bristol Tech Fair 2020 </Rights>
+        <p>All rights reserved. Bristol Tech Fair 2020 </p>
       </Text>
       <Image>
         <Robot />

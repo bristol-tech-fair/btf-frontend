@@ -6,4 +6,4 @@ export default {
   component: Footer
 };
 
-export const HelloWorld = () => <Footer value="Hello world!" />;
+export const FooterTesting = () => <Footer />;
