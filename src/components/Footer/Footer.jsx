@@ -9,7 +9,7 @@ const Footer = () => {
       <Text>
         <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/contacts">Contacts</StyledLink>
-        <StyledLink to="/codeofconducts">Code of Conduct</StyledLink>
+        <StyledLink to="/codeofconduct">Code of Conduct</StyledLink>
         <StyledLink to="/cookiepolicy">Cookie Policy</StyledLink>
         <StyledLink to="/termsandconditions">Terms & Conditions</StyledLink>
         <Icons>
