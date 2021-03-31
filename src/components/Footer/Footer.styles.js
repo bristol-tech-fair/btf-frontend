@@ -8,41 +8,19 @@ export const StyledLink = styled(NavLink)`
   align-self: flex-start;
 `;
 
-export const Image = styled.div`
-  position: absolute;
-  display: none;
-  right: 2.7rem;
-  top: calc(-1 * var(--medium-space));
-  transform: rotate(12deg);
-
-  svg {
-    width: 30.6rem;
-    height: 30.1rem;
-  }
-
-  ${mediaQuery.tablet} {
-    display: flex;
-  }
-`;
-
-export const Icons = styled.div`
+export const FooterWrapper = styled.div`
+  background-color: var(--orange);
+  position: relative;
+  height: 30rem;
   display: flex;
-  max-width: 11.2rem;
   justify-content: space-between;
 
-  ${StyledLink} svg {
-    vertical-align: middle;
-    path {
-      stroke: white;
-    }
-
-    &:hover path {
-      stroke: var(--lightblue);
-    }
+  ${mediaQuery.desktop} {
+    height: 31.2rem;
   }
 `;
 
-export const Text = styled.div`
+export const LinksList = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,14 +39,36 @@ export const Text = styled.div`
   }
 `;
 
-export const FooterWrapper = styled.div`
-  background-color: var(--orange);
-  position: relative;
-  height: 30rem;
+export const IconsWrapper = styled.div`
   display: flex;
+  max-width: 11.2rem;
   justify-content: space-between;
 
-  ${mediaQuery.desktop} {
-    height: 31.2rem;
+  ${StyledLink} svg {
+    vertical-align: middle;
+    path {
+      stroke: white;
+    }
+
+    &:hover path {
+      stroke: var(--lightblue);
+    }
+  }
+`;
+
+export const Image = styled.div`
+  position: absolute;
+  display: none;
+  right: 2.7rem;
+  top: calc(-1 * var(--medium-space));
+  transform: rotate(12deg);
+
+  svg {
+    width: 30.6rem;
+    height: 30.1rem;
+  }
+
+  ${mediaQuery.tablet} {
+    display: flex;
   }
 `;
