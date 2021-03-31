@@ -9,20 +9,26 @@ export const NavigationWrapper = styled.div`
   background: var(--white);
 
   ${mediaQuery.tablet} {
-    padding: 20px;
+    padding: var(--small-space);
   }
 `;
 
 export const NavMenu = styled.div`
   flex-direction: column;
   align-items: center;
+  justify-: center;
   width: 100vw;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   background: var(--white);
+  padding-top: var(--smallest-space);
   display: ${(props) => (props.click === true ? 'flex' : 'none')};
+
+  ${mediaQuery.tablet} {
+    padding-top: 35px;
+  }
 
   ${mediaQuery.desktop} {
     display: flex;
@@ -30,6 +36,7 @@ export const NavMenu = styled.div`
     justify-content: space-between;
     position: static;
     width: auto;
+    padding-top: 0;
   }
 `;
 
@@ -38,7 +45,6 @@ export const EndLink = styled.div`
   flex-direction: row;
   align-items: flex-start;
   margin: 0 var(--smallest-space);
-}
 `;
 
 export const MenuIcon = styled.div`
