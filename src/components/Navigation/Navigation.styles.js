@@ -16,7 +16,7 @@ export const NavigationWrapper = styled.div`
 export const NavMenu = styled.div`
   flex-direction: column;
   align-items: center;
-  justify-: center;
+  justify-content: center;
   width: 100vw;
   position: absolute;
   top: 0;
