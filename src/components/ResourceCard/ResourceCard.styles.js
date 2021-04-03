@@ -21,11 +21,7 @@ export const Content = styled(Link)`
   border-radius: var(--smallest-space);
 
   overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  position: relative;
   width: 32.8rem;
   height: 44rem;
 
