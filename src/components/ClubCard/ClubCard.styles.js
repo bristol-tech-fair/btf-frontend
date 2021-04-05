@@ -10,10 +10,9 @@ export const ContentContainer = styled(Link)`
   border: 0.1rem solid var(--lightblue);
   border-radius: var(--smallest-space);
 
-  overflow: hidden;
   max-width: 32.8rem;
 
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   &:hover,
   &:active {
@@ -26,7 +25,6 @@ export const ContentContainer = styled(Link)`
 `;
 
 export const Image = styled.img`
-  border-radius: var(--smallest-space) var(--smallest-space) 0 0;
   overflow: hidden;
   object-fit: cover;
   width: 100%;
