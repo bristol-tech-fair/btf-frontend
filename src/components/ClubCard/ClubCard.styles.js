@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Content = styled(Link)`
+export const ContentContainer = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,9 +11,7 @@ export const Content = styled(Link)`
   border-radius: var(--smallest-space);
 
   overflow: hidden;
-  position: relative;
-  width: 32.8rem;
-  height: 44rem;
+  max-width: 32.8rem;
 
   transition: all 0.2s ease;
   cursor: pointer;
@@ -25,4 +23,18 @@ export const Content = styled(Link)`
   &:focus {
     box-shadow: ${({ color }) => `0 0 0 0.3rem var(--${color})`};
   }
+`;
+
+export const Image = styled.img`
+  border-radius: var(--smallest-space) var(--smallest-space) 0 0;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+`;
+
+export const Title = styled.h2`
+  line-height: 130%;
+  font-weight: 700;
+  text-align: center;
+  padding: var(--small-space) var(--smallest-space);
 `;
