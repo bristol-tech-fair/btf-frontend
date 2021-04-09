@@ -19,13 +19,13 @@ const Footer = () => {
         <StyledLink to="/cookiepolicy">Cookie Policy</StyledLink>
         <StyledLink to="/termsandconditions">Terms & Conditions</StyledLink>
         <IconsWrapper>
-          <StyledLink to="/">
+          <StyledLink to="/" target="_blank" rel="noopener noreferrer">
             <Twitter />
           </StyledLink>
-          <StyledLink to="/">
+          <StyledLink to="/" target="_blank" rel="noopener noreferrer">
             <Facebook />
           </StyledLink>
-          <StyledLink to="/">
+          <StyledLink to="/" target="_blank" rel="noopener noreferrer">
             <LinkedIn />
           </StyledLink>
         </IconsWrapper>
