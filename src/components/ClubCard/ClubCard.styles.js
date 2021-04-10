@@ -20,7 +20,7 @@ export const ContentContainer = styled(Link)`
     box-shadow: var(--card-shadow);
   }
   &:focus {
-    box-shadow: ${({ color }) => `0 0 0 0.3rem var(--${color})`};
+    box-shadow: 0 0 0 0.3rem var(--lightblue);
   }
 `;
 
