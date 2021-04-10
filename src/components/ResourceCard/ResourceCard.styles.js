@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import mediaQuery from '../../utils/mediaQuery';
 
 export const Banner = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   opacity: 0.6;
 `;
 
@@ -22,8 +16,7 @@ export const Content = styled(Link)`
 
   overflow: hidden;
   position: relative;
-  width: 32.8rem;
-  height: 44rem;
+  max-width: 60rem;
 
   transition: all 0.2s ease;
   cursor: pointer;
@@ -38,38 +31,28 @@ export const Content = styled(Link)`
   &:hover ${Banner} {
     opacity: 1;
   }
-  ${mediaQuery.tablet} {
-    h2 {
-      font-size: 2.8rem;
-    }
-  }
 `;
 
 export const ContentCategory = styled.p`
   color: var(--darkblue);
-  position: absolute;
-  top: 37.95%;
   text-transform: capitalize;
+  margin-top: -6rem;
 `;
 
 export const ContentAges = styled.p`
   color: var(--darkblue);
-  position: absolute;
-  top: 45.23%;
+  margin-top: var(--small-space);
 `;
 
 export const ContentTitle = styled.h2`
-  position: absolute;
-  top: 52.45%;
   text-align: center;
   line-height: 130%;
-  margin: var(--smallest-space);
+  margin: var(--medium-space);
 `;
 
 export const ContentRating = styled.div`
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 88.86%;
+  margin-bottom: var(--medium-space);
   width: var(--largest-space);
 `;

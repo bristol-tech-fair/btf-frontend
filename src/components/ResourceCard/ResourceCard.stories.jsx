@@ -10,7 +10,7 @@ export default {
 export const CardTest = () => (
   <Router>
     <ResourceCard
-      title="It is <h2> tag with media query to keep font size 2.8rem. Fourth line."
+      title="It is <h2> tag. Let see how it will scale with longer text."
       category="Electronics"
       ages="6-10"
       rating="4"
