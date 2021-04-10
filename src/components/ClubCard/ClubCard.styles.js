@@ -10,7 +10,8 @@ export const ContentContainer = styled(Link)`
   border: 0.1rem solid var(--lightblue);
   border-radius: var(--smallest-space);
 
-  max-width: 32.8rem;
+  max-width: 60rem;
+  padding: var(--smallest-space);
 
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -25,6 +26,7 @@ export const ContentContainer = styled(Link)`
 `;
 
 export const Image = styled.img`
+  border-radius: var(--smallest-space);
   overflow: hidden;
   object-fit: cover;
   width: 100%;

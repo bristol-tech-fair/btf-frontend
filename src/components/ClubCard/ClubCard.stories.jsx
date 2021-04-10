@@ -7,7 +7,7 @@ export default {
   component: ClubCard
 };
 
-export const HelloWorld = () => (
+export const ClubCardTesting = () => (
   <BrowserRouter>
     <ClubCard
       to="/"
