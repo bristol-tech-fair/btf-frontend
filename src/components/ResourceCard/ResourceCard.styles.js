@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Banner = styled.div`
+  width: 100%;
   opacity: 0.6;
 `;
 
