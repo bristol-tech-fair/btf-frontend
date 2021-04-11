@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom';
 export const BookCardWrapper = styled(Link)`
   background: var(--white);
   border: 0.1rem solid var(--lightblue);
-  border-radius: 1rem;
+  border-radius: var(--smallest-space);
   overflow: hidden;
   display: inline-block;
+  padding: var(--smallest-space);
+  max-width: 60rem;
   text-align: center;
   transition: all 100ms ease-in-out;
   cursor: pointer;
 
   & > img {
-    height: 14rem;
     width: 100%;
     object-fit: cover;
     margin-bottom: var(--small-space);
+    border-radius: var(--smallest-space);
   }
 
   & > h3 {
