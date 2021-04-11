@@ -1,18 +1,50 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { LayoutContainer } from './Layout.styles';
+import { LayoutContainer, TestComp, FlexList } from './Layout.styles';
 import DefaultPageLayout from '../DefaultPageLayout';
+import ResourceCard from '../../../components/ResourceCard';
+import BookCard from '../../../components/BookCard';
+import ClubCard from '../../../components/ClubCard';
 
 const Layout = () => {
   return (
     <>
       <DefaultPageLayout>
-        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
-        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
-        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
-        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
-        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
-        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
+        <LayoutContainer>
+          I am a child of DefaultPageLayout!!! H3 TAG
+        </LayoutContainer>
+        <FlexList>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+          <TestComp>
+            <ClubCard />
+          </TestComp>
+          <TestComp>
+            <BookCard />
+          </TestComp>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+          <TestComp>
+            <ResourceCard />
+          </TestComp>
+        </FlexList>
       </DefaultPageLayout>
     </>
   );
