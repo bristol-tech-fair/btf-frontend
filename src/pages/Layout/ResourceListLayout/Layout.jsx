@@ -1,14 +1,20 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import { LayoutContainer } from './Layout.styles';
-// import { Navbar } from '../../components/Navigation';
-// import { Footer } from '../../components/Footer';
+import DefaultPageLayout from '../DefaultPageLayout';
 
 const Layout = () => {
   return (
-    <LayoutContainer>
-      <h3>testing</h3>
-    </LayoutContainer>
+    <>
+      <DefaultPageLayout>
+        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
+        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
+        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
+        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
+        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
+        <LayoutContainer>I am a child of DefaultPageLayout!!!</LayoutContainer>
+      </DefaultPageLayout>
+    </>
   );
 };
 
