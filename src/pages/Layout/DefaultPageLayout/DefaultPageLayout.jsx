@@ -15,31 +15,7 @@ const DefaultPageLayout = ({ children }) => {
       <NavPlaceholder>
         <Navigation />
       </NavPlaceholder>
-      <Main>
-        <h1>
-          Red border: 100VH .... Purple Border & Main Tag: max-width 144REM ....
-          Footer: width:144REM centered inside ORANGE DIV taking 100% width of
-          the page .... Footer is sticky to the bottom and will be pushed down
-          as more content populate the page
-        </h1>
-        <br />
-        <br />
-        <h3>
-          Default Page Layout:
-          <br />
-          {`<Navbar />`}
-          <br />
-          {`<Main >`}
-          <br />
-          {`{children}`}
-          <br />
-          {`</Main>`}
-          <br />
-          {`<Footer />`}
-        </h3>
-
-        {children}
-      </Main>
+      <Main>{children}</Main>
       <FooterPlaceholder>
         <Footer />
       </FooterPlaceholder>

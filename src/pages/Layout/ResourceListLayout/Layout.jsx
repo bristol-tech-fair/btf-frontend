@@ -3,8 +3,6 @@ import React from 'react';
 import { LayoutContainer, TestComp, FlexList } from './Layout.styles';
 import DefaultPageLayout from '../DefaultPageLayout';
 import ResourceCard from '../../../components/ResourceCard';
-import BookCard from '../../../components/BookCard';
-import ClubCard from '../../../components/ClubCard';
 
 const Layout = () => {
   return (
@@ -18,10 +16,7 @@ const Layout = () => {
             <ResourceCard />
           </TestComp>
           <TestComp>
-            <ClubCard />
-          </TestComp>
-          <TestComp>
-            <BookCard />
+            <ResourceCard />
           </TestComp>
           <TestComp>
             <ResourceCard />
