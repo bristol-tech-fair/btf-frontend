@@ -25,7 +25,7 @@ const Posts = () => {
         <h5 key={Post.title}>
           <NavLink
             path={`/posts/${Post.title}`}
-            value={`Link to ${Post.title} Page`}
+            content={`Link to ${Post.title} Page`}
           />
         </h5>
       ))}

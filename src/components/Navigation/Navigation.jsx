@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   NavigationWrapper,
   NavMenu,
@@ -9,13 +9,15 @@ import Logo from '../Logo';
 import NavLink from '../NavLink';
 import TextButton from '../TextButton';
 import { Menu, Cross } from '../Icons';
+import ModalContext from '../../context/ModalContext';
 
 const Navigation = () => {
   const [click, setClick] = useState(false);
+  const { setModalOn } = useContext(ModalContext);
   return (
     <NavigationWrapper>
       <NavLink path="/" content={<Logo color="red" />} />
-      <NavMenu click={click}>
+      <NavMenu click={click} onClick={() => setClick(!click)}>
         <NavLink path="/resources" content="Learning Resources" />
         <NavLink path="/books" content="Book List" />
         <NavLink path="/events" content="Events" />
@@ -25,7 +27,11 @@ const Navigation = () => {
         <NavLink path="/posts" content="Posts" />
       </NavMenu>
       <EndLink>
-        <TextButton content="Add a resource" />
+        <TextButton
+          content="Add a resource"
+          type="button"
+          onClick={() => setModalOn(true)}
+        />
         <MenuIcon>
           <TextButton
             content={click ? <Cross /> : <Menu />}

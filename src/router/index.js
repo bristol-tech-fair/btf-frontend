@@ -6,6 +6,7 @@ import Terms from '../pages/Terms';
 import Policy from '../pages/Policy';
 import Books from '../pages/Books';
 import Clubs from '../pages/Clubs';
+import Groups from '../pages/Groups';
 import Competetions from '../pages/Competetions';
 import Events from '../pages/Events';
 import Resources from '../pages/Resources';
@@ -27,10 +28,10 @@ function Router() {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/policy">
+        <Route path="/cookiepolicy">
           <Policy />
         </Route>
-        <Route path="/terms">
+        <Route path="/termsandconditions">
           <Terms />
         </Route>
         <Route path="/books">
@@ -39,7 +40,10 @@ function Router() {
         <Route path="/clubs">
           <Clubs />
         </Route>
-        <Route path="/competetions">
+        <Route path="/supportgroups">
+          <Groups />
+        </Route>
+        <Route path="/competitions">
           <Competetions />
         </Route>
         <Route path="/codeofconduct">
