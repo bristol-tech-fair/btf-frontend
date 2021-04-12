@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Theme from './theme';
-import Header from './components/Header';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Router from './router';
 import ModalContext from './context/ModalContext';
@@ -18,7 +18,7 @@ const App = () => {
       <p>p</p>
       <a href="#/">a</a> */}
       <ModalContext.Provider value={{ modalOn, setModalOn }}>
-        <Header />
+        <Navigation />
         <Router />
         <Footer />
       </ModalContext.Provider>
