@@ -7,7 +7,7 @@ export default {
   component: Layout
 };
 
-export const DefaultSampleLayout = () => (
+export const DefaultPageLayout = () => (
   <Router>
     <Layout />
   </Router>

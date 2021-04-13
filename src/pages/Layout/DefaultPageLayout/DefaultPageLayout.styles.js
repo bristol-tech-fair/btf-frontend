@@ -12,7 +12,7 @@ export const LayoutContainer = styled.div`
   overflow: hidden;
 `;
 
-export const NavPlaceholder = styled.div`
+export const HeaderContainer = styled.div`
   width: 100%;
 
   ${mediaQuery.desktop} {
@@ -20,7 +20,7 @@ export const NavPlaceholder = styled.div`
   }
 `;
 
-export const Main = styled.main`
+export const MainContainer = styled.main`
   max-width: 144rem;
   margin: var(--medium-space) 0;
   padding: 0 5px;
@@ -30,7 +30,7 @@ export const Main = styled.main`
   }
 `;
 
-export const FooterPlaceholder = styled.div`
+export const FooterContainer = styled.div`
   background-color: var(--orange);
   width: 100%;
   margin-top: auto;

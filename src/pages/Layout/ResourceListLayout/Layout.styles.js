@@ -11,7 +11,6 @@ export const TestComp = styled.div`
 
   ${mediaQuery.tablet} {
     flex: 1;
-    //padding: var(--smallest-space) var(--smallest-space) 0 0;
     min-width: 29.9rem;
     max-width: 30rem;
   }

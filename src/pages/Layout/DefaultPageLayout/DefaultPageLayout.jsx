@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   LayoutContainer,
-  FooterPlaceholder,
-  NavPlaceholder,
-  Main
+  FooterContainer,
+  HeaderContainer,
+  MainContainer
 } from './DefaultPageLayout.styles';
 import Navigation from '../../../components/Navigation';
 import Footer from '../../../components/Footer';
@@ -12,13 +12,13 @@ import Footer from '../../../components/Footer';
 const DefaultPageLayout = ({ children }) => {
   return (
     <LayoutContainer>
-      <NavPlaceholder>
+      <HeaderContainer>
         <Navigation />
-      </NavPlaceholder>
-      <Main>{children}</Main>
-      <FooterPlaceholder>
+      </HeaderContainer>
+      <MainContainer>{children}</MainContainer>
+      <FooterContainer>
         <Footer />
-      </FooterPlaceholder>
+      </FooterContainer>
     </LayoutContainer>
   );
 };
