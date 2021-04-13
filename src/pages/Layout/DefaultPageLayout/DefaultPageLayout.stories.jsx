@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Layout from './DefaultPageLayout';
 
 export default {
@@ -8,7 +8,7 @@ export default {
 };
 
 export const DefaultPageLayout = () => (
-  <Router>
+  <BrowserRouter>
     <Layout />
-  </Router>
+  </BrowserRouter>
 );
