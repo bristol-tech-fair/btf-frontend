@@ -3,11 +3,11 @@ import { BrowserRouter } from 'react-router-dom';
 import ClubsList from './ClubsList';
 
 export default {
-  title: 'Components/ClubsList',
+  title: 'Components/Pages/ClubsList',
   component: ClubsList
 };
 
-export const ResourceListClubsList = () => (
+export const ClubsListTest = () => (
   <BrowserRouter>
     <ClubsList />
   </BrowserRouter>
