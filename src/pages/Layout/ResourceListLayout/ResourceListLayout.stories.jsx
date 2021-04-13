@@ -7,7 +7,7 @@ export default {
   component: Layout
 };
 
-export const SampleLayout = () => (
+export const ResourceListLayout = () => (
   <BrowserRouter>
     <Layout />
   </BrowserRouter>
