@@ -23,11 +23,7 @@ export const HeaderContainer = styled.div`
 export const MainContainer = styled.main`
   max-width: 144rem;
   margin: var(--medium-space) 0;
-  padding: 0 5px;
-
-  ${mediaQuery.tablet} {
-    padding: 0 var(--small-space);
-  }
+  padding: 0 var(--small-space);
 `;
 
 export const FooterContainer = styled.div`
