@@ -2,27 +2,49 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 // import mediaQuery from '../../utils/mediaQuery';
 
-export const CloseButton = styled(Link)``;
-export const Attached = styled.p``;
-
 export const FrontCard = styled.div`
   display: flex;
-  background: var(--white);
-`;
-export const BackCard = styled.div`
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: var(--small-space);
   background: var(--white);
   box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
   border-radius: 15px;
+  width: 36rem;
+  height: 50rem;
+  //padding: var(--medium-space);
+`;
+
+export const CloseButton = styled(Link)`
+  display: flex;
+  align-self: flex-end;
+  margin: var(--small-space) var(--small-space) 0 0;
+  border: 2px solid lime;
+`;
+
+export const Header = styled.h3`
+  padding: var(--small-space) var(--medium-space);
+`;
+
+export const Attachments = styled.p``;
+
+export const BackCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
+  border-radius: 15px;
+  width: 36rem;
+
+  & ${Header} {
+    color: var(--lightblue);
+    text-align: center;
+  }
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
+  padding: var(--medium-space);
   border: 2px solid red;
   //background-color: $color-white;
   //box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
