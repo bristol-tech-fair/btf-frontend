@@ -7,6 +7,7 @@ import Navigation from '../Navigation';
 import {
   PopupContainer,
   FrontCard,
+  MobileNav,
   Form,
   CloseButton,
   Attachments,
@@ -27,8 +28,10 @@ const SubmitResourceForm = () => {
 
   return (
     <div>
-      <Navigation />
       <PopupContainer>
+        <MobileNav>
+          <Navigation />
+        </MobileNav>
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
           <FrontCard>
             <CloseButton>
@@ -45,7 +48,7 @@ const SubmitResourceForm = () => {
               />
               <Select
                 name="Category"
-                label="Category*"
+                label="Category"
                 defaultValue="Category"
                 options={[
                   {
