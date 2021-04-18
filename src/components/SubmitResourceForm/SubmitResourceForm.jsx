@@ -8,17 +8,21 @@ import {
   PopupContainer,
   FrontCard,
   MobileNav,
+  Header,
   Form,
   CloseButton,
   Attachments,
-  Header,
+  ButtonContainer,
+  Uploads,
+  FileToUpload,
+  Info,
   BackCard
 } from './SubmitResourceForm.styles';
-import TextButton from '../TextButton';
+import TertiaryButton from '../TertiaryButton';
 import { Robot } from '../Illustration';
-import { Cross } from '../Icons';
+import { Cross, File, Links, Youtube, Image } from '../Icons';
 
-const SubmitResourceForm = () => {
+const SubmitResourceForm = (to) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const flipCard = (event) => {
@@ -29,12 +33,12 @@ const SubmitResourceForm = () => {
   return (
     <div>
       <PopupContainer>
-        <MobileNav>
-          <Navigation />
-        </MobileNav>
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
           <FrontCard>
-            <CloseButton>
+            <MobileNav>
+              <Navigation />
+            </MobileNav>
+            <CloseButton to={to}>
               <Cross />
             </CloseButton>
             <Header>Submit your resource</Header>
@@ -48,7 +52,7 @@ const SubmitResourceForm = () => {
               />
               <Select
                 name="Category"
-                label="Category"
+                label="Category*"
                 defaultValue="Category"
                 options={[
                   {
@@ -83,16 +87,37 @@ const SubmitResourceForm = () => {
               <TextInput
                 id="descriptionInput"
                 name="textInput"
-                label="Description*"
-                placeholder="please leave description"
+                label="Description"
+                placeholder="Please leave description"
                 value="Input"
               />
               <Attachments>Attachments</Attachments>
-              <TextButton
-                type="submit"
-                content="Click to flip me"
-                onClick={flipCard}
-              />
+              <Uploads>
+                <FileToUpload>
+                  <Links />
+                  Link
+                </FileToUpload>
+                <FileToUpload>
+                  <File />
+                  File
+                </FileToUpload>
+                <FileToUpload>
+                  <Youtube />
+                  Video
+                </FileToUpload>
+                <FileToUpload>
+                  <Image />
+                  Image
+                </FileToUpload>
+              </Uploads>
+              <ButtonContainer>
+                <TertiaryButton
+                  type="submit"
+                  content="Submit"
+                  onClick={flipCard}
+                />
+              </ButtonContainer>
+              <Info>Fields marked with * are mandatory.</Info>
             </Form>
           </FrontCard>
           <BackCard>

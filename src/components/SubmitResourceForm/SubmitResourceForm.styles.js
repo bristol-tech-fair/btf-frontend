@@ -9,12 +9,32 @@ export const FrontCard = styled.div`
   box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
   //border-radius: 15px;
   //max-width: 60rem;
-  height: 100vh;
   //padding: var(--medium-space);
+  height: 100vh;
+  border: 1px solid purple;
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+
+  padding: var(--small-space) var(--small-space);
+
+  border: 2px solid red;
+  //overflow: auto;
+
+  //opacity: 0;
+
+  & select {
+    border: 1px solid var(--lightblue);
+  }
 `;
 
 export const MobileNav = styled.div`
-  z-index: 1000;
+  //z-index: 1000;
+  border: 1px solid #4d4d04;
 `;
 export const CloseButton = styled(Link)`
   display: none;
@@ -27,7 +47,26 @@ export const Header = styled.h3`
   padding: var(--small-space) var(--small-space);
 `;
 
-export const Attachments = styled.p``;
+export const Attachments = styled.p`
+  text-align: center;
+`;
+
+export const Uploads = styled.div`
+  display: flex;
+
+  justify-content: space-between;
+`;
+
+export const FileToUpload = styled(Link)``;
+
+export const ButtonContainer = styled.div`
+  margin: 0 auto;
+`;
+
+export const Info = styled.p`
+  color: var(--darkgrey);
+  text-align: center;
+`;
 
 export const BackCard = styled.div`
   display: flex;
@@ -42,20 +81,6 @@ export const BackCard = styled.div`
     color: var(--lightblue);
     text-align: center;
   }
-`;
-
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  height: 100vh;
-  padding: var(--small-space) var(--small-space);
-
-  border: 2px solid red;
-  overflow: hidden;
-
-  //opacity: 0;
 `;
 
 export const PopupContainer = styled.div`
