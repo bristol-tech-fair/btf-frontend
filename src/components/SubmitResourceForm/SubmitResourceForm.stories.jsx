@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import SubmitResourceForm from './SubmitResourceForm';
 
 export default {
@@ -6,4 +7,8 @@ export default {
   component: SubmitResourceForm
 };
 
-export const RedSubmitResourceForm = () => <SubmitResourceForm />;
+export const TestSubmitResourceForm = () => (
+  <BrowserRouter>
+    <SubmitResourceForm />
+  </BrowserRouter>
+);
