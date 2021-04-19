@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-// import mediaQuery from '../../utils/mediaQuery';
+import mediaQuery from '../../utils/mediaQuery';
 
 export const FrontCard = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--white);
-  box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
-  //border-radius: 15px;
-  //max-width: 60rem;
-  //padding: var(--medium-space);
+  padding: var(--small-space);
   height: 100vh;
-  border: 1px solid purple;
+
+  ${mediaQuery.tablet} {
+    box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
+    border-radius: 15px;
+    height: auto;
+    height: 90rem;
+    width: 60rem;
+  }
 `;
 
 export const Form = styled.form`
@@ -20,44 +24,44 @@ export const Form = styled.form`
   flex: 1;
   justify-content: space-between;
 
-  padding: var(--small-space) var(--small-space);
-
-  border: 2px solid red;
-  //overflow: auto;
-
-  //opacity: 0;
-
   & select {
     border: 1px solid var(--lightblue);
   }
 `;
 
 export const MobileNav = styled.div`
-  //z-index: 1000;
-  border: 1px solid #4d4d04;
+  ${mediaQuery.tablet} {
+    display: none;
+  }
 `;
+
 export const CloseButton = styled(Link)`
   display: none;
   align-self: flex-end;
   margin: var(--small-space) var(--small-space) 0 0;
-  border: 2px solid lime;
+
+  ${mediaQuery.tablet} {
+    display: flex;
+  }
 `;
 
 export const Header = styled.h3`
-  padding: var(--small-space) var(--small-space);
+  padding: var(--small-space) 0;
 `;
 
 export const Attachments = styled.p`
   text-align: center;
 `;
 
-export const Uploads = styled.div`
+export const UploadsContainer = styled.div`
   display: flex;
-
   justify-content: space-between;
 `;
 
-export const FileToUpload = styled(Link)``;
+export const FileToUpload = styled(Link)`
+  display: flex;
+  align-items: center;
+`;
 
 export const ButtonContainer = styled.div`
   margin: 0 auto;
@@ -68,24 +72,56 @@ export const Info = styled.p`
   text-align: center;
 `;
 
-export const ImageContainer = styled.div``;
-
-export const ReturnButton = styled(Link)``;
-
 export const BackCard = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--white);
-  box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
-  //border-radius: 15px;
-  //max-width: 60rem;
-  //padding: var(--medium-space);
-  height: 100vh;
-  border: 1px solid purple;
+  padding: var(--small-space);
 
   & ${Header} {
     color: var(--lightblue);
     text-align: center;
+
+    ${mediaQuery.tablet} {
+      padding: var(--large-space) var(--largest-space);
+    }
+  }
+
+  ${mediaQuery.tablet} {
+    box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
+    border-radius: 15px;
+    justify-content: space-between;
+    height: 90rem;
+    width: 60rem;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+
+  ${mediaQuery.tablet} {
+    & svg {
+      height: auto;
+      width: 50rem;
+    }
+  }
+`;
+
+export const ReturnButton = styled(Link)`
+  display: flex;
+  align-items: center;
+  color: var(--lightblue);
+  padding: var(--small-space) var(--small-space);
+
+  ${mediaQuery.tablet} {
+    display: none;
+  }
+`;
+
+export const FooterContainer = styled.div`
+  ${mediaQuery.tablet} {
+    display: none;
   }
 `;
 
@@ -129,5 +165,9 @@ export const PopupContainer = styled.div`
       //transition: all 0.2s;
       //line-height: 1;
     }
+  }
+  ${mediaQuery.tablet} {
+    justify-content: center;
+    align-items: center;
   }
 `;

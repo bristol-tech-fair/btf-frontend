@@ -8,9 +8,17 @@ export const SelectWrapper = styled.div`
   select {
     font-size: 1.6rem;
     cursor: pointer;
-    color: var(--darkgrey);
     -moz-appearance: none;
     -webkit-appearance: none;
+    padding: var(--small-space);
+    border: 0.1rem solid var(--lightblue);
+    background: var(--lightgrey);
+    border-radius: 0.5rem;
+
+    placeholder {
+      color: var(--darkgrey);
+      font-size: 1rem;
+    }
   }
 
   &::after {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 import TextInput from '../TextInput';
+import TextArea from '../TextArea';
 import Select from '../Select';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
@@ -14,12 +15,13 @@ import {
   CloseButton,
   Attachments,
   ButtonContainer,
-  Uploads,
+  UploadsContainer,
   FileToUpload,
   Info,
+  BackCard,
   ImageContainer,
   ReturnButton,
-  BackCard
+  FooterContainer
 } from './SubmitResourceForm.styles';
 import TertiaryButton from '../TertiaryButton';
 import { Robot } from '../Illustration';
@@ -87,15 +89,14 @@ const SubmitResourceForm = (to) => {
                   console.log('Success!');
                 }}
               />
-              <TextInput
+              <TextArea
                 id="descriptionInput"
                 name="textInput"
-                label="Description"
-                placeholder="Please leave description"
-                value="Input"
+                labelText="Description"
+                placeholder="Write what this resource is about"
               />
               <Attachments>Attachments</Attachments>
-              <Uploads>
+              <UploadsContainer>
                 <FileToUpload>
                   <Links />
                   Link
@@ -112,7 +113,7 @@ const SubmitResourceForm = (to) => {
                   <Image />
                   Image
                 </FileToUpload>
-              </Uploads>
+              </UploadsContainer>
               <ButtonContainer>
                 <TertiaryButton
                   type="submit"
@@ -127,7 +128,7 @@ const SubmitResourceForm = (to) => {
             <MobileNav>
               <Navigation />
             </MobileNav>
-            <CloseButton to={to}>
+            <CloseButton to={to} onClick={flipCard}>
               <Cross />
             </CloseButton>
             <ImageContainer>
@@ -137,11 +138,11 @@ const SubmitResourceForm = (to) => {
             <Header>Thank you for submitting your resource!</Header>
             <ReturnButton onClick={flipCard}>
               <ArrowLeft />
-              Return
+              Back
             </ReturnButton>
-            <div>
+            <FooterContainer>
               <Footer />
-            </div>
+            </FooterContainer>
           </BackCard>
         </ReactCardFlip>
       </PopupContainer>
