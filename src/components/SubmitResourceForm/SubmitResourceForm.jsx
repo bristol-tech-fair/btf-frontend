@@ -3,6 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 import TextInput from '../TextInput';
 import Select from '../Select';
 import Navigation from '../Navigation';
+import Footer from '../Footer';
 // import PropTypes from 'prop-types';
 import {
   PopupContainer,
@@ -16,11 +17,13 @@ import {
   Uploads,
   FileToUpload,
   Info,
+  ImageContainer,
+  ReturnButton,
   BackCard
 } from './SubmitResourceForm.styles';
 import TertiaryButton from '../TertiaryButton';
 import { Robot } from '../Illustration';
-import { Cross, File, Links, Youtube, Image } from '../Icons';
+import { Cross, File, Links, Youtube, Image, ArrowLeft } from '../Icons';
 
 const SubmitResourceForm = (to) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -121,14 +124,24 @@ const SubmitResourceForm = (to) => {
             </Form>
           </FrontCard>
           <BackCard>
-            <CloseButton>
+            <MobileNav>
+              <Navigation />
+            </MobileNav>
+            <CloseButton to={to}>
               <Cross />
             </CloseButton>
-            <Robot />
+            <ImageContainer>
+              <Robot />
+            </ImageContainer>
+
             <Header>Thank you for submitting your resource!</Header>
-            <button type="button" onClick={flipCard}>
-              Click to flip
-            </button>
+            <ReturnButton onClick={flipCard}>
+              <ArrowLeft />
+              Return
+            </ReturnButton>
+            <div>
+              <Footer />
+            </div>
           </BackCard>
         </ReactCardFlip>
       </PopupContainer>

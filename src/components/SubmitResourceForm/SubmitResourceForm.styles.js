@@ -68,14 +68,20 @@ export const Info = styled.p`
   text-align: center;
 `;
 
+export const ImageContainer = styled.div``;
+
+export const ReturnButton = styled(Link)``;
+
 export const BackCard = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: var(--white);
   box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
-  border-radius: 15px;
-  //width: 36rem;
+  //border-radius: 15px;
+  //max-width: 60rem;
+  //padding: var(--medium-space);
+  height: 100vh;
+  border: 1px solid purple;
 
   & ${Header} {
     color: var(--lightblue);
