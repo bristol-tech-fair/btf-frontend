@@ -11581,10 +11581,10 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
-react-card-flip@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-card-flip/-/react-card-flip-1.1.0.tgz#e1785a26d80e67b5faf787bd145e396e175ceb0d"
-  integrity sha512-rrZ18lZb6Fsangia+mTgBfYB588oGfUN55MyOmoaG0YN8gaFk4aX4vJp4clxByw1WUJR9hYtV53LvLtPO8YsHw==
+react-card-flip@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-card-flip/-/react-card-flip-1.1.1.tgz#4df665d706e58032c9059a99814f29e99dd964a7"
+  integrity sha512-viH05bvFl3jfy75ibZhvubq6VV4Sla2GuN0hGFMuqLRIkM6qW21WswoFC7qhntY0+PMFqu0WSY5mBKneR0HL3Q==
 
 react-color@^2.17.0:
   version "2.19.3"
@@ -11734,6 +11734,11 @@ react-helmet-async@^1.0.2:
     prop-types "^15.7.2"
     react-fast-compare "^3.2.0"
     shallowequal "^1.1.0"
+
+react-hook-form@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.2.1.tgz#99b3540dd2314499df12e9a53c70587ad63a806c"
+  integrity sha512-QopAubhVofqQrwlWLr9aK0DF8tNU8fnU8sJIlw1Tb3tGkEvP9yeaA+cx1hlxYni8xBswtHruL1WcDEa6CYQDow==
 
 react-hotkeys@2.0.0:
   version "2.0.0"
