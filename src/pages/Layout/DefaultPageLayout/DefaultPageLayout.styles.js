@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import mediaQuery from '../../../utils/mediaQuery';
 
 export const LayoutContainer = styled.div`
-  background: var(--white);
+  //background: var(--white);
 
   display: flex;
   flex-direction: column;
@@ -27,12 +27,8 @@ export const MainContainer = styled.main`
 `;
 
 export const FooterContainer = styled.div`
-  background-color: var(--orange);
+  //background-color: var(--orange);
   width: 100%;
+  max-width: 144rem;
   margin-top: auto;
-
-  & > div {
-    max-width: 144rem;
-    margin: 0 auto;
-  }
 `;
