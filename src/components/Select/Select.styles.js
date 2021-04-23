@@ -11,6 +11,11 @@ export const SelectWrapper = styled.div`
     color: var(--darkgrey);
     -moz-appearance: none;
     -webkit-appearance: none;
+
+    padding: var(--small-space);
+    border: 0.1rem solid var(--lightblue);
+    background: var(--lightgrey);
+    border-radius: 0.5rem;
   }
 
   &::after {

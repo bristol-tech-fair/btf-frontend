@@ -21,9 +21,10 @@ export const HeaderContainer = styled.div`
 `;
 
 export const MainContainer = styled.main`
+  width: 100%;
   max-width: 144rem;
   margin: var(--medium-space) 0;
-  padding: 0 var(--small-space);
+  border: 2px solid blue;
 `;
 
 export const FooterContainer = styled.div`
