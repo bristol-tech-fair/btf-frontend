@@ -9,10 +9,13 @@ import {
   PageTitle,
   FilterContainer,
   FilterRow,
-  FilterColumn,
-  FilterTitle,
-  FilterSelect,
-  FilterButtons
+  FilterColumnOne,
+  FilterColumnTwo,
+  FilterColumnThree,
+  FilterColumnFour,
+  FilterTitle
+  // FilterSelect,
+  // FilterButtons
 } from './LearningResources.styles';
 
 const LearningResources = () => {
@@ -20,62 +23,55 @@ const LearningResources = () => {
     <DefaultPageLayout>
       <MainContainer>
         <PageTitle>Learning Resources</PageTitle>
+        <PrimaryButton content="Primary button" type="button" />
         <FilterContainer>
           <FilterRow>
-            <FilterColumn>
+            <FilterColumnOne>
               <FilterTitle>Filter</FilterTitle>
-            </FilterColumn>
-            <FilterColumn>
-              <FilterSelect>
-                <Select
-                  name="Fruit"
-                  label=""
-                  defaultValue="Fruits"
-                  options={[
-                    { optionValue: 'noneSelected', optionLabel: 'Age group' },
-                    { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
-                    { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
-                    { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
-                  ]}
-                  onBlur={() => {
-                    console.log('Success!');
-                  }}
-                />
-              </FilterSelect>
-            </FilterColumn>
-            <FilterColumn>
-              <FilterSelect>
-                <Select
-                  name="Fruit"
-                  label=""
-                  defaultValue="Fruits"
-                  options={[
-                    { optionValue: 'noneSelected', optionLabel: 'Any topic' },
-                    { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
-                    { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
-                    { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
-                  ]}
-                  onBlur={() => {
-                    console.log('Success!');
-                  }}
-                />
-              </FilterSelect>
-            </FilterColumn>
-            <FilterColumn>
-              <FilterButtons>
-                <PrimaryButton content="Primary button" />
-              </FilterButtons>
-            </FilterColumn>
+            </FilterColumnOne>
+            <FilterColumnTwo>
+              <Select
+                name="Fruit"
+                label=""
+                defaultValue="Fruits"
+                options={[
+                  { optionValue: 'noneSelected', optionLabel: 'Age group' },
+                  { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
+                  { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
+                  { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
+                ]}
+                onBlur={() => {
+                  console.log('Success!');
+                }}
+              />
+            </FilterColumnTwo>
+            <FilterColumnThree>
+              <Select
+                name="Fruit"
+                label=""
+                defaultValue="Fruits"
+                options={[
+                  { optionValue: 'noneSelected', optionLabel: 'Any topic' },
+                  { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
+                  { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
+                  { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
+                ]}
+                onBlur={() => {
+                  console.log('Success!');
+                }}
+              />
+            </FilterColumnThree>
+            <FilterColumnFour>
+              <PrimaryButton content="Primary button" type="button" />
+            </FilterColumnFour>
           </FilterRow>
           <FilterRow>
-            <FilterColumn />
-            <FilterColumn />
-            <FilterColumn />
-            <FilterColumn>
-              <FilterButtons>
-                <TextButton content="Text button" type="button" />
-              </FilterButtons>
-            </FilterColumn>
+            <FilterColumnOne />
+            <FilterColumnTwo />
+            <FilterColumnThree />
+            <FilterColumnFour>
+              <TextButton content="Text button" type="button" />
+            </FilterColumnFour>
           </FilterRow>
         </FilterContainer>
         <h3>

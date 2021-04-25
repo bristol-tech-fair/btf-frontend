@@ -17,10 +17,8 @@ export const PageTitle = styled.h1`
 `;
 
 export const FilterContainer = styled.div`
-  //display: flex;
-  //justify-content: space-between;
-  //padding: var(--small-space);
-  width: 100rem;
+  display: block;
+  max-width: 100rem;
   border: 2px solid red;
   overflow: hidden;
 `;
@@ -29,25 +27,43 @@ export const FilterRow = styled.div`
   display: flex;
   width: 100%;
   border: 2px solid pink;
+  flex-wrap: wrap;
 `;
 
-export const FilterColumn = styled.div`
+export const FilterColumnOne = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   flex: 1;
-  width: 25%;
   border: 2px solid black;
 `;
 
 export const FilterTitle = styled.h4`
-  padding-right: var(--small-space);
   color: var(--lightblue);
 `;
 
-export const FilterSelect = styled.div`
-  width: 100%;
-  //padding-right: var(--small-space);
-  //border: 2px solid teal;
+export const FilterColumnTwo = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 3;
+  border: 2px solid black;
+
+  & select {
+    min-width: 100%;
+    border: 2px solid yellow;
+  }
 `;
 
-export const FilterButtons = styled.div``;
+export const FilterColumnThree = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 3;
+  border: 2px solid black;
+`;
+
+export const FilterColumnFour = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 3;
+  border: 2px solid black;
+`;
