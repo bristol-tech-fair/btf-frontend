@@ -1,24 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SelectWrapper } from './Select.styles';
+import { SelectContainer, LabelTag, SelectTag } from './Select.styles';
+import InputWrapper from '../../theme/inputs.styles';
 
 const Select = ({ name, label, onBlur, options, defaultValue }) => {
   return (
-    <SelectWrapper>
-      <label htmlFor={name}>{label}</label>
-
-      <select name={name} id={name} onBlur={onBlur} value={defaultValue}>
-        {options.map(({ optionValue, optionLabel }) => (
-          <option
-            key={optionLabel}
-            className="select--option"
-            value={optionValue}
-          >
-            {optionLabel}
-          </option>
-        ))}
-      </select>
-    </SelectWrapper>
+    <InputWrapper>
+      <LabelTag htmlFor={name}>{label}</LabelTag>
+      <SelectContainer>
+        <SelectTag name={name} id={name} onBlur={onBlur} value={defaultValue}>
+          {options.map(({ optionValue, optionLabel }) => (
+            <option
+              key={optionLabel}
+              className="select--option"
+              value={optionValue}
+            >
+              {optionLabel}
+            </option>
+          ))}
+        </SelectTag>
+      </SelectContainer>
+    </InputWrapper>
   );
 };
 
