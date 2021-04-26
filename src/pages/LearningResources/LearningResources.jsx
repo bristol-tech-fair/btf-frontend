@@ -7,14 +7,13 @@ import PrimaryButton from '../../components/PrimaryButton';
 import {
   MainContainer,
   PageTitle,
-  FilterContainer,
-  FilterRow,
-  FilterColumnOne,
-  FilterColumnTwo,
-  FilterColumnThree,
-  FilterColumnFour,
-  FilterTitle
-  // FilterSelect,
+  Row,
+  ColumnOne,
+  ColumnTwo,
+  ColumnThree,
+  ColumnFour,
+  FilterTitle,
+  SelectContainer
   // FilterButtons
 } from './LearningResources.styles';
 
@@ -23,57 +22,56 @@ const LearningResources = () => {
     <DefaultPageLayout>
       <MainContainer>
         <PageTitle>Learning Resources</PageTitle>
-        <PrimaryButton content="Primary button" type="button" />
-        <FilterContainer>
-          <FilterRow>
-            <FilterColumnOne>
-              <FilterTitle>Filter</FilterTitle>
-            </FilterColumnOne>
-            <FilterColumnTwo>
+        <Row>
+          <ColumnOne>
+            <FilterTitle>Filter</FilterTitle>
+          </ColumnOne>
+          <ColumnTwo>
+            <SelectContainer>
               <Select
-                name="Fruit"
+                name="ages"
                 label=""
-                defaultValue="Fruits"
+                placeholder="Age group"
                 options={[
-                  { optionValue: 'noneSelected', optionLabel: 'Age group' },
-                  { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
-                  { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
-                  { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
+                  { value: 'coding', label: 'Coding' },
+                  { value: 'Watermelon', label: 'Watermelon' },
+                  { value: 'Jackfruit', label: 'Jackfruit' }
                 ]}
                 onBlur={() => {
                   console.log('Success!');
                 }}
               />
-            </FilterColumnTwo>
-            <FilterColumnThree>
+            </SelectContainer>
+          </ColumnTwo>
+          <ColumnThree>
+            <SelectContainer>
               <Select
-                name="Fruit"
+                name="topic"
                 label=""
-                defaultValue="Fruits"
+                placeholder="Any topic"
                 options={[
-                  { optionValue: 'noneSelected', optionLabel: 'Any topic' },
-                  { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
-                  { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
-                  { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
+                  { value: 'Strawberry', label: 'Strawberry' },
+                  { value: 'Watermelon', label: 'Watermelon' },
+                  { value: 'Jackfruit', label: 'Jackfruit' }
                 ]}
                 onBlur={() => {
                   console.log('Success!');
                 }}
               />
-            </FilterColumnThree>
-            <FilterColumnFour>
-              <PrimaryButton content="Primary button" type="button" />
-            </FilterColumnFour>
-          </FilterRow>
-          <FilterRow>
-            <FilterColumnOne />
-            <FilterColumnTwo />
-            <FilterColumnThree />
-            <FilterColumnFour>
-              <TextButton content="Text button" type="button" />
-            </FilterColumnFour>
-          </FilterRow>
-        </FilterContainer>
+            </SelectContainer>
+          </ColumnThree>
+          <ColumnFour>
+            <PrimaryButton content="Primary button" type="button" />
+          </ColumnFour>
+        </Row>
+        <Row>
+          <ColumnOne />
+          <ColumnTwo />
+          <ColumnThree />
+          <ColumnFour>
+            <TextButton content="Clear Filters" type="button" />
+          </ColumnFour>
+        </Row>
         <h3>
           <span>below will be filter</span>
           <div>Here we will have a list of resource cards</div>

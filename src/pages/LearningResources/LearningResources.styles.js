@@ -9,45 +9,44 @@ export const MainContainer = styled.div`
 `;
 
 export const PageTitle = styled.h1`
-  border: 2px solid lime;
-  //align-self: center;
-  //display: flex;
-  //margin: 0 auto;
-  //padding-right: var(--small-space);
+  margin: var(--small-space) 0;
 `;
 
-export const FilterContainer = styled.div`
-  //display: flex;
-  //justify-content: space-between;
-  //padding: var(--small-space);
-  width: 100rem;
-  border: 2px solid red;
-  overflow: hidden;
-`;
-
-export const FilterRow = styled.div`
+export const Row = styled.div`
   display: flex;
+  padding: 0 var(--large-space);
   width: 100%;
-  border: 2px solid pink;
 `;
 
-export const FilterColumn = styled.div`
+export const ColumnOne = styled.div`
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   flex: 1;
-  width: 25%;
-  border: 2px solid black;
+`;
+
+export const ColumnTwo = styled.div`
+  display: flex;
+  flex: 2;
+  padding-right: var(--small-space);
+`;
+
+export const ColumnThree = styled.div`
+  display: flex;
+  flex: 2;
+  padding-right: var(--small-space);
+`;
+
+export const ColumnFour = styled.div`
+  display: flex;
+  flex: 2;
 `;
 
 export const FilterTitle = styled.h4`
-  padding-right: var(--small-space);
   color: var(--lightblue);
+  padding-right: var(--small-space);
 `;
 
-export const FilterSelect = styled.div`
+export const SelectContainer = styled.div`
   width: 100%;
-  //padding-right: var(--small-space);
-  //border: 2px solid teal;
 `;
-
-export const FilterButtons = styled.div``;
