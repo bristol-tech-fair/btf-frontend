@@ -3,19 +3,22 @@ import PropTypes from 'prop-types';
 import { SelectContainer, LabelTag, SelectTag } from './Select.styles';
 import InputWrapper from '../../theme/inputs.styles';
 
-const Select = ({ name, label, onBlur, options, defaultValue }) => {
+const Select = ({ name, label, onBlur, options, placeholder }) => {
   return (
     <InputWrapper>
       <LabelTag htmlFor={name}>{label}</LabelTag>
       <SelectContainer>
-        <SelectTag name={name} id={name} onBlur={onBlur} value={defaultValue}>
-          {options.map(({ optionValue, optionLabel }) => (
+        <SelectTag name={name} id={name} onBlur={onBlur}>
+          <option value="" selected disabled hidden>
+            {placeholder}
+          </option>
+          {options.map((option) => (
             <option
-              key={optionLabel}
+              key={option.label}
               className="select--option"
-              value={optionValue}
+              value={option.value}
             >
-              {optionLabel}
+              {option.label}
             </option>
           ))}
         </SelectTag>
@@ -27,11 +30,11 @@ const Select = ({ name, label, onBlur, options, defaultValue }) => {
 Select.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  defaultValue: PropTypes.string,
+  placeholder: PropTypes.string,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      optionValue: PropTypes.string.isRequired,
-      optionLabel: PropTypes.string.isRequired
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
     })
   ).isRequired,
   onBlur: PropTypes.func.isRequired
