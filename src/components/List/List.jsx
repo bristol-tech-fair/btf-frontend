@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ListWrapper, StyledList } from './List.styles';
 
-const List = ({ Component, data, title }) => {
+const List = ({ Component, title, data }) => {
   return (
     <ListWrapper>
       <h1>{title}</h1>
       <StyledList>
-        {data.map((props) => (
-          <Component {...{ ...props }} />
-        ))}
+        {data &&
+          data.map((props) => <Component key={props._id} {...{ ...props }} />)}
       </StyledList>
     </ListWrapper>
   );
 };
 
 List.propTypes = {
-  Component: PropTypes.string.isRequired,
+  Component: PropTypes.objectOf.isRequired,
   title: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired
+  data: PropTypes.string.isRequired,
+  _id: PropTypes.number.isRequired
 };
 
 export default List;

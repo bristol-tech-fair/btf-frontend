@@ -13,8 +13,8 @@ export const ClubCardList = () => (
     <Router>
       <ClubCard
         title="Codingbug"
+        coverUrl="https://via.placeholder.com/240x140"
         to="/"
-        imgUrl="https://via.placeholder.com/240x140"
       />
     </Router>
   </List>
