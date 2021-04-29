@@ -1,21 +1,42 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import List from './List';
-import ClubCard from '../ClubCard';
+import ClubCard from '../ClubCard/ClubCard';
 
 export default {
   title: 'Components/List',
   component: List
 };
 
+const data = [
+  {
+    coverUrl: 'https://via.placeholder.com/240x140',
+    title: 'Codingbug',
+    to: '/'
+  },
+  {
+    coverUrl: 'https://via.placeholder.com/240x140',
+    title: 'Code Club',
+    to: '/'
+  }
+];
+
 export const ClubCardList = () => (
-  <List title="Clubs">
-    <Router>
+  <Router>
+    <List title="Clubs" Component={ClubCard} _id="1" />
+    <li>
       <ClubCard
-        title="Codingbug"
-        coverUrl="https://via.placeholder.com/240x140"
-        to="/"
+        coverUrl={data[0].coverUrl}
+        title={data[0].title}
+        to={data[0].to}
       />
-    </Router>
-  </List>
+    </li>
+    <li>
+      <ClubCard
+        coverUrl={data[1].coverUrl}
+        title={data[1].title}
+        to={data[1].to}
+      />
+    </li>
+  </Router>
 );

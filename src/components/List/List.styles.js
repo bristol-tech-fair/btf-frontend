@@ -7,4 +7,5 @@ export const ListWrapper = styled.div`
 export const StyledList = styled.ul`
   display: grid;
   gap: var(--medium-space);
+  list-style: none;
 `;

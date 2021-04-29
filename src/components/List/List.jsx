@@ -15,9 +15,9 @@ const List = ({ Component, title, data }) => {
 };
 
 List.propTypes = {
-  Component: PropTypes.objectOf.isRequired,
+  Component: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
+  data: PropTypes.func.isRequired,
   _id: PropTypes.number.isRequired
 };
 
