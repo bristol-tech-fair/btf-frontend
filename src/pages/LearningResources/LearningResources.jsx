@@ -4,6 +4,8 @@ import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import Select from '../../components/Select';
 import TextButton from '../../components/TextButton';
 import PrimaryButton from '../../components/PrimaryButton';
+import TertiaryButton from '../../components/TertiaryButton';
+import ResourceCard from '../../components/ResourceCard';
 import {
   MainContainer,
   PageTitle,
@@ -12,8 +14,12 @@ import {
   ColumnTwo,
   ColumnThree,
   ColumnFour,
-  FilterTitle
+  FilterTitle,
+  ListContainer
 } from './LearningResources.styles';
+
+// TODO    need state for select tags for reset and search and loading more resources*/;
+// TODO    need state for one active card (opacity 1) and disabled Load button */;
 
 const LearningResources = () => {
   return (
@@ -63,14 +69,22 @@ const LearningResources = () => {
           <ColumnTwo />
           <ColumnThree />
           <ColumnFour>
-            <TextButton content="Text button" type="button" />
+            <TextButton content="Clear Filters" type="button" />
           </ColumnFour>
         </Row>
-        <h3>
-          <span>below will be </span>
-          <div>Here we will have a list of resource cards</div>
-        </h3>
-        <h3>and we insert button to show more resources</h3>
+        <ListContainer>
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+          <ResourceCard />
+        </ListContainer>
+        <TertiaryButton content="Show more" type="button" />
       </MainContainer>
     </DefaultPageLayout>
   );

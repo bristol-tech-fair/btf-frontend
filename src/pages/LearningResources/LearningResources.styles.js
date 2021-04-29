@@ -14,7 +14,6 @@ export const PageTitle = styled.h1`
 
 export const Row = styled.div`
   display: flex;
-  //padding: 0 var(--large-space);
   width: 100%;
 `;
 
@@ -54,5 +53,13 @@ export const FilterTitle = styled.h4`
 `;
 
 export const SelectContainer = styled.div`
+  width: 100%;
+`;
+
+export const ListContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: var(--small-space) 0 var(--medium-space) 0;
   width: 100%;
 `;

@@ -24,11 +24,9 @@ export const MainContainer = styled.main`
   width: 100%;
   max-width: 144rem;
   margin: var(--medium-space) 0;
-  border: 2px solid blue;
 `;
 
 export const FooterContainer = styled.div`
-  //background-color: var(--orange);
   width: 100%;
   max-width: 144rem;
   margin-top: auto;
