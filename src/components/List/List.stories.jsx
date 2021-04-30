@@ -18,6 +18,16 @@ const data = [
     coverUrl: 'https://via.placeholder.com/240x140',
     title: 'Code Club',
     to: '/'
+  },
+  {
+    coverUrl: 'https://via.placeholder.com/240x140',
+    title: 'Coder Dojo',
+    to: '/'
+  },
+  {
+    coverUrl: 'https://via.placeholder.com/240x140',
+    title: 'Code Club',
+    to: '/'
   }
 ];
 
