@@ -23,20 +23,6 @@ const data = [
 
 export const ClubCardList = () => (
   <Router>
-    <List title="Clubs" Component={ClubCard} _id="1" />
-    <li>
-      <ClubCard
-        coverUrl={data[0].coverUrl}
-        title={data[0].title}
-        to={data[0].to}
-      />
-    </li>
-    <li>
-      <ClubCard
-        coverUrl={data[1].coverUrl}
-        title={data[1].title}
-        to={data[1].to}
-      />
-    </li>
+    <List title="Clubs" Component={ClubCard} _id="1" data={data} />
   </Router>
 );
