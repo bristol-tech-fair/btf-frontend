@@ -1,32 +1,40 @@
 import styled from 'styled-components';
 
-export const SelectWrapper = styled.div`
+export const SelectTag = styled.select`
+  cursor: pointer;
+  color: var(--darkgrey);
+  font-size: 1.6rem;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+`;
+
+export const LabelTag = styled.label`
+  color: var(--darkblue);
+`;
+
+export const SelectContainer = styled.div`
   display: flex;
   flex-flow: column;
   position: relative;
 
   select {
-    font-size: 1.6rem;
     cursor: pointer;
+    color: var(--darkgrey);
+    font-size: 1.6rem;
+
+    appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    padding: var(--small-space);
-    border: 0.1rem solid var(--lightblue);
-    background: var(--lightgrey);
-    border-radius: 0.5rem;
-
-    placeholder {
-      color: var(--darkgrey);
-      font-size: 1rem;
-    }
   }
 
   &::after {
     content: ' ';
     display: block;
     position: absolute;
-    top: 5.2rem;
-    right: var(--medium-space);
+    top: 2.5rem;
+    right: var(--smallest-space);
     width: 0;
     height: 0;
     border-left: 0.8rem solid transparent;

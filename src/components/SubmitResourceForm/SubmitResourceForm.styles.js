@@ -4,7 +4,7 @@ import mediaQuery from '../../utils/mediaQuery';
 
 export const PopupContainer = styled.div`
   //swap none with flex
-  display: ${(props) => (props.click === true ? 'none' : 'flex')};
+  display: ${(props) => (props.close === true ? 'none' : 'flex')};
   flex-direction: column;
   height: 100vh;
   width: 100%;

@@ -30,82 +30,81 @@ import { Robot } from '../Illustration';
 import { Cross, File, Links, Youtube, Image, ArrowLeft } from '../Icons';
 
 const SubmitResourceForm = () => {
+  /* Functionality for "flip card", "close" button and "submit" button.
+      "onSubmit" function prevent double clicking "Submit button" and prevent activating it on Enter
+     */
+
   const [isFlipped, setIsFlipped] = useState(false);
-  const [click, setClick] = useState(false);
+  const [close, setClose] = useState(false);
 
   const flipCard = (event) => {
     event.preventDefault();
     setIsFlipped(!isFlipped);
   };
 
-  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
 
-  const { handleSubmit, formState } = useForm();
-  const onSubmit = async () => {
-    if (!formState.isSubmitting) {
-      console.log('onSubmit');
-      await sleep(2000);
-    }
-  };
+  const onSubmit = (data) => console.log(data);
+  console.log(errors);
 
   return (
-    <PopupContainer click={click}>
+    <PopupContainer close={close}>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <FrontCard>
           <MobileNav>
             <Navigation />
           </MobileNav>
-          <CloseButton onClick={() => setClick(!click)}>
+          <CloseButton onClick={() => setClose(!close)}>
             <Cross />
           </CloseButton>
           <Header>Submit your resource</Header>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <TextInput
-              id="titleInput"
-              name="titleInput"
+              id="title"
+              name="title"
               label="Title*"
               placeholder="Resource name"
               value="Input"
+              {...register('title', { required: true })}
             />
             <Select
               name="Category"
               label="Category*"
-              defaultValue="Category"
+              placeholder="Choose category..."
               options={[
-                {
-                  optionValue: 'noneSelected',
-                  optionLabel: 'Please choose one category'
-                },
-                { optionValue: 'Coding', optionLabel: 'Coding' },
-                { optionValue: 'Maths', optionLabel: 'Maths' },
-                { optionValue: 'Electronics', optionLabel: 'Electronics' }
+                { value: 'Strawberry', label: 'Strawberry' },
+                { value: 'Watermelon', label: 'Watermelon' },
+                { value: 'Jackfruit', label: 'Jackfruit' }
               ]}
               onBlur={() => {
                 console.log('Success!');
               }}
+              {...register('category', { required: true })}
             />
             <Select
-              name="Ages"
+              name="ages"
               label="Ages*"
-              defaultValue="Ages"
+              placeholder="Choose age group..."
               options={[
-                {
-                  optionValue: 'noneSelected',
-                  optionLabel: 'Please choose one category'
-                },
-                { optionValue: '6-10', optionLabel: '6-10' },
-                { optionValue: '11-14', optionLabel: '11-14' },
-                { optionValue: '15-18', optionLabel: '15-18' }
+                { value: 'Strawberry', label: 'Strawberry' },
+                { value: 'Watermelon', label: 'Watermelon' },
+                { value: 'Jackfruit', label: 'Jackfruit' }
               ]}
               onBlur={() => {
                 console.log('Success!');
               }}
+              {...register('ages', { required: true })}
             />
             <TextArea
               id="descriptionInput"
               name="textInput"
               labelText="Description"
               placeholder="Write what this resource is about"
+              {...register('description')}
             />
             <Attachments>Attachments</Attachments>
             <UploadsContainer>
@@ -131,7 +130,6 @@ const SubmitResourceForm = () => {
                 type="submit"
                 content="Submit"
                 onClick={flipCard}
-                disabled={formState.isSubmitting}
               />
             </ButtonContainer>
             <Info>Fields marked with * are mandatory.</Info>
@@ -141,7 +139,7 @@ const SubmitResourceForm = () => {
           <MobileNav>
             <Navigation />
           </MobileNav>
-          <CloseButton type="button" onClick={() => setClick(!click)}>
+          <CloseButton type="button" onClick={() => setClose(!close)}>
             <Cross />
           </CloseButton>
           <ImageContainer>
