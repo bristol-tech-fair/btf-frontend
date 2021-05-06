@@ -12,7 +12,7 @@ export const LayoutContainer = styled.div`
   overflow: hidden;
 `;
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   width: 100%;
 
   ${mediaQuery.desktop} {
