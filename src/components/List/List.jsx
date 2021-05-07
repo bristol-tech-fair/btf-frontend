@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ListWrapper, StyledList, ListTitle } from './List.styles';
+import { ListWrapper, StyledList } from './List.styles';
 
-const List = ({ Component, title, data }) => {
+const List = ({ Component, data }) => {
   return (
     <ListWrapper>
-      <ListTitle>{title}</ListTitle>
       <StyledList>
         {data &&
           data.map((props) => <Component key={props._id} {...{ ...props }} />)}
@@ -16,7 +15,6 @@ const List = ({ Component, title, data }) => {
 
 List.propTypes = {
   Component: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
   data: PropTypes.func.isRequired,
   _id: PropTypes.number.isRequired
 };

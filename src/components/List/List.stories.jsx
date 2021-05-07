@@ -33,6 +33,6 @@ const data = [
 
 export const ClubCardList = () => (
   <Router>
-    <List title="Clubs" Component={ClubCard} _id="1" data={data} />
+    <List Component={ClubCard} _id="1" data={data} />
   </Router>
 );

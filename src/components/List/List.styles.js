@@ -15,8 +15,3 @@ export const StyledList = styled.ul`
     grid-template-columns: repeat(4, 1fr);
   }
 `;
-
-export const ListTitle = styled.h1`
-  text-align: center;
-  padding-bottom: var(--medium-space);
-`;
