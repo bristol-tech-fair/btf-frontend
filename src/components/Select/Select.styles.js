@@ -1,30 +1,15 @@
 import styled from 'styled-components';
+import InputWrapper from '../../theme/inputs.styles';
 
-export const SelectTag = styled.select`
-  cursor: pointer;
-  color: var(--darkgrey);
-  font-size: 1.6rem;
-
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-`;
-
-export const LabelTag = styled.label`
-  font-weight: bold;
-  color: var(--darkblue);
-`;
-
-export const SelectContainer = styled.div`
+export const SelectInputWrapper = styled(InputWrapper)`
   display: flex;
-  flex-flow: column;
-  position: relative;
+  flex-direction: column;
+
+  label {
+    font-weight: bold;
+  }
 
   select {
-    cursor: pointer;
-    color: var(--darkgrey);
-    font-size: 1.6rem;
-
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -34,8 +19,8 @@ export const SelectContainer = styled.div`
     content: ' ';
     display: block;
     position: absolute;
-    top: 2.5rem;
-    right: var(--smallest-space);
+    top: 5.6rem;
+    right: var(--small-space);
     width: 0;
     height: 0;
     border-left: 0.8rem solid transparent;
