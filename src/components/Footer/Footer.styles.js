@@ -9,40 +9,58 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const FooterWrapper = styled.div`
-  background-color: var(--orange);
-  position: relative;
-  height: 30rem;
   display: flex;
   justify-content: space-between;
 
-  ${mediaQuery.desktop} {
-    height: 31.2rem;
+  background-color: var(--orange);
+  position: relative;
+
+  height: var(--largest-space);
+  padding: var(--small-space);
+`;
+
+export const LinksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+export const Paragraph = styled.p`
+  display: flex;
+  align-self: center;
+  color: var(--white);
+
+  ${mediaQuery.tablet} {
+    align-self: flex-start;
   }
 `;
 
-export const LinksList = styled.div`
+export const ColumnWrapper = styled.div`
   display: flex;
+  flex: 3;
+`;
+
+export const ColumnOne = styled.div`
+  display: flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  height: 23.215rem;
-  left: var(--small-space);
-  top: var(--medium-space);
 
   p {
     font-size: 1.2rem;
     color: var(--white);
   }
-
-  ${mediaQuery.desktop} {
-    left: var(--medium-space);
-  }
+`;
+export const ColumnTwo = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 `;
 
 export const IconsWrapper = styled.div`
   display: flex;
-  max-width: 11.2rem;
+  max-width: 13rem;
   justify-content: space-between;
+  padding: var(--smallest-space) 0;
 
   ${StyledLink} svg {
     vertical-align: middle;
@@ -56,19 +74,16 @@ export const IconsWrapper = styled.div`
   }
 `;
 
-export const Image = styled.div`
-  position: absolute;
+export const ImageContainer = styled.div`
   display: none;
-  right: 2.7rem;
-  top: calc(-1 * var(--medium-space));
-  transform: rotate(12deg);
-
-  svg {
-    width: 30.6rem;
-    height: 30.1rem;
-  }
+  transform: rotate(12deg) translateY(calc(-1 * var(--largest-space)));
 
   ${mediaQuery.tablet} {
     display: flex;
+
+    svg {
+      width: 30.6rem;
+      height: 30.1rem;
+    }
   }
 `;
