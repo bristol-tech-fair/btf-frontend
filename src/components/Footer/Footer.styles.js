@@ -19,7 +19,7 @@ export const FooterWrapper = styled.div`
   padding: var(--small-space);
 `;
 
-export const LinksContainer = styled.div`
+export const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -35,12 +35,12 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const ColumnWrapper = styled.div`
+export const LinksWrapper = styled.div`
   display: flex;
   flex: 3;
 `;
 
-export const ColumnOne = styled.div`
+export const LeftLinks = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -50,7 +50,7 @@ export const ColumnOne = styled.div`
     color: var(--white);
   }
 `;
-export const ColumnTwo = styled.div`
+export const RightLinks = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -74,7 +74,7 @@ export const IconsWrapper = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const RightColumn = styled.div`
   display: none;
   transform: rotate(12deg) translateY(calc(-1 * var(--largest-space)));
 

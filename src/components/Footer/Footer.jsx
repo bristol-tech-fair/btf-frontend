@@ -1,11 +1,11 @@
 import React from 'react';
 import {
   FooterWrapper,
-  ImageContainer,
-  LinksContainer,
-  ColumnWrapper,
-  ColumnOne,
-  ColumnTwo,
+  RightColumn,
+  LeftColumn,
+  LinksWrapper,
+  LeftLinks,
+  RightLinks,
   Paragraph,
   IconsWrapper,
   StyledLink
@@ -16,9 +16,9 @@ import { Twitter, Facebook, LinkedIn } from '../Icons';
 const Footer = () => {
   return (
     <FooterWrapper>
-      <LinksContainer>
-        <ColumnWrapper>
-          <ColumnOne>
+      <LeftColumn>
+        <LinksWrapper>
+          <LeftLinks>
             <StyledLink to="/about">About</StyledLink>
             <StyledLink to="/contacts">Contacts</StyledLink>
             <IconsWrapper>
@@ -32,19 +32,19 @@ const Footer = () => {
                 <LinkedIn />
               </StyledLink>
             </IconsWrapper>
-          </ColumnOne>
-          <ColumnTwo>
+          </LeftLinks>
+          <RightLinks>
             <StyledLink to="/codeofconduct">Code of Conduct</StyledLink>
             <StyledLink to="/cookiepolicy">Cookie Policy</StyledLink>
             <StyledLink to="/termsandconditions">Terms & Conditions</StyledLink>
-          </ColumnTwo>
-        </ColumnWrapper>
+          </RightLinks>
+        </LinksWrapper>
 
         <Paragraph>All rights reserved. Bristol Tech Fair 2020</Paragraph>
-      </LinksContainer>
-      <ImageContainer>
+      </LeftColumn>
+      <RightColumn>
         <Robot />
-      </ImageContainer>
+      </RightColumn>
     </FooterWrapper>
   );
 };
