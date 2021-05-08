@@ -14,6 +14,7 @@ export const FooterWrapper = styled.div`
   height: 30rem;
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
 
   ${mediaQuery.desktop} {
     height: 31.2rem;
