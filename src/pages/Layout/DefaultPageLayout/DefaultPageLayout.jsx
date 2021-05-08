@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
   LayoutContainer,
   FooterContainer,
-  HeaderContainer,
   MainContainer
 } from './DefaultPageLayout.styles';
 import Navigation from '../../../components/Navigation';
@@ -12,9 +11,7 @@ import Footer from '../../../components/Footer';
 const DefaultPageLayout = ({ children }) => {
   return (
     <LayoutContainer>
-      <HeaderContainer>
-        <Navigation />
-      </HeaderContainer>
+      <Navigation />
       <MainContainer>{children}</MainContainer>
       <FooterContainer>
         <Footer />
