@@ -5,10 +5,6 @@ export const SelectInputWrapper = styled(InputWrapper)`
   display: flex;
   flex-direction: column;
 
-  label {
-    font-weight: bold;
-  }
-
   select {
     appearance: none;
     -moz-appearance: none;
