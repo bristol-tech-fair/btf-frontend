@@ -11,7 +11,6 @@ export const SelectInputWrapper = styled(InputWrapper)`
     -webkit-appearance: none;
 
     font-size: 1.6rem;
-    color: var(--darkgrey);
   }
 
   &::after {
