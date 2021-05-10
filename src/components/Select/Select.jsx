@@ -1,35 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { SelectWrapper } from './Select.styles';
+import { SelectInputWrapper } from './Select.styles';
 
-const Select = ({ name, label, onBlur, options, defaultValue }) => {
+const Select = ({ name, label, onBlur, options, placeholder }) => {
+  const [color, setColor] = useState(`var(--darkgrey)`);
+
+  function changeColor() {
+    setColor(`var(--darkblue)`);
+  }
   return (
-    <SelectWrapper>
+    <SelectInputWrapper>
       <label htmlFor={name}>{label}</label>
-
-      <select name={name} id={name} onBlur={onBlur} value={defaultValue}>
-        {options.map(({ optionValue, optionLabel }) => (
+      <select
+        name={name}
+        id={name}
+        onBlur={onBlur}
+        style={{ color }}
+        onChange={changeColor}
+      >
+        <option value="" selected disabled hidden>
+          {placeholder}
+        </option>
+        {options.map((option) => (
           <option
-            key={optionLabel}
+            key={option.label}
             className="select--option"
-            value={optionValue}
+            value={option.value}
           >
-            {optionLabel}
+            {option.label}
           </option>
         ))}
       </select>
-    </SelectWrapper>
+    </SelectInputWrapper>
   );
 };
 
 Select.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  defaultValue: PropTypes.string,
+  placeholder: PropTypes.string,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      optionValue: PropTypes.string.isRequired,
-      optionLabel: PropTypes.string.isRequired
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
     })
   ).isRequired,
   onBlur: PropTypes.func.isRequired
