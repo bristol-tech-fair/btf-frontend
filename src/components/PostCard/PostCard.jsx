@@ -35,10 +35,10 @@ const PostCard = ({
           <MoreLink to={postLink}>Read more</MoreLink>
         </MoreLinkWrapper>
         <MoreLinkWrapper>
-          <a href={shareLink}>
+          <a href={shareLink} title="Share link">
             <Share />
           </a>
-          <a href={bookmark}>
+          <a href={bookmark} title="Bookmark link">
             <Bookmark />
           </a>
         </MoreLinkWrapper>
