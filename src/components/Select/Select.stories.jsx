@@ -10,7 +10,7 @@ export const Fruit = () => (
   <Select
     name="Fruit"
     label="Choose a fruit"
-    placeholder="I am default Value"
+    placeholder="Select an option"
     options={[
       { value: 'Strawberry', label: 'Strawberry' },
       { value: 'Watermelon', label: 'Watermelon' },
@@ -26,7 +26,7 @@ export const Example = () => (
   <Select
     name="Example name"
     label="Example label"
-    defaultValue="Example default value"
+    placeholder="Example value"
     options={[
       { value: '1', label: '1' },
       { value: '2', label: '2' },
