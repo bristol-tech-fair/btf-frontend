@@ -7,7 +7,8 @@ const TextInput = ({
   defaultValue,
   name,
   handleOnChange,
-  placeholder
+  placeholder,
+  ...inputProps
 }) => {
   return (
     <TextInputWrapper>
@@ -18,6 +19,7 @@ const TextInput = ({
         onChange={handleOnChange}
         value={defaultValue}
         placeholder={placeholder}
+        {...inputProps}
       />
     </TextInputWrapper>
   );

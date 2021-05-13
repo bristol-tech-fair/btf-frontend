@@ -48,8 +48,11 @@ const SubmitResourceForm = () => {
     formState: { errors }
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+    console.log(data);
+    console.log(errors);
+  };
 
   return (
     <PopupContainer close={close}>
@@ -68,7 +71,6 @@ const SubmitResourceForm = () => {
               name="title"
               label="Title*"
               placeholder="Resource name"
-              value="Input"
               {...register('title', { required: true })}
             />
             <Select
@@ -126,11 +128,7 @@ const SubmitResourceForm = () => {
               </FileToUpload>
             </UploadsContainer>
             <ButtonContainer>
-              <TertiaryButton
-                type="submit"
-                content="Submit"
-                onClick={flipCard}
-              />
+              <TertiaryButton type="submit" content="Submit" />
             </ButtonContainer>
             <Info>Fields marked with * are mandatory.</Info>
           </Form>

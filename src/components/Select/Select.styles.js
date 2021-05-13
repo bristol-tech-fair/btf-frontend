@@ -4,6 +4,7 @@ import InputWrapper from '../../theme/inputs.styles';
 export const SelectInputWrapper = styled(InputWrapper)`
   display: flex;
   flex-direction: column;
+  position: relative;
 
   select {
     appearance: none;
