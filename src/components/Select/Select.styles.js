@@ -18,7 +18,7 @@ export const SelectInputWrapper = styled(InputWrapper)`
     content: ' ';
     display: block;
     position: absolute;
-    top: 5.6rem;
+    top: 4.9rem;
     right: var(--small-space);
     width: 0;
     height: 0;

@@ -14,6 +14,10 @@ export const PopupContainer = styled.div`
   background-color: hsla(0, 0%, 0%, 0.8);
   z-index: 9999;
 
+  #err-msg {
+    color: red;
+  }
+
   ${mediaQuery.tablet} {
     justify-content: center;
     align-items: center;
