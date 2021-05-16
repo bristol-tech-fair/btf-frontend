@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { SelectInputWrapper } from './Select.styles';
 
-const Select = ({ id, name, label, onBlur, options, placeholder }) => {
+const Select = ({ name, label, onBlur, options, placeholder }) => {
   const [color, setColor] = useState(`var(--darkgrey)`);
 
   function changeColor() {
@@ -13,7 +13,7 @@ const Select = ({ id, name, label, onBlur, options, placeholder }) => {
       <label htmlFor={name}>{label}</label>
       <select
         name={name}
-        id={id}
+        id={name}
         onBlur={onBlur}
         style={{ color }}
         onChange={changeColor}
@@ -37,7 +37,6 @@ const Select = ({ id, name, label, onBlur, options, placeholder }) => {
 
 Select.propTypes = {
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   options: PropTypes.arrayOf(

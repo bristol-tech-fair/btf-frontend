@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { TextInputWrapper } from './TextInput.styles';
 
 const TextInput = ({
-  id,
   label,
   defaultValue,
   name,
@@ -16,7 +15,7 @@ const TextInput = ({
       <label htmlFor={name}>{label}</label>
       <input
         name={name}
-        id={id}
+        id={name}
         onChange={handleOnChange}
         value={defaultValue}
         placeholder={placeholder}
@@ -28,7 +27,6 @@ const TextInput = ({
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
   handleOnChange: PropTypes.func,
