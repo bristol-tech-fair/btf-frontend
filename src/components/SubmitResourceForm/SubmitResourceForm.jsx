@@ -63,15 +63,11 @@ const SubmitResourceForm = () => {
               name="title"
               label="Title*"
               placeholder="Resource name"
-              aria-invalid={errors.title ? 'true' : 'false'}
               {...register('title', { required: true })}
             />
-            {errors.title && errors.title.type === 'required' && (
-              <span id="err-msg" role="alert">
-                This is required
-              </span>
-            )}
+            {errors.title && <span id="err-msg">This Field is required</span>}
             <Select
+              id="Category"
               name="Category"
               label="Category*"
               placeholder="Choose category..."
@@ -80,16 +76,10 @@ const SubmitResourceForm = () => {
                 { value: 'Watermelon', label: 'Watermelon' },
                 { value: 'Jackfruit', label: 'Jackfruit' }
               ]}
-              onBlur={() => {
-                console.log('Success!');
-              }}
-              aria-invalid={errors.title ? 'true' : 'false'}
               {...register('category', { required: true })}
             />
-            {errors.category && errors.category.type === 'required' && (
-              <span id="err-msg" role="alert">
-                This is required
-              </span>
+            {errors.category && (
+              <span id="err-msg">This Field is required</span>
             )}
             <Select
               name="ages"
@@ -103,14 +93,9 @@ const SubmitResourceForm = () => {
               onBlur={() => {
                 console.log('Success!');
               }}
-              aria-invalid={errors.title ? 'true' : 'false'}
               {...register('ages', { required: true })}
             />
-            {errors.ages && errors.ages.type === 'required' && (
-              <span id="err-msg" role="alert">
-                This is required
-              </span>
-            )}
+            {errors.ages && <span id="err-msg">This Field is required</span>}
             <TextArea
               id="descriptionInput"
               name="textInput"
