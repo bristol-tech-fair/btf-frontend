@@ -30,17 +30,8 @@ import { Robot } from '../Illustration';
 import { Cross, File, Links, Youtube, Image, ArrowLeft } from '../Icons';
 
 const SubmitResourceForm = () => {
-  /* Functionality for "flip card", "close" button and "submit" button.
-      "onSubmit" function prevent double clicking "Submit button" and prevent activating it on Enter
-     */
-
   const [isFlipped, setIsFlipped] = useState(false);
   const [close, setClose] = useState(false);
-
-  const flipCard = (event) => {
-    event.preventDefault();
-    setIsFlipped(!isFlipped);
-  };
 
   const {
     register,
@@ -49,6 +40,7 @@ const SubmitResourceForm = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    setIsFlipped(!isFlipped);
     alert(JSON.stringify(data));
     console.log(data);
     console.log(errors);
@@ -165,7 +157,7 @@ const SubmitResourceForm = () => {
 
           <ReturnButton>
             <ArrowLeft />
-            <TextButton onClick={flipCard} type="button" content="Back" />
+            <TextButton type="button" content="Back" />
           </ReturnButton>
           <FooterContainer>
             <Footer />
