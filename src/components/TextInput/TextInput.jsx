@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { TextInputWrapper } from './TextInput.styles';
 
 const TextInput = ({
+  id,
   label,
-  defaultValue,
+  value,
   name,
   handleOnChange,
   placeholder,
@@ -17,7 +18,7 @@ const TextInput = ({
         name={name}
         id={name}
         onChange={handleOnChange}
-        value={defaultValue}
+        value={value}
         placeholder={placeholder}
         {...inputProps}
       />
@@ -27,8 +28,9 @@ const TextInput = ({
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  defaultValue: PropTypes.string,
+  value: PropTypes.string,
   handleOnChange: PropTypes.func,
   placeholder: PropTypes.string
 };

@@ -40,9 +40,12 @@ const SubmitResourceForm = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    setIsFlipped(!isFlipped);
-    alert(JSON.stringify(data));
-    console.log(data);
+    setTimeout(() => {
+      setIsFlipped(!isFlipped);
+      alert(JSON.stringify(data));
+      console.log(data);
+    }, 1000);
+
     console.log(errors);
   };
 
@@ -107,19 +110,19 @@ const SubmitResourceForm = () => {
             <UploadsContainer>
               <FileToUpload>
                 <Links />
-                Link
+                <TextInput type="file" label="Link" id="link" name="link" />
               </FileToUpload>
               <FileToUpload>
                 <File />
-                File
+                <TextInput type="file" label="File" id="file" name="file" />
               </FileToUpload>
               <FileToUpload>
                 <Youtube />
-                Video
+                <TextInput type="file" label="Video" id="video" name="video" />
               </FileToUpload>
               <FileToUpload>
                 <Image />
-                Image
+                <TextInput type="file" label="Image" id="image" name="image" />
               </FileToUpload>
             </UploadsContainer>
             <ButtonContainer>

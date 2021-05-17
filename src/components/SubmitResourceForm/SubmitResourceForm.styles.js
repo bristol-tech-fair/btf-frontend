@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import mediaQuery from '../../utils/mediaQuery';
 
 export const PopupContainer = styled.div`
@@ -53,7 +53,7 @@ export const MobileNav = styled.div`
   }
 `;
 
-export const CloseButton = styled(Link)`
+export const CloseButton = styled.div`
   display: flex;
   align-self: flex-end;
 `;
@@ -70,12 +70,32 @@ export const UploadsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-self: center;
+
+  [type='file'] {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+  }
 `;
 
-export const FileToUpload = styled(Link)`
+export const FileToUpload = styled.div`
   display: flex;
   align-items: center;
   padding: 0 var(--smallest-space);
+
+  label {
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      color: var(--logopink);
+    }
+  }
 `;
 
 export const ButtonContainer = styled.div`
