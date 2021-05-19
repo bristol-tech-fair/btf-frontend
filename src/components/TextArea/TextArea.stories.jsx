@@ -12,7 +12,6 @@ export const TextAreaDefaultView = () => (
     name="textarea"
     labelText="Label"
     placeholder="Input text"
-    value="Input"
   />
 );
 
