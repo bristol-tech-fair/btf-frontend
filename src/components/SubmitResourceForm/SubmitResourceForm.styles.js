@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
 import mediaQuery from '../../utils/mediaQuery';
 
 export const PopupContainer = styled.div`
-  //swap none with flex
-  display: ${(props) => (props.close === true ? 'none' : 'flex')};
+  // for testing purpose swap 'flex' with 'none
+  display: ${(props) => (props.close === true ? 'flex' : 'none')};
   flex-direction: column;
   height: 100vh;
   width: 100%;
@@ -28,14 +27,14 @@ export const FrontCard = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--white);
-  padding: var(--small-space);
-  height: 100vh;
+  padding: var(--smallest-space);
   width: 100%;
 
   ${mediaQuery.tablet} {
     box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
     border-radius: 15px;
-    height: 74rem;
+    padding: var(--small-space);
+    min-height: 75rem;
     width: 60rem;
   }
 `;
@@ -54,22 +53,33 @@ export const MobileNav = styled.div`
 `;
 
 export const CloseButton = styled.div`
-  display: flex;
+  display: none;
   align-self: flex-end;
+
+  ${mediaQuery.tablet} {
+    display: flex;
+  }
 `;
 
 export const Header = styled.h3`
   padding: var(--small-space) 0;
+  text-align: center;
+
+  ${mediaQuery.tablet} {
+    text-align: left;
+  }
 `;
 
 export const Attachments = styled.p`
   text-align: center;
+  margin-top: var(--smallest-space);
 `;
 
 export const UploadsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-self: center;
+  margin: var(--smallest-space) 0;
 
   [type='file'] {
     border: 0;
@@ -104,6 +114,7 @@ export const ButtonContainer = styled.div`
 
 export const Info = styled.p`
   color: var(--darkgrey);
+  margin: var(--small-space) 0;
   text-align: center;
 `;
 
@@ -111,7 +122,12 @@ export const BackCard = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--white);
-  padding: var(--small-space);
+  height: 100vh;
+  width: 100%;
+
+  ${mediaQuery.tablet} {
+    padding: var(--small-space);
+  }
 
   & ${Header} {
     color: var(--lightblue);
@@ -131,13 +147,13 @@ export const BackCard = styled.div`
     box-shadow: 0px 0px 60px hsla(0, 0%, 0%, 0.5);
     border-radius: 15px;
     justify-content: space-between;
-    height: 74rem;
+    height: 75rem;
     width: 60rem;
   }
 `;
 
 export const ImageContainer = styled.div`
-  margin: 0 auto;
+  margin: auto auto;
 
   ${mediaQuery.tablet} {
     & svg {
@@ -159,6 +175,7 @@ export const ReturnButton = styled.div`
 `;
 
 export const FooterContainer = styled.div`
+  margin-top: auto;
   ${mediaQuery.tablet} {
     display: none;
   }
