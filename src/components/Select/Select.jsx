@@ -18,7 +18,7 @@ const Select = ({ name, label, onBlur, options, placeholder, id }) => {
         style={{ color }}
         onChange={changeColor}
       >
-        <option value="" selected disabled hidden>
+        <option value={placeholder} hidden>
           {placeholder}
         </option>
         {options.map((option) => (
