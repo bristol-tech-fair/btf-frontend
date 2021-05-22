@@ -20,7 +20,6 @@ export const PostCardWrapper = styled.div`
   flex-direction: column;
   border: 0.1rem solid var(--lightblue);
   border-radius: var(--smallest-space);
-  width: 258px;
   background: var(--lightgrey);
   &:hover ${Image} {
     opacity: 1;
