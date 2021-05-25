@@ -16,7 +16,7 @@ const TextInput = ({
       <label htmlFor={name}>{label}</label>
       <input
         name={name}
-        id={name}
+        id={id}
         onChange={handleOnChange}
         value={value}
         placeholder={placeholder}
