@@ -12,7 +12,7 @@ describe('ResourceCard', () => {
           title="First title"
           category="maths"
           color="midblue"
-          ages={[6, 16]}
+          ages="6-11"
           to="/test"
         />
       </Router>

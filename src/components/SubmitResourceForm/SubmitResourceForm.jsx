@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import ReactCardFlip from 'react-card-flip';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import TextInput from '../TextInput';
 import TextArea from '../TextArea';
 import Select from '../Select';
@@ -29,7 +29,7 @@ import TextButton from '../TextButton';
 import { Robot } from '../Illustration';
 import { Cross, File, Youtube, Image, ArrowLeft } from '../Icons';
 
-const SubmitResourceForm = ({ selectAges, selectCategory }) => {
+const SubmitResourceForm = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [close, setClose] = useState(false);
 
@@ -44,8 +44,6 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
       setIsFlipped(!isFlipped);
       console.log(formData);
     }, 1000);
-
-    console.log(errors);
   };
 
   return (
@@ -73,7 +71,11 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
               name="Category"
               label="Category*"
               placeholder="Choose category..."
-              options={selectCategory}
+              options={[
+                { value: 'maths', label: 'maths' },
+                { value: 'coding', label: 'coding' },
+                { value: 'engineering', label: 'engineering' }
+              ]}
               {...register('category', { required: true })}
             />
             {errors.category && (
@@ -84,7 +86,11 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
               name="ages"
               label="Ages*"
               placeholder="Choose age group..."
-              options={selectAges}
+              options={[
+                { value: '8-11', label: '8-11' },
+                { value: '12-15', label: '12-15' },
+                { value: '16-18', label: '16-18' }
+              ]}
               {...register('ages', { required: true })}
             />
             {errors.ages && <span id="err-msg">This Field is required</span>}
@@ -171,19 +177,19 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
   );
 };
 
-SubmitResourceForm.propTypes = {
-  selectAges: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired
-    })
-  ).isRequired,
-  selectCategory: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired
-    })
-  ).isRequired
-};
+// SubmitResourceForm.propTypes = {
+//   selectAges: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       value: PropTypes.string.isRequired,
+//       label: PropTypes.string.isRequired
+//     })
+//   ).isRequired,
+//   selectCategory: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       value: PropTypes.string.isRequired,
+//       label: PropTypes.string.isRequired
+//     })
+//   ).isRequired
+// };
 
 export default SubmitResourceForm;
