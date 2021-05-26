@@ -5,8 +5,10 @@ import TextInput from './TextInput';
 
 describe('TextInput', () => {
   test('renders TextInput component', () => {
-    render(<TextInput value="Hello" />);
+    render(
+      <TextInput id="test" name="name" label="label" placeholder="Hello" />
+    );
 
-    expect(screen.getByText('Hello'));
+    expect(screen.getByPlaceholderText('Hello'));
   });
 });

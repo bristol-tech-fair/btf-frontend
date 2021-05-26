@@ -7,6 +7,7 @@ import Select from './Select';
 test('Label correctly associated with select component by screenreader', () => {
   render(
     <Select
+      id="one"
       name="test name"
       label="test label"
       value="test default value"

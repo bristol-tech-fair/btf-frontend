@@ -102,8 +102,8 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
                 <TextInput
                   type="file"
                   label="File"
-                  id="file"
-                  name="file"
+                  id="document"
+                  name="document"
                   {...register('document')}
                 />
               </FileToUpload>
