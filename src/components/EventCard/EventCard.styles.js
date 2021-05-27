@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { NavLink as Link } from 'react-router-dom';
+import mediaQuery from '../../utils/mediaQuery';
 
 export const EventCardWrapper = styled.div`
   display: flex;
@@ -29,5 +31,31 @@ export const EventCardWrapper = styled.div`
   .vectors {
     display: flex;
     gap: var(--small-space);
+  }
+
+  ${mediaQuery.tablet} {
+    flex-direction: row;
+    .details {
+      align-items: start;
+    }
+    .content {
+      align-items: start;
+    }
+    .vectors {
+      flex-direction: column;
+    }
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
+
+  &.active {
+    color: var(--logopink);
+  }
+
+  &:hover {
+    color: var(--lightblue);
   }
 `;
