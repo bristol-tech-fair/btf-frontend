@@ -64,8 +64,36 @@ const clubData = [
   }
 ];
 
+const sponsorData = [
+  {
+    sponsorLogo: 'https://via.placeholder.com/240x140',
+    sponsorName: 'WTH1'
+  },
+  {
+    sponsorLogo: 'https://via.placeholder.com/240x140',
+    sponsorName: 'WTH2'
+  },
+  {
+    sponsorLogo: 'https://via.placeholder.com/240x140',
+    sponsorName: 'WTH3'
+  },
+  {
+    sponsorLogo: 'https://via.placeholder.com/240x140',
+    sponsorName: 'WTH4'
+  },
+  {
+    sponsorLogo: 'https://via.placeholder.com/240x140',
+    sponsorName: 'WTH5'
+  }
+];
+
 export const HelloWorld = () => (
   <BrowserRouter>
-    <HomePage navPath="/about" resourceData={data} clubData={clubData} />
+    <HomePage
+      readMoreUrl="/about"
+      resourceData={data}
+      clubData={clubData}
+      sponsorData={sponsorData}
+    />
   </BrowserRouter>
 );
