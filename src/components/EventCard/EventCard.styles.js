@@ -50,6 +50,7 @@ export const EventCardWrapper = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
+  color: var(--lightblue);
 
   &.active {
     color: var(--logopink);
