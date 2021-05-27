@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import mediaQuery from '../../utils/mediaQuery';
 
-export const NavigationWrapper = styled.div`
+export const NavigationWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -10,12 +10,11 @@ export const Fruit = () => (
   <Select
     name="Fruit"
     label="Choose a fruit"
-    defaultValue="Fruits"
+    placeholder="Select an option"
     options={[
-      { optionValue: 'noneSelected', optionLabel: 'Pick one!' },
-      { optionValue: 'Strawberry', optionLabel: 'Strawberry' },
-      { optionValue: 'Watermelon', optionLabel: 'Watermelon' },
-      { optionValue: 'Jackfruit', optionLabel: 'Jackfruit' }
+      { value: 'Strawberry', label: 'Strawberry' },
+      { value: 'Watermelon', label: 'Watermelon' },
+      { value: 'Jackfruit', label: 'Jackfruit' }
     ]}
     onBlur={() => {
       console.log('Success!');
@@ -27,12 +26,12 @@ export const Example = () => (
   <Select
     name="Example name"
     label="Example label"
-    defaultValue="Example default value"
+    placeholder="Example value"
     options={[
-      { optionValue: '1', optionLabel: '1' },
-      { optionValue: '2', optionLabel: '2' },
-      { optionValue: '3', optionLabel: '3' },
-      { optionValue: '4', optionLabel: '4' }
+      { value: '1', label: '1' },
+      { value: '2', label: '2' },
+      { value: '3', label: '3' },
+      { value: '4', label: '4' }
     ]}
     onBlur={() => {
       console.log('Success!');
