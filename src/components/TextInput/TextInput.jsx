@@ -4,10 +4,11 @@ import { TextInputWrapper } from './TextInput.styles';
 
 const TextInput = ({
   label,
-  defaultValue,
+  value,
   name,
-  handleOnChange,
-  placeholder
+  onChange,
+  placeholder,
+  ...inputProps
 }) => {
   return (
     <TextInputWrapper>
@@ -15,9 +16,10 @@ const TextInput = ({
       <input
         name={name}
         id={name}
-        onChange={handleOnChange}
-        value={defaultValue}
+        onChange={onChange}
+        value={value}
         placeholder={placeholder}
+        {...inputProps}
       />
     </TextInputWrapper>
   );
@@ -25,9 +27,10 @@ const TextInput = ({
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  defaultValue: PropTypes.string,
-  handleOnChange: PropTypes.func.isRequired,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
   placeholder: PropTypes.string
 };
 
