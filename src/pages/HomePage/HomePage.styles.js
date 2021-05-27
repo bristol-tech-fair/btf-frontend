@@ -63,6 +63,16 @@ export const AboutWrapper = styled.p`
   }
 `;
 
+export const EventCardWrapper = styled.div`
+  padding-top: var(--small-space);
+  width: 95%;
+  margin: auto;
+  ${mediaQuery.desktop} {
+    width: 80%;
+    margin: auto;
+  }
+`;
+
 export const SponsorWrapper = styled.div`
   display: flex;
   justify-content: space-around;

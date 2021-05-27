@@ -41,26 +41,51 @@ const data = [
     to: '/'
   }
 ];
-const clubData = [
+
+const eventData = {
+  imgSrc: './assets/images/codingbug.png',
+  date: '13/5/2021',
+  title: 'Coding Bug Event',
+  desc:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  url: '/'
+};
+const postData = [
   {
-    coverUrl: 'https://via.placeholder.com/240x140',
-    title: 'Codingbug',
-    to: '/'
+    title: 'If you love data come and speak to KETL',
+    coverUrl: './assets/images/background.png',
+    category: 'EVENT',
+    date: '09/02/2011',
+    bookmark: '/',
+    shareLink: '/',
+    postLink: '/'
   },
   {
-    coverUrl: 'https://via.placeholder.com/240x140',
-    title: 'Code Club',
-    to: '/'
+    title: 'If you love data come and speak to KETL',
+    coverUrl: './assets/images/background.png',
+    category: 'EVENT',
+    date: '09/02/2011',
+    bookmark: '/',
+    shareLink: '/',
+    postLink: '/'
   },
   {
-    coverUrl: 'https://via.placeholder.com/240x140',
-    title: 'Coder Dojo',
-    to: '/'
+    title: 'If you love data come and speak to KETL',
+    coverUrl: './assets/images/background.png',
+    category: 'EVENT',
+    date: '09/02/2011',
+    bookmark: '/',
+    shareLink: '/',
+    postLink: '/'
   },
   {
-    coverUrl: 'https://via.placeholder.com/240x140',
-    title: 'Code Club',
-    to: '/'
+    title: 'If you love data come and speak to KETL',
+    coverUrl: './assets/images/background.png',
+    category: 'EVENT',
+    date: '09/02/2011',
+    bookmark: '/',
+    shareLink: '/',
+    postLink: '/'
   }
 ];
 
@@ -92,7 +117,8 @@ export const HelloWorld = () => (
     <HomePage
       readMoreUrl="/about"
       resourceData={data}
-      clubData={clubData}
+      eventData={eventData}
+      postData={postData}
       sponsorData={sponsorData}
     />
   </BrowserRouter>

@@ -4,6 +4,7 @@ import {
   HomePageWrapper,
   TitleWrapper,
   AboutWrapper,
+  EventCardWrapper,
   SponsorWrapper
 } from './HomePage.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
@@ -11,10 +12,17 @@ import PrimaryButton from '../../components/PrimaryButton';
 import List from '../../components/List';
 import NavLink from '../../components/NavLink';
 import ResourceCard from '../../components/ResourceCard';
-import ClubCard from '../../components/ClubCard/ClubCard';
+import EventCard from '../../components/EventCard';
+import PostCard from '../../components/PostCard';
 import SponsorCard from '../../components/SponsorCard';
 
-const HomePage = ({ readMoreUrl, resourceData, clubData, sponsorData }) => {
+const HomePage = ({
+  readMoreUrl,
+  resourceData,
+  eventData,
+  postData,
+  sponsorData
+}) => {
   return (
     <DefaultPageLayout>
       <HomePageWrapper>
@@ -30,8 +38,18 @@ const HomePage = ({ readMoreUrl, resourceData, clubData, sponsorData }) => {
       </AboutWrapper>
       <TitleWrapper>Learning Resources</TitleWrapper>
       <List Component={ResourceCard} data={resourceData} _id="1" />
-      <TitleWrapper>Club Card</TitleWrapper>
-      <List Component={ClubCard} _id="1" data={clubData} />
+      <TitleWrapper>Events</TitleWrapper>
+      <EventCardWrapper>
+        <EventCard
+          imgSrc={eventData.imgSrc}
+          date={eventData.date}
+          title={eventData.title}
+          desc={eventData.desc}
+          url={eventData.url}
+        />
+      </EventCardWrapper>
+      <TitleWrapper>Posts</TitleWrapper>
+      <List Component={PostCard} _id="1" data={postData} />
       <TitleWrapper>Sponsors</TitleWrapper>
       <SponsorWrapper>
         {sponsorData.map((sponsor) => (
@@ -49,8 +67,9 @@ const HomePage = ({ readMoreUrl, resourceData, clubData, sponsorData }) => {
 HomePage.propTypes = {
   readMoreUrl: PropTypes.string.isRequired,
   resourceData: PropTypes.func.isRequired,
-  clubData: PropTypes.func.isRequired,
-  sponsorData: PropTypes.func.isRequired
+  postData: PropTypes.func.isRequired,
+  sponsorData: PropTypes.func.isRequired,
+  eventData: PropTypes.func.isRequired
 };
 
 export default HomePage;
