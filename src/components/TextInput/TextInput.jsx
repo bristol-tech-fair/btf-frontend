@@ -2,20 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextInputWrapper } from './TextInput.styles';
 
-const TextInput = ({
-  label,
-  defaultValue,
-  name,
-  handleOnChange,
-  placeholder
-}) => {
+const TextInput = ({ label, defaultValue, name, onChange, placeholder }) => {
   return (
     <TextInputWrapper>
       <label htmlFor={name}>{label}</label>
       <input
         name={name}
         id={name}
-        onChange={handleOnChange}
+        onChange={onChange}
         value={defaultValue}
         placeholder={placeholder}
       />
@@ -27,7 +21,7 @@ TextInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   defaultValue: PropTypes.string,
-  handleOnChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   placeholder: PropTypes.string
 };
 
