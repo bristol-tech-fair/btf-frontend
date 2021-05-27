@@ -14,6 +14,12 @@ export const EventCardWrapper = styled.div`
   h3 {
     color: var(--darkburgundy);
   }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--small-space);
+  }
   .content {
     display: flex;
     flex-direction: column;

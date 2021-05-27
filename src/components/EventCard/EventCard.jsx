@@ -12,11 +12,13 @@ const EventCard = (props) => {
   return (
     <EventCardWrapper>
       <img src={imgSrc} alt="Event Logo" />
-      <h4>{date}</h4>
-      <h3>{title}</h3>
-      <div className="content">
-        <p>{desc}</p>
-        <NavLink content="Read more..." path={url} />
+      <div className="details">
+        <h4>{date}</h4>
+        <h3>{title}</h3>
+        <div className="content">
+          <p>{desc}</p>
+          <NavLink content="Read more..." path={url} />
+        </div>
       </div>
       <div className="vectors">
         <a href="www.facebook.com">
