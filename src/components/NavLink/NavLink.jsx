@@ -7,7 +7,11 @@ const NavLink = ({ content, path }) => {
 };
 
 NavLink.propTypes = {
+<<<<<<< HEAD
   content: PropTypes.node.isRequired,
+=======
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+>>>>>>> origin/develop
   path: PropTypes.string.isRequired
 };
 

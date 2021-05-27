@@ -14,7 +14,7 @@ const TextButton = ({ content, type = 'button', onClick }) => {
 };
 
 TextButton.propTypes = {
-  content: PropTypes.node.isRequired,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   type: PropTypes.oneOf(['submit', 'button']),
   onClick: PropTypes.func
 };
