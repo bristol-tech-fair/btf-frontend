@@ -15,7 +15,7 @@ const MockInput = () => {
       name="test"
       id="test"
       value={value}
-      labelText="Label"
+      label="Label"
       onChange={handleChange}
     />
   );
