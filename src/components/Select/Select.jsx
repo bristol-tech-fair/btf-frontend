@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { SelectInputWrapper } from './Select.styles';
 
@@ -12,6 +12,11 @@ const Select = ({
   onChange
 }) => {
   const [color, setColor] = useState(`var(--darkgrey)`);
+  const [dropdown, setDropdown] = useState([]);
+
+  useEffect(() => {
+    setDropdown(options);
+  }, [options]);
 
   function changeColor() {
     setColor(`var(--darkblue)`);
@@ -29,7 +34,7 @@ const Select = ({
         <option value={placeholder} hidden>
           {placeholder}
         </option>
-        {options.map((option) => (
+        {dropdown.map((option) => (
           <option
             onClick={changeColor}
             key={option.label}

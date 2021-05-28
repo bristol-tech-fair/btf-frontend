@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
@@ -32,6 +32,16 @@ import { Cross, File, Youtube, Image, ArrowLeft } from '../Icons';
 const SubmitResourceForm = ({ selectAges, selectCategory }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [close, setClose] = useState(false);
+  const [ages, setAges] = useState([]);
+  const [cat, setCat] = useState([]);
+
+  useEffect(() => {
+    setAges(selectAges);
+  }, [selectAges]);
+
+  useEffect(() => {
+    setCat(selectCategory);
+  }, [selectCategory]);
 
   const {
     register,
@@ -71,7 +81,7 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
               name="Category"
               label="Category*"
               placeholder="Choose category..."
-              options={selectCategory}
+              options={cat}
               {...register('category', { required: true })}
             />
             {errors.category && (
@@ -82,7 +92,7 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
               name="ages"
               label="Ages*"
               placeholder="Choose age group..."
-              options={selectAges}
+              options={ages}
               {...register('ages', { required: true })}
             />
             {errors.ages && <span id="err-msg">This Field is required</span>}
