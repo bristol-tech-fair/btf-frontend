@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import mediaQuery from '../../utils/mediaQuery';
 
-export const HomePageWrapper = styled.div`
+export const BannerWrapper = styled.div`
   background: ;
   height: 166px;
   border: 0.1rem solid blue;
@@ -14,8 +14,7 @@ export const HomePageWrapper = styled.div`
   margin: 0;
   ${mediaQuery.tablet} {
     height: 295px;
-    margin: var(--small-space);
-    margin-bottom: 0;
+    margin: var(--smallest-space) var(--small-space) 0 var(--small-space);
   }
   ${mediaQuery.desktop} {
     height: 600px;
@@ -25,24 +24,28 @@ export const HomePageWrapper = styled.div`
     position: absolute;
     bottom: var(--small-space);
     border-radius: var(--small-space);
+    background: var(--logopink);
+    padding: 0 var(--small-space);
+    font-size: 1.2rem;
+    &:hover {
+      background: var(--lightblue);
+    }
     ${mediaQuery.tablet} {
       bottom: var(--medium-space);
+      padding: var(--smallest-space) var(--medium-space);
     }
     ${mediaQuery.desktop} {
       bottom: var(--large-space);
+      padding: var(--small-space) var(--large-space);
     }
   }
 `;
 
-export const TitleWrapper = styled.h2`
+export const TitleWrapper = styled.h1`
   text-align: center;
-  padding-top: 32px;
+  padding-top: var(--medium-space);
   padding-bottom: var(--small-space);
   color: var(--darkburgundy);
-  ${mediaQuery.tablet} {
-    padding-top: var(--medium-space);
-    padding-bottom: var(--small-space);
-  }
   ${mediaQuery.desktop} {
     padding-top: var(--large-space);
     padding-bottom: var(--medium-space);
@@ -63,6 +66,62 @@ export const AboutWrapper = styled.p`
   }
 `;
 
+export const ResourceCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${mediaQuery.desktop} {
+  }
+`;
+export const TabletCardWrapper = styled.div`
+  display: none;
+  & > div {
+    width: 100%;
+    margin: auto;
+  }
+  ${mediaQuery.tablet} {
+    display: flex;
+    justify-content: space-between;
+  }
+  ${mediaQuery.desktop} {
+    display: none;
+  }
+`;
+
+export const MobileCardWrapper = styled.div`
+  display: flex;
+  & > div {
+    width: 90%;
+    margin: auto;
+  }
+  ${mediaQuery.tablet} {
+    display: none;
+  }
+  ${mediaQuery.desktop} {
+    display: none;
+  }
+`;
+
+export const DeskTopCardWrapper = styled.div`
+  display: none;
+  ${mediaQuery.tablet} {
+    display: none;
+  }
+  ${mediaQuery.desktop} {
+    display: flex;
+  }
+`;
+
+export const TabletEventCardWrapper = styled(TabletCardWrapper)`
+  & > div {
+    width: 90%;
+    margin: auto;
+    padding-bottom: var(--largest-space);
+  }
+  ${mediaQuery.tablet} {
+    justify-content: space-around;
+  }
+`;
+
 export const EventCardWrapper = styled.div`
   padding-top: var(--small-space);
   width: 95%;
@@ -73,9 +132,20 @@ export const EventCardWrapper = styled.div`
   }
 `;
 
-export const SponsorWrapper = styled.div`
+export const SponsorLogoWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   padding-bottom: var(--largest-space);
   padding-top: var(--small-space);
+  ${mediaQuery.desktop} {
+    display: flex;
+  }
+`;
+
+export const SponsorWrapper = styled.div`
+  display: none;
+  ${mediaQuery.desktop} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
