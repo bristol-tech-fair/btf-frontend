@@ -6,15 +6,15 @@ import '@testing-library/jest-dom';
 import SubmitResourceForm from './SubmitResourceForm';
 
 const optionOne = [
-  { optionValue: 'a', optionLabel: 'b' },
-  { optionValue: 'c', optionLabel: 'd' },
-  { optionValue: 'e', optionLabel: 'f' }
+  { value: 'a', label: 'b' },
+  { value: 'c', label: 'd' },
+  { value: 'e', label: 'f' }
 ];
 
 const optionTwo = [
-  { optionValue: '1', optionLabel: '2' },
-  { optionValue: '3', optionLabel: '4' },
-  { optionValue: '5', optionLabel: '6' }
+  { value: '1', label: '2' },
+  { value: '3', label: '4' },
+  { value: '5', label: '6' }
 ];
 
 describe('SubmitResourceForm', () => {
