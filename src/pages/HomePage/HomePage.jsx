@@ -43,17 +43,17 @@ const HomePage = ({
       </AboutWrapper>
       <TitleWrapper>Learning Resources</TitleWrapper>
       <MobileCardWrapper>
-        <List Component={ResourceCard} data={[resourceData[0]]} _id="1" />
+        <List Component={ResourceCard} data={[resourceData[0]]} _id={1} />
       </MobileCardWrapper>
       <TabletCardWrapper>
         <List
           Component={ResourceCard}
           data={[resourceData[0], resourceData[1]]}
-          _id="1"
+          _id={1}
         />
       </TabletCardWrapper>
       <DeskTopCardWrapper>
-        <List Component={ResourceCard} data={resourceData} _id="1" />
+        <List Component={ResourceCard} data={resourceData} _id={1} />
       </DeskTopCardWrapper>
       <TitleWrapper>Events</TitleWrapper>
       <EventCardWrapper>
@@ -96,7 +96,13 @@ HomePage.propTypes = {
   resourceData: PropTypes.arrayOf(PropTypes.object),
   postData: PropTypes.arrayOf(PropTypes.object),
   sponsorData: PropTypes.arrayOf(PropTypes.object),
-  eventData: PropTypes.func.isRequired
+  eventData: PropTypes.shape({
+    imgSrc: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default HomePage;

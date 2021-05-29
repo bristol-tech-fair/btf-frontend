@@ -111,7 +111,7 @@ const sponsorData = [
   }
 ];
 
-export const HelloWorld = () => (
+export const HomePageTest = () => (
   <BrowserRouter>
     <HomePage
       readMoreUrl="/about"
