@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import mediaQuery from '../../utils/mediaQuery';
 
 export const BannerWrapper = styled.div`
-  background: ;
   height: 166px;
   border: 0.1rem solid blue;
   display: flex;
