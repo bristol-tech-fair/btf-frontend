@@ -5,8 +5,14 @@ import SponsorCard from './SponsorCard';
 
 describe('SponsorCard', () => {
   test('renders SponsorCard component', () => {
-    render(<SponsorCard value="Hello" />);
+    render(
+      <SponsorCard
+        sponsorLogo="./assets/images/book-of-making-cover.jpg"
+        sponsorName="WTH"
+      />
+    );
 
-    expect(screen.getByText('Hello'));
+    const image = screen.getByAltText('WTH');
+    expect(image.src).toContain('.jpg');
   });
 });

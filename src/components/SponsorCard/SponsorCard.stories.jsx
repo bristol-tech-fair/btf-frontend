@@ -6,7 +6,7 @@ export default {
   component: SponsorCard
 };
 
-export const HelloWorld = () => (
+export const SponsorCardTest = () => (
   <SponsorCard
     sponsorLogo="./assets/images/book-of-making-cover.jpg"
     sponsorName="WTH"
