@@ -5,7 +5,7 @@ import Small from './Small';
 
 describe('Small', () => {
   test('renders Small component', () => {
-    render(<Small />);
+    render(<Small color="midblue" />);
 
     screen.debug();
   });

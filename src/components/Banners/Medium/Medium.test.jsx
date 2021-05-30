@@ -5,7 +5,7 @@ import Medium from './Medium';
 
 describe('Medium', () => {
   test('renders Medium component', () => {
-    render(<Medium />);
+    render(<Medium color="midblue" />);
 
     screen.debug();
   });
