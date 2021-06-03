@@ -4,8 +4,9 @@ import {
   ContentWrapper,
   Info,
   ClickCounter,
-  OpenResource,
-  Tags
+  OpenLink,
+  Tags,
+  Array
 } from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import { Large } from '../../components/Banners';
@@ -18,6 +19,8 @@ import {
   Bookmark
 } from '../../components/Icons';
 import SecondaryButton from '../../components/SecondaryButton';
+import TertiaryButton from '../../components/TertiaryButton';
+import SubmitResourceForm from '../../components/SubmitResourceForm';
 
 const ResourceCardOpen = ({
   resourceLink,
@@ -27,8 +30,21 @@ const ResourceCardOpen = ({
   linkedInLink
 }) => {
   const condition = 2;
+  const string = ['testing', 'fantastic', 'map', 'function'];
   return (
     <DefaultPageLayout>
+      <SubmitResourceForm
+        selectAges={[
+          { value: '8-11', label: '8-11' },
+          { value: '12-15', label: '12-15' },
+          { value: '16-18', label: '16-18' }
+        ]}
+        selectCategory={[
+          { value: 'maths', label: 'maths' },
+          { value: 'coding', label: 'coding' },
+          { value: 'engineering', label: 'engineering' }
+        ]}
+      />
       <Large color="logopink" />
       <ContentWrapper>
         <h3>Electronics</h3>
@@ -53,32 +69,40 @@ const ResourceCardOpen = ({
             experiences that inspire teachers and students alike.
           </p>
         </Info>
-        <OpenResource to={resourceLink}>
+        <OpenLink to={resourceLink}>
           <SecondaryButton content="Go to resource" type="button" />
-        </OpenResource>
+        </OpenLink>
 
         <Tags>
-          <div>array</div>
+          <Array>
+            {string.map((str) => {
+              return <p key={str}>{str}</p>;
+            })}
+          </Array>
           <div>
-            <OpenResource to={facebookLink}>
+            <OpenLink to={facebookLink} target="_blank">
               <Facebook />
-            </OpenResource>
-            <OpenResource>
+            </OpenLink>
+            <OpenLink>
               <LinkedIn to={linkedInLink} />
-            </OpenResource>
-            <OpenResource>
+            </OpenLink>
+            <OpenLink>
               <Twitter to={twitterLink} />
-            </OpenResource>
-            <OpenResource>
+            </OpenLink>
+            <OpenLink>
               <Bookmark to={bookmarksLink} />
-            </OpenResource>
+            </OpenLink>
+            <a href="https://www.wp.pl/" target="_blank" rel="noreferrer">
+              Press me now
+            </a>
           </div>
         </Tags>
 
         <div />
         <div />
         <p />
-        <div>button</div>
+        <TertiaryButton content="Submit" type="button" />
+
         <div />
       </ContentWrapper>
     </DefaultPageLayout>
