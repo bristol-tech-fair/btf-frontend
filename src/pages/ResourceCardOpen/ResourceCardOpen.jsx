@@ -1,11 +1,31 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import { ContentWrapper, Info, ClickCounter } from './ResourceCardOpen.styles';
+import PropTypes from 'prop-types';
+import {
+  ContentWrapper,
+  Info,
+  ClickCounter,
+  OpenResource,
+  Tags
+} from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import { Large } from '../../components/Banners';
-import { Heart, HeartFull } from '../../components/Icons';
+import {
+  Heart,
+  HeartFull,
+  Facebook,
+  LinkedIn,
+  Twitter,
+  Bookmark
+} from '../../components/Icons';
+import SecondaryButton from '../../components/SecondaryButton';
 
-const ResourceCardOpen = () => {
+const ResourceCardOpen = ({
+  resourceLink,
+  facebookLink,
+  twitterLink,
+  bookmarksLink,
+  linkedInLink
+}) => {
   const condition = 2;
   return (
     <DefaultPageLayout>
@@ -29,12 +49,32 @@ const ResourceCardOpen = () => {
 
           <p>
             We support STEM teachers by providing a range of resources linked to
-            the UK curriculum and partnering with organisations to create
+            the UK curriculum and partnering with organizations to create
             experiences that inspire teachers and students alike.
           </p>
         </Info>
+        <OpenResource to={resourceLink}>
+          <SecondaryButton content="Go to resource" type="button" />
+        </OpenResource>
 
-        <div>button</div>
+        <Tags>
+          <div>array</div>
+          <div>
+            <OpenResource to={facebookLink}>
+              <Facebook />
+            </OpenResource>
+            <OpenResource>
+              <LinkedIn to={linkedInLink} />
+            </OpenResource>
+            <OpenResource>
+              <Twitter to={twitterLink} />
+            </OpenResource>
+            <OpenResource>
+              <Bookmark to={bookmarksLink} />
+            </OpenResource>
+          </div>
+        </Tags>
+
         <div />
         <div />
         <p />
@@ -46,7 +86,11 @@ const ResourceCardOpen = () => {
 };
 
 ResourceCardOpen.propTypes = {
-  // bla: PropTypes.string,
+  resourceLink: PropTypes.string,
+  facebookLink: PropTypes.string,
+  bookmarksLink: PropTypes.string,
+  linkedInLink: PropTypes.string,
+  twitterLink: PropTypes.string
 };
 
 export default ResourceCardOpen;

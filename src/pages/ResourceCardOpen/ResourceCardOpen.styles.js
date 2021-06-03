@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -24,6 +25,19 @@ export const Info = styled.div`
   div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--smallest-space) 0;
+
+    border: 2px solid limegreen;
+
+    svg {
+      margin-right: 3px;
+    }
   }
+`;
+
+export const OpenResource = styled(Link)``;
+
+export const Tags = styled.div`
+  display: flex;
 `;
