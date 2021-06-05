@@ -32,6 +32,11 @@ const ResourceCardOpen = ({
   const condition = 2;
   const string = ['testing', 'fantastic', 'map', 'function'];
   const [showForm, setShowForm] = useState(false);
+  const [counter, setCounter] = useState(0);
+
+  const handleCounter = () => {
+    setCounter((count) => count + 1);
+  };
 
   return (
     <DefaultPageLayout>
@@ -63,7 +68,7 @@ const ResourceCardOpen = ({
               {condition > 2 ? <HeartFull /> : <Heart />}
               {condition > 3 ? <HeartFull /> : <Heart />}
               {condition > 4 ? <HeartFull /> : <Heart />}
-              <ClickCounter>| clicks</ClickCounter>
+              <ClickCounter>| {counter}</ClickCounter>
             </div>
           </div>
 
@@ -74,7 +79,11 @@ const ResourceCardOpen = ({
           </p>
         </Info>
         <OpenLink to={resourceLink}>
-          <SecondaryButton content="Go to resource" type="button" />
+          <SecondaryButton
+            content="Go to resource"
+            type="button"
+            onClick={handleCounter}
+          />
         </OpenLink>
 
         <Tags>
