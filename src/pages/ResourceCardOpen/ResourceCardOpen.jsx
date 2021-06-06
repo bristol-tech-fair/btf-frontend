@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import {
   ContentWrapper,
@@ -31,29 +31,32 @@ const ResourceCardOpen = ({
 }) => {
   const condition = 2;
   const string = ['testing', 'fantastic', 'map', 'function'];
-  const [showForm, setShowForm] = useState(false);
   const [counter, setCounter] = useState(0);
 
   const handleCounter = () => {
     setCounter((count) => count + 1);
   };
 
+  //* ----Toggler for popup form
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current.openPopup();
+  };
   return (
     <DefaultPageLayout>
-      {showForm && (
-        <SubmitResourceForm
-          selectAges={[
-            { value: '8-11', label: '8-11' },
-            { value: '12-15', label: '12-15' },
-            { value: '16-18', label: '16-18' }
-          ]}
-          selectCategory={[
-            { value: 'maths', label: 'maths' },
-            { value: 'coding', label: 'coding' },
-            { value: 'engineering', label: 'engineering' }
-          ]}
-        />
-      )}
+      <SubmitResourceForm
+        ref={ref}
+        selectAges={[
+          { value: '8-11', label: '8-11' },
+          { value: '12-15', label: '12-15' },
+          { value: '16-18', label: '16-18' }
+        ]}
+        selectCategory={[
+          { value: 'maths', label: 'maths' },
+          { value: 'coding', label: 'coding' },
+          { value: 'engineering', label: 'engineering' }
+        ]}
+      />
       <Large color="logopink" />
       <ContentWrapper>
         <h3>Electronics</h3>
@@ -114,11 +117,7 @@ const ResourceCardOpen = ({
         <div />
         <div />
         <p />
-        <TertiaryButton
-          content="Submit"
-          type="button"
-          onClick={() => setShowForm(!showForm)}
-        />
+        <TertiaryButton content="Submit" type="button" onClick={handleClick} />
 
         <div />
       </ContentWrapper>
