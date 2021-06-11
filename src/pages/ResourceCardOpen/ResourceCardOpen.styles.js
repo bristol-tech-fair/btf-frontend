@@ -68,3 +68,17 @@ export const Array = styled.div`
     padding: 3px var(--small-space);
   }
 `;
+
+export const Rating = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  padding: var(--medium-space);
+  width: 100%;
+`;
+
+export const ButtonsRedirect = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: var(--medium-space);
+  width: 100%;
+`;

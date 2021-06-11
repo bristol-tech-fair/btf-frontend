@@ -6,7 +6,9 @@ import {
   ClickCounter,
   OpenLink,
   Tags,
-  Array
+  Array,
+  Rating,
+  ButtonsRedirect
 } from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import { Large } from '../../components/Banners';
@@ -108,18 +110,30 @@ const ResourceCardOpen = ({
             <OpenLink>
               <Bookmark to={bookmarksLink} />
             </OpenLink>
-            <a href="https://www.wp.pl/" target="_blank" rel="noreferrer">
-              Press me now
-            </a>
           </div>
         </Tags>
+        <Rating>
+          <div>
+            <p>
+              How was this resource? <Heart />
+            </p>
+          </div>
+          <div>
+            <p>
+              Having a problem?
+              <Heart />
+              well create missing icon the!!!
+            </p>
+          </div>
+        </Rating>
 
-        <div />
-        <div />
-        <p />
+        <p>Want to share your resource?</p>
         <TertiaryButton content="Submit" type="button" onClick={handleClick} />
 
-        <div />
+        <ButtonsRedirect>
+          <h3>buttons</h3>
+          <h3>buttons</h3>
+        </ButtonsRedirect>
       </ContentWrapper>
     </DefaultPageLayout>
   );
