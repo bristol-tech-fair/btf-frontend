@@ -1,9 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-export const PopUp = styled.div`
-  display: ${(props) => (props.close === true ? 'flex' : 'none')};
-`;
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -37,7 +32,7 @@ export const Info = styled.div`
   }
 `;
 
-export const OpenLink = styled(Link)`
+export const OpenLink = styled.a`
   & path {
     stroke: var(--darkgrey);
   }

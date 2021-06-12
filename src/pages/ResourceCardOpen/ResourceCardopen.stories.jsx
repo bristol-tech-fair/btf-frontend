@@ -10,11 +10,11 @@ export default {
 export const ResourceCardOpenTest = () => (
   <BrowserRouter>
     <ResourceCardOpen
-      facebookLink="https://www.wp.pl/"
+      facebookLink="https://www.interia.pl/"
       resourceLink="https://www.wp.pl/"
       twitterLink="https://www.wp.pl/"
-      bookmarksLink="https://www.wp.pl/"
-      linkedInLink="https://www.wp.pl/"
+      bookmarksLink="https://www.o2.pl/"
+      linkedInLink="https://www.o2.pl/"
     />
   </BrowserRouter>
 );

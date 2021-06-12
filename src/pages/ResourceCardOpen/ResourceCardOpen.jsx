@@ -83,7 +83,7 @@ const ResourceCardOpen = ({
             experiences that inspire teachers and students alike.
           </p>
         </Info>
-        <OpenLink to={resourceLink}>
+        <OpenLink href={resourceLink} target="_blank">
           <SecondaryButton
             content="Go to resource"
             type="button"
@@ -98,17 +98,17 @@ const ResourceCardOpen = ({
             })}
           </Array>
           <div>
-            <OpenLink to={facebookLink} target="_blank">
+            <OpenLink href={facebookLink} target="_blank">
               <Facebook />
             </OpenLink>
             <OpenLink>
-              <LinkedIn to={linkedInLink} />
+              <LinkedIn href={linkedInLink} target="_blank" />
             </OpenLink>
             <OpenLink>
-              <Twitter to={twitterLink} />
+              <Twitter href={twitterLink} target="_blank" />
             </OpenLink>
             <OpenLink>
-              <Bookmark to={bookmarksLink} />
+              <Bookmark href={bookmarksLink} target="_blank" />
             </OpenLink>
           </div>
         </Tags>
