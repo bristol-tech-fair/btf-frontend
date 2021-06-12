@@ -71,9 +71,13 @@ export const Rating = styled.div`
   width: 100%;
 `;
 
+export const NewResource = styled.p`
+  padding: var(--small-space);
+`;
 export const ButtonsRedirect = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: var(--small-space);
   padding: var(--medium-space);
   width: 100%;
 `;

@@ -8,6 +8,7 @@ import {
   Tags,
   Array,
   Rating,
+  NewResource,
   ButtonsRedirect
 } from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
@@ -122,17 +123,18 @@ const ResourceCardOpen = ({
             <p>
               Having a problem?
               <Heart />
-              well create missing icon the!!!
+              well create missing icon then, ffs!!!
             </p>
           </div>
         </Rating>
 
-        <p>Want to share your resource?</p>
+        <NewResource>Want to share your resource?</NewResource>
+
         <TertiaryButton content="Submit" type="button" onClick={handleClick} />
 
         <ButtonsRedirect>
-          <h3>buttons</h3>
-          <h3>buttons</h3>
+          <h2>buttons</h2>
+          <h2>buttons</h2>
         </ButtonsRedirect>
       </ContentWrapper>
     </DefaultPageLayout>
