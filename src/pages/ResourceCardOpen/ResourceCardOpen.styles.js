@@ -69,6 +69,8 @@ export const Rating = styled.div`
   justify-content: space-evenly;
   padding: var(--medium-space);
   width: 100%;
+
+  border: 2px solid limegreen;
 `;
 
 export const NewResource = styled.p`
@@ -80,4 +82,9 @@ export const ButtonsRedirect = styled.div`
   margin-bottom: var(--small-space);
   padding: var(--medium-space);
   width: 100%;
+`;
+
+export const MailButton = styled.div`
+  display: flex;
+  align-items: center;
 `;

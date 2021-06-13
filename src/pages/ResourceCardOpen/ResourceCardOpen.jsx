@@ -9,6 +9,7 @@ import {
   Array,
   Rating,
   NewResource,
+  MailButton,
   ButtonsRedirect
 } from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
@@ -19,7 +20,8 @@ import {
   Facebook,
   LinkedIn,
   Twitter,
-  Bookmark
+  Bookmark,
+  Mail
 } from '../../components/Icons';
 import SecondaryButton from '../../components/SecondaryButton';
 import TertiaryButton from '../../components/TertiaryButton';
@@ -30,7 +32,8 @@ const ResourceCardOpen = ({
   facebookLink,
   twitterLink,
   bookmarksLink,
-  linkedInLink
+  linkedInLink,
+  contactSupport
 }) => {
   const condition = 2;
   const string = ['testing', 'fantastic', 'map', 'function'];
@@ -120,11 +123,12 @@ const ResourceCardOpen = ({
             </p>
           </div>
           <div>
-            <p>
-              Having a problem?
-              <Heart />
-              well create missing icon then, ffs!!!
-            </p>
+            <MailButton>
+              <p>Having a problem? &nbsp;</p>
+              <a href={contactSupport}>
+                <Mail />
+              </a>
+            </MailButton>
           </div>
         </Rating>
 
@@ -146,7 +150,8 @@ ResourceCardOpen.propTypes = {
   facebookLink: PropTypes.string,
   bookmarksLink: PropTypes.string,
   linkedInLink: PropTypes.string,
-  twitterLink: PropTypes.string
+  twitterLink: PropTypes.string,
+  contactSupport: PropTypes.string
 };
 
 export default ResourceCardOpen;

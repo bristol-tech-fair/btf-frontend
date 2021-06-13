@@ -17,3 +17,4 @@ export { default as Cross } from './Cross';
 export { default as Image } from './Image';
 export { default as Links } from './Links';
 export { default as Menu } from './Menu';
+export { default as Mail } from './Mail';

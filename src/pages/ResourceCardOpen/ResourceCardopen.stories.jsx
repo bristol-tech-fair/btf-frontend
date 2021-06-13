@@ -15,6 +15,7 @@ export const ResourceCardOpenTest = () => (
       twitterLink="https://www.wp.pl/"
       bookmarksLink="https://www.o2.pl/"
       linkedInLink="https://www.o2.pl/"
+      contactSupport="mailto:admtomas@gmail.com"
     />
   </BrowserRouter>
 );
