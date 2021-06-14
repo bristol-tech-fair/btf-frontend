@@ -64,13 +64,29 @@ export const Array = styled.div`
   }
 `;
 
-export const Rating = styled.div`
+export const RatingSupport = styled.div`
   display: flex;
   justify-content: space-evenly;
   padding: var(--medium-space);
   width: 100%;
+  svg {
+    margin: 2px;
+    :hover {
+      scale: 1.3;
+    }
+  }
+`;
 
-  border: 2px solid limegreen;
+export const MailSupport = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const StarRating = styled.div`
+  display: flex;
+  button:focus {
+    border: none;
+  }
 `;
 
 export const NewResource = styled.p`
@@ -82,9 +98,4 @@ export const ButtonsRedirect = styled.div`
   margin-bottom: var(--small-space);
   padding: var(--medium-space);
   width: 100%;
-`;
-
-export const MailButton = styled.div`
-  display: flex;
-  align-items: center;
 `;

@@ -7,10 +7,11 @@ import {
   OpenLink,
   Tags,
   Array,
-  Rating,
+  RatingSupport,
   NewResource,
-  MailButton,
-  ButtonsRedirect
+  MailSupport,
+  ButtonsRedirect,
+  StarRating
 } from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import { Large } from '../../components/Banners';
@@ -25,6 +26,7 @@ import {
 } from '../../components/Icons';
 import SecondaryButton from '../../components/SecondaryButton';
 import TertiaryButton from '../../components/TertiaryButton';
+import TextButton from '../../components/TextButton';
 import SubmitResourceForm from '../../components/SubmitResourceForm';
 
 const ResourceCardOpen = ({
@@ -35,11 +37,28 @@ const ResourceCardOpen = ({
   linkedInLink,
   contactSupport
 }) => {
-  const condition = 2;
+  const [condition, setCondition] = useState(0);
   const string = ['testing', 'fantastic', 'map', 'function'];
   const [counter, setCounter] = useState(0);
 
-  const handleCounter = () => {
+  const rateOne = () => {
+    setCondition(() => setCondition(1));
+    setCounter((count) => count + 1);
+  };
+  const rateTwo = () => {
+    setCondition(() => setCondition(2));
+    setCounter((count) => count + 1);
+  };
+  const rateThree = () => {
+    setCondition(() => setCondition(3));
+    setCounter((count) => count + 1);
+  };
+  const rateFour = () => {
+    setCondition(() => setCondition(4));
+    setCounter((count) => count + 1);
+  };
+  const rateFive = () => {
+    setCondition(() => setCondition(5));
     setCounter((count) => count + 1);
   };
 
@@ -88,11 +107,7 @@ const ResourceCardOpen = ({
           </p>
         </Info>
         <OpenLink href={resourceLink} target="_blank">
-          <SecondaryButton
-            content="Go to resource"
-            type="button"
-            onClick={handleCounter}
-          />
+          <SecondaryButton content="Go to resource" type="button" />
         </OpenLink>
 
         <Tags>
@@ -105,32 +120,34 @@ const ResourceCardOpen = ({
             <OpenLink href={facebookLink} target="_blank">
               <Facebook />
             </OpenLink>
-            <OpenLink>
-              <LinkedIn href={linkedInLink} target="_blank" />
+            <OpenLink href={linkedInLink} target="_blank">
+              <LinkedIn />
             </OpenLink>
-            <OpenLink>
-              <Twitter href={twitterLink} target="_blank" />
+            <OpenLink href={twitterLink} target="_blank">
+              <Twitter />
             </OpenLink>
-            <OpenLink>
-              <Bookmark href={bookmarksLink} target="_blank" />
+            <OpenLink href={bookmarksLink} target="_blank">
+              <Bookmark />
             </OpenLink>
           </div>
         </Tags>
-        <Rating>
-          <div>
-            <p>
-              How was this resource? <Heart />
-            </p>
-          </div>
-          <div>
-            <MailButton>
-              <p>Having a problem? &nbsp;</p>
-              <a href={contactSupport}>
-                <Mail />
-              </a>
-            </MailButton>
-          </div>
-        </Rating>
+        <RatingSupport>
+          <StarRating>
+            <p>How was this resource? &nbsp;</p>
+            <TextButton type="button" content={<Heart />} onClick={rateOne} />
+            <TextButton type="button" content={<Heart />} onClick={rateTwo} />
+            <TextButton type="button" content={<Heart />} onClick={rateThree} />
+            <TextButton type="button" content={<Heart />} onClick={rateFour} />
+            <TextButton type="button" content={<Heart />} onClick={rateFive} />
+          </StarRating>
+
+          <MailSupport>
+            <p>Having a problem? &nbsp;</p>
+            <a href={contactSupport}>
+              <Mail />
+            </a>
+          </MailSupport>
+        </RatingSupport>
 
         <NewResource>Want to share your resource?</NewResource>
 
