@@ -22,12 +22,15 @@ import {
   LinkedIn,
   Twitter,
   Bookmark,
-  Mail
+  Mail,
+  ArrowLeft,
+  ArrowRight
 } from '../../components/Icons';
 import SecondaryButton from '../../components/SecondaryButton';
 import TertiaryButton from '../../components/TertiaryButton';
 import TextButton from '../../components/TextButton';
 import SubmitResourceForm from '../../components/SubmitResourceForm';
+import NavLink from '../../components/NavLink';
 
 const ResourceCardOpen = ({
   resourceLink,
@@ -154,8 +157,14 @@ const ResourceCardOpen = ({
         <TertiaryButton content="Submit" type="button" onClick={handleClick} />
 
         <ButtonsRedirect>
-          <h2>buttons</h2>
-          <h2>buttons</h2>
+          <div>
+            <ArrowLeft />
+            <NavLink content="Back to resources" path="/" />
+          </div>
+          <div>
+            <NavLink content="Next" path="/" />
+            <ArrowRight />
+          </div>
         </ButtonsRedirect>
       </ContentWrapper>
     </DefaultPageLayout>

@@ -78,8 +78,7 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
     formState: { errors }
   } = useForm();
 
-  const onSubmit = (formData, e) => {
-    e.target.reset();
+  const onSubmit = (formData) => {
     setTimeout(() => {
       setIsFlipped(!isFlipped);
       console.log(formData);

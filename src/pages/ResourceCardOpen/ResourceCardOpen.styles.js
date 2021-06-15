@@ -7,7 +7,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   transform: translateY(calc(-1 * var(--medium-space)));
 
-  h3 {
+  & h3 {
     transform: translateY(calc(-1 * var(--medium-space)));
   }
 `;
@@ -20,7 +20,7 @@ export const Info = styled.div`
   padding: var(--medium-space);
   width: 100%;
 
-  div {
+  & div {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,7 +55,7 @@ export const Tags = styled.div`
 `;
 export const Array = styled.div`
   display: flex;
-  p {
+  & p {
     background: hsl(0, 0%, 45%, 0.3);
     border-radius: 5px;
     color: var(--darkblue);
@@ -69,7 +69,7 @@ export const RatingSupport = styled.div`
   justify-content: space-evenly;
   padding: var(--medium-space);
   width: 100%;
-  svg {
+  & svg {
     margin: 2px;
     :hover {
       scale: 1.3;
@@ -84,7 +84,7 @@ export const MailSupport = styled.div`
 
 export const StarRating = styled.div`
   display: flex;
-  button:focus {
+  & button:focus {
     border: none;
   }
 `;
@@ -98,4 +98,20 @@ export const ButtonsRedirect = styled.div`
   margin-bottom: var(--small-space);
   padding: var(--medium-space);
   width: 100%;
+
+  & a.active {
+    color: var(--lightblue);
+    :hover {
+      color: var(--logopink);
+    }
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+  }
+
+  & svg {
+    scale: 1.3;
+  }
 `;
