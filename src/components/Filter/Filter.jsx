@@ -14,13 +14,13 @@ const Filter = () => {
           label="Filter"
           placeholder="Age group"
           options={[
-            { value: '1', label: '6-18 years' },
-            { value: '2', label: '6-12 years' },
-            { value: '3', label: '12-18 years' }
+            { value: '6-18', label: '6-18 years' },
+            { value: '6-12', label: '6-12 years' },
+            { value: '12-18', label: '12-18 years' }
           ]}
         />
+        <PrimaryButton content="Find resources" />
       </SelectWrapper>
-      <PrimaryButton content="Find resources" />
       <ButtonContainer>
         <TextButton content="Clear Filters" />
       </ButtonContainer>
