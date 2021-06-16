@@ -70,6 +70,7 @@ const ResourceCardOpen = ({
   const handleClick = () => {
     ref.current.openPopup();
   };
+
   return (
     <DefaultPageLayout>
       <SubmitResourceForm

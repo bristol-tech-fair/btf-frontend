@@ -39,6 +39,12 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
   const [ages, setAges] = useState([]);
   const [cat, setCat] = useState([]);
   const [close, setClose] = useState(false);
+  const {
+    reset,
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
   //* ----Toggler functionality
 
   const closeCard = () => {
@@ -52,6 +58,7 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
 
   const openPopup = () => {
     setClose(!close);
+    reset();
   };
 
   useImperativeHandle(ref, () => {
@@ -71,12 +78,6 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
   }, [selectCategory]);
 
   //* React-hook-form  functionality
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm();
 
   const onSubmit = (formData) => {
     setTimeout(() => {
