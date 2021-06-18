@@ -43,38 +43,44 @@ const ResourceCardOpen = ({
   const [condition, setCondition] = useState(0);
   const string = ['testing', 'fantastic', 'map', 'function'];
   const [counter, setCounter] = useState(0);
+  const [disable, setDisable] = useState(false);
 
   const rateOne = () => {
     setCondition(() => setCondition(1));
     setCounter((count) => count + 1);
+    setDisable(true);
   };
   const rateTwo = () => {
     setCondition(() => setCondition(2));
     setCounter((count) => count + 1);
+    setDisable(true);
   };
   const rateThree = () => {
     setCondition(() => setCondition(3));
     setCounter((count) => count + 1);
+    setDisable(true);
   };
   const rateFour = () => {
     setCondition(() => setCondition(4));
     setCounter((count) => count + 1);
+    setDisable(true);
   };
   const rateFive = () => {
     setCondition(() => setCondition(5));
     setCounter((count) => count + 1);
+    setDisable(true);
   };
 
   //* ----Toggler for popup form
-  const ref = useRef(null);
+  const refClose = useRef(null);
   const handleClick = () => {
-    ref.current.openPopup();
+    refClose.current.openPopup();
   };
 
   return (
     <DefaultPageLayout>
       <SubmitResourceForm
-        ref={ref}
+        ref={refClose}
         selectAges={[
           { value: '8-11', label: '8-11' },
           { value: '12-15', label: '12-15' },
@@ -138,11 +144,36 @@ const ResourceCardOpen = ({
         <RatingSupport>
           <StarRating>
             <p>How was this resource? &nbsp;</p>
-            <TextButton type="button" content={<Heart />} onClick={rateOne} />
-            <TextButton type="button" content={<Heart />} onClick={rateTwo} />
-            <TextButton type="button" content={<Heart />} onClick={rateThree} />
-            <TextButton type="button" content={<Heart />} onClick={rateFour} />
-            <TextButton type="button" content={<Heart />} onClick={rateFive} />
+            <TextButton
+              type="button"
+              content={<Heart />}
+              onClick={rateOne}
+              disabled={disable}
+            />
+            <TextButton
+              type="button"
+              content={<Heart />}
+              onClick={rateTwo}
+              disabled={disable}
+            />
+            <TextButton
+              type="button"
+              content={<Heart />}
+              onClick={rateThree}
+              disabled={disable}
+            />
+            <TextButton
+              type="button"
+              content={<Heart />}
+              onClick={rateFour}
+              disabled={disable}
+            />
+            <TextButton
+              type="button"
+              content={<Heart />}
+              onClick={rateFive}
+              disabled={disable}
+            />
           </StarRating>
 
           <MailSupport>

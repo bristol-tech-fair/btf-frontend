@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextButtonWrapper } from './TextButton.styles';
 
-const TextButton = ({ content, type = 'button', onClick }) => {
+const TextButton = ({ content, type = 'button', onClick, ...btnProps }) => {
   return (
     <TextButtonWrapper
+      {...btnProps}
       type={type === 'submit' ? 'submit' : 'button'}
       onClick={onClick}
     >
