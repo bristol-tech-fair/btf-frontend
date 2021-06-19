@@ -36,7 +36,7 @@ const ResourceCard = ({ category, title, ages, rating, color, to }) => {
 };
 
 ResourceCard.propTypes = {
-  category: PropTypes.oneOf(['coding', 'maths', 'electronics']).isRequired,
+  category: PropTypes.oneOf(['Coding', 'Maths', 'Electronics']).isRequired,
   title: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   ages: PropTypes.string.isRequired,
