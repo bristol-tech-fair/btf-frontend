@@ -15,7 +15,7 @@ const List = ({ Component, data }) => {
 
 List.propTypes = {
   Component: PropTypes.func.isRequired,
-  data: PropTypes.func.isRequired,
+  data: PropTypes.arrayOf(PropTypes.object),
   _id: PropTypes.number.isRequired
 };
 

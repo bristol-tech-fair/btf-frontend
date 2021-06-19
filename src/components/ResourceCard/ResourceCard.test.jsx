@@ -10,7 +10,7 @@ describe('ResourceCard', () => {
       <Router>
         <ResourceCard
           title="First title"
-          category="maths"
+          category="Maths"
           color="midblue"
           ages="6-11"
           to="/test"
@@ -19,7 +19,7 @@ describe('ResourceCard', () => {
     );
 
     expect(screen.getByText('First title'));
-    expect(screen.getByText('maths'));
+    expect(screen.getByText('Maths'));
     const link = screen.getByRole('link');
     expect(link.getAttribute('href')).toBe('/test');
     screen.debug();
