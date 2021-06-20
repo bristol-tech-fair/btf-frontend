@@ -7,6 +7,7 @@ import React, {
 import { useForm } from 'react-hook-form';
 import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import TextInput from '../TextInput';
 import TextArea from '../TextArea';
 import Select from '../Select';
@@ -79,10 +80,23 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
 
   //* React-hook-form  functionality
 
-  const onSubmit = (formData) => {
+  const onSubmit = async (data) => {
+    const formData = new FormData();
+
+    formData.append('ages', data.ages);
+    formData.append('category', data.category);
+    formData.append('description', data.description);
+    if (data.document[0]) formData.append('attachments', data.document[0]);
+    if (data.image[0]) formData.append('attachments', data.image[0]);
+    if (data.video[0]) formData.append('attachments', data.video[0]);
+
+    const res = await axios.post('/learningResources', formData);
+
+    console.log(res.data);
+
     setTimeout(() => {
       setIsFlipped(!isFlipped);
-      console.log(formData);
+      console.log(data);
     }, 1000);
   };
 

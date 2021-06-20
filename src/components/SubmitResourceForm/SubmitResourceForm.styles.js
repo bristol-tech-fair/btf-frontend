@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import mediaQuery from '../../utils/mediaQuery';
 
 export const PopupContainer = styled.div`
-  display: ${(props) => (props.close === false ? 'none ' : 'flex')};
+  display: ${(props) => (props.close === true ? 'none ' : 'flex')};
   flex-direction: column;
   background-color: hsla(0, 0%, 0%, 0.8);
   height: 100vh;

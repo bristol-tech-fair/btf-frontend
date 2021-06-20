@@ -1,5 +1,7 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Theme from './theme';
+import SubmitResourceForm from './components/SubmitResourceForm';
 
 const App = () => {
   return (
@@ -11,6 +13,12 @@ const App = () => {
       <h4>h4</h4>
       <p>p</p>
       <a href="#/">a</a>
+      <BrowserRouter>
+        <SubmitResourceForm
+          selectAges={[{ value: '1', label: '1' }]}
+          selectCategory={[{ value: '1', label: '1' }]}
+        />
+      </BrowserRouter>
     </>
   );
 };
