@@ -12,6 +12,7 @@ const Filter = () => {
         id="ages"
         label="Filter"
         placeholder="Age group"
+        leftlabel="true"
         options={[
           { value: '6-18', label: '6-18 years' },
           { value: '6-12', label: '6-12 years' },

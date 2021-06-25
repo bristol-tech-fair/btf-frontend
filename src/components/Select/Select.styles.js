@@ -3,14 +3,15 @@ import InputWrapper from '../../theme/inputs.styles';
 
 export const SelectInputWrapper = styled(InputWrapper)`
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
+  flex-direction: ${(props) => (props.leftlabel === true ? 'row' : 'column')};
   position: relative;
 
   select {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-
+    width: 100%;
     font-size: 1.6rem;
   }
 
