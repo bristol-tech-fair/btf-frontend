@@ -8,6 +8,12 @@ export const FilterText = styled.p`
     padding: var(--medium-space);
   }
 `;
+export const SelectWrapper = styled.div`
+  ${mediaQuery.tablet}, ${mediaQuery.desktop} {
+    width: 30%;
+    margin-right: var(--small-space);
+  }
+`;
 
 export const FilterWrapper = styled.form`
   padding: var(--small-space);
@@ -32,9 +38,12 @@ export const FilterWrapper = styled.form`
 `;
 
 export const ButtonContainer = styled.div`
-  margin: var(--small-space);
   display: flex;
   flex-direction: column;
+  margin-top: var(--small-space);
+  ${mediaQuery.tablet}, ${mediaQuery.desktop} {
+    width: 30%;
+  }
 `;
 
 export const ClearFilterButton = styled.button`

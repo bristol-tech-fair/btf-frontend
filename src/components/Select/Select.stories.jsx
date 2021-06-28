@@ -29,7 +29,6 @@ export const Example = () => (
     name="Example name"
     label="Example label"
     placeholder="Example value"
-    leftlabel="true"
     options={[
       { value: '1', label: '1' },
       { value: '2', label: '2' },

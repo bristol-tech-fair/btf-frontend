@@ -2,22 +2,14 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { SelectInputWrapper } from './Select.styles';
 
-const Select = ({
-  name,
-  label,
-  onBlur,
-  leftlabel,
-  options,
-  placeholder,
-  id
-}) => {
+const Select = ({ name, label, onBlur, options, placeholder, id }) => {
   const [color, setColor] = useState(`var(--darkgrey)`);
 
   function changeColor() {
     setColor(`var(--darkblue)`);
   }
   return (
-    <SelectInputWrapper leftlabel={leftlabel}>
+    <SelectInputWrapper>
       <label htmlFor={name}>{label}</label>
       <select
         name={name}
@@ -54,7 +46,6 @@ Select.propTypes = {
       label: PropTypes.string.isRequired
     })
   ).isRequired,
-  leftlabel: PropTypes.bool,
   onBlur: PropTypes.func
 };
 
