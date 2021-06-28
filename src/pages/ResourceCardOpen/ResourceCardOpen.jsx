@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import {
   ContentWrapper,
   Info,
@@ -40,10 +41,26 @@ const ResourceCardOpen = ({
   linkedInLink,
   contactSupport
 }) => {
+  const [data, setData] = useState({ resources: [] });
   const [condition, setCondition] = useState(0);
   const string = ['testing', 'fantastic', 'map', 'function'];
   const [counter, setCounter] = useState(0);
   const [disable, setDisable] = useState(false);
+
+  //* Fetch data from the server
+  // ?    https://api.jsonbin.io/b/60d7dc198ea8ec25bd1678f5
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        'https://api.jsonbin.io/b/60d7dc198ea8ec25bd1678f5'
+      );
+
+      setData(result.data);
+    };
+
+    fetchData();
+  }, []);
+  console.log('Here is some json data downloaded from website: ', data);
 
   const rateOne = () => {
     setCondition(() => setCondition(1));
@@ -93,6 +110,14 @@ const ResourceCardOpen = ({
         ]}
       />
       <Large color="logopink" />
+      <ul>
+        {data.resources.map((item) => (
+          <li key={item.title}>
+            <p>{item.title}</p>
+            <p>{item.category}</p>
+          </li>
+        ))}
+      </ul>
       <ContentWrapper>
         <h3>Electronics</h3>
         <h1>The Institution of Engineering</h1>
