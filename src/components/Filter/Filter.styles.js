@@ -1,30 +1,44 @@
 import styled from 'styled-components';
 import mediaQuery from '../../utils/mediaQuery';
 
-export const FilterWrapper = styled.div`
+export const FilterText = styled.p`
+  color: var(--lightblue);
+  font-weight: 500;
+  ${mediaQuery.tablet}, ${mediaQuery.desktop} {
+    padding: var(--medium-space);
+  }
+`;
+
+export const FilterWrapper = styled.form`
   padding: var(--small-space);
   display: flex;
   flex-direction: column;
+  flex: 1;
   text-align: center;
   ${mediaQuery.tablet} {
-    height: 6rem;
+    height: 7rem;
     flex-direction: row;
+    justify-content: center;
     width: 80%;
     text-align: left;
   }
   ${mediaQuery.desktop} {
-    height: 7rem;
+    height: 8rem;
     flex-direction: row;
+    justify-content: center;
     width: 90%;
     text-align: left;
   }
 `;
 
 export const ButtonContainer = styled.div`
-  margin-top: var(--smallest-space);
+  margin: var(--small-space);
   display: flex;
   flex-direction: column;
-  ${mediaQuery.desktop} {
+`;
+
+export const ClearFilterButton = styled.button`
+  ${mediaQuery.tablet}, ${mediaQuery.desktop} {
     text-align: left;
   }
 `;

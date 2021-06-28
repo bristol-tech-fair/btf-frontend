@@ -1,5 +1,10 @@
 import React from 'react';
-import { FilterWrapper, ButtonContainer } from './Filter.styles';
+import {
+  FilterWrapper,
+  FilterText,
+  ClearFilterButton,
+  ButtonContainer
+} from './Filter.styles';
 import Select from '../Select';
 import PrimaryButton from '../PrimaryButton';
 import TextButton from '../TextButton';
@@ -7,12 +12,12 @@ import TextButton from '../TextButton';
 const Filter = () => {
   return (
     <FilterWrapper>
+      <FilterText>Filter</FilterText>
       <Select
         name="Age Group"
         id="ages"
-        label="Filter"
+        label="Age group"
         placeholder="Age group"
-        leftlabel="true"
         options={[
           { value: '6-18', label: '6-18 years' },
           { value: '6-12', label: '6-12 years' },
@@ -22,7 +27,7 @@ const Filter = () => {
       <Select
         name="Any topic"
         id="topic"
-        label=""
+        label="Topic"
         placeholder="Any topic"
         options={[
           { value: 'coding', label: 'Coding' },
@@ -32,7 +37,9 @@ const Filter = () => {
       />
       <ButtonContainer>
         <PrimaryButton content="Find resources" />
-        <TextButton content="Clear Filters" />
+        <ClearFilterButton>
+          <TextButton content="Clear Filters" />
+        </ClearFilterButton>
       </ButtonContainer>
     </FilterWrapper>
   );
