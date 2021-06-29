@@ -1,8 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+// TODO import axios from 'axios';
 import {
   ContentWrapper,
+  MobileBanner,
+  TabletBanner,
+  DesktopBanner,
   Info,
   ClickCounter,
   OpenLink,
@@ -15,7 +18,7 @@ import {
   StarRating
 } from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
-import { Large } from '../../components/Banners';
+import { Small, Medium, Large } from '../../components/Banners';
 import {
   Heart,
   HeartFull,
@@ -41,26 +44,38 @@ const ResourceCardOpen = ({
   linkedInLink,
   contactSupport
 }) => {
-  const [data, setData] = useState({ resources: [] });
+  // TODO const [data, setData] = useState({ resources: [] });
   const [condition, setCondition] = useState(0);
   const string = ['testing', 'fantastic', 'map', 'function'];
   const [counter, setCounter] = useState(0);
   const [disable, setDisable] = useState(false);
+  const bannerColor = [
+    'lightpink',
+    'darkpink',
+    'mattepink',
+    'logopink',
+    'lightgrey',
+    'darkgrey',
+    'darkburgundy',
+    'orange',
+    'lightblue',
+    'midblue',
+    'darkblue'
+  ];
+  const pickAColor =
+    bannerColor[Math.floor(Math.random() * bannerColor.length)];
 
-  //* Fetch data from the server
-  // ?    https://api.jsonbin.io/b/60d7dc198ea8ec25bd1678f5
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        'https://api.jsonbin.io/b/60d7dc198ea8ec25bd1678f5'
-      );
-
-      setData(result.data);
-    };
-
-    fetchData();
-  }, []);
-  console.log('Here is some json data downloaded from website: ', data);
+  //* Fetch data from the server and close webpage inside map function
+  // TODO useEffect(() => {
+  // TODO   const fetchData = async () => {
+  // TODO     const result = await axios(
+  // TODO       'https://api.jsonbin.io/b/60d7dc198ea8ec25bd1678f5/4'
+  //  TODO    );
+  // TODO     setData(result.data);
+  // TODO   };
+  // TODO   fetchData();
+  // TODO }, []);
+  // TODO console.log('Here is some json data downloaded from website: ', data);
 
   const rateOne = () => {
     setCondition(() => setCondition(1));
@@ -95,136 +110,145 @@ const ResourceCardOpen = ({
   };
 
   return (
-    <DefaultPageLayout>
-      <SubmitResourceForm
-        ref={refClose}
-        selectAges={[
-          { value: '8-11', label: '8-11' },
-          { value: '12-15', label: '12-15' },
-          { value: '16-18', label: '16-18' }
-        ]}
-        selectCategory={[
-          { value: 'maths', label: 'maths' },
-          { value: 'coding', label: 'coding' },
-          { value: 'engineering', label: 'engineering' }
-        ]}
-      />
-      <Large color="logopink" />
-      <ul>
-        {data.resources.map((item) => (
-          <li key={item.title}>
-            <p>{item.title}</p>
-            <p>{item.category}</p>
-          </li>
-        ))}
-      </ul>
-      <ContentWrapper>
-        <h3>Electronics</h3>
-        <h1>The Institution of Engineering</h1>
+    <>
+      {/* {data.resources.map((item) => ( */}
+      <DefaultPageLayout>
+        <SubmitResourceForm
+          ref={refClose}
+          selectAges={[
+            { value: '8-11', label: '8-11' },
+            { value: '12-15', label: '12-15' },
+            { value: '16-18', label: '16-18' }
+          ]}
+          selectCategory={[
+            { value: 'maths', label: 'maths' },
+            { value: 'coding', label: 'coding' },
+            { value: 'engineering', label: 'engineering' }
+          ]}
+        />
+        <MobileBanner>
+          <Small color={pickAColor} />
+        </MobileBanner>
+        <TabletBanner>
+          <Medium color={pickAColor} />
+        </TabletBanner>
+        <DesktopBanner>
+          <Large color={pickAColor} />
+        </DesktopBanner>
 
-        <Info>
-          <div>
-            <h4>Ages:</h4>
+        <ContentWrapper>
+          <h3>Electronics</h3>
+          <h1>The Institution of Engineering</h1>
+
+          <Info>
             <div>
-              {condition > 0 ? <HeartFull /> : <Heart />}
-              {condition > 1 ? <HeartFull /> : <Heart />}
-              {condition > 2 ? <HeartFull /> : <Heart />}
-              {condition > 3 ? <HeartFull /> : <Heart />}
-              {condition > 4 ? <HeartFull /> : <Heart />}
-              <ClickCounter>| {counter}</ClickCounter>
+              <h4>Ages:</h4>
+              <div>
+                {condition > 0 ? <HeartFull /> : <Heart />}
+                {condition > 1 ? <HeartFull /> : <Heart />}
+                {condition > 2 ? <HeartFull /> : <Heart />}
+                {condition > 3 ? <HeartFull /> : <Heart />}
+                {condition > 4 ? <HeartFull /> : <Heart />}
+                <ClickCounter>| {counter}</ClickCounter>
+              </div>
             </div>
-          </div>
 
-          <p>
-            We support STEM teachers by providing a range of resources linked to
-            the UK curriculum and partnering with organizations to create
-            experiences that inspire teachers and students alike.
-          </p>
-        </Info>
-        <OpenLink href={resourceLink} target="_blank">
-          <SecondaryButton content="Go to resource" type="button" />
-        </OpenLink>
+            <p>
+              We support STEM teachers by providing a range of resources linked
+              to the UK curriculum and partnering with organizations to create
+              experiences that inspire teachers and students alike.
+            </p>
+          </Info>
+          <OpenLink href={resourceLink} target="_blank">
+            <SecondaryButton content="Go to resource" type="button" />
+          </OpenLink>
 
-        <Tags>
-          <Array>
-            {string.map((str) => {
-              return <p key={str}>{str}</p>;
-            })}
-          </Array>
-          <div>
-            <OpenLink href={facebookLink} target="_blank">
-              <Facebook />
-            </OpenLink>
-            <OpenLink href={linkedInLink} target="_blank">
-              <LinkedIn />
-            </OpenLink>
-            <OpenLink href={twitterLink} target="_blank">
-              <Twitter />
-            </OpenLink>
-            <OpenLink href={bookmarksLink} target="_blank">
-              <Bookmark />
-            </OpenLink>
-          </div>
-        </Tags>
-        <RatingSupport>
-          <StarRating>
-            <p>How was this resource? &nbsp;</p>
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateOne}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateTwo}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateThree}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateFour}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateFive}
-              disabled={disable}
-            />
-          </StarRating>
+          <Tags>
+            <Array>
+              {string.map((str) => {
+                return <p key={str}>{str}</p>;
+              })}
+            </Array>
+            <div>
+              <OpenLink href={facebookLink} target="_blank">
+                <Facebook />
+              </OpenLink>
+              <OpenLink href={linkedInLink} target="_blank">
+                <LinkedIn />
+              </OpenLink>
+              <OpenLink href={twitterLink} target="_blank">
+                <Twitter />
+              </OpenLink>
+              <OpenLink href={bookmarksLink} target="_blank">
+                <Bookmark />
+              </OpenLink>
+            </div>
+          </Tags>
+          <RatingSupport>
+            <StarRating>
+              <p>How was this resource? &nbsp;</p>
+              <TextButton
+                type="button"
+                content={<Heart />}
+                onClick={rateOne}
+                disabled={disable}
+              />
+              <TextButton
+                type="button"
+                content={<Heart />}
+                onClick={rateTwo}
+                disabled={disable}
+              />
+              <TextButton
+                type="button"
+                content={<Heart />}
+                onClick={rateThree}
+                disabled={disable}
+              />
+              <TextButton
+                type="button"
+                content={<Heart />}
+                onClick={rateFour}
+                disabled={disable}
+              />
+              <TextButton
+                type="button"
+                content={<Heart />}
+                onClick={rateFive}
+                disabled={disable}
+              />
+            </StarRating>
 
-          <MailSupport>
-            <p>Having a problem? &nbsp;</p>
-            <a href={contactSupport}>
-              <Mail />
-            </a>
-          </MailSupport>
-        </RatingSupport>
+            <MailSupport>
+              <p>Having a problem? &nbsp;</p>
+              <a href={contactSupport}>
+                <Mail />
+              </a>
+            </MailSupport>
+          </RatingSupport>
 
-        <NewResource>Want to share your resource?</NewResource>
+          <NewResource>Want to share your resource?</NewResource>
 
-        <TertiaryButton content="Submit" type="button" onClick={handleClick} />
+          <TertiaryButton
+            content="Submit"
+            type="button"
+            onClick={handleClick}
+          />
 
-        <ButtonsRedirect>
-          <div>
-            <ArrowLeft />
-            <NavLink content="Back to resources" path="/" />
-          </div>
-          <div>
-            <NavLink content="Next" path="/" />
-            <ArrowRight />
-          </div>
-        </ButtonsRedirect>
-      </ContentWrapper>
-    </DefaultPageLayout>
+          <ButtonsRedirect>
+            <div>
+              <ArrowLeft />
+              <NavLink content="Back to resources" path="/" />
+            </div>
+            <div>
+              <NavLink content="Next" path="/" />
+              <ArrowRight />
+            </div>
+          </ButtonsRedirect>
+        </ContentWrapper>
+      </DefaultPageLayout>
+      {/* ))} */}
+    </>
   );
 };
 

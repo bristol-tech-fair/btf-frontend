@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import mediaQuery from '../../utils/mediaQuery';
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -9,6 +10,27 @@ export const ContentWrapper = styled.div`
 
   & h3 {
     transform: translateY(calc(-1 * var(--medium-space)));
+  }
+`;
+
+export const MobileBanner = styled.div`
+  ${mediaQuery.tablet} {
+    display: none;
+  }
+`;
+export const TabletBanner = styled.div`
+  display: none;
+  ${mediaQuery.tablet} {
+    display: flex;
+  }
+  ${mediaQuery.desktop} {
+    display: none;
+  }
+`;
+export const DesktopBanner = styled.div`
+  display: none;
+  ${mediaQuery.desktop} {
+    display: flex;
   }
 `;
 
