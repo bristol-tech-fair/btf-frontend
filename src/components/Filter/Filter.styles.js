@@ -30,7 +30,7 @@ export const FilterWrapper = styled.form`
   ${mediaQuery.desktop} {
     flex-direction: row;
     justify-content: center;
-    width: 90%;
+    max-width: 100rem;
     text-align: left;
   }
 `;
