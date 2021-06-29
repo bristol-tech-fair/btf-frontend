@@ -18,7 +18,7 @@ const Filter = () => {
         <Select
           name="Age Group"
           id="ages"
-          label="Age group"
+          label="&nbsp;"
           placeholder="Age group"
           options={[
             { value: '6-18', label: '6-18 years' },
@@ -31,7 +31,7 @@ const Filter = () => {
         <Select
           name="Any topic"
           id="topic"
-          label="Topic"
+          label="&nbsp;"
           placeholder="Any topic"
           options={[
             { value: 'coding', label: 'Coding' },

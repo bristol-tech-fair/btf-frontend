@@ -4,8 +4,9 @@ import mediaQuery from '../../utils/mediaQuery';
 export const FilterText = styled.p`
   color: var(--lightblue);
   font-weight: 500;
+  padding: var(--smallest-space) var(--smallest-space);
   ${mediaQuery.tablet}, ${mediaQuery.desktop} {
-    padding: var(--medium-space);
+    padding: var(--medium-space) var(--smallest-space);
   }
 `;
 export const SelectWrapper = styled.div`
@@ -16,20 +17,17 @@ export const SelectWrapper = styled.div`
 `;
 
 export const FilterWrapper = styled.form`
-  padding: var(--small-space);
   display: flex;
   flex-direction: column;
   flex: 1;
   text-align: center;
+  margin: 0 auto;
   ${mediaQuery.tablet} {
-    height: 7rem;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
     text-align: left;
   }
   ${mediaQuery.desktop} {
-    height: 8rem;
     flex-direction: row;
     justify-content: center;
     width: 90%;
@@ -43,11 +41,16 @@ export const ButtonContainer = styled.div`
   margin-top: var(--small-space);
   ${mediaQuery.tablet}, ${mediaQuery.desktop} {
     width: 30%;
+    > button {
+      padding: var(--small-space);
+    }
   }
 `;
 
 export const ClearFilterButton = styled.button`
+  padding: var(--smallest-space);
   ${mediaQuery.tablet}, ${mediaQuery.desktop} {
     text-align: left;
+    padding: 0;
   }
 `;
