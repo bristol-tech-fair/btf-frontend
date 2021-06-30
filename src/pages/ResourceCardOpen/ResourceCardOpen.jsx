@@ -169,7 +169,7 @@ const ResourceCardOpen = ({
                 return <p key={str}>{str}</p>;
               })}
             </Array>
-            <div>
+            <div className="iconLink">
               <OpenLink href={facebookLink} target="_blank">
                 <Facebook />
               </OpenLink>

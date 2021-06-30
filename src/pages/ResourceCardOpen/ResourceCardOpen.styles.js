@@ -6,14 +6,21 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(calc(-1 * var(--medium-space)));
+  transform: translateY(calc(-1 * var(--small-space)));
 
+  & h1 {
+    text-align: center;
+  }
   & h3 {
     transform: translateY(calc(-1 * var(--medium-space)));
+  }
+  ${mediaQuery.tablet} {
+    transform: translateY(calc(-1 * var(--small-space)));
   }
 `;
 
 export const MobileBanner = styled.div`
+  display: flex;
   ${mediaQuery.tablet} {
     display: none;
   }
@@ -67,27 +74,48 @@ export const OpenLink = styled.a`
 
 export const Tags = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: var(--medium-space);
   width: 100%;
+  ${mediaQuery.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   & svg {
     margin-left: var(--smallest-space);
   }
+
+  .iconLink {
+    margin: auto;
+    padding: var(--smallest-space);
+  }
+
+  ${mediaQuery.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+    .iconLink {
+      margin: 0;
+      padding: 0;
+    }
+  }
 `;
 export const Array = styled.div`
   display: flex;
+
   & p {
     background: hsl(0, 0%, 45%, 0.3);
     border-radius: 5px;
     color: var(--darkblue);
     margin-right: var(--smallest-space);
-    padding: 3px var(--small-space);
+    padding: 3px;
   }
 `;
 
 export const RatingSupport = styled.div`
   display: flex;
+
   justify-content: space-evenly;
   padding: var(--medium-space);
   width: 100%;
