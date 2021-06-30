@@ -28,10 +28,7 @@ export const FilterWrapper = styled.form`
     text-align: left;
   }
   ${mediaQuery.desktop} {
-    flex-direction: row;
-    justify-content: center;
     max-width: 100rem;
-    text-align: left;
   }
 `;
 
@@ -39,7 +36,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: var(--small-space);
-  ${mediaQuery.tablet}, ${mediaQuery.desktop} {
+  ${mediaQuery.tablet} {
     width: 30%;
     > button {
       padding: var(--small-space);
@@ -49,7 +46,7 @@ export const ButtonContainer = styled.div`
 
 export const ClearFilterButton = styled.button`
   padding: var(--smallest-space);
-  ${mediaQuery.tablet}, ${mediaQuery.desktop} {
+  ${mediaQuery.tablet} {
     text-align: left;
     padding: 0;
   }
