@@ -141,7 +141,7 @@ const ResourceCardOpen = ({
           <h1>The Institution of Engineering</h1>
 
           <Info>
-            <div>
+            <div className="info">
               <h4>Ages:</h4>
               <div>
                 {condition > 0 ? <HeartFull /> : <Heart />}
@@ -187,36 +187,38 @@ const ResourceCardOpen = ({
           <RatingSupport>
             <StarRating>
               <p>How was this resource? &nbsp;</p>
-              <TextButton
-                type="button"
-                content={<Heart />}
-                onClick={rateOne}
-                disabled={disable}
-              />
-              <TextButton
-                type="button"
-                content={<Heart />}
-                onClick={rateTwo}
-                disabled={disable}
-              />
-              <TextButton
-                type="button"
-                content={<Heart />}
-                onClick={rateThree}
-                disabled={disable}
-              />
-              <TextButton
-                type="button"
-                content={<Heart />}
-                onClick={rateFour}
-                disabled={disable}
-              />
-              <TextButton
-                type="button"
-                content={<Heart />}
-                onClick={rateFive}
-                disabled={disable}
-              />
+              <div className="buttonHeart">
+                <TextButton
+                  type="button"
+                  content={<Heart />}
+                  onClick={rateOne}
+                  disabled={disable}
+                />
+                <TextButton
+                  type="button"
+                  content={<Heart />}
+                  onClick={rateTwo}
+                  disabled={disable}
+                />
+                <TextButton
+                  type="button"
+                  content={<Heart />}
+                  onClick={rateThree}
+                  disabled={disable}
+                />
+                <TextButton
+                  type="button"
+                  content={<Heart />}
+                  onClick={rateFour}
+                  disabled={disable}
+                />
+                <TextButton
+                  type="button"
+                  content={<Heart />}
+                  onClick={rateFive}
+                  disabled={disable}
+                />
+              </div>
             </StarRating>
 
             <MailSupport>

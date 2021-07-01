@@ -46,9 +46,8 @@ export const ClickCounter = styled.p`
 `;
 
 export const Info = styled.div`
-  padding: var(--medium-space);
+  padding: var(--small-space);
   width: 100%;
-
   & div {
     display: flex;
     align-items: center;
@@ -57,6 +56,18 @@ export const Info = styled.div`
 
     svg {
       margin-right: 3px;
+    }
+  }
+
+  ${mediaQuery.tablet} {
+    padding: var(--medium-space);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    ${mediaQuery.tablet} {
+      flex-direction: row;
     }
   }
 `;
@@ -76,11 +87,11 @@ export const Tags = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--medium-space);
+  margin-top: var(--medium-space);
+  padding: 0 var(--small-space);
   width: 100%;
   ${mediaQuery.tablet} {
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 0 var(--medium-space);
   }
 
   & svg {
@@ -88,17 +99,12 @@ export const Tags = styled.div`
   }
 
   .iconLink {
-    margin: auto;
-    padding: var(--smallest-space);
+    margin-top: var(--small-space);
   }
 
   ${mediaQuery.tablet} {
     flex-direction: row;
     justify-content: space-between;
-    .iconLink {
-      margin: 0;
-      padding: 0;
-    }
   }
 `;
 export const Array = styled.div`
@@ -115,39 +121,76 @@ export const Array = styled.div`
 
 export const RatingSupport = styled.div`
   display: flex;
-
-  justify-content: space-evenly;
-  padding: var(--medium-space);
+  flex-direction: column;
+  margin-top: var(--small-space);
   width: 100%;
+
   & svg {
     margin: 2px;
     :hover {
       scale: 1.3;
     }
   }
+
+  ${mediaQuery.tablet} {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 `;
 
 export const MailSupport = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
+
+  ${mediaQuery.tablet} {
+    flex-direction: row;
+    > a {
+      margin-top: var(--smallest-space);
+    }
+  }
 `;
 
 export const StarRating = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--small-space);
+
+  ${mediaQuery.tablet} {
+    flex-direction: row;
+    margin-bottom: 0;
+    .buttonHeart {
+      margin-top: var(--smallest-space);
+    }
+  }
+
+  .buttonHeart {
+    display: flex;
+    justify-content: center;
+  }
   & button:focus {
     border: none;
   }
 `;
 
 export const NewResource = styled.p`
-  padding: var(--small-space);
+  margin: var(--small-space) 0;
+  ${mediaQuery.tablet} {
+    padding: var(--small-space);
+    margin-bottom: 0;
+  }
 `;
+
 export const ButtonsRedirect = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--small-space);
-  padding: var(--medium-space);
+  padding: var(--small-space);
   width: 100%;
+  ${mediaQuery.tablet} {
+    margin-bottom: var(--medium-space);
+    padding: var(--medium-space);
+  }
 
   & a.active {
     color: var(--lightblue);
