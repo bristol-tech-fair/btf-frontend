@@ -12,6 +12,5 @@ export const textInput = () => (
     name="textInput"
     label="Label"
     placeholder="Input"
-    value="Input"
   />
 );

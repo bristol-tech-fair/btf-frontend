@@ -5,7 +5,7 @@ import Large from './Large';
 
 describe('Large', () => {
   test('renders Large component', () => {
-    render(<Large />);
+    render(<Large color="midblue" />);
 
     screen.debug();
   });

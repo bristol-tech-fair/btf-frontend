@@ -8,6 +8,7 @@ export default {
 
 export const Fruit = () => (
   <Select
+    id="selectOne"
     name="Fruit"
     label="Choose a fruit"
     placeholder="Select an option"
@@ -24,6 +25,7 @@ export const Fruit = () => (
 
 export const Example = () => (
   <Select
+    id="selectTwo"
     name="Example name"
     label="Example label"
     placeholder="Example value"
