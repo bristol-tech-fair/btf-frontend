@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Theme from './theme';
 import HomePage from './pages/HomePage';
 
@@ -8,7 +8,13 @@ const App = () => {
     <>
       <Router>
         <Theme />
-        <HomePage readMoreUrl="/" />
+        <Switch>
+          <Route
+            path="/"
+            exact
+            component={() => <HomePage readMoreUrl="/" />}
+          />
+        </Switch>
       </Router>
     </>
   );
