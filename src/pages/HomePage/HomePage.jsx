@@ -23,6 +23,7 @@ import EventCard from '../../components/EventCard';
 import PostCard from '../../components/PostCard';
 import SponsorCard from '../../components/SponsorCard';
 import axios from 'axios';
+import Spinner from '../../components/Spinner';
 
 const HomePage = ({
   readMoreUrl
@@ -129,7 +130,7 @@ const HomePage = ({
       <TitleWrapper>Learning Resources</TitleWrapper>
 
       {
-        resourceData &&
+        resourceData ?
         (<>
         <MobileCardWrapper>
         <List Component={ResourceCard} data={[resourceData[0]]} _id={1} />
@@ -144,7 +145,7 @@ const HomePage = ({
       <DeskTopCardWrapper>
         <List Component={ResourceCard} data={resourceData} _id={1} />
       </DeskTopCardWrapper>
-      </>)
+      </>) : (<Spinner />)
 
       }
       <TitleWrapper>Events</TitleWrapper>
