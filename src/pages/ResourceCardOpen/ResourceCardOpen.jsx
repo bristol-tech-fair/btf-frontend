@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 // TODO import axios from 'axios';
 import {
@@ -45,7 +45,7 @@ const ResourceCardOpen = ({
   contactSupport
 }) => {
   // TODO const [data, setData] = useState({ resources: [] });
-  const [condition, setCondition] = useState(0);
+  const [condition, setCondition] = useState(3);
   const string = ['testing', 'fantastic', 'map', 'function'];
   const [counter, setCounter] = useState(0);
   const [disable, setDisable] = useState(false);
@@ -77,6 +77,23 @@ const ResourceCardOpen = ({
   // TODO }, []);
   // TODO console.log('Here is some json data downloaded from website: ', data);
 
+  //* Use local storage to disable button for rating and counter after first click
+  useEffect(() => {
+    // checking if localStorage has a "hasVisited" key
+    if (localStorage.getItem('hasVisited')) {
+      // setting the state of "disable" to "true" if it does exist
+      setDisable(true);
+    } else {
+      // creating the "hasVisited" key value pair in localStorage if it does not exist
+      localStorage.setItem('hasVisited', 'true');
+    }
+    // we are only running this useEffect on the first render by passing empty array
+  }, []);
+
+  console.log('current state of disable is: ', disable);
+  const check = localStorage.getItem('hasVisited');
+
+  console.log('hasVisited state is now set to : ', check);
   const rateOne = () => {
     setCondition(() => setCondition(1));
     setCounter((count) => count + 1);
