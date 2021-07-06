@@ -27,8 +27,7 @@ import {
   Twitter,
   Bookmark,
   Mail,
-  ArrowLeft,
-  ArrowRight
+  ArrowLeft
 } from '../../components/Icons';
 import SecondaryButton from '../../components/SecondaryButton';
 import TertiaryButton from '../../components/TertiaryButton';
@@ -65,7 +64,7 @@ const ResourceCardOpen = ({
   const pickAColor =
     bannerColor[Math.floor(Math.random() * bannerColor.length)];
 
-  //* Fetch data from the server and close webpage inside map function
+  //* Fetch data from the server
   // TODO useEffect(() => {
   // TODO   const fetchData = async () => {
   // TODO     const result = await axios(
@@ -77,7 +76,7 @@ const ResourceCardOpen = ({
   // TODO }, []);
   // TODO console.log('Here is some json data downloaded from website: ', data);
 
-  //* Use local storage to disable button for rating and counter after first click
+  //* Use local storage to disable rating/counter buttons first click
   useEffect(() => {
     // checking if localStorage has a "hasVisited" key
     if (localStorage.getItem('hasVisited')) {
@@ -87,41 +86,37 @@ const ResourceCardOpen = ({
       // creating the "hasVisited" key value pair in localStorage if it does not exist
       localStorage.setItem('hasVisited', 'true');
     }
-    // we are only running this useEffect on the first render by passing empty array
   }, []);
 
-  console.log('current state of disable is: ', disable);
-  const check = localStorage.getItem('hasVisited');
-
-  console.log('hasVisited state is now set to : ', check);
   const rateOne = () => {
-    setCondition(() => setCondition(1));
+    setCondition(() => setCondition(Math.round(condition + 1) / 2));
     setCounter((count) => count + 1);
     setDisable(true);
   };
   const rateTwo = () => {
-    setCondition(() => setCondition(2));
+    setCondition(() => setCondition(Math.round(condition + 2) / 2));
     setCounter((count) => count + 1);
     setDisable(true);
   };
   const rateThree = () => {
-    setCondition(() => setCondition(3));
+    setCondition(() => setCondition(Math.round(condition + 3) / 2));
     setCounter((count) => count + 1);
     setDisable(true);
   };
   const rateFour = () => {
-    setCondition(() => setCondition(4));
+    setCondition(() => setCondition(Math.round(condition + 4) / 2));
     setCounter((count) => count + 1);
     setDisable(true);
   };
   const rateFive = () => {
-    setCondition(() => setCondition(5));
+    setCondition(() => setCondition(Math.round(condition + 5) / 2));
     setCounter((count) => count + 1);
     setDisable(true);
   };
 
   //* ----Toggler for popup form
   const refClose = useRef(null);
+
   const handleClick = () => {
     refClose.current.openPopup();
   };
@@ -258,10 +253,6 @@ const ResourceCardOpen = ({
             <div>
               <ArrowLeft />
               <NavLink content="Back to resources" path="/" />
-            </div>
-            <div>
-              <NavLink content="Next" path="/" />
-              <ArrowRight />
             </div>
           </ButtonsRedirect>
         </ContentWrapper>

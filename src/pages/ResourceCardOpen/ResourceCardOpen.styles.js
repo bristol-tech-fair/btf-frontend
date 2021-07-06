@@ -132,6 +132,13 @@ export const RatingSupport = styled.div`
     }
   }
 
+  button {
+    &:active,
+    &:focus {
+      border-bottom: none;
+    }
+  }
+
   ${mediaQuery.tablet} {
     flex-direction: row;
     justify-content: space-evenly;
@@ -184,7 +191,6 @@ export const NewResource = styled.p`
 
 export const ButtonsRedirect = styled.div`
   display: flex;
-  justify-content: space-between;
   padding: var(--small-space);
   width: 100%;
   ${mediaQuery.tablet} {
