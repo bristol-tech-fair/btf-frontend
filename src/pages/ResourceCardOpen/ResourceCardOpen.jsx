@@ -45,24 +45,11 @@ const ResourceCardOpen = ({
 }) => {
   // TODO const [data, setData] = useState({ resources: [] });
   const [condition, setCondition] = useState(3);
-  const string = ['testing', 'fantastic', 'map', 'function'];
+  // const [tags, setTags] = useState();
   const [counter, setCounter] = useState(0);
   const [disable, setDisable] = useState(false);
-  const bannerColor = [
-    'lightpink',
-    'darkpink',
-    'mattepink',
-    'logopink',
-    'lightgrey',
-    'darkgrey',
-    'darkburgundy',
-    'orange',
-    'lightblue',
-    'midblue',
-    'darkblue'
-  ];
-  const pickAColor =
-    bannerColor[Math.floor(Math.random() * bannerColor.length)];
+  // TODO const [color, setColor] = useState();
+  // TODO const [ages, setAges] = useState();
 
   //* Fetch data from the server
   // TODO useEffect(() => {
@@ -139,13 +126,13 @@ const ResourceCardOpen = ({
           ]}
         />
         <MobileBanner>
-          <Small color={pickAColor} />
+          <Small />
         </MobileBanner>
         <TabletBanner>
-          <Medium color={pickAColor} />
+          <Medium />
         </TabletBanner>
         <DesktopBanner>
-          <Large color={pickAColor} />
+          <Large />
         </DesktopBanner>
 
         <ContentWrapper>
@@ -177,9 +164,9 @@ const ResourceCardOpen = ({
 
           <Tags>
             <Array>
-              {string.map((str) => {
+              {/* {tags.map((str) => {
                 return <p key={str}>{str}</p>;
-              })}
+              })} */}
             </Array>
             <div className="iconLink">
               <OpenLink href={facebookLink} target="_blank">
