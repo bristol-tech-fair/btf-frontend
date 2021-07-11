@@ -14,14 +14,8 @@ const List = ({ Component, data }) => {
 };
 
 List.propTypes = {
-<<<<<<< HEAD
-  Component: PropTypes.func.isRequired,
-  data: PropTypes.arrayOf(PropTypes.object),
-  _id: PropTypes.number.isRequired
-=======
   Component: PropTypes.node.isRequired,
   data: PropTypes.arrayOf(PropTypes.object)
->>>>>>> 0dc7b35abee4a7e1a7807ec542daf60a3503c017
 };
 
 export default List;
