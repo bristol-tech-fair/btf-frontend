@@ -108,6 +108,7 @@ const HomePage = ({ readMoreUrl }) => {
     }
   ];
 
+
   return (
     <DefaultPageLayout>
       <BannerWrapper>
@@ -142,6 +143,7 @@ const HomePage = ({ readMoreUrl }) => {
       ) : (
         <Spinner />
       )}
+
       <TitleWrapper>Events</TitleWrapper>
       <EventCardWrapper>
         <EventCard
