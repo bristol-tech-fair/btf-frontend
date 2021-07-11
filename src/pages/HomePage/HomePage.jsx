@@ -108,7 +108,6 @@ const HomePage = ({ readMoreUrl }) => {
     }
   ];
 
-
   return (
     <DefaultPageLayout>
       <BannerWrapper>
