@@ -1,7 +1,6 @@
-/* eslint-disable */
-
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import {
   BannerWrapper,
   TitleWrapper,
@@ -22,28 +21,21 @@ import ResourceCard from '../../components/ResourceCard';
 import EventCard from '../../components/EventCard';
 import PostCard from '../../components/PostCard';
 import SponsorCard from '../../components/SponsorCard';
-import axios from 'axios';
 import Spinner from '../../components/Spinner';
 
-const HomePage = ({
-  readMoreUrl
-  // resourceData,
-  // eventData,
-  // postData,
-  // sponsorData
-}) => {
-
-  const [ resourceData, setResourceData ] = useState();
+const HomePage = ({ readMoreUrl }) => {
+  const [resourceData, setResourceData] = useState();
 
   const getResourceData = async () => {
     const res = await axios.get('/learningResources');
     setResourceData(res.data.data);
-  }
+  };
 
   useEffect(() => {
     getResourceData();
-  }, [])
+  }, []);
 
+  // TODO: Replace this temporary data with API call
   const eventData = {
     imgSrc: './assets/images/codingbug.png',
     date: '13/5/2021',
@@ -52,6 +44,7 @@ const HomePage = ({
     url: '/'
   };
 
+  // TODO: Replace this temporary data with API call
   const postData = [
     {
       title: 'If you love data come and speak to KETL',
@@ -91,6 +84,7 @@ const HomePage = ({
     }
   ];
 
+  // TODO: Replace this temporary data with API call
   const sponsorData = [
     {
       sponsorLogo: 'https://via.placeholder.com/240x140',
@@ -129,25 +123,25 @@ const HomePage = ({
       </AboutWrapper>
       <TitleWrapper>Learning Resources</TitleWrapper>
 
-      {
-        resourceData ?
-        (<>
-        <MobileCardWrapper>
-        <List Component={ResourceCard} data={[resourceData[0]]} _id={1} />
-      </MobileCardWrapper>
-      <TabletCardWrapper>
-        <List
-          Component={ResourceCard}
-          data={[resourceData[0], resourceData[1]]}
-          _id={1}
-          />
-      </TabletCardWrapper>
-      <DeskTopCardWrapper>
-        <List Component={ResourceCard} data={resourceData} _id={1} />
-      </DeskTopCardWrapper>
-      </>) : (<Spinner />)
-
-      }
+      {resourceData ? (
+        <>
+          <MobileCardWrapper>
+            <List Component={ResourceCard} data={[resourceData[0]]} _id={1} />
+          </MobileCardWrapper>
+          <TabletCardWrapper>
+            <List
+              Component={ResourceCard}
+              data={[resourceData[0], resourceData[1]]}
+              _id={1}
+            />
+          </TabletCardWrapper>
+          <DeskTopCardWrapper>
+            <List Component={ResourceCard} data={resourceData} _id={1} />
+          </DeskTopCardWrapper>
+        </>
+      ) : (
+        <Spinner />
+      )}
       <TitleWrapper>Events</TitleWrapper>
       <EventCardWrapper>
         <EventCard
@@ -186,9 +180,6 @@ const HomePage = ({
 
 HomePage.propTypes = {
   readMoreUrl: PropTypes.string.isRequired,
-  resourceData: PropTypes.arrayOf(PropTypes.object),
-  postData: PropTypes.arrayOf(PropTypes.object),
-  sponsorData: PropTypes.arrayOf(PropTypes.object),
   eventData: PropTypes.shape({
     imgSrc: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,

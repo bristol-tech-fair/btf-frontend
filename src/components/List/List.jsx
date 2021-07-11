@@ -1,7 +1,5 @@
-/* eslint-disable */
-
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { ListWrapper, StyledList } from './List.styles';
 
 const List = ({ Component, data }) => {
@@ -15,10 +13,10 @@ const List = ({ Component, data }) => {
   );
 };
 
-// List.propTypes = {
-//   Component: PropTypes.func.isRequired,
-//   data: PropTypes.arrayOf(PropTypes.object),
-//   _id: PropTypes.number.isRequired
-// };
+List.propTypes = {
+  Component: PropTypes.func.isRequired,
+  data: PropTypes.arrayOf(PropTypes.object),
+  _id: PropTypes.number.isRequired
+};
 
 export default List;
