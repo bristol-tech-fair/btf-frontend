@@ -17,15 +17,12 @@ const optionTopic = [
 ];
 
 describe('Filter', () => {
-  test('check if form fields are rendered', async () => {
+  test('Renders Filter component', () => {
     render(
       <BrowserRouter>
         <Filter selectAges={optionAge} selectCategory={optionTopic} />
       </BrowserRouter>
     );
-    expect(screen.getByRole('button')).toHaveTextContent('Clear filters');
-    expect(screen.getByRole('select', { id: 'topic' })).toBeInTheDocument();
-    expect(screen.getByRole('select', { id: 'ages' })).toBeInTheDocument();
     expect(screen.getByText('Filter'));
   });
   test('renders PrimaryButton component', () => {
@@ -34,15 +31,7 @@ describe('Filter', () => {
         <Filter selectAges={optionAge} selectCategory={optionTopic} />
       </BrowserRouter>
     );
-    expect(screen.getByRole('button')).toHaveTextContent('Find resources');
-  });
-  test('renders button of type submit', () => {
-    render(
-      <BrowserRouter>
-        <Filter selectAges={optionAge} selectCategory={optionTopic} />
-      </BrowserRouter>
-    );
-    expect(screen.getByRole('button')).toHaveAttribute('type', 'submit');
+    expect(screen.getByText('Find resources'));
   });
   test('renders TextButton component', () => {
     render(
@@ -50,17 +39,6 @@ describe('Filter', () => {
         <Filter selectAges={optionAge} selectCategory={optionTopic} />
       </BrowserRouter>
     );
-    expect(screen.getByRole('button')).toHaveTextContent('Clear filters');
+    expect(screen.getByText('Clear Filters'));
   });
-});
-
-test('check if options of select dropdowns exists in the document', async () => {
-  render(
-    <BrowserRouter>
-      <Filter selectAges={optionAge} selectCategory={optionTopic} />
-    </BrowserRouter>
-  );
-
-  expect(screen.getByRole('option', { name: '6-18' })).toBeInTheDocument();
-  expect(screen.getByRole('option', { name: 'coding' })).toBeInTheDocument();
 });
