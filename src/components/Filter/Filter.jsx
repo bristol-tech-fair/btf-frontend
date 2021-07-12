@@ -32,7 +32,7 @@ const Filter = () => {
           name="Any topic"
           id="topic"
           label="Topic"
-          placeholder="Any topic"
+          placeholder="Topic"
           options={[
             { value: 'coding', label: 'Coding' },
             { value: 'maths', label: 'Maths' },
@@ -41,7 +41,7 @@ const Filter = () => {
         />
       </SelectWrapper>
       <ButtonContainer>
-        <PrimaryButton content="Find resources" />
+        <PrimaryButton content="Find resources" type="submit" />
         <ClearFilterButton>
           <TextButton content="Clear Filters" />
         </ClearFilterButton>
