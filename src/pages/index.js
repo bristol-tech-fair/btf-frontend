@@ -1,3 +1,10 @@
 export { default as DefaultPageLayout } from './Layout/DefaultPageLayout';
 export { default as ResourceListLayout } from './Layout/ResourceListLayout';
 export { default as HomePage } from './HomePage';
+export { default as About } from './About';
+export { default as BookList } from './BookList';
+export { default as Clubs } from './Clubs';
+export { default as Events } from './Events';
+export { default as Posts } from './Posts';
+export { default as PostsOpen } from './PostsOpen';
+export { default as SupportGroups } from './SupportGroups';
