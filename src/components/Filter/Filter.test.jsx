@@ -23,7 +23,6 @@ describe('Filter', () => {
         <Filter selectAges={optionAge} selectCategory={optionTopic} />
       </BrowserRouter>
     );
-<<<<<<< HEAD
     expect(screen.getByText('Filter'));
   });
   test('renders PrimaryButton component', () => {
@@ -42,28 +41,4 @@ describe('Filter', () => {
     );
     expect(screen.getByText('Clear Filters'));
   });
-=======
-
-    expect(
-      screen.getByRole('button', { name: 'Find resources' })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', { name: 'Clear filters' })
-    ).toBeInTheDocument();
-    expect(screen.getByRole('select', { id: 'topic' })).toBeInTheDocument();
-    expect(screen.getByRole('select', { id: 'ages' })).toBeInTheDocument();
-    expect(screen.getByText('Filter'));
-  });
-});
-
-test('check if options of select dropdowns exists in the document', async () => {
-  render(
-    <BrowserRouter>
-      <Filter />
-    </BrowserRouter>
-  );
-
-  expect(screen.getByRole('option', { name: '6-18' })).toBeInTheDocument();
-  expect(screen.getByRole('option', { name: 'coding' })).toBeInTheDocument();
->>>>>>> b7772cd9719b432588a8c7cbd94101fcb992e456
 });
