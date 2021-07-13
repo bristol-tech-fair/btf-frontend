@@ -1,38 +1,63 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { SelectWrapper } from './Select.styles';
+import { SelectInputWrapper } from './Select.styles';
 
-const Select = ({ name, label, onBlur, options, defaultValue }) => {
-  return (
-    <SelectWrapper>
-      <label htmlFor={name}>{label}</label>
+const Select = React.forwardRef(
+  ({ name, label, onBlur, options, placeholder = '', id, onChange }, ref) => {
+    const [color, setColor] = useState(`var(--darkgrey)`);
+    const [dropdown, setDropdown] = useState([]);
 
-      <select name={name} id={name} onBlur={onBlur} value={defaultValue}>
-        {options.map(({ optionValue, optionLabel }) => (
-          <option
-            key={optionLabel}
-            className="select--option"
-            value={optionValue}
-          >
-            {optionLabel}
+    useEffect(() => {
+      setDropdown(options);
+    }, [options]);
+
+    function changeColor() {
+      setColor(`var(--darkblue)`);
+    }
+    return (
+      <SelectInputWrapper>
+        <label htmlFor={id}>{label}</label>
+        <select
+          name={name}
+          id={id}
+          onBlur={onBlur}
+          style={{ color }}
+          onChange={onChange}
+          ref={ref}
+        >
+          <option value={placeholder} hidden>
+            {placeholder}
           </option>
-        ))}
-      </select>
-    </SelectWrapper>
-  );
-};
+          {dropdown.map((option) => (
+            <option
+              onClick={changeColor}
+              key={option.label}
+              className="select--option"
+              value={option.value}
+            >
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </SelectInputWrapper>
+    );
+  }
+);
 
 Select.propTypes = {
   name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  defaultValue: PropTypes.string,
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      optionValue: PropTypes.string.isRequired,
-      optionLabel: PropTypes.string.isRequired
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
     })
   ).isRequired,
-  onBlur: PropTypes.func.isRequired
+  onBlur: PropTypes.func
 };
+Select.displayName = 'Select';
 
 export default Select;

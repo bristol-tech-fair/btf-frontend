@@ -4,4 +4,7 @@ import InputWrapper from '../../theme/inputs.styles';
 export const TextAreaWrapper = styled(InputWrapper)`
   display: flex;
   flex-direction: column;
+  & > textarea {
+    resize: none;
+  }
 `;

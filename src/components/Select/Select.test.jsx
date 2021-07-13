@@ -4,22 +4,26 @@ import '@testing-library/jest-dom/extend-expect';
 
 import Select from './Select';
 
-test('Label correctly associated with select component by screenreader', () => {
+const option = [
+  { value: 'a', label: 'b' },
+  { value: 'c', label: 'd' },
+  { value: 'e', label: 'f' }
+];
+
+test('Label correctly associated with select component by screen reader', () => {
   render(
     <Select
+      id="one"
       name="test name"
       label="test label"
       value="test default value"
-      options={[
-        { optionValue: 'a', optionLabel: 'b' },
-        { optionValue: 'c', optionLabel: 'd' },
-        { optionValue: 'e', optionLabel: 'f' }
-      ]}
+      placeholder="Select..."
+      options={option}
       onBlur={() => {
         console.log('I am working!');
       }}
     />
   );
 
-  fireEvent.blur(screen.getByLabelText('test label'));
+  fireEvent.blur(screen.getByText('test label'));
 });

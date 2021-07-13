@@ -18,7 +18,7 @@ describe('NavLink', () => {
   test('renders NavLink link properly', () => {
     render(
       <BrowserRouter>
-        <NavLink value="Test" path="/" />
+        <NavLink content="Test" path="/" />
       </BrowserRouter>
     );
 

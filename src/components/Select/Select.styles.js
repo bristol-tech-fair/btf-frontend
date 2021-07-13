@@ -1,24 +1,25 @@
 import styled from 'styled-components';
+import InputWrapper from '../../theme/inputs.styles';
 
-export const SelectWrapper = styled.div`
+export const SelectInputWrapper = styled(InputWrapper)`
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   position: relative;
 
   select {
-    font-size: 1.6rem;
-    cursor: pointer;
-    color: var(--darkgrey);
+    appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+
+    font-size: 1.6rem;
   }
 
   &::after {
     content: ' ';
     display: block;
     position: absolute;
-    top: 5.2rem;
-    right: var(--medium-space);
+    top: 4.9rem;
+    right: var(--small-space);
     width: 0;
     height: 0;
     border-left: 0.8rem solid transparent;
