@@ -2,7 +2,7 @@ import React from 'react';
 import BookList from './BookList';
 
 export default {
-  title: 'Components/BookList',
+  title: 'Components/Pages/BookList',
   component: BookList
 };
 

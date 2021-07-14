@@ -8,3 +8,7 @@ export { default as Events } from './Events';
 export { default as Posts } from './Posts';
 export { default as PostsOpen } from './PostsOpen';
 export { default as SupportGroups } from './SupportGroups';
+export { default as CodeOfConduct } from './CodeOfConduct';
+export { default as TandC } from './TandC';
+export { default as CookiePolicy } from './CookiePolicy';
+export { default as Contact } from './Contact';

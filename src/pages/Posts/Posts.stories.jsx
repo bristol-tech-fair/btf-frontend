@@ -2,7 +2,7 @@ import React from 'react';
 import Posts from './Posts';
 
 export default {
-  title: 'Components/Posts',
+  title: 'Components/Pages/Posts',
   component: Posts
 };
 

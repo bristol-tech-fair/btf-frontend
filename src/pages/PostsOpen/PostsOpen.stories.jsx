@@ -2,7 +2,7 @@ import React from 'react';
 import PostsOpen from './PostsOpen';
 
 export default {
-  title: 'Components/PostsOpen',
+  title: 'Components/Pages/PostsOpen',
   component: PostsOpen
 };
 

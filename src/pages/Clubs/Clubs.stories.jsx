@@ -2,7 +2,7 @@ import React from 'react';
 import Clubs from './Clubs';
 
 export default {
-  title: 'Components/Clubs',
+  title: 'Components/Pages/Clubs',
   component: Clubs
 };
 
