@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
@@ -126,24 +128,23 @@ const HomePage = ({ readMoreUrl }) => {
       {resourceData ? (
         <>
           <MobileCardWrapper>
-            <List Component={ResourceCard} data={[resourceData[0]]} _id={1} />
+            <List Component={ResourceCard} data={resourceData} />
           </MobileCardWrapper>
           <TabletCardWrapper>
             <List
               Component={ResourceCard}
-              data={[resourceData[0], resourceData[1]]}
-              _id={1}
+              data={resourceData}
             />
           </TabletCardWrapper>
           <DeskTopCardWrapper>
-            <List Component={ResourceCard} data={resourceData} _id={1} />
+            <List Component={ResourceCard} data={resourceData} />
           </DeskTopCardWrapper>
         </>
       ) : (
         <Spinner />
       )}
 
-      <TitleWrapper>Events</TitleWrapper>
+      {/* <TitleWrapper>Events</TitleWrapper>
       <EventCardWrapper>
         <EventCard
           imgSrc={eventData.imgSrc}
@@ -174,20 +175,20 @@ const HomePage = ({ readMoreUrl }) => {
             />
           ))}
         </SponsorLogoWrapper>
-      </SponsorWrapper>
+      </SponsorWrapper> */}
     </DefaultPageLayout>
   );
 };
 
-HomePage.propTypes = {
-  readMoreUrl: PropTypes.string.isRequired,
-  eventData: PropTypes.shape({
-    imgSrc: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
-  }).isRequired
-};
+// HomePage.propTypes = {
+//   readMoreUrl: PropTypes.string.isRequired,
+//   eventData: PropTypes.shape({
+//     imgSrc: PropTypes.string.isRequired,
+//     date: PropTypes.string.isRequired,
+//     title: PropTypes.string.isRequired,
+//     desc: PropTypes.string.isRequired,
+//     url: PropTypes.string.isRequired
+//   }).isRequired
+// };
 
 export default HomePage;
