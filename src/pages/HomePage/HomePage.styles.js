@@ -111,7 +111,6 @@ export const DeskTopCardWrapper = styled.div`
 `;
 
 export const TabletEventCardWrapper = styled.div`
-  //display: none;
   & > div {
     width: 100%;
     margin: auto;
@@ -134,18 +133,15 @@ export const EventCardWrapper = styled.div`
 
 export const SponsorLogoWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding-bottom: var(--largest-space);
-  padding-top: var(--small-space);
-  ${mediaQuery.desktop} {
-    display: flex;
-  }
 `;
 
 export const SponsorWrapper = styled.div`
-  display: none;
-  ${mediaQuery.desktop} {
-    display: flex;
-    flex-direction: column;
+  & > div {
+    margin: 0 var(--small-space);
+  }
+  ${mediaQuery.tablet} {
+    margin-bottom: var(--large-space);
   }
 `;
