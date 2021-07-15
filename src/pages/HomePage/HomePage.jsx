@@ -5,11 +5,8 @@ import {
   BannerWrapper,
   TitleWrapper,
   AboutWrapper,
-  // MobileCardWrapper,
-  // TabletCardWrapper,
-  DeskTopCardWrapper,
+  CardWrapper,
   EventCardWrapper,
-  // TabletEventCardWrapper,
   SponsorWrapper,
   SponsorLogoWrapper
 } from './HomePage.styles';
@@ -108,7 +105,6 @@ const HomePage = ({ readMoreUrl }) => {
     }
   ];
 
-  // TODO Cleanup unwanted code. Commented out is redundant. There is an issue for tablet/mobile size as SPONSOR content is hidden
   return (
     <DefaultPageLayout>
       <BannerWrapper>
@@ -126,18 +122,9 @@ const HomePage = ({ readMoreUrl }) => {
 
       {resourceData ? (
         <>
-          {/* <MobileCardWrapper>
-            <List Component={ResourceCard} data={[resourceData[0]]} />
-          </MobileCardWrapper>
-          <TabletCardWrapper>
-            <List
-              Component={ResourceCard}
-              data={[resourceData[0], resourceData[1]]}
-            />
-          </TabletCardWrapper> */}
-          <DeskTopCardWrapper>
+          <CardWrapper>
             <List Component={ResourceCard} data={resourceData} />
-          </DeskTopCardWrapper>
+          </CardWrapper>
         </>
       ) : (
         <Spinner />
@@ -154,15 +141,10 @@ const HomePage = ({ readMoreUrl }) => {
         />
       </EventCardWrapper>
       <TitleWrapper>Posts</TitleWrapper>
-      {/* <MobileCardWrapper>
-        <List Component={PostCard} data={[postData[0]]} />
-      </MobileCardWrapper>
-      <TabletEventCardWrapper>
-        <List Component={PostCard} data={[postData[0], postData[1]]} />
-      </TabletEventCardWrapper> */}
-      <DeskTopCardWrapper>
+
+      <CardWrapper>
         <List Component={PostCard} data={postData} />
-      </DeskTopCardWrapper>
+      </CardWrapper>
       <SponsorWrapper>
         <TitleWrapper>Sponsors</TitleWrapper>
         <SponsorLogoWrapper>
