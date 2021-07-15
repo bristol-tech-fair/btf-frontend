@@ -7,7 +7,7 @@ const List = ({ Component, data }) => {
     <ListWrapper>
       <StyledList>
         {data &&
-          data.map((props) => <Component key={props} {...{ ...props }} />)}
+          data.map((item) => <Component key={item._id} {...{ ...item }} />)}
       </StyledList>
     </ListWrapper>
   );
@@ -15,7 +15,11 @@ const List = ({ Component, data }) => {
 
 List.propTypes = {
   Component: PropTypes.node.isRequired,
-  data: PropTypes.arrayOf(PropTypes.object)
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string
+    })
+  )
 };
 
 export default List;

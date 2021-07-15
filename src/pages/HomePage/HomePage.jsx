@@ -156,7 +156,7 @@ const HomePage = ({ readMoreUrl }) => {
             />
           ))}
         </SponsorLogoWrapper>
-      </SponsorWrapper>
+      </SponsorWrapper>}
     </DefaultPageLayout>
   );
 };
