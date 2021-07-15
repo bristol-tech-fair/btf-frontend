@@ -5,11 +5,11 @@ import {
   BannerWrapper,
   TitleWrapper,
   AboutWrapper,
-  MobileCardWrapper,
-  TabletCardWrapper,
+  // MobileCardWrapper,
+  // TabletCardWrapper,
   DeskTopCardWrapper,
   EventCardWrapper,
-  TabletEventCardWrapper,
+  // TabletEventCardWrapper,
   SponsorWrapper,
   SponsorLogoWrapper
 } from './HomePage.styles';
@@ -108,6 +108,7 @@ const HomePage = ({ readMoreUrl }) => {
     }
   ];
 
+  // TODO Cleanup unwanted code. Commented out is redundant. There is an issue for tablet/mobile size as SPONSOR content is hidden
   return (
     <DefaultPageLayout>
       <BannerWrapper>
@@ -125,18 +126,17 @@ const HomePage = ({ readMoreUrl }) => {
 
       {resourceData ? (
         <>
-          <MobileCardWrapper>
-            <List Component={ResourceCard} data={[resourceData[0]]} _id={1} />
+          {/* <MobileCardWrapper>
+            <List Component={ResourceCard} data={[resourceData[0]]} />
           </MobileCardWrapper>
           <TabletCardWrapper>
             <List
               Component={ResourceCard}
               data={[resourceData[0], resourceData[1]]}
-              _id={1}
             />
-          </TabletCardWrapper>
+          </TabletCardWrapper> */}
           <DeskTopCardWrapper>
-            <List Component={ResourceCard} data={resourceData} _id={1} />
+            <List Component={ResourceCard} data={resourceData} />
           </DeskTopCardWrapper>
         </>
       ) : (
@@ -154,14 +154,14 @@ const HomePage = ({ readMoreUrl }) => {
         />
       </EventCardWrapper>
       <TitleWrapper>Posts</TitleWrapper>
-      <MobileCardWrapper>
-        <List Component={PostCard} _id={1} data={[postData[0]]} />
+      {/* <MobileCardWrapper>
+        <List Component={PostCard} data={[postData[0]]} />
       </MobileCardWrapper>
       <TabletEventCardWrapper>
-        <List Component={PostCard} _id={1} data={[postData[0], postData[1]]} />
-      </TabletEventCardWrapper>
+        <List Component={PostCard} data={[postData[0], postData[1]]} />
+      </TabletEventCardWrapper> */}
       <DeskTopCardWrapper>
-        <List Component={PostCard} _id={1} data={postData} />
+        <List Component={PostCard} data={postData} />
       </DeskTopCardWrapper>
       <SponsorWrapper>
         <TitleWrapper>Sponsors</TitleWrapper>

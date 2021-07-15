@@ -10,7 +10,8 @@ export const BannerWrapper = styled.div`
   position: relative;
   background: #c4c4c4;
   border-radius: var(--small-space);
-  margin: 0;
+  padding: var(--small-space);
+  margin: var(--small-space);
   ${mediaQuery.tablet} {
     height: 295px;
     margin: var(--smallest-space) var(--small-space) 0 var(--small-space);
@@ -52,6 +53,7 @@ export const TitleWrapper = styled.h1`
 `;
 
 export const AboutWrapper = styled.p`
+  margin: 0 var(--small-space);
   ${mediaQuery.tablet} {
     width: 90%;
     margin: auto;
@@ -71,48 +73,47 @@ export const ResourceCardWrapper = styled.div`
   ${mediaQuery.desktop} {
   }
 `;
-export const TabletCardWrapper = styled.div`
-  display: none;
-  & > div {
-    width: 100%;
-    margin: auto;
-  }
-  ${mediaQuery.tablet} {
-    display: flex;
-    justify-content: space-between;
-  }
-  ${mediaQuery.desktop} {
-    display: none;
-  }
-`;
+// export const TabletCardWrapper = styled.div`
+//   display: none;
+//   & > div {
+//     width: 100%;
+//     margin: auto;
+//   }
+//   ${mediaQuery.tablet} {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+//   ${mediaQuery.desktop} {
+//     display: none;
+//   }
+// `;
 
-export const MobileCardWrapper = styled.div`
-  display: flex;
-  & > div {
-    width: 90%;
-    margin: auto;
-  }
-  ${mediaQuery.tablet} {
-    display: none;
-  }
-  ${mediaQuery.desktop} {
-    display: none;
-  }
-`;
+// export const MobileCardWrapper = styled.div`
+//   display: flex;
+//   & > div {
+//     width: 90%;
+//     margin: auto;
+//   }
+//   ${mediaQuery.tablet} {
+//     display: none;
+//   }
+//   ${mediaQuery.desktop} {
+//     display: none;
+//   }
+// `;
 
 export const DeskTopCardWrapper = styled.div`
-  display: none;
-  ${mediaQuery.tablet} {
-    display: none;
-  }
-  ${mediaQuery.desktop} {
-    display: flex;
+  //display: flex;
+  justify-content: space-between;
+  & > div {
+    width: 100%;
   }
 `;
 
-export const TabletEventCardWrapper = styled(TabletCardWrapper)`
+export const TabletEventCardWrapper = styled.div`
+  //display: none;
   & > div {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding-bottom: var(--largest-space);
   }
