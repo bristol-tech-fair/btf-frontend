@@ -119,7 +119,6 @@ const HomePage = ({ readMoreUrl }) => {
         <NavLink path={readMoreUrl} content="Read more.." />
       </AboutWrapper>
       <TitleWrapper>Learning Resources</TitleWrapper>
-
       {resourceData ? (
         <>
           <CardWrapper>
@@ -129,7 +128,6 @@ const HomePage = ({ readMoreUrl }) => {
       ) : (
         <Spinner />
       )}
-
       <TitleWrapper>Events</TitleWrapper>
       <EventCardWrapper>
         <EventCard
@@ -141,7 +139,6 @@ const HomePage = ({ readMoreUrl }) => {
         />
       </EventCardWrapper>
       <TitleWrapper>Posts</TitleWrapper>
-
       <CardWrapper>
         <List Component={PostCard} data={postData} />
       </CardWrapper>
@@ -156,7 +153,7 @@ const HomePage = ({ readMoreUrl }) => {
             />
           ))}
         </SponsorLogoWrapper>
-      </SponsorWrapper>}
+      </SponsorWrapper>
     </DefaultPageLayout>
   );
 };
