@@ -2,7 +2,7 @@ import React from 'react';
 import Competitions from './Competitions';
 
 export default {
-  title: 'Components/Pages/Competitions',
+  title: 'Pages/Competitions',
   component: Competitions
 };
 

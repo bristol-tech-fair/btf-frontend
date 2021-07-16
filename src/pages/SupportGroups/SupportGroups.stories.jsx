@@ -2,7 +2,7 @@ import React from 'react';
 import SupportGroups from './SupportGroups';
 
 export default {
-  title: 'Components/Pages/SupportGroups',
+  title: 'Pages/SupportGroups',
   component: SupportGroups
 };
 

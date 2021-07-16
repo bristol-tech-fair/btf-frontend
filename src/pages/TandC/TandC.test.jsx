@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import TandC from './TandC';
+import TermsAndConditions from './TandC';
 
-describe('TandC', () => {
-  test('renders TandC component', () => {
-    render(<TandC value="Hello" />);
+describe('TermsAndConditions', () => {
+  test('renders TermsAndConditions component', () => {
+    render(<TermsAndConditions value="Hello" />);
 
     expect(screen.getByText('Hello'));
   });

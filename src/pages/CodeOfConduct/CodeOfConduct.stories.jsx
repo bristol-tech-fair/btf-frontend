@@ -2,7 +2,7 @@ import React from 'react';
 import CodeOfConduct from './CodeOfConduct';
 
 export default {
-  title: 'Components/Pages/CodeOfConduct',
+  title: 'Pages/CodeOfConduct',
   component: CodeOfConduct
 };
 

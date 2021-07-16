@@ -1,3 +1,3 @@
-import TandC from './TandC';
+import TermsAndConditions from './TermsAndConditions';
 
-export default TandC;
+export default TermsAndConditions;

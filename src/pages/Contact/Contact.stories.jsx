@@ -2,7 +2,7 @@ import React from 'react';
 import Contact from './Contact';
 
 export default {
-  title: 'Components/Pages/Contact',
+  title: 'Pages/Contact',
   component: Contact
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TandCWrapper } from './TandC.styles';
 
-const TandC = ({ value }) => {
+const TermsAndConditions = ({ value }) => {
   return (
     <TandCWrapper>
       <p>{value}</p>
@@ -10,8 +10,8 @@ const TandC = ({ value }) => {
   );
 };
 
-TandC.propTypes = {
+TermsAndConditions.propTypes = {
   value: PropTypes.string.isRequired
 };
 
-export default TandC;
+export default TermsAndConditions;

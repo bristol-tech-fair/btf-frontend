@@ -1,9 +1,9 @@
 import React from 'react';
-import TandC from './TandC';
+import TermsAndConditions from './TandC';
 
 export default {
-  title: 'Components/Pages/TandC',
-  component: TandC
+  title: 'Pages/TermsAndConditions',
+  component: TermsAndConditions
 };
 
-export const HelloWorld = () => <TandC value="Hello world!" />;
+export const HelloWorld = () => <TermsAndConditions value="Hello world!" />;

@@ -2,7 +2,7 @@ import React from 'react';
 import Events from './Events';
 
 export default {
-  title: 'Components/Pages/Events',
+  title: 'Pages/Events',
   component: Events
 };
 

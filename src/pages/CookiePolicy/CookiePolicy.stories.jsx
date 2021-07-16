@@ -2,7 +2,7 @@ import React from 'react';
 import CookiePolicy from './CookiePolicy';
 
 export default {
-  title: 'Components/Pages/CookiePolicy',
+  title: 'Pages/CookiePolicy',
   component: CookiePolicy
 };
 
