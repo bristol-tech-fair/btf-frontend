@@ -19,7 +19,7 @@ function Router() {
     <>
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <HomePage readMoreUrl="/" />
         </Route>
         <Route path="/about">
           <About />

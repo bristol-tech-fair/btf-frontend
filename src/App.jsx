@@ -1,21 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Theme from './theme';
-import HomePage from './pages/HomePage';
+import Router from './router';
 
+// TODO Test Router
 const App = () => {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Theme />
-        <Switch>
-          <Route
-            path="/"
-            exact
-            component={() => <HomePage readMoreUrl="/" />}
-          />
-        </Switch>
-      </Router>
+        <Router />
+      </BrowserRouter>
     </>
   );
 };
