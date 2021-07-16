@@ -112,10 +112,7 @@ const HomePage = ({ readMoreUrl }) => {
       </BannerWrapper>
       <TitleWrapper>About Us</TitleWrapper>
       <AboutWrapper>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+        Write something here About This Page !!! OK?!
         <NavLink path={readMoreUrl} content="Read more.." />
       </AboutWrapper>
       <TitleWrapper>Learning Resources</TitleWrapper>
