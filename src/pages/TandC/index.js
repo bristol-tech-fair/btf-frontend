@@ -1,3 +1,3 @@
-import TermsAndConditions from './TermsAndConditions';
+import TermsAndConditions from './TandC';
 
 export default TermsAndConditions;
