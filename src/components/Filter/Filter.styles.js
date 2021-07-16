@@ -38,7 +38,6 @@ export const ButtonContainer = styled.div`
   margin-top: var(--small-space);
   ${mediaQuery.tablet} {
     width: 30%;
-    }
   }
 `;
 
