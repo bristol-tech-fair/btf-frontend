@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import mediaQuery from '../../utils/mediaQuery';
 
 export const PrimaryButtonWrapper = styled.button`
   padding: var(--small-space) var(--large-space);
@@ -6,6 +7,9 @@ export const PrimaryButtonWrapper = styled.button`
   background: var(--lightblue);
   color: var(--lightgrey);
   font-weight: 700;
+  ${mediaQuery.tablet} {
+    padding: var(--small-space);
+  }
 
   &:hover {
     background: var(--logopink);
