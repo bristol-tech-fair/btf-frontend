@@ -86,7 +86,7 @@ export const TabletCardWrapper = styled.div`
   }
 `;
 
-export const MobileCardWrapper = styled.div`
+export const CardWrapper = styled.div`
   display: flex;
   & > div {
     width: 90%;
