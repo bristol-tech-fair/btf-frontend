@@ -14,6 +14,11 @@ import PostsOpen from '../pages/PostsOpen';
 import SupportGroups from '../pages/SupportGroups';
 import TermsAndConditions from '../pages/Terms';
 
+// TODO Modify Routes as we progress with development
+
+// import LearningResources from '../pages/LearningResources';
+// import ResourceCardOpen from '../pages/ResourceCardOpen';
+
 function Routes() {
   return (
     <>
@@ -21,6 +26,12 @@ function Routes() {
         <Route exact path="/">
           <HomePage readMoreUrl="/" />
         </Route>
+        {/* <Route  path="/learning-resources">
+          LearningResources />
+        </Route>
+        <Route  path="/resource/:id">
+          <ResourceCardOpen />
+        </Route> */}
         <Route path="/about">
           <About />
         </Route>

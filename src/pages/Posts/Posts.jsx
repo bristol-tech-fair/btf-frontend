@@ -6,6 +6,7 @@ const Posts = ({ value }) => {
   return (
     <PostsWrapper>
       <p>{value}</p>
+      <h1>This is the Posts page. It is here to check the Router</h1>
     </PostsWrapper>
   );
 };

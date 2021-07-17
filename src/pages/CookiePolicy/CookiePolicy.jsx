@@ -6,6 +6,7 @@ const CookiePolicy = ({ value }) => {
   return (
     <CookiePolicyWrapper>
       <p>{value}</p>
+      <h1>This is the Cookie Monster not the Policy</h1>
     </CookiePolicyWrapper>
   );
 };
