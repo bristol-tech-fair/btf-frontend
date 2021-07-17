@@ -6,6 +6,7 @@ const CodeOfConduct = ({ value }) => {
   return (
     <CodeOfConductWrapper>
       <p>{value}</p>
+      <h1>Conduct the interrogation.</h1>
     </CodeOfConductWrapper>
   );
 };

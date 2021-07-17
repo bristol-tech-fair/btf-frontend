@@ -20,7 +20,7 @@ const Footer = () => {
         <LinksWrapper>
           <LeftLinks>
             <StyledLink to="/about">About</StyledLink>
-            <StyledLink to="/contacts">Contacts</StyledLink>
+            <StyledLink to="/contact">Contacts</StyledLink>
             <IconsWrapper>
               <StyledLink to="/" target="_blank" rel="noopener noreferrer">
                 <Twitter />
@@ -34,9 +34,11 @@ const Footer = () => {
             </IconsWrapper>
           </LeftLinks>
           <RightLinks>
-            <StyledLink to="/codeofconduct">Code of Conduct</StyledLink>
-            <StyledLink to="/cookiepolicy">Cookie Policy</StyledLink>
-            <StyledLink to="/termsandconditions">Terms & Conditions</StyledLink>
+            <StyledLink to="/code-of-conduct">Code of Conduct</StyledLink>
+            <StyledLink to="/cookie-policy">Cookie Policy</StyledLink>
+            <StyledLink to="/terms-and-conditions">
+              Terms & Conditions
+            </StyledLink>
           </RightLinks>
         </LinksWrapper>
 

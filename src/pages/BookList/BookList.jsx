@@ -6,6 +6,7 @@ const BookList = ({ value }) => {
   return (
     <BookListWrapper>
       <p>{value}</p>
+      <h1>This is the Books page. It is here to check the Router</h1>
     </BookListWrapper>
   );
 };

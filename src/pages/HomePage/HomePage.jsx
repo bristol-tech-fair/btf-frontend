@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
@@ -9,7 +7,6 @@ import {
   AboutWrapper,
   CardWrapper,
   EventCardWrapper,
-  TabletEventCardWrapper,
   SponsorWrapper,
   SponsorLogoWrapper
 } from './HomePage.styles';
@@ -119,7 +116,6 @@ const HomePage = ({ readMoreUrl }) => {
         <NavLink path={readMoreUrl} content="Read more.." />
       </AboutWrapper>
       <TitleWrapper>Learning Resources</TitleWrapper>
-
       {resourceData ? (
         <>
           <CardWrapper>
@@ -129,8 +125,7 @@ const HomePage = ({ readMoreUrl }) => {
       ) : (
         <Spinner />
       )}
-
-      {/* <TitleWrapper>Events</TitleWrapper>
+      <TitleWrapper>Events</TitleWrapper>
       <EventCardWrapper>
         <EventCard
           imgSrc={eventData.imgSrc}
@@ -142,14 +137,8 @@ const HomePage = ({ readMoreUrl }) => {
       </EventCardWrapper>
       <TitleWrapper>Posts</TitleWrapper>
       <CardWrapper>
-        <List Component={PostCard} _id={1} data={[postData[0]]} />
+        <List Component={PostCard} data={postData} />
       </CardWrapper>
-      <TabletEventCardWrapper>
-        <List Component={PostCard} _id={1} data={[postData[0], postData[1]]} />
-      </TabletEventCardWrapper>
-      <DeskTopCardWrapper>
-        <List Component={PostCard} _id={1} data={postData} />
-      </DeskTopCardWrapper>
       <SponsorWrapper>
         <TitleWrapper>Sponsors</TitleWrapper>
         <SponsorLogoWrapper>
@@ -161,20 +150,20 @@ const HomePage = ({ readMoreUrl }) => {
             />
           ))}
         </SponsorLogoWrapper>
-      </SponsorWrapper> */}
+      </SponsorWrapper>
     </DefaultPageLayout>
   );
 };
 
-// HomePage.propTypes = {
-//   readMoreUrl: PropTypes.string.isRequired,
-//   eventData: PropTypes.shape({
-//     imgSrc: PropTypes.string.isRequired,
-//     date: PropTypes.string.isRequired,
-//     title: PropTypes.string.isRequired,
-//     desc: PropTypes.string.isRequired,
-//     url: PropTypes.string.isRequired
-//   }).isRequired
-// };
+HomePage.propTypes = {
+  readMoreUrl: PropTypes.string.isRequired,
+  eventData: PropTypes.shape({
+    imgSrc: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default HomePage;
