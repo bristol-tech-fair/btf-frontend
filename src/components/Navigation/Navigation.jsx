@@ -23,7 +23,7 @@ const Navigation = () => {
         <NavLink path="/events" content="Events" />
         <NavLink path="/clubs" content="Clubs" />
         <NavLink path="/competitions" content="Competitions" />
-        <NavLink path="/supportgroups" content="Support Groups" />
+        <NavLink path="/support-groups" content="Support Groups" />
         <NavLink path="/posts" content="Posts" />
       </NavMenu>
       <EndLink>

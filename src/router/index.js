@@ -12,9 +12,9 @@ import HomePage from '../pages/HomePage';
 import Posts from '../pages/Posts';
 import PostsOpen from '../pages/PostsOpen';
 import SupportGroups from '../pages/SupportGroups';
-import TermsAndConditions from '../pages/TandC';
+import TermsAndConditions from '../pages/Terms';
 
-function Router() {
+function Routes() {
   return (
     <>
       <Switch>
@@ -24,10 +24,10 @@ function Router() {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/cookiepolicy">
+        <Route path="/cookie-policy">
           <CookiePolicy />
         </Route>
-        <Route path="/termsandconditions">
+        <Route path="/terms-and-conditions">
           <TermsAndConditions />
         </Route>
         <Route path="/books">
@@ -36,13 +36,13 @@ function Router() {
         <Route path="/clubs">
           <Clubs />
         </Route>
-        <Route path="/supportgroups">
+        <Route path="/support-groups">
           <SupportGroups />
         </Route>
         <Route path="/competitions">
           <Competitions />
         </Route>
-        <Route path="/codeofconduct">
+        <Route path="/code-of-conduct">
           <CodeOfConduct />
         </Route>
         <Route path="/events">
@@ -62,4 +62,4 @@ function Router() {
   );
 }
 
-export default Router;
+export default Routes;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Theme from './theme';
-import Router from './router';
+import Routes from './router';
 
 // TODO Test Router
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Theme />
-        <Router />
+        <Routes />
       </BrowserRouter>
     </>
   );

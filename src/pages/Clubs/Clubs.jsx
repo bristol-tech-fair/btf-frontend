@@ -6,6 +6,7 @@ const Clubs = ({ value }) => {
   return (
     <ClubsWrapper>
       <p>{value}</p>
+      <h1>This is the Club page. It is here to check the Router</h1>
     </ClubsWrapper>
   );
 };
