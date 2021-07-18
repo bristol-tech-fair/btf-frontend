@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import HomePage from './HomePage';
 
 export default {
-  title: 'Components/HomePage',
+  title: 'Pages/HomePage',
   component: HomePage
 };
 
