@@ -1,5 +1,5 @@
 import React from 'react';
-import TermsAndConditions from './TandC';
+import TermsAndConditions from './Terms';
 
 export default {
   title: 'Pages/TermsAndConditions',

@@ -6,6 +6,7 @@ const Events = ({ value }) => {
   return (
     <EventsWrapper>
       <p>{value}</p>
+      <h1>This is the Event page. It is here to check the Router</h1>
     </EventsWrapper>
   );
 };

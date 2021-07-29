@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TandCWrapper } from './TandC.styles';
+import { TermsWrapper } from './Terms.styles';
 
 const TermsAndConditions = ({ value }) => {
   return (
-    <TandCWrapper>
+    <TermsWrapper>
       <p>{value}</p>
-    </TandCWrapper>
+      <h1>
+        This is the Terms & Conditions page. It is here to check the Router
+      </h1>
+    </TermsWrapper>
   );
 };
 

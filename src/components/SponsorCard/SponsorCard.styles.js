@@ -1,13 +1,20 @@
 import styled from 'styled-components';
+import mediaQuery from '../../utils/mediaQuery';
 
 export const SponsorCardWrapper = styled.div`
-  width: 200px;
-  height: 145px;
-  background: var(--white);
   display: flex;
-  padding: var(--small-space);
-  padding-bottom: var(--smallest-space);
+  background: var(--white);
   border: 1px solid var(--lightblue);
+  padding: var(--small-space);
+  width: 256px;
+  height: 161px;
+  margin: var(--smallest-space);
+
+  ${mediaQuery.tablet} {
+    width: 255px;
+    height: 160px;
+  }
+
   & > img {
     width: 100%;
     object-fit: cover;

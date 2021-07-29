@@ -6,6 +6,7 @@ const About = ({ value }) => {
   return (
     <AboutWrapper>
       <p>{value}</p>
+      <h1>This is the About page. It is here to check the Router</h1>
     </AboutWrapper>
   );
 };

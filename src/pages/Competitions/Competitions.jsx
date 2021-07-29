@@ -6,6 +6,7 @@ const Competitions = ({ value }) => {
   return (
     <CompetitionsWrapper>
       <p>{value}</p>
+      <h1>Compete for last bread crumb</h1>
     </CompetitionsWrapper>
   );
 };
