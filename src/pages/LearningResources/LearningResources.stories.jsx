@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import LearningResources from './LearningResources';
 
 export default {
-  title: 'Components/Pages/LearningResources',
+  title: 'Pages/LearningResources',
   component: LearningResources
 };
 
