@@ -1,94 +1,46 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
-// import Select from '../../components/Select';
-// import TextButton from '../../components/TextButton';
-// import PrimaryButton from '../../components/PrimaryButton';
 import TertiaryButton from '../../components/TertiaryButton';
 import ResourceCard from '../../components/ResourceCard';
 import {
   MainContainer,
   PageTitle,
-  // Row,
-  // ColumnOne,
-  // ColumnTwo,
-  // ColumnThree,
-  // ColumnFour,
-  // FilterTitle,
-  ListContainer
+  ListContainer,
+  FilterContainer
 } from './LearningResources.styles';
+import Filter from '../../components/Filter';
+import List from '../../components/List';
 
 // TODO Import list component/filter component
 
 const LearningResources = () => {
+  const [resourceData, setResourceData] = useState();
+
+  const getResourceData = async () => {
+    const res = await axios.get('/learningResources');
+    setResourceData(res.data.data);
+  };
+
+  useEffect(() => {
+    getResourceData();
+  }, []);
+
   return (
     <DefaultPageLayout>
       <MainContainer>
         <PageTitle>Learning Resources</PageTitle>
-        {/* <Row>
-          <ColumnOne>
-            <FilterTitle>Filter</FilterTitle>
-          </ColumnOne>
-          <ColumnTwo>
-            <Select
-              name="ages"
-              label=""
-              placeholder="Age group"
-              options={[
-                { value: 'Strawberry', label: 'Strawberry' },
-                { value: 'Watermelon', label: 'Watermelon' },
-                { value: 'Jackfruit', label: 'Jackfruit' }
-              ]}
-              onBlur={() => {
-                console.log('Success!');
-              }}
-            />
-          </ColumnTwo>
-          <ColumnThree>
-            <Select
-              name="topic"
-              label=""
-              placeholder="Ant topic"
-              options={[
-                { value: 'Strawberry', label: 'Strawberry' },
-                { value: 'Watermelon', label: 'Watermelon' },
-                { value: 'Jackfruit', label: 'Jackfruit' }
-              ]}
-              onBlur={() => {
-                console.log('Success!');
-              }}
-            />
-          </ColumnThree>
-          <ColumnFour>
-            <PrimaryButton content="Primary button" type="button" />
-          </ColumnFour>
-        </Row>
-        <Row>
-          <ColumnOne />
-          <ColumnTwo />
-          <ColumnThree />
-          <ColumnFour>
-            <TextButton content="Clear Filters" type="button" />
-          </ColumnFour>
-        </Row> */}
+        <FilterContainer>
+          <Filter />
+        </FilterContainer>
+
         <ListContainer>
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
-          <ResourceCard />
+          <List Component={ResourceCard} data={resourceData} />
         </ListContainer>
         <TertiaryButton content="Show more" type="button" />
       </MainContainer>
     </DefaultPageLayout>
   );
 };
-
-// LearningResources.propTypes = { list: PropTypes.node };
 
 export default LearningResources;
