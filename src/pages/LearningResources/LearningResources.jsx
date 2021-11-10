@@ -11,6 +11,7 @@ import {
 } from './LearningResources.styles';
 import Filter from '../../components/Filter';
 import List from '../../components/List';
+import Spinner from '../../components/Spinner';
 
 // TODO Import list component/filter component
 
@@ -34,9 +35,16 @@ const LearningResources = () => {
           <Filter />
         </FilterContainer>
 
-        <ListContainer>
-          <List Component={ResourceCard} data={resourceData} />
-        </ListContainer>
+        {resourceData ? (
+          <>
+            <ListContainer>
+              <List Component={ResourceCard} data={resourceData} />
+            </ListContainer>
+          </>
+        ) : (
+          <Spinner />
+        )}
+
         <TertiaryButton content="Show more" type="button" />
       </MainContainer>
     </DefaultPageLayout>
