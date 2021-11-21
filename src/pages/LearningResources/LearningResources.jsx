@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
-import TertiaryButton from '../../components/TertiaryButton';
 import ResourceCard from '../../components/ResourceCard';
 import {
   MainContainer,
@@ -158,8 +157,6 @@ const LearningResources = () => {
         ) : (
           <Spinner />
         )}
-
-        <TertiaryButton content="Show more" type="button" />
       </MainContainer>
     </DefaultPageLayout>
   );
