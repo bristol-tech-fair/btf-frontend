@@ -31,7 +31,7 @@ export const SelectWrapper = styled.div`
   }
 `;
 
-export const FilterWrapper = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -46,8 +46,6 @@ export const FilterWrapper = styled.form`
     max-width: 100rem;
   }
 `;
-
-export const Form = styled.form``;
 
 export const ListContainer = styled.div`
   display: flex;
