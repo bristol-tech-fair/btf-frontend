@@ -45,8 +45,17 @@ const items = [
     color: 'darkblue'
   },
   {
+    category: 'Electronics',
+    ages: '6-12',
+    title: 'Fifth Title',
+    description: 'Here we have some description for testing purposes',
+    rating: '4',
+    tags: ['some', 'fantastic', 'tag', 'three'],
+    color: 'logopink'
+  },
+  {
     category: 'Robotics',
-    ages: '16-18',
+    ages: '12-18',
     title: 'Fourth Title',
     description: 'Here we have some description for testing purposes',
     rating: '2',
