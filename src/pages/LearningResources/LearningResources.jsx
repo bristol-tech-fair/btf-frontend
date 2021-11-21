@@ -60,8 +60,8 @@ const items = [
 const LearningResources = () => {
   //* set and setState being initialized
   const [resourceData, setResourceData] = useState(items);
-  const [ages, setAges] = useState('');
-  const [topics, setTopics] = useState('');
+  const [ages, setAges] = useState('All');
+  const [topics, setTopics] = useState('All');
 
   // const getResourceData = async () => {
   //   const res = await axios.get(
@@ -89,13 +89,18 @@ const LearningResources = () => {
   useEffect(() => {
     let filteredData = items;
 
-    if (ages !== '') {
-      filteredData = filteredData.filter((product) => product.ages === ages);
+    if (ages === 'All') {
+      setResourceData(items);
     }
-    if (topics !== '') {
-      filteredData = filteredData.filter(
-        (product) => product.category === topics
-      );
+    if (topics === 'All') {
+      setResourceData(items);
+    }
+
+    if (ages !== 'All') {
+      filteredData = filteredData.filter((data) => data.ages === ages);
+    }
+    if (topics !== 'All') {
+      filteredData = filteredData.filter((data) => data.category === topics);
     }
     setResourceData(filteredData);
     // variable being listened for change
@@ -111,14 +116,13 @@ const LearningResources = () => {
             <Form>
               <FilterText>Filter</FilterText>
               <SelectWrapper>
-                {' '}
-                {/* listens for when input field is changed */}
                 <Select
                   name="Age Group"
                   id="ages"
                   label="Age group"
                   placeholder="Age group"
                   options={[
+                    { value: 'All', label: 'All' },
                     { value: '6-18', label: '6-18 years' },
                     { value: '6-12', label: '6-12 years' },
                     { value: '12-18', label: '12-18 years' }
@@ -133,6 +137,7 @@ const LearningResources = () => {
                   label="Topic"
                   placeholder="Any topic"
                   options={[
+                    { value: 'All', label: 'All' },
                     { value: 'Coding', label: 'Coding' },
                     { value: 'Maths', label: 'Maths' },
                     { value: 'Electronics', label: 'Electronics' }
