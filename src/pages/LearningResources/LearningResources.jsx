@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import TertiaryButton from '../../components/TertiaryButton';
 import ResourceCard from '../../components/ResourceCard';
@@ -7,9 +7,13 @@ import {
   MainContainer,
   PageTitle,
   ListContainer,
-  FilterContainer
+  FilterContainer,
+  FilterWrapper,
+  SelectWrapper,
+  FilterText,
+  Form
 } from './LearningResources.styles';
-import Filter from '../../components/Filter';
+// import Filter from '../../components/Filter';
 import List from '../../components/List';
 import Spinner from '../../components/Spinner';
 import Select from '../../components/Select';
@@ -18,9 +22,21 @@ const items = require('../../data/products.json');
 // TODO Import list component/filter component
 
 const LearningResources = () => {
-  // set and setState being initialized
-  const [products, setProducts] = useState(items);
+  // const [resourceData, setResourceData] = useState();
+
+  // const getResourceData = async () => {
+  //   const res = await axios.get(
+  //     'https://api.jsonbin.io/b/61965f820ddbee6f8b0e2811'
+  //   );
+  //   setResourceData(res.data.data);
+  // };
+
+  //* set and setState being initialized
+  const [resourceData, setResourceData] = useState(items);
+  const [ages, setAges] = useState('');
+  const [topics, setTopics] = useState('');
   const [category, setCategory] = useState('all');
+  const [categoryTwo, setCategoryTwo] = useState('all');
   const [min, setMin] = useState('');
   const [max, setMax] = useState('');
   // e = event for the value when select changes
@@ -30,11 +46,20 @@ const LearningResources = () => {
       case 'category':
         setCategory(e.target.value);
         break;
+      case 'categoryTwo':
+        setCategoryTwo(e.target.value);
+        break;
       case 'min':
         setMin(e.target.value);
         break;
       case 'max':
         setMax(e.target.value);
+        break;
+      case 'ages':
+        setAges(e.target.value);
+        break;
+      case 'topics':
+        setTopics(e.target.value);
         break;
       default:
         break;
@@ -42,46 +67,102 @@ const LearningResources = () => {
   };
   // initial render then updates when state/criteria is changed
   useEffect(() => {
-    let filteredProducts = items;
+    let filteredData = items;
 
     if (category !== 'all') {
-      filteredProducts = filteredProducts.filter(
+      filteredData = filteredData.filter(
         (product) => product.category === category
       );
     }
-    if (min !== '') {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.price > min
+    if (categoryTwo !== 'all') {
+      filteredData = filteredData.filter(
+        (product) => product.category === categoryTwo
       );
+    }
+    if (ages !== '') {
+      filteredData = filteredData.filter((product) => product.ages === ages);
+    }
+    if (topics !== '') {
+      filteredData = filteredData.filter(
+        (product) => product.category === topics
+      );
+    }
+    if (min !== '') {
+      filteredData = filteredData.filter((product) => product.price > min);
     }
     if (max !== '') {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.price < max
-      );
+      filteredData = filteredData.filter((product) => product.price < max);
     }
-    setProducts(filteredProducts);
+    setResourceData(filteredData);
     // variable being listened for change
-  }, [category, min, max]);
-
-  const [resourceData, setResourceData] = useState();
-
-  const getResourceData = async () => {
-    const res = await axios.get('/learningResources');
-    setResourceData(res.data.data);
-  };
-
-  useEffect(() => {
-    getResourceData();
-  }, []);
+  }, [category, categoryTwo, min, max, ages, topics]);
 
   return (
     <DefaultPageLayout>
       <MainContainer>
         <PageTitle>Learning Resources</PageTitle>
+
         <>
-          <form className="filter">
+          <FilterContainer>
+            <FilterWrapper>
+              <FilterText>Filter</FilterText>
+              <SelectWrapper>
+                <Select
+                  name="Age Group"
+                  id="ages"
+                  label="Age group"
+                  placeholder="Age group"
+                  options={[
+                    { value: '6-18', label: '6-18 years' },
+                    { value: '6-12', label: '6-12 years' },
+                    { value: '12-18', label: '12-18 years' }
+                  ]}
+                  onChange={(e) => handleFilterChange(e, 'ages')}
+                />
+              </SelectWrapper>
+              <SelectWrapper>
+                <Select
+                  name="Any topic"
+                  id="topic"
+                  label="Topic"
+                  placeholder="Any topic"
+                  options={[
+                    { value: 'coding', label: 'Coding' },
+                    { value: 'maths', label: 'Maths' },
+                    { value: 'electronics', label: 'Electronics' }
+                  ]}
+                  onChange={(e) => handleFilterChange(e, 'topics')}
+                />
+              </SelectWrapper>
+            </FilterWrapper>
+          </FilterContainer>
+          <Form className="filter">
             <div>
               {' '}
+              <Select
+                name="Age Group"
+                id="ages"
+                label="Age group"
+                placeholder="Age group"
+                options={[
+                  { value: '6-18', label: '6-18 years' },
+                  { value: '6-12', label: '6-12 years' },
+                  { value: '12-18', label: '12-18 years' }
+                ]}
+                onChange={(e) => handleFilterChange(e, 'ages')}
+              />
+              <Select
+                name="Any topic"
+                id="topic"
+                label="Topic"
+                placeholder="Any topic"
+                options={[
+                  { value: 'Coding', label: 'Coding' },
+                  { value: 'Maths', label: 'Maths' },
+                  { value: 'Electronics', label: 'Electronics' }
+                ]}
+                onChange={(e) => handleFilterChange(e, 'topics')}
+              />
               <Select
                 id="category"
                 name="category"
@@ -92,7 +173,44 @@ const LearningResources = () => {
                   { value: 'pant', label: 'Pants' },
                   { value: 'dress', label: 'dresses' }
                 ]}
-                onBlur={(e) => handleFilterChange(e, 'category')}
+                onChange={(e) => handleFilterChange(e, 'category')}
+              />
+              <Select
+                id="category"
+                name="category"
+                label="Select ages"
+                placeholder="Example value"
+                options={[
+                  { value: '22', label: '22' },
+                  { value: '55', label: '55' },
+                  { value: '477', label: '477' }
+                ]}
+                onChange={(e) => handleFilterChange(e, 'min')}
+              />
+              <Select
+                id="age"
+                name="age"
+                label="Age group"
+                placeholder="Age group"
+                options={[
+                  { value: '16-18', label: '16-18' },
+                  { value: '55', label: '55' },
+                  { value: '477', label: '477' }
+                ]}
+                onChange={(e) => handleFilterChange(e, 'ages')}
+              />
+              {/* listens for when input field is changed */}
+              <Select
+                id="topic"
+                name="topic"
+                label="Topic"
+                placeholder="Any topic"
+                options={[
+                  { value: 'Coding', label: 'Coding' },
+                  { value: 'Maths', label: 'Maths' },
+                  { value: 'Electronics', label: 'Electronics' }
+                ]}
+                onChange={(e) => handleFilterChange(e, 'topics')}
               />
               <label htmlFor="category">
                 Choose a category:
@@ -132,10 +250,10 @@ const LearningResources = () => {
               onChange={(e) => handleFilterChange(e, 'max')}
               placeholder="Max Price"
             />
-          </form>
+          </Form>
           <div className="master--card">
             {/* state */}
-            {products.map((item, key) => {
+            {resourceData.map((item, key) => {
               const { id } = key;
               return (
                 <div className="card" key={id}>
@@ -150,9 +268,7 @@ const LearningResources = () => {
             })}
           </div>
         </>
-        <FilterContainer>
-          <Filter />
-        </FilterContainer>
+        <FilterContainer />
 
         {resourceData ? (
           <>

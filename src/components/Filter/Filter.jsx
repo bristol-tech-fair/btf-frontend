@@ -2,13 +2,13 @@ import React from 'react';
 import {
   FilterWrapper,
   SelectWrapper,
-  FilterText,
-  ClearFilterButton,
-  ButtonContainer
+  FilterText
+  // ClearFilterButton,
+  // ButtonContainer
 } from './Filter.styles';
 import Select from '../Select';
-import PrimaryButton from '../PrimaryButton';
-import TextButton from '../TextButton';
+// import PrimaryButton from '../PrimaryButton';
+// import TextButton from '../TextButton';
 
 const Filter = () => {
   return (
@@ -40,12 +40,12 @@ const Filter = () => {
           ]}
         />
       </SelectWrapper>
-      <ButtonContainer>
+      {/* <ButtonContainer>
         <PrimaryButton content="Find resources" type="submit" />
         <ClearFilterButton>
           <TextButton content="Clear Filters" />
         </ClearFilterButton>
-      </ButtonContainer>
+      </ButtonContainer> */}
     </FilterWrapper>
   );
 };

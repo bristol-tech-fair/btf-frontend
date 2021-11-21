@@ -194,5 +194,57 @@
         "description": "Finely crafted from soft cotton, these pants showcase an intricate patchwork motif made up of 49 different patterns. The hand-sewn construction ensures each piece is unique.",
         "price": 498.00,
         "category": "pant"
+    },
+    {
+        "category": "Coding",
+        "ages": "6-18",
+        "title": "First Title",
+        "description": "Here we have some description for testing purposes",
+        "rating": "3",
+        "tags": [
+            "some",
+            "fantastic",
+            "tag",
+            "one"
+        ]
+    },
+    {
+        "category": "Maths",
+        "ages": "12-18",
+        "title": "First Title",
+        "description": "Here we have some description for testing purposes",
+        "rating": "5",
+        "tags": [
+            "some",
+            "fantastic",
+            "tag",
+            "two"
+        ]
+    },
+    {
+        "category": "Electronics",
+        "ages": "6-18",
+        "title": "First Title",
+        "description": "Here we have some description for testing purposes",
+        "rating": "4",
+        "tags": [
+            "some",
+            "fantastic",
+            "tag",
+            "three"
+        ]
+    },
+    {
+        "category": "Robotics",
+        "ages": "16-18",
+        "title": "First Title",
+        "description": "Here we have some description for testing purposes",
+        "rating": "2",
+        "tags": [
+            "some",
+            "fantastic",
+            "tag",
+            "four"
+        ]
     }
 ]
