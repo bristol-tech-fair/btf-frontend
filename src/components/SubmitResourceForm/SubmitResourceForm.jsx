@@ -1,7 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState,
+  useEffect,
+  forwardRef,
+  useImperativeHandle
+} from 'react';
 import { useForm } from 'react-hook-form';
 import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import TextInput from '../TextInput';
 import TextArea from '../TextArea';
 import Select from '../Select';
@@ -29,11 +35,40 @@ import TextButton from '../TextButton';
 import { Robot } from '../Illustration';
 import { Cross, File, Youtube, Image, ArrowLeft } from '../Icons';
 
-const SubmitResourceForm = ({ selectAges, selectCategory }) => {
+const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [close, setClose] = useState(false);
   const [ages, setAges] = useState([]);
   const [cat, setCat] = useState([]);
+  const [close, setClose] = useState(false);
+  const {
+    reset,
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+  //* ----Toggler functionality
+
+  const closeCard = () => {
+    setClose(!close);
+  };
+
+  const closeBackCard = () => {
+    setClose(!close);
+    setIsFlipped(!isFlipped);
+  };
+
+  const openPopup = () => {
+    setClose(!close);
+    reset();
+  };
+
+  useImperativeHandle(ref, () => {
+    return {
+      openPopup
+    };
+  });
+
+  //* Setting up options for select tags
 
   useEffect(() => {
     setAges(selectAges);
@@ -43,16 +78,25 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
     setCat(selectCategory);
   }, [selectCategory]);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm();
+  //* React-hook-form  functionality
 
-  const onSubmit = (formData) => {
+  const onSubmit = async (data) => {
+    const formData = new FormData();
+
+    formData.append('ages', data.ages);
+    formData.append('category', data.category);
+    formData.append('description', data.description);
+    if (data.document[0]) formData.append('attachments', data.document[0]);
+    if (data.image[0]) formData.append('attachments', data.image[0]);
+    if (data.video[0]) formData.append('attachments', data.video[0]);
+
+    const res = await axios.post('/learningResources', formData);
+
+    console.log(res.data);
+
     setTimeout(() => {
       setIsFlipped(!isFlipped);
-      console.log(formData);
+      console.log(data);
     }, 1000);
   };
 
@@ -63,7 +107,7 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
           <MobileNav>
             <Navigation />
           </MobileNav>
-          <CloseButton onClick={() => setClose(!close)}>
+          <CloseButton onClick={closeCard}>
             <Cross />
           </CloseButton>
           <Header>Submit your resource</Header>
@@ -142,11 +186,7 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
           </Form>
           <ReturnButton>
             <ArrowLeft />
-            <TextButton
-              type="button"
-              content="Back"
-              onClick={() => setClose(!close)}
-            />
+            <TextButton type="button" content="Back" onClick={closeCard} />
           </ReturnButton>
           <Info>Fields marked with * are mandatory.</Info>
         </FrontCard>
@@ -155,7 +195,7 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
           <MobileNav>
             <Navigation />
           </MobileNav>
-          <CloseButton type="button" onClick={() => setClose(!close)}>
+          <CloseButton type="button" onClick={closeBackCard}>
             <Cross />
           </CloseButton>
           <ImageContainer>
@@ -164,11 +204,7 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
           <Header>Thank you for submitting your resource!</Header>
           <ReturnButton>
             <ArrowLeft />
-            <TextButton
-              type="button"
-              content="Back"
-              onClick={() => setClose(!close)}
-            />
+            <TextButton type="button" content="Back" onClick={closeBackCard} />
           </ReturnButton>
           <FooterContainer>
             <Footer />
@@ -177,7 +213,7 @@ const SubmitResourceForm = ({ selectAges, selectCategory }) => {
       </ReactCardFlip>
     </PopupContainer>
   );
-};
+});
 
 SubmitResourceForm.propTypes = {
   selectAges: PropTypes.arrayOf(
@@ -193,5 +229,6 @@ SubmitResourceForm.propTypes = {
     })
   ).isRequired
 };
+SubmitResourceForm.displayName = 'ResourceForm';
 
 export default SubmitResourceForm;

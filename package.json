@@ -1,73 +1,73 @@
 {
-  "name": "btf-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "license": "MIT",
-  "proxy": "http://localhost:5000/api",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-card-flip": "^1.1.1",
-    "react-dom": "^17.0.1",
-    "react-hook-form": "^7.6.9",
-    "react-loader-spinner": "^4.0.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "prestart": "yarn lint",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --watchAll",
-    "lint": "eslint --ext .jsx,.js src/",
-    "lint:fix": "eslint  --ext .jsx,.js src/ --fix",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "component": "node scripts/createComponent.js",
-    "postcomponent": "yarn test --watchAll=false"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-controls": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/addons": "^6.1.11",
-    "@storybook/node-logger": "^6.1.11",
-    "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.11",
-    "@storybook/theming": "^6.1.11",
-    "babel-loader": "8.1.0",
-    "eslint": "^7.15.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^7.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.2.0",
-    "eslint-plugin-react": "^7.21.5",
-    "prettier": "^2.2.1"
-  }
+    "name": "btf-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "license": "MIT",
+    "proxy": "http://localhost:5000/api",
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "axios": "^0.21.1",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.1",
+        "react-card-flip": "^1.1.1",
+        "react-dom": "^17.0.1",
+        "react-hook-form": "^7.6.9",
+        "react-loader-spinner": "^4.0.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.1",
+        "styled-components": "^5.2.1",
+        "web-vitals": "^0.2.4"
+    },
+    "scripts": {
+        "prestart": "yarn lint",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --watchAll",
+        "lint": "eslint --ext .jsx,.js src/",
+        "lint:fix": "eslint  --ext .jsx,.js src/ --fix",
+        "storybook": "start-storybook -p 6006 -s public",
+        "build-storybook": "build-storybook -s public",
+        "component": "node scripts/createComponent.js",
+        "postcomponent": "yarn test --watchAll=false"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.1.11",
+        "@storybook/addon-controls": "^6.1.11",
+        "@storybook/addon-essentials": "^6.1.11",
+        "@storybook/addon-links": "^6.1.11",
+        "@storybook/addons": "^6.1.11",
+        "@storybook/node-logger": "^6.1.11",
+        "@storybook/preset-create-react-app": "^3.1.5",
+        "@storybook/react": "^6.1.11",
+        "@storybook/theming": "^6.1.11",
+        "babel-loader": "8.1.0",
+        "eslint": "^7.15.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^7.0.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.2.0",
+        "eslint-plugin-react": "^7.21.5",
+        "prettier": "^2.2.1"
+    }
 }

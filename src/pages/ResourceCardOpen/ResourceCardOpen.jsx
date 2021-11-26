@@ -1,6 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { Test } from './ResourceCardOpen.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import { Large } from '../../components/Banners';
 
@@ -36,10 +34,6 @@ const ResourceCardOpen = () => {
       </DefaultPageLayout>
     </>
   );
-};
-
-ResourceCardOpen.propTypes = {
-  // bla: PropTypes.string,
 };
 
 export default ResourceCardOpen;

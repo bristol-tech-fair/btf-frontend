@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import mediaQuery from '../../utils/mediaQuery';
 
 export const PopupContainer = styled.div`
-  // for testing purpose swap 'flex' with 'none
-  display: ${(props) => (props.close === true ? 'flex' : 'none')};
+  display: ${(props) => (props.close === true ? 'flex ' : 'none')};
   flex-direction: column;
+  background-color: hsla(0, 0%, 0%, 0.8);
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: hsla(0, 0%, 0%, 0.8);
+
   z-index: 9999;
 
   #err-msg {
