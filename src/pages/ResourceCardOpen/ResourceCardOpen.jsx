@@ -1,215 +1,39 @@
-import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
-import {
-  ContentWrapper,
-  Info,
-  ClickCounter,
-  OpenLink,
-  Tags,
-  Array,
-  RatingSupport,
-  NewResource,
-  MailSupport,
-  ButtonsRedirect,
-  StarRating
-} from './ResourceCardOpen.styles';
+import React from 'react';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
 import { Large } from '../../components/Banners';
-import {
-  Heart,
-  HeartFull,
-  Facebook,
-  LinkedIn,
-  Twitter,
-  Bookmark,
-  Mail,
-  ArrowLeft,
-  ArrowRight
-} from '../../components/Icons';
-import SecondaryButton from '../../components/SecondaryButton';
-import TertiaryButton from '../../components/TertiaryButton';
-import TextButton from '../../components/TextButton';
-import SubmitResourceForm from '../../components/SubmitResourceForm';
-import NavLink from '../../components/NavLink';
 
-const ResourceCardOpen = ({
-  resourceLink,
-  facebookLink,
-  twitterLink,
-  bookmarksLink,
-  linkedInLink,
-  contactSupport
-}) => {
-  const [condition, setCondition] = useState(0);
-  const string = ['testing', 'fantastic', 'map', 'function'];
-  const [counter, setCounter] = useState(0);
-  const [disable, setDisable] = useState(false);
-
-  const rateOne = () => {
-    setCondition(() => setCondition(1));
-    setCounter((count) => count + 1);
-    setDisable(true);
-  };
-  const rateTwo = () => {
-    setCondition(() => setCondition(2));
-    setCounter((count) => count + 1);
-    setDisable(true);
-  };
-  const rateThree = () => {
-    setCondition(() => setCondition(3));
-    setCounter((count) => count + 1);
-    setDisable(true);
-  };
-  const rateFour = () => {
-    setCondition(() => setCondition(4));
-    setCounter((count) => count + 1);
-    setDisable(true);
-  };
-  const rateFive = () => {
-    setCondition(() => setCondition(5));
-    setCounter((count) => count + 1);
-    setDisable(true);
-  };
-
-  //* ----Toggler for popup form
-  const refClose = useRef(null);
-  const handleClick = () => {
-    refClose.current.openPopup();
-  };
-
+const ResourceCardOpen = () => {
   return (
-    <DefaultPageLayout>
-      <SubmitResourceForm
-        ref={refClose}
-        selectAges={[
-          { value: '8-11', label: '8-11' },
-          { value: '12-15', label: '12-15' },
-          { value: '16-18', label: '16-18' }
-        ]}
-        selectCategory={[
-          { value: 'maths', label: 'maths' },
-          { value: 'coding', label: 'coding' },
-          { value: 'engineering', label: 'engineering' }
-        ]}
-      />
-      <Large color="logopink" />
-      <ContentWrapper>
-        <h3>Electronics</h3>
-        <h1>The Institution of Engineering</h1>
-
-        <Info>
+    <>
+      <DefaultPageLayout>
+        <Large />
+        <p>category</p>
+        <h1>title</h1>
+        <div>
+          <p>ages</p>
+          <div>Icon rating with click counter</div>
+        </div>
+        <p>Description</p>
+        <button type="button">primary button</button>
+        <div>
+          <div>Tags</div>
+          <div>icon links</div>
+        </div>
+        <div>
+          <p>rate resource with icon</p>
+          <p>email support</p>
           <div>
-            <h4>Ages:</h4>
-            <div>
-              {condition > 0 ? <HeartFull /> : <Heart />}
-              {condition > 1 ? <HeartFull /> : <Heart />}
-              {condition > 2 ? <HeartFull /> : <Heart />}
-              {condition > 3 ? <HeartFull /> : <Heart />}
-              {condition > 4 ? <HeartFull /> : <Heart />}
-              <ClickCounter>| {counter}</ClickCounter>
-            </div>
-          </div>
-
-          <p>
-            We support STEM teachers by providing a range of resources linked to
-            the UK curriculum and partnering with organizations to create
-            experiences that inspire teachers and students alike.
-          </p>
-        </Info>
-        <OpenLink href={resourceLink} target="_blank">
-          <SecondaryButton content="Go to resource" type="button" />
-        </OpenLink>
-
-        <Tags>
-          <Array>
-            {string.map((str) => {
-              return <p key={str}>{str}</p>;
-            })}
-          </Array>
-          <div>
-            <OpenLink href={facebookLink} target="_blank">
-              <Facebook />
-            </OpenLink>
-            <OpenLink href={linkedInLink} target="_blank">
-              <LinkedIn />
-            </OpenLink>
-            <OpenLink href={twitterLink} target="_blank">
-              <Twitter />
-            </OpenLink>
-            <OpenLink href={bookmarksLink} target="_blank">
-              <Bookmark />
-            </OpenLink>
-          </div>
-        </Tags>
-        <RatingSupport>
-          <StarRating>
-            <p>How was this resource? &nbsp;</p>
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateOne}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateTwo}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateThree}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateFour}
-              disabled={disable}
-            />
-            <TextButton
-              type="button"
-              content={<Heart />}
-              onClick={rateFive}
-              disabled={disable}
-            />
-          </StarRating>
-
-          <MailSupport>
-            <p>Having a problem? &nbsp;</p>
-            <a href={contactSupport}>
-              <Mail />
-            </a>
-          </MailSupport>
-        </RatingSupport>
-
-        <NewResource>Want to share your resource?</NewResource>
-
-        <TertiaryButton content="Submit" type="button" onClick={handleClick} />
-
-        <ButtonsRedirect>
-          <div>
-            <ArrowLeft />
-            <NavLink content="Back to resources" path="/" />
+            <p>Add new resource</p>
+            <button type="button">Secondary button</button>
           </div>
           <div>
-            <NavLink content="Next" path="/" />
-            <ArrowRight />
+            <p>nav-link back</p>
+            <p>nav-link next resource</p>
           </div>
-        </ButtonsRedirect>
-      </ContentWrapper>
-    </DefaultPageLayout>
+        </div>
+      </DefaultPageLayout>
+    </>
   );
-};
-
-ResourceCardOpen.propTypes = {
-  resourceLink: PropTypes.string,
-  facebookLink: PropTypes.string,
-  bookmarksLink: PropTypes.string,
-  linkedInLink: PropTypes.string,
-  twitterLink: PropTypes.string,
-  contactSupport: PropTypes.string
 };
 
 export default ResourceCardOpen;
