@@ -7,7 +7,7 @@ import {
 } from './Navigation.styles';
 import Logo from '../Logo';
 import NavLink from '../NavLink';
-import TextButton from '../TextButton';
+import { TextButton } from '../Button';
 import { Menu, Cross } from '../Icons';
 import ModalContext from '../../context/ModalContext';
 

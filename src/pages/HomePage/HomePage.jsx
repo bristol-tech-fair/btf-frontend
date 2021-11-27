@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import { PrimaryButton } from '../../components/Button';
 import {
   BannerWrapper,
   TitleWrapper,
@@ -11,7 +12,6 @@ import {
   SponsorLogoWrapper
 } from './HomePage.styles';
 import DefaultPageLayout from '../Layout/DefaultPageLayout';
-import PrimaryButton from '../../components/PrimaryButton';
 import List from '../../components/List';
 import NavLink from '../../components/NavLink';
 import ResourceCard from '../../components/ResourceCard';

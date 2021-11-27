@@ -30,8 +30,7 @@ import {
   ReturnButton,
   FooterContainer
 } from './SubmitResourceForm.styles';
-import TertiaryButton from '../TertiaryButton';
-import TextButton from '../TextButton';
+import { TertiaryButton, TextButton } from '../Button';
 import { Robot } from '../Illustration';
 import { Cross, File, Youtube, Image, ArrowLeft } from '../Icons';
 

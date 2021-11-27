@@ -7,8 +7,7 @@ import {
   ButtonContainer
 } from './Filter.styles';
 import Select from '../Select';
-import PrimaryButton from '../PrimaryButton';
-import TextButton from '../TextButton';
+import { PrimaryButton, TextButton } from '../Button';
 
 const Filter = () => {
   return (

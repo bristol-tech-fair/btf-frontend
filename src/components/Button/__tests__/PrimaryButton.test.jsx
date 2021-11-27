@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import PrimaryButton from './PrimaryButton';
+import PrimaryButton from '../PrimaryButton';
 
 describe('PrimaryButton', () => {
   test('renders PrimaryButton component', () => {
