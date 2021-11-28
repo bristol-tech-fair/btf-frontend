@@ -1,19 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import About from '../pages/About';
-import BookList from '../pages/BookList';
-import Clubs from '../pages/Clubs';
-import CodeOfConduct from '../pages/CodeOfConduct';
-import Competitions from '../pages/Competitions';
-import Contact from '../pages/Contact';
-import CookiePolicy from '../pages/CookiePolicy';
-import Events from '../pages/Events';
-import HomePage from '../pages/HomePage';
-import Posts from '../pages/Posts';
-import PostsOpen from '../pages/PostsOpen';
-import SupportGroups from '../pages/SupportGroups';
-import TermsAndConditions from '../pages/Terms';
-import LearningResources from '../pages/LearningResources';
+import About from '../components/About';
+import BookList from '../components/BookList';
+import Clubs from '../components/Clubs';
+import CodeOfConduct from '../components/CodeOfConduct';
+import Competitions from '../components/Competitions';
+import Contact from '../components/Contact';
+import CookiePolicy from '../components/CookiePolicy';
+import Events from '../components/Events';
+import HomePage from '../components/HomePage';
+import Posts from '../components/Posts';
+import PostsOpen from '../components/PostsOpen';
+import SupportGroups from '../components/SupportGroups';
+import TermsAndConditions from '../components/Terms';
+import LearningResources from '../components/LearningResources';
 
 // TODO Modify Routes as we progress with development
 
