@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import SubmitResourceForm from './SubmitResourceForm';
 
 export default {
-  title: 'Components/SubmitResourceForm',
+  title: 'Organisms/SubmitResourceForm',
   component: SubmitResourceForm
 };
 

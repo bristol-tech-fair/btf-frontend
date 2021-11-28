@@ -2,7 +2,7 @@ import React from 'react';
 import Image from './Image';
 
 export default {
-  title: 'Components/Icons/Image',
+  title: 'Atoms/Icons/Image',
   component: Image
 };
 

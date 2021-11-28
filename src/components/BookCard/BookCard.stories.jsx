@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import BookCard from './BookCard';
 
 export default {
-  title: 'Components/BookCard',
+  title: 'Molecules/BookCard',
   component: BookCard
 };
 

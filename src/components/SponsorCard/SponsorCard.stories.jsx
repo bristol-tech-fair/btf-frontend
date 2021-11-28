@@ -2,7 +2,7 @@ import React from 'react';
 import SponsorCard from './SponsorCard';
 
 export default {
-  title: 'Components/SponsorCard',
+  title: 'Molecules/SponsorCard',
   component: SponsorCard
 };
 

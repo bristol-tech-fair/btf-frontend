@@ -2,7 +2,7 @@ import React from 'react';
 import Message from './Message';
 
 export default {
-  title: 'Components/Icons/Message',
+  title: 'Atoms/Icons/Message',
   component: Message
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Bookmark from './Bookmark';
 
 export default {
-  title: 'Components/Icons/Bookmark',
+  title: 'Atoms/Icons/Bookmark',
   component: Bookmark
 };
 

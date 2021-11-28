@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import ResourceCard from './ResourceCard';
 
 export default {
-  title: 'Components/ResourceCard',
+  title: 'Molecules/ResourceCard',
   component: ResourceCard
 };
 

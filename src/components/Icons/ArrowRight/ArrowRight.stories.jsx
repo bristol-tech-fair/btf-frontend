@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowRight from './ArrowRight';
 
 export default {
-  title: 'Components/Icons/ArrowRight',
+  title: 'Atoms/Icons/ArrowRight',
   component: ArrowRight
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Large from './Large';
 
 export default {
-  title: 'Components/Banners/Large',
+  title: 'Atoms/Banners/Large',
   component: Large
 };
 

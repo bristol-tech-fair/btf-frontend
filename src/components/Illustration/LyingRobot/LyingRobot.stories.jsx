@@ -2,7 +2,7 @@ import React from 'react';
 import LyingRobot from './LyingRobot';
 
 export default {
-  title: 'Components/LyingRobot',
+  title: 'Atoms/Illustrations/LyingRobot',
   component: LyingRobot
 };
 

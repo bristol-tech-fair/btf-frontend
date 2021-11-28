@@ -2,7 +2,7 @@ import React from 'react';
 import Cross from './Cross';
 
 export default {
-  title: 'Components/Icons/Cross',
+  title: 'Atoms/Icons/Cross',
   component: Cross
 };
 

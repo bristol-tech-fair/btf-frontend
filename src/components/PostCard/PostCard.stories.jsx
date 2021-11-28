@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import PostCard from './PostCard';
 
 export default {
-  title: 'Components/PostCard',
+  title: 'Molecules/PostCard',
   component: PostCard
 };
 

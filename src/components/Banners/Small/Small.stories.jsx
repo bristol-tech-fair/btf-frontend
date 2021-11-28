@@ -2,7 +2,7 @@ import React from 'react';
 import Small from './Small';
 
 export default {
-  title: 'Components/Banners/Small',
+  title: 'Atoms/Banners/Small',
   component: Small
 };
 

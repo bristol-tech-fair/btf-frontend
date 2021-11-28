@@ -2,7 +2,7 @@ import React from 'react';
 import Medium from './Medium';
 
 export default {
-  title: 'Components/Banners/Medium',
+  title: 'Atoms/Banners/Medium',
   component: Medium
 };
 

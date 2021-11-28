@@ -2,7 +2,7 @@ import React from 'react';
 import LoveIllustration from './LoveIllustration';
 
 export default {
-  title: 'Components/LoveIllustration',
+  title: 'Atoms/Illustrations/LoveIllustration',
   component: LoveIllustration
 };
 

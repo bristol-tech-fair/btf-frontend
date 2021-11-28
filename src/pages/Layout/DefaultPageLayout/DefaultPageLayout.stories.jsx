@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Layout from './DefaultPageLayout';
 
 export default {
-  title: 'Pages/DefLayout',
+  title: 'Templates/DefaultPageLayout',
   component: Layout
 };
 

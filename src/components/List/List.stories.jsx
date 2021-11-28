@@ -4,7 +4,7 @@ import List from './List';
 import ClubCard from '../ClubCard/ClubCard';
 
 export default {
-  title: 'Components/List',
+  title: 'Templates/List',
   component: List
 };
 

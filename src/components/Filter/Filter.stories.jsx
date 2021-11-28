@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Filter from './Filter';
 
 export default {
-  title: 'Components/Filter',
+  title: 'Molecules/Filter',
   component: Filter
 };
 

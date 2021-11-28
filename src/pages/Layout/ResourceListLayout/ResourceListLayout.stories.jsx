@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Layout from './ResourceListLayout';
 
 export default {
-  title: 'Pages/ResLayout',
+  title: 'Templates/ResourceListLayout',
   component: Layout
 };
 

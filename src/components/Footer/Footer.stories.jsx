@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Footer from './Footer';
 
 export default {
-  title: 'Components/Footer',
+  title: 'Organisms/Footer',
   component: Footer
 };
 

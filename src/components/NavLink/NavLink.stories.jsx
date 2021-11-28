@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import NavLink from './NavLink';
 
 export default {
-  title: 'Components/NavLink',
+  title: 'Atoms/NavLink',
   component: NavLink
 };
 

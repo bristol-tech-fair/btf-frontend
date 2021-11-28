@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ClubCard from './ClubCard';
 
 export default {
-  title: 'Components/ClubCard',
+  title: 'Molecules/ClubCard',
   component: ClubCard
 };
 

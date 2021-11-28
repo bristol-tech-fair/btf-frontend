@@ -2,7 +2,7 @@ import React from 'react';
 import File from './File';
 
 export default {
-  title: 'Components/Icons/File',
+  title: 'Atoms/Icons/File',
   component: File
 };
 

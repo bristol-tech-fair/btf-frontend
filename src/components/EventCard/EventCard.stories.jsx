@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import EventCard from './EventCard';
 
 export default {
-  title: 'Components/EventCard',
+  title: 'Molecules/EventCard',
   component: EventCard
 };
 
