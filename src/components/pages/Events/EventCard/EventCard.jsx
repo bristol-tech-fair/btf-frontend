@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Facebook,
-  LinkedIn,
-  Twitter,
-  Bookmark
-} from '../../SharedComponents/Icons';
+import { Facebook, LinkedIn, Twitter, Bookmark } from 'components/common/Icons';
 import { EventCardWrapper, StyledLink } from './EventCard.styles';
 
 const EventCard = (props) => {

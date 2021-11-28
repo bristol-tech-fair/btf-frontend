@@ -8,9 +8,18 @@ import { useForm } from 'react-hook-form';
 import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import { TextInput, TextArea, Select } from '../../SharedComponents/Inputs';
-import Navigation from '../../SharedComponents/Navigation';
-import Footer from '../../SharedComponents/Footer';
+import { TextInput, TextArea, Select } from 'components/common/Inputs';
+import Navigation from 'components/common/Navigation';
+import Footer from 'components/common/Footer';
+import { TertiaryButton, TextButton } from 'components/common/Buttons';
+import { Robot } from 'components/common/Illustrations';
+import {
+  Cross,
+  File,
+  Youtube,
+  Image,
+  ArrowLeft
+} from 'components/common/Icons';
 import {
   PopupContainer,
   FrontCard,
@@ -28,15 +37,6 @@ import {
   ReturnButton,
   FooterContainer
 } from './SubmitResourceForm.styles';
-import { TertiaryButton, TextButton } from '../../SharedComponents/Buttons';
-import { Robot } from '../../SharedComponents/Illustrations';
-import {
-  Cross,
-  File,
-  Youtube,
-  Image,
-  ArrowLeft
-} from '../../SharedComponents/Icons';
 
 const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
   const [isFlipped, setIsFlipped] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import ClubCard from 'components/pages/Clubs/ClubCard';
 import List from './List';
-import ClubCard from '../../../Clubs/ClubCard';
 
 export default {
   title: 'Templates/List',

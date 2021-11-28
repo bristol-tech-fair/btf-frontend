@@ -1,6 +1,6 @@
 import React from 'react';
-import DefaultPageLayout from '../SharedComponents/Layout/DefaultPageLayout';
-import { Large } from '../SharedComponents/Banners';
+import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
+import { Large } from 'components/common/Banners';
 
 const ResourceCardOpen = () => {
   return (

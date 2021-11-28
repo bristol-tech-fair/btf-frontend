@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Heart, HeartFull } from 'components/common/Icons';
+import { Small } from 'components/common/Banners';
 import {
   Banner,
   Content,
@@ -8,8 +10,6 @@ import {
   ContentCategory,
   ContentAges
 } from './ResourceCard.styles';
-import { Heart, HeartFull } from '../../SharedComponents/Icons';
-import { Small } from '../../SharedComponents/Banners';
 
 const ResourceCard = ({ category, title, ages, rating, color, to }) => {
   const condition = rating;

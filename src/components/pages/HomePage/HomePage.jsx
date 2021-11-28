@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import { PrimaryButton } from '../SharedComponents/Buttons';
+import { PrimaryButton } from 'components/common/Buttons';
+import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
+import List from 'components/common/Layout/List';
+import NavLink from 'components/common/NavLink';
+import Spinner from 'components/common/Spinner';
+import ResourceCard from 'components/pages/LearningResources/ResourceCard';
 import {
   BannerWrapper,
   TitleWrapper,
@@ -10,15 +15,10 @@ import {
   EventCardWrapper,
   SponsorWrapper,
   SponsorLogoWrapper
-} from './HomePage.styles';
-import DefaultPageLayout from '../SharedComponents/Layout/DefaultPageLayout';
-import List from '../SharedComponents/Layout/List';
-import NavLink from '../SharedComponents/NavLink';
-import ResourceCard from '../LearningResources/ResourceCard';
-import EventCard from '../Events/EventCard';
-import PostCard from '../Posts/PostCard';
-import SponsorCard from '../About/SponsorCard';
-import Spinner from '../SharedComponents/Spinner';
+} from 'components/pages/HomePage/HomePage.styles';
+import EventCard from 'components/pages/Events/EventCard';
+import PostCard from 'components/pages/Posts/PostCard';
+import SponsorCard from 'components/pages/About/SponsorCard';
 
 const HomePage = ({ readMoreUrl }) => {
   const [resourceData, setResourceData] = useState();

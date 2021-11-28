@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
-import DefaultPageLayout from '../SharedComponents/Layout/DefaultPageLayout';
-import ResourceCard from './ResourceCard';
+import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
+import List from 'components/common/Layout/List';
+import Spinner from 'components/common/Spinner';
+import { Select } from 'components/common/Inputs';
 import {
   MainContainer,
   PageTitle,
@@ -11,9 +13,7 @@ import {
   FilterText,
   Form
 } from './LearningResources.styles';
-import List from '../SharedComponents/Layout/List';
-import Spinner from '../SharedComponents/Spinner';
-import { Select } from '../SharedComponents/Inputs';
+import ResourceCard from './ResourceCard';
 
 //!   CONST below is just for testing purpose. Proper import need to be implemented
 const items = [

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ArrowCircleRight, Share, Bookmark } from 'components/common/Icons';
 import {
   PostCardWrapper,
   Image,
@@ -10,11 +11,6 @@ import {
   MoreLink,
   MoreLinkWrapper
 } from './PostCard.styles';
-import {
-  ArrowCircleRight,
-  Share,
-  Bookmark
-} from '../../SharedComponents/Icons';
 
 const PostCard = ({
   coverUrl,

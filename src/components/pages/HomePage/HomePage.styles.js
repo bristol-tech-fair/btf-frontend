@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mediaQuery from '../../utils/mediaQuery';
+import mediaQuery from 'utils/mediaQuery';
 
 export const BannerWrapper = styled.div`
   height: 166px;
