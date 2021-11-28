@@ -6,7 +6,7 @@ import {
   ClearFilterButton,
   ButtonContainer
 } from './Filter.styles';
-import Select from '../Select';
+import { Select } from '../Input';
 import { PrimaryButton, TextButton } from '../Button';
 
 const Filter = () => {

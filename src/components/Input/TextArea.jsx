@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextAreaWrapper } from './TextArea.styles';
+import styled from 'styled-components';
+import InputBase from './InputBase.styles';
 
 const TextArea = React.forwardRef(
   ({ id, name, label, placeholder, value, onChange }, ref) => {
@@ -29,5 +30,13 @@ TextArea.propTypes = {
   onChange: PropTypes.func
 };
 TextArea.displayName = 'Textarea';
+
+const TextAreaWrapper = styled(InputBase)`
+  display: flex;
+  flex-direction: column;
+  & > textarea {
+    resize: none;
+  }
+`;
 
 export default TextArea;

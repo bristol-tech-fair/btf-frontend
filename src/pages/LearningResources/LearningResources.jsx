@@ -13,7 +13,7 @@ import {
 } from './LearningResources.styles';
 import List from '../../components/List';
 import Spinner from '../../components/Spinner';
-import Select from '../../components/Select';
+import { Select } from '../../components/Input';
 
 //!   CONST below is just for testing purpose. Proper import need to be implemented
 const items = [

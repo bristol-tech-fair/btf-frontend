@@ -8,9 +8,7 @@ import { useForm } from 'react-hook-form';
 import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import TextInput from '../TextInput';
-import TextArea from '../TextArea';
-import Select from '../Select';
+import { TextInput, TextArea, Select } from '../Input';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 import {

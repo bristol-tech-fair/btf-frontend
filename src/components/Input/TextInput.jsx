@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextInputWrapper } from './TextInput.styles';
+import styled from 'styled-components';
+import InputBase from './InputBase.styles';
 
 const TextInput = React.forwardRef(
   ({ label, value, name, onChange, placeholder, ...inputProps }, ref) => {
@@ -30,5 +31,10 @@ TextInput.propTypes = {
   placeholder: PropTypes.string
 };
 TextInput.displayName = 'Input';
+
+const TextInputWrapper = styled(InputBase)`
+  display: flex;
+  flex-direction: column;
+`;
 
 export default TextInput;

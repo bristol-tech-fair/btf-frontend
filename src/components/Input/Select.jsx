@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { SelectInputWrapper } from './Select.styles';
+import styled from 'styled-components';
+import InputBase from './InputBase.styles';
 
 const Select = ({
   name,
@@ -63,5 +64,32 @@ Select.propTypes = {
   ).isRequired,
   onBlur: PropTypes.func
 };
+
+const SelectInputWrapper = styled(InputBase)`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    font-size: 1.6rem;
+  }
+
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 4.9rem;
+    right: var(--small-space);
+    width: 0;
+    height: 0;
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-top: 1.2rem solid var(--lightblue);
+  }
+`;
 
 export default Select;
