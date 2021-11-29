@@ -6,6 +6,7 @@ export default {
   component: App
 };
 
-export const AppComp = () => {
-  return <App />;
-};
+const Template = (args) => <App {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};
