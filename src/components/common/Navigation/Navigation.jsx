@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import ModalContext from 'context/ModalContext';
+import { PATHS } from 'router/paths';
 import {
   NavigationWrapper,
   NavMenu,
@@ -16,15 +17,15 @@ const Navigation = () => {
   const { setModalOn } = useContext(ModalContext);
   return (
     <NavigationWrapper>
-      <NavLink path="/" content={<Logo color="red" />} />
+      <NavLink path={PATHS.home} content={<Logo color="red" />} />
       <NavMenu click={click} onClick={() => setClick(!click)}>
-        <NavLink path="/resources" content="Learning Resources" />
-        <NavLink path="/books" content="Book List" />
-        <NavLink path="/events" content="Events" />
-        <NavLink path="/clubs" content="Clubs" />
-        <NavLink path="/competitions" content="Competitions" />
-        <NavLink path="/support-groups" content="Support Groups" />
-        <NavLink path="/posts" content="Posts" />
+        <NavLink path={PATHS.learningResources} content="Learning Resources" />
+        <NavLink path={PATHS.books} content="Book List" />
+        <NavLink path={PATHS.events} content="Events" />
+        <NavLink path={PATHS.clubs} content="Clubs" />
+        <NavLink path={PATHS.competitions} content="Competitions" />
+        <NavLink path={PATHS.supportGroups} content="Support Groups" />
+        <NavLink path={PATHS.posts} content="Posts" />
       </NavMenu>
       <EndLink>
         <TextButton

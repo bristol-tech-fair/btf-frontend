@@ -1,4 +1,5 @@
 import React from 'react';
+import { PATHS } from 'router/paths';
 import {
   FooterWrapper,
   RightColumn,
@@ -19,8 +20,8 @@ const Footer = () => {
       <LeftColumn>
         <LinksWrapper>
           <LeftLinks>
-            <StyledLink to="/about">About</StyledLink>
-            <StyledLink to="/contact">Contacts</StyledLink>
+            <StyledLink to={PATHS.about}>About</StyledLink>
+            <StyledLink to={PATHS.contact}>Contacts</StyledLink>
             <IconsWrapper>
               <StyledLink to="/" target="_blank" rel="noopener noreferrer">
                 <Twitter />
@@ -34,9 +35,9 @@ const Footer = () => {
             </IconsWrapper>
           </LeftLinks>
           <RightLinks>
-            <StyledLink to="/code-of-conduct">Code of Conduct</StyledLink>
-            <StyledLink to="/cookie-policy">Cookie Policy</StyledLink>
-            <StyledLink to="/terms-and-conditions">
+            <StyledLink to={PATHS.codeOfConduct}>Code of Conduct</StyledLink>
+            <StyledLink to={PATHS.cookiePolicy}>Cookie Policy</StyledLink>
+            <StyledLink to={PATHS.termsAndConditions}>
               Terms & Conditions
             </StyledLink>
           </RightLinks>

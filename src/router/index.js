@@ -15,57 +15,58 @@ import PostsOpen from 'components/pages/PostsOpen';
 import ResourceCardOpen from 'components/pages/ResourceCardOpen';
 import SupportGroups from 'components/pages/SupportGroups';
 import TermsAndConditions from 'components/pages/Terms';
+import { PATHS } from './paths';
 
 function Routes() {
   return (
     <>
       <Switch>
         {/* Header / Navigation */}
-        <Route path="/">
+        <Route exact path={PATHS.home}>
           <HomePage readMoreUrl="/" />
         </Route>
-        <Route exact path="/learning-resources">
+        <Route exact path={PATHS.learningResources}>
           <LearningResources />
         </Route>
-        <Route exact path="/books">
+        <Route exact path={PATHS.books}>
           <BookList />
         </Route>
-        <Route exact path="/events">
+        <Route exact path={PATHS.events}>
           <Events />
         </Route>
-        <Route exact path="/clubs">
+        <Route exact path={PATHS.clubs}>
           <Clubs />
         </Route>
-        <Route exact path="/competitions">
+        <Route exact path={PATHS.competitions}>
           <Competitions />
         </Route>
-        <Route exact path="/support-groups">
+        <Route exact path={PATHS.supportGroups}>
           <SupportGroups />
         </Route>
-        <Route exact path="/posts">
+        <Route exact path={PATHS.posts}>
           <Posts />
         </Route>
         {/* Pages by id / title */}
-        <Route exact path="/resource/:id">
+        <Route exact path={PATHS.resourceOpen}>
           <ResourceCardOpen />
         </Route>
-        <Route exact path="/posts/:title">
+        <Route exact path={PATHS.postOpen}>
           <PostsOpen />
         </Route>
         {/* Footer links */}
-        <Route exact path="/about">
+        <Route exact path={PATHS.about}>
           <About />
         </Route>
-        <Route exact path="/contact">
+        <Route exact path={PATHS.contact}>
           <Contact />
         </Route>
-        <Route exact path="/code-of-conduct">
+        <Route exact path={PATHS.codeOfConduct}>
           <CodeOfConduct />
         </Route>
-        <Route exact path="/cookie-policy">
+        <Route exact path={PATHS.cookiePolicy}>
           <CookiePolicy />
         </Route>
-        <Route exact path="/terms-and-conditions">
+        <Route exact path={PATHS.termsAndConditions}>
           <TermsAndConditions />
         </Route>
       </Switch>
