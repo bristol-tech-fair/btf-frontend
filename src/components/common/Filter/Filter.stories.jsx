@@ -6,4 +6,7 @@ export default {
   component: Filter
 };
 
-export const TestFilter = () => <Filter />;
+const Template = (args) => <Filter {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};

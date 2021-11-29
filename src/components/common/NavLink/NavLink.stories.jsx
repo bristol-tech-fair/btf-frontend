@@ -6,6 +6,10 @@ export default {
   component: NavLink
 };
 
-export const NavLinkWithContent = () => {
-  return <NavLink content="Navigation link" path="/" />;
+const Template = (args) => <NavLink {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  content: 'Navigation link',
+  path: '/'
 };

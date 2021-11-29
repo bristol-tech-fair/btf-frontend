@@ -6,13 +6,14 @@ export default {
   component: ResourceCard
 };
 
-export const CardTest = () => (
-  <ResourceCard
-    title="It is <h2> tag. Let see how it will scale with longer text."
-    category="Electronics"
-    ages="6-10"
-    rating="4"
-    color="midblue"
-    to="/"
-  />
-);
+const Template = (args) => <ResourceCard {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  title: 'It is <h2> tag. Let see how it will scale with longer text.',
+  category: 'Electronics',
+  ages: '6-10',
+  rating: '4',
+  color: 'midblue',
+  to: '/'
+};

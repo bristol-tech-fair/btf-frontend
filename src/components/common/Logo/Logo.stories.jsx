@@ -6,5 +6,9 @@ export default {
   component: Logo
 };
 
-export const RedLogo = () => <Logo color="red" />;
-export const BlueLogo = () => <Logo color="blue" />;
+const Template = (args) => <Logo {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  color: 'red'
+};

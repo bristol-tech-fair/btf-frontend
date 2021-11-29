@@ -6,10 +6,11 @@ export default {
   component: ClubCard
 };
 
-export const ClubCardTesting = () => (
-  <ClubCard
-    to="/"
-    title="This is the title taking over three lines."
-    coverUrl="./assets/images/codingbug.png"
-  />
-);
+const Template = (args) => <ClubCard {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  to: '/',
+  title: 'This is the title taking over three lines.',
+  coverUrl: './assets/images/codingbug.png'
+};

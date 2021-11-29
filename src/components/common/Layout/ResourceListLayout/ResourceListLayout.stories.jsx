@@ -1,9 +1,12 @@
 import React from 'react';
-import Layout from './ResourceListLayout';
+import ResourceListLayout from './ResourceListLayout';
 
 export default {
   title: 'Templates/ResourceListLayout',
-  component: Layout
+  component: ResourceListLayout
 };
 
-export const ResourceListLayout = () => <Layout />;
+const Template = (args) => <ResourceListLayout {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};

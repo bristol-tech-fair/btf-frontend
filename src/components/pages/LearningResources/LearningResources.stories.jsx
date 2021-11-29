@@ -6,4 +6,7 @@ export default {
   component: LearningResources
 };
 
-export const LearningResourcesTest = () => <LearningResources />;
+const Template = (args) => <LearningResources {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};

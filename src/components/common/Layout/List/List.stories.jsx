@@ -30,6 +30,11 @@ const data = [
   }
 ];
 
-export const ClubCardList = () => (
-  <List Component={ClubCard} _id="1" data={data} />
-);
+const Template = (args) => <List {...args} />;
+
+export const ClubCardList = Template.bind({});
+ClubCardList.args = {
+  Component: ClubCard,
+  _id: '1',
+  data
+};

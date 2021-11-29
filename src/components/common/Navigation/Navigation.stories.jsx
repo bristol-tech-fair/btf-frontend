@@ -6,4 +6,7 @@ export default {
   component: Navigation
 };
 
-export const Header = () => <Navigation />;
+const Template = (args) => <Navigation {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};

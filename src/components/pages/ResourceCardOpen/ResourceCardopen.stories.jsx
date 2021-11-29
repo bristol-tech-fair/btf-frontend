@@ -6,4 +6,7 @@ export default {
   component: ResourceCardOpen
 };
 
-export const ResourceCardOpenTest = () => <ResourceCardOpen />;
+const Template = (args) => <ResourceCardOpen {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};

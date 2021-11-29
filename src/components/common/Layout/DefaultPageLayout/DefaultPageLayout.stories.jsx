@@ -1,9 +1,12 @@
 import React from 'react';
-import Layout from './DefaultPageLayout';
+import DefaultPageLayout from './DefaultPageLayout';
 
 export default {
   title: 'Templates/DefaultPageLayout',
-  component: Layout
+  component: DefaultPageLayout
 };
 
-export const DefaultPageLayout = () => <Layout />;
+const Template = (args) => <DefaultPageLayout {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};

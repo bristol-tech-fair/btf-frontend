@@ -6,11 +6,12 @@ export default {
   component: BookCard
 };
 
-export const SampleBookCard = () => (
-  <BookCard
-    to="/"
-    title="Book of Making"
-    author="J. Doe"
-    coverUrl="./assets/images/book-of-making-cover.jpg"
-  />
-);
+const Template = (args) => <BookCard {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  to: '/',
+  title: 'Book of Making',
+  author: 'J. Doe',
+  coverUrl: './assets/images/book-of-making-cover.jpg'
+};
