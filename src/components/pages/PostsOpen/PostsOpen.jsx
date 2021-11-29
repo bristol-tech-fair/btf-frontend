@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
 import { PostsOpenWrapper } from './PostsOpen.styles';
 
 const PostsOpen = ({ value }) => {
   return (
-    <PostsOpenWrapper>
-      <p>{value}</p>
-    </PostsOpenWrapper>
+    <DefaultPageLayout>
+      <PostsOpenWrapper>
+        <p>{value}</p>
+      </PostsOpenWrapper>
+    </DefaultPageLayout>
   );
 };
 

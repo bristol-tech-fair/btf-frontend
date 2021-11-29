@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
 import { CompetitionsWrapper } from './Competitions.styles';
 
 const Competitions = ({ value }) => {
   return (
-    <CompetitionsWrapper>
-      <p>{value}</p>
-      <h1>Compete for last bread crumb</h1>
-    </CompetitionsWrapper>
+    <DefaultPageLayout>
+      <CompetitionsWrapper>
+        <p>{value}</p>
+        <h1>Compete for last bread crumb</h1>
+      </CompetitionsWrapper>
+    </DefaultPageLayout>
   );
 };
 

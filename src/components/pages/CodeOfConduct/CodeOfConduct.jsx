@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
 import { CodeOfConductWrapper } from './CodeOfConduct.styles';
 
 const CodeOfConduct = ({ value }) => {
   return (
-    <CodeOfConductWrapper>
-      <p>{value}</p>
-      <h1>Conduct the interrogation.</h1>
-    </CodeOfConductWrapper>
+    <DefaultPageLayout>
+      <CodeOfConductWrapper>
+        <p>{value}</p>
+        <h1>Conduct the interrogation.</h1>
+      </CodeOfConductWrapper>
+    </DefaultPageLayout>
   );
 };
 
