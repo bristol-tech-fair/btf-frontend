@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import Footer from './Footer';
 
 export default {
@@ -7,8 +6,4 @@ export default {
   component: Footer
 };
 
-export const FooterTesting = () => (
-  <BrowserRouter>
-    <Footer />
-  </BrowserRouter>
-);
+export const FooterTesting = () => <Footer />;

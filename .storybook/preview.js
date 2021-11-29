@@ -1,6 +1,7 @@
 import { addDecorator } from '@storybook/react';
 import React from 'react';
 import Theme from '../src/theme';
+import StoryRouter from 'storybook-react-router';
 
 function withGlobalStyles(storyFn) {
   return (
@@ -12,6 +13,7 @@ function withGlobalStyles(storyFn) {
 }
 
 addDecorator(withGlobalStyles);
+addDecorator(StoryRouter());
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

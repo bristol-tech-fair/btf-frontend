@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import Layout from './DefaultPageLayout';
 
 export default {
@@ -7,8 +6,4 @@ export default {
   component: Layout
 };
 
-export const DefaultPageLayout = () => (
-  <BrowserRouter>
-    <Layout />
-  </BrowserRouter>
-);
+export const DefaultPageLayout = () => <Layout />;

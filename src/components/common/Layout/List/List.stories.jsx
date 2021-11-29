@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import ClubCard from 'components/pages/Clubs/ClubCard';
 import List from './List';
 
@@ -32,7 +31,5 @@ const data = [
 ];
 
 export const ClubCardList = () => (
-  <Router>
-    <List Component={ClubCard} _id="1" data={data} />
-  </Router>
+  <List Component={ClubCard} _id="1" data={data} />
 );

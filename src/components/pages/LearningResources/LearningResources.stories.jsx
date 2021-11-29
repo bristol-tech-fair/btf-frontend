@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import LearningResources from './LearningResources';
 
 export default {
@@ -7,8 +6,4 @@ export default {
   component: LearningResources
 };
 
-export const LearningResourcesTest = () => (
-  <BrowserRouter>
-    <LearningResources />
-  </BrowserRouter>
-);
+export const LearningResourcesTest = () => <LearningResources />;

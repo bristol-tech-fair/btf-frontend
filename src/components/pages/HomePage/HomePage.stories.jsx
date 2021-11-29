@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import HomePage from './HomePage';
 
 export default {
@@ -112,13 +111,11 @@ const sponsorData = [
 ];
 
 export const HomePageTest = () => (
-  <BrowserRouter>
-    <HomePage
-      readMoreUrl="/about"
-      resourceData={data}
-      eventData={eventData}
-      postData={postData}
-      sponsorData={sponsorData}
-    />
-  </BrowserRouter>
+  <HomePage
+    readMoreUrl="/about"
+    resourceData={data}
+    eventData={eventData}
+    postData={postData}
+    sponsorData={sponsorData}
+  />
 );

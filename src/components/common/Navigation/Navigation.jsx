@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import ModalContext from 'context/ModalContext';
 import {
   NavigationWrapper,
   NavMenu,
@@ -9,7 +10,6 @@ import Logo from '../Logo';
 import NavLink from '../NavLink';
 import { TextButton } from '../Buttons';
 import { Menu, Cross } from '../Icons';
-import ModalContext from '../../../context/ModalContext';
 
 const Navigation = () => {
   const [click, setClick] = useState(false);

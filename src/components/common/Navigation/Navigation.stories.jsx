@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import Navigation from './Navigation';
 
 export default {
@@ -7,8 +6,4 @@ export default {
   component: Navigation
 };
 
-export const Header = () => (
-  <BrowserRouter>
-    <Navigation />
-  </BrowserRouter>
-);
+export const Header = () => <Navigation />;

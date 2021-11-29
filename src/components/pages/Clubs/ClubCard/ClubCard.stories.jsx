@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import ClubCard from './ClubCard';
 
 export default {
@@ -8,11 +7,9 @@ export default {
 };
 
 export const ClubCardTesting = () => (
-  <BrowserRouter>
-    <ClubCard
-      to="/"
-      title="This is the title taking over three lines."
-      coverUrl="./assets/images/codingbug.png"
-    />
-  </BrowserRouter>
+  <ClubCard
+    to="/"
+    title="This is the title taking over three lines."
+    coverUrl="./assets/images/codingbug.png"
+  />
 );

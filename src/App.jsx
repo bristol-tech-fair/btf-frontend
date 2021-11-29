@@ -1,17 +1,15 @@
+/* eslint-disable */
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Theme from './theme';
 import Routes from './router';
 
-// TODO Test Router
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Theme />
-        <Routes />
-      </BrowserRouter>
-    </>
+    <Router>
+      <Theme />
+      <Routes />
+    </Router>
   );
 };
 

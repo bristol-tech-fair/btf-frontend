@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import Filter from './Filter';
 
 export default {
@@ -7,8 +6,4 @@ export default {
   component: Filter
 };
 
-export const TestFilter = () => (
-  <BrowserRouter>
-    <Filter />
-  </BrowserRouter>
-);
+export const TestFilter = () => <Filter />;

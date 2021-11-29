@@ -6,6 +6,4 @@ export default {
   component: App
 };
 
-export const AppComp = () => {
-  return <App />;
-};
+export const AppComp = () => <App />;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import Layout from './ResourceListLayout';
 
 export default {
@@ -7,8 +6,4 @@ export default {
   component: Layout
 };
 
-export const ResourceListLayout = () => (
-  <BrowserRouter>
-    <Layout />
-  </BrowserRouter>
-);
+export const ResourceListLayout = () => <Layout />;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import NavLink from './NavLink';
 
 export default {
@@ -8,9 +7,5 @@ export default {
 };
 
 export const NavLinkWithContent = () => {
-  return (
-    <BrowserRouter>
-      <NavLink content="Navigation link" path="/" />
-    </BrowserRouter>
-  );
+  return <NavLink content="Navigation link" path="/" />;
 };
