@@ -21,7 +21,7 @@ const Footer = () => {
         <LinksWrapper>
           <LeftLinks>
             <StyledLink to={PATHS.about}>About</StyledLink>
-            <StyledLink to={PATHS.contact}>Contacts</StyledLink>
+            <StyledLink to={PATHS.contact}>Contact</StyledLink>
             <IconsWrapper>
               <StyledLink to="/" target="_blank" rel="noopener noreferrer">
                 <Twitter />
