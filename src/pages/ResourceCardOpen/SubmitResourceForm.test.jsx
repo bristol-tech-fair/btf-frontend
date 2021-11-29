@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 import ResourceCardOpen from './ResourceCardOpen';
 
 describe('ResourceCardOpen', () => {
-  test('name the test', () => {
+  test('Render page ', () => {
     render(
       <BrowserRouter>
         <ResourceCardOpen />
