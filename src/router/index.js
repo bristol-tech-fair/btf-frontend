@@ -9,65 +9,64 @@ import Contact from 'components/pages/Contact';
 import CookiePolicy from 'components/pages/CookiePolicy';
 import Events from 'components/pages/Events';
 import HomePage from 'components/pages/HomePage';
+import LearningResources from 'components/pages/LearningResources';
 import Posts from 'components/pages/Posts';
 import PostsOpen from 'components/pages/PostsOpen';
+import ResourceCardOpen from 'components/pages/ResourceCardOpen';
 import SupportGroups from 'components/pages/SupportGroups';
 import TermsAndConditions from 'components/pages/Terms';
-import LearningResources from 'components/pages/LearningResources';
-
-// TODO Modify Routes as we progress with development
-
-// import ResourceCardOpen from '../pages/ResourceCardOpen';
 
 function Routes() {
   return (
     <>
       <Switch>
-        <Route exact path="/">
+        {/* Header / Navigation */}
+        <Route path="/">
           <HomePage readMoreUrl="/" />
         </Route>
-        <Route path="/learning-resources">
+        <Route exact path="/learning-resources">
           <LearningResources />
         </Route>
-        {/*
-        <Route  path="/resource/:id">
-          <ResourceCardOpen />
-        </Route> */}
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/cookie-policy">
-          <CookiePolicy />
-        </Route>
-        <Route path="/terms-and-conditions">
-          <TermsAndConditions />
-        </Route>
-        <Route path="/books">
+        <Route exact path="/books">
           <BookList />
         </Route>
-        <Route path="/clubs">
-          <Clubs />
-        </Route>
-        <Route path="/support-groups">
-          <SupportGroups />
-        </Route>
-        <Route path="/competitions">
-          <Competitions />
-        </Route>
-        <Route path="/code-of-conduct">
-          <CodeOfConduct />
-        </Route>
-        <Route path="/events">
+        <Route exact path="/events">
           <Events />
         </Route>
-        <Route path="/contact">
-          <Contact />
+        <Route exact path="/clubs">
+          <Clubs />
         </Route>
-        <Route path="/posts">
+        <Route exact path="/competitions">
+          <Competitions />
+        </Route>
+        <Route exact path="/support-groups">
+          <SupportGroups />
+        </Route>
+        <Route exact path="/posts">
           <Posts />
         </Route>
-        <Route path="/posts/:title">
+        {/* Pages by id / title */}
+        <Route exact path="/resource/:id">
+          <ResourceCardOpen />
+        </Route>
+        <Route exact path="/posts/:title">
           <PostsOpen />
+        </Route>
+        {/* Footer links */}
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+        <Route exact path="/code-of-conduct">
+          <CodeOfConduct />
+        </Route>
+        <Route exact path="/cookie-policy">
+          <CookiePolicy />
+        </Route>
+        <Route exact path="/terms-and-conditions">
+          <TermsAndConditions />
         </Route>
       </Switch>
     </>
