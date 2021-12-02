@@ -1,7 +1,8 @@
 import { addDecorator } from '@storybook/react';
 import React from 'react';
 import Theme from '../src/theme';
-import StoryRouter from 'storybook-react-router';
+// import StoryRouter from 'storybook-react-router';
+import { MemoryRouter } from 'react-router-dom';
 
 function withGlobalStyles(storyFn) {
   return (
@@ -13,7 +14,10 @@ function withGlobalStyles(storyFn) {
 }
 
 addDecorator(withGlobalStyles);
-addDecorator(StoryRouter());
+// addDecorator(StoryRouter());
+addDecorator((story) => (
+  <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
+));
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

@@ -24,7 +24,8 @@ const items = [
     description: 'Here we have some description for testing purposes',
     rating: '3',
     tags: ['some', 'fantastic', 'tag', 'one'],
-    color: 'mattepink'
+    color: 'mattepink',
+    to: '/https://www.wp.pl/'
   },
   {
     category: 'Maths',
@@ -33,7 +34,8 @@ const items = [
     description: 'Here we have some description for testing purposes',
     rating: '5',
     tags: ['some', 'fantastic', 'tag', 'two'],
-    color: 'darkburgundy'
+    color: 'darkburgundy',
+    to: '/https://www.wp.pl/'
   },
   {
     category: 'Electronics',
@@ -42,7 +44,8 @@ const items = [
     description: 'Here we have some description for testing purposes',
     rating: '4',
     tags: ['some', 'fantastic', 'tag', 'three'],
-    color: 'darkblue'
+    color: 'darkblue',
+    to: '/https://www.wp.pl/'
   },
   {
     category: 'Electronics',
@@ -51,7 +54,8 @@ const items = [
     description: 'Here we have some description for testing purposes',
     rating: '4',
     tags: ['some', 'fantastic', 'tag', 'three'],
-    color: 'logopink'
+    color: 'logopink',
+    to: '/https://www.wp.pl/'
   },
   {
     category: 'Robotics',

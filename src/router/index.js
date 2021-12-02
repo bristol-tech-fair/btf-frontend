@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import About from 'components/pages/About';
 import BookList from 'components/pages/BookList';
 import Clubs from 'components/pages/Clubs';
@@ -17,61 +17,34 @@ import SupportGroups from 'components/pages/SupportGroups';
 import TermsAndConditions from 'components/pages/Terms';
 import { PATHS } from './paths';
 
-function Routes() {
+function AppRoutes() {
   return (
     <>
-      <Switch>
+      <Routes>
         {/* Header / Navigation */}
-        <Route exact path={PATHS.home}>
-          <HomePage readMoreUrl="/" />
-        </Route>
-        <Route exact path={PATHS.learningResources}>
-          <LearningResources />
-        </Route>
-        <Route exact path={PATHS.books}>
-          <BookList />
-        </Route>
-        <Route exact path={PATHS.events}>
-          <Events />
-        </Route>
-        <Route exact path={PATHS.clubs}>
-          <Clubs />
-        </Route>
-        <Route exact path={PATHS.competitions}>
-          <Competitions />
-        </Route>
-        <Route exact path={PATHS.supportGroups}>
-          <SupportGroups />
-        </Route>
-        <Route exact path={PATHS.posts}>
-          <Posts />
-        </Route>
+        <Route path={PATHS.home} element={<HomePage readMoreUrl="/" />} />
+        <Route path={PATHS.learningResources} element={<LearningResources />} />
+        <Route path={PATHS.books} element={<BookList />} />
+        <Route path={PATHS.events} element={<Events />} />
+        <Route path={PATHS.clubs} element={<Clubs />} />
+        <Route path={PATHS.competitions} element={<Competitions />} />
+        <Route path={PATHS.supportGroups} element={<SupportGroups />} />
+        <Route path={PATHS.posts} element={<Posts />} />
         {/* Pages by id / title */}
-        <Route exact path={PATHS.resourceOpen}>
-          <ResourceCardOpen />
-        </Route>
-        <Route exact path={PATHS.postOpen}>
-          <PostsOpen />
-        </Route>
+        <Route path={PATHS.resourceOpen} element={<ResourceCardOpen />} />
+        <Route path={PATHS.postOpen} element={<PostsOpen />} />
         {/* Footer links */}
-        <Route exact path={PATHS.about}>
-          <About />
-        </Route>
-        <Route exact path={PATHS.contact}>
-          <Contact />
-        </Route>
-        <Route exact path={PATHS.codeOfConduct}>
-          <CodeOfConduct />
-        </Route>
-        <Route exact path={PATHS.cookiePolicy}>
-          <CookiePolicy />
-        </Route>
-        <Route exact path={PATHS.termsAndConditions}>
-          <TermsAndConditions />
-        </Route>
-      </Switch>
+        <Route path={PATHS.about} element={<About />} />
+        <Route path={PATHS.contact} element={<Contact />} />
+        <Route path={PATHS.codeOfConduct} element={<CodeOfConduct />} />
+        <Route path={PATHS.cookiePolicy} element={<CookiePolicy />} />
+        <Route
+          path={PATHS.termsAndConditions}
+          element={<TermsAndConditions />}
+        />
+      </Routes>
     </>
   );
 }
 
-export default Routes;
+export default AppRoutes;
