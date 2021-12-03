@@ -47,6 +47,7 @@ const eventData = {
 };
 const postData = [
   {
+    _id: '1',
     title: 'If you love data come and speak to KETL',
     coverUrl: './assets/images/background.png',
     category: 'EVENT',
@@ -56,6 +57,7 @@ const postData = [
     postLink: '/'
   },
   {
+    _id: '2',
     title: 'If you love data come and speak to KETL',
     coverUrl: './assets/images/background.png',
     category: 'EVENT',
@@ -65,6 +67,7 @@ const postData = [
     postLink: '/'
   },
   {
+    _id: '3',
     title: 'If you love data come and speak to KETL',
     coverUrl: './assets/images/background.png',
     category: 'EVENT',
@@ -74,6 +77,7 @@ const postData = [
     postLink: '/'
   },
   {
+    _id: '4',
     title: 'If you love data come and speak to KETL',
     coverUrl: './assets/images/background.png',
     category: 'EVENT',
