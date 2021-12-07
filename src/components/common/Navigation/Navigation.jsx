@@ -1,5 +1,4 @@
-import React, { useState, useContext } from 'react';
-import ModalContext from 'context/ModalContext';
+import React, { useState, useRef } from 'react';
 import { PATHS } from 'router/paths';
 import {
   NavigationWrapper,
@@ -11,10 +10,18 @@ import Logo from '../Logo';
 import NavLink from '../NavLink';
 import { TextButton } from '../Buttons';
 import { Menu, Cross } from '../Icons';
+import SubmitResourceForm from '../../pages/LearningResources/SubmitResourceForm/SubmitResourceForm';
 
 const Navigation = () => {
   const [click, setClick] = useState(false);
-  const { setModalOn } = useContext(ModalContext);
+
+  //* ----Toggler for popup form
+  const refClose = useRef(null);
+
+  const handleClick = () => {
+    refClose.current.openPopup();
+  };
+
   return (
     <NavigationWrapper>
       <NavLink path={PATHS.home} content={<Logo color="red" />} />
@@ -31,7 +38,20 @@ const Navigation = () => {
         <TextButton
           content="Add a resource"
           type="button"
-          onClick={() => setModalOn(true)}
+          onClick={handleClick}
+        />
+        <SubmitResourceForm
+          ref={refClose}
+          selectAges={[
+            { value: '6-12', label: '6-12' },
+            { value: '6-18', label: '6-18' },
+            { value: '12-18', label: '12-18' }
+          ]}
+          selectCategory={[
+            { value: 'Maths', label: 'Maths' },
+            { value: 'Coding', label: 'Coding' },
+            { value: 'Electronics', label: 'Electronics' }
+          ]}
         />
         <MenuIcon>
           <TextButton

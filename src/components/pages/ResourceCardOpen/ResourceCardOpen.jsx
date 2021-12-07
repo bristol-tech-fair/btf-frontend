@@ -115,14 +115,14 @@ const ResourceCardOpen = ({
         <SubmitResourceForm
           ref={refClose}
           selectAges={[
-            { value: '8-11', label: '8-11' },
-            { value: '12-15', label: '12-15' },
-            { value: '16-18', label: '16-18' }
+            { value: '6-12', label: '6-12' },
+            { value: '6-18', label: '6-18' },
+            { value: '12-18', label: '12-18' }
           ]}
           selectCategory={[
-            { value: 'maths', label: 'maths' },
-            { value: 'coding', label: 'coding' },
-            { value: 'engineering', label: 'engineering' }
+            { value: 'Maths', label: 'Maths' },
+            { value: 'Coding', label: 'Coding' },
+            { value: 'Electronics', label: 'Electronics' }
           ]}
         />
         <MobileBanner>
