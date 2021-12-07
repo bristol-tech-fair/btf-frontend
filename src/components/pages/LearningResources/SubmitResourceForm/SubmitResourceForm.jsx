@@ -9,8 +9,6 @@ import ReactCardFlip from 'react-card-flip';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { TextInput, TextArea, Select } from 'components/common/Inputs';
-import Navigation from 'components/common/Navigation';
-import Footer from 'components/common/Footer';
 import { TertiaryButton, TextButton } from 'components/common/Buttons';
 import { Robot } from 'components/common/Illustrations';
 import {
@@ -23,7 +21,6 @@ import {
 import {
   PopupContainer,
   FrontCard,
-  MobileNav,
   Header,
   Form,
   CloseButton,
@@ -34,8 +31,7 @@ import {
   Info,
   BackCard,
   ImageContainer,
-  ReturnButton,
-  FooterContainer
+  ReturnButton
 } from './SubmitResourceForm.styles';
 
 const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
@@ -107,9 +103,6 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
     <PopupContainer close={close}>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <FrontCard>
-          <MobileNav>
-            <Navigation />
-          </MobileNav>
           <CloseButton onClick={closeCard}>
             <Cross />
           </CloseButton>
@@ -195,9 +188,6 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
         </FrontCard>
 
         <BackCard>
-          <MobileNav>
-            <Navigation />
-          </MobileNav>
           <CloseButton type="button" onClick={closeBackCard}>
             <Cross />
           </CloseButton>
@@ -209,9 +199,6 @@ const SubmitResourceForm = forwardRef(({ selectAges, selectCategory }, ref) => {
             <ArrowLeft />
             <TextButton type="button" content="Back" onClick={closeBackCard} />
           </ReturnButton>
-          <FooterContainer>
-            <Footer />
-          </FooterContainer>
         </BackCard>
       </ReactCardFlip>
     </PopupContainer>

@@ -44,11 +44,9 @@ export const Form = styled.form`
   flex-direction: column;
   flex: 1;
   justify-content: space-between;
-`;
-
-export const MobileNav = styled.div`
+  padding: var(--small-space);
   ${mediaQuery.tablet} {
-    display: none;
+    padding: 0;
   }
 `;
 
@@ -169,13 +167,6 @@ export const ReturnButton = styled.div`
   color: var(--lightblue);
   padding: var(--small-space) var(--small-space);
 
-  ${mediaQuery.tablet} {
-    display: none;
-  }
-`;
-
-export const FooterContainer = styled.div`
-  margin-top: auto;
   ${mediaQuery.tablet} {
     display: none;
   }
