@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import mediaQuery from 'utils/mediaQuery';
 
 export const ContentContainer = styled.a`
   display: flex;
@@ -10,7 +9,7 @@ export const ContentContainer = styled.a`
   border: 0.1rem solid var(--lightblue);
   border-radius: var(--smallest-space);
 
-  max-width: 40rem;
+  max-width: 60rem;
   padding: var(--smallest-space);
 
   transition: all 0.2s ease-in-out;
@@ -22,9 +21,6 @@ export const ContentContainer = styled.a`
   }
   &:focus {
     box-shadow: 0 0 0 0.3rem var(--lightblue);
-  }
-  ${mediaQuery.tablet} {
-    max-width: 40rem;
   }
 `;
 
