@@ -13,17 +13,17 @@ import ClubCard from '../Clubs/ClubCard/ClubCard';
 const items = [
   {
     coverUrl: './assets/images/codingbug.png',
-    to: 'https://www.wp.pl/',
+    url: 'https://www.wp.pl/',
     title: 'React Documentation 1'
   },
   {
-    coverUrl: './assets/images/codingbug.png',
-    to: 'https://www.wp.pl/',
+    coverUrl: './assets/images/background.png',
+    url: 'https://o2.pl/',
     title: 'React Documentation 2'
   },
   {
-    coverUrl: './assets/images/codingbug.png',
-    to: 'https://www.wp.pl/',
+    coverUrl: './assets/images/book-of-making-cover.jpg',
+    url: 'https://www.onet.pl/',
     title: 'React Documentation 3'
   },
   {
