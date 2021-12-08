@@ -12,6 +12,7 @@ export const StyledList = styled.ul`
     grid-template-columns: repeat(2, 1fr);
   }
   ${mediaQuery.desktop} {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%)
+      );
   }
 `;

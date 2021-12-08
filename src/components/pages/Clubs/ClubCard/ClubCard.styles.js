@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import mediaQuery from 'utils/mediaQuery';
 
-export const ContentContainer = styled(Link)`
+export const ContentContainer = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ export const ContentContainer = styled(Link)`
   border: 0.1rem solid var(--lightblue);
   border-radius: var(--smallest-space);
 
-  max-width: 60rem;
+  max-width: 40rem;
   padding: var(--smallest-space);
 
   transition: all 0.2s ease-in-out;
@@ -22,6 +22,9 @@ export const ContentContainer = styled(Link)`
   }
   &:focus {
     box-shadow: 0 0 0 0.3rem var(--lightblue);
+  }
+  ${mediaQuery.tablet} {
+    max-width: 40rem;
   }
 `;
 

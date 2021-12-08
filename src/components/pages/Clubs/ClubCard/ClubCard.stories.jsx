@@ -10,7 +10,7 @@ const Template = (args) => <ClubCard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  to: '/',
+  url: '/',
   title: 'This is the title taking over three lines.',
   coverUrl: './assets/images/codingbug.png'
 };
