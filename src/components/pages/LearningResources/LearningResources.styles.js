@@ -51,6 +51,6 @@ export const ListContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: var(--small-space) 0 var(--medium-space) 0;
+  margin: var(--small-space) 0 var(--large-space) 0;
   width: 100%;
 `;

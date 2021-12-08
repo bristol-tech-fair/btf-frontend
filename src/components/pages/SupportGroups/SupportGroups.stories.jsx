@@ -6,4 +6,4 @@ export default {
   component: SupportGroups
 };
 
-export const HelloWorld = () => <SupportGroups value="Hello world!" />;
+export const HelloWorld = () => <SupportGroups />;
