@@ -57,18 +57,18 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const MoreLink = styled(Link)`
-  font-size: 12px;
-  color: var(--darkburgundy);
-  &:hover {
-    color: var(--darkburgundy);
-  }
-`;
-
-export const MoreLinkWrapper = styled.div`
+export const LinkWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   a {
     padding-left: 5px;
+  }
+`;
+
+export const ReadMoreLink = styled(Link)`
+  font-size: 12px;
+  color: var(--darkburgundy);
+  &:hover {
+    color: var(--darkburgundy);
   }
 `;
