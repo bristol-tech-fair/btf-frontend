@@ -8,8 +8,8 @@ import {
   Date,
   Title,
   IconWrapper,
-  MoreLink,
-  MoreLinkWrapper
+  ReadMoreLink,
+  LinkWrapper
 } from './PostCard.styles';
 
 const PostCard = ({
@@ -30,18 +30,18 @@ const PostCard = ({
       </DateCategoryWrapper>
       <Title>{title}</Title>
       <IconWrapper>
-        <MoreLinkWrapper>
+        <LinkWrapper>
           <ArrowCircleRight />
-          <MoreLink to={postLink}>Read more</MoreLink>
-        </MoreLinkWrapper>
-        <MoreLinkWrapper>
+          <ReadMoreLink to={postLink}>Read more</ReadMoreLink>
+        </LinkWrapper>
+        <LinkWrapper>
           <a href={shareLink} title="Share link">
             <Share />
           </a>
           <a href={bookmark} title="Bookmark link">
             <Bookmark />
           </a>
-        </MoreLinkWrapper>
+        </LinkWrapper>
       </IconWrapper>
     </PostCardWrapper>
   );
