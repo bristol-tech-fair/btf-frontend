@@ -1,8 +1,9 @@
 import React from 'react';
 import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
 import SponsorCard from 'components/pages/About/SponsorCard';
-// import List from 'components/common/Layout/List';
-import { AboutWrapper } from './About.styles';
+import List from 'components/common/Layout/List';
+import Spinner from 'components/common/Spinner';
+import { MainContainer, PageTitle, ListContainer } from './About.styles';
 import { LyingRobot, LoveIllustration } from '../../common/Illustrations';
 
 const About = () => {
@@ -10,7 +11,7 @@ const About = () => {
   const sponsorData = [
     {
       sponsorLogo: 'https://via.placeholder.com/240x140',
-      sponsorName: 'WTH1'
+      sponsorName: 'WTPageTitle'
     },
     {
       sponsorLogo: 'https://via.placeholder.com/240x140',
@@ -32,8 +33,8 @@ const About = () => {
 
   return (
     <DefaultPageLayout>
-      <AboutWrapper>
-        <h1>About Us</h1>
+      <MainContainer>
+        <PageTitle>About Us</PageTitle>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ad
           impedit, nobis ducimus animi recusandae optio obcaecati ut amet
@@ -46,7 +47,7 @@ const About = () => {
           <LyingRobot />
         </div>
 
-        <h1>Mission & Values </h1>
+        <PageTitle>Mission & Values </PageTitle>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. A neque
           deserunt eligendi omnis odit labore in debitis repellendus minus
@@ -65,7 +66,7 @@ const About = () => {
           <LoveIllustration />
         </div>
 
-        <h1>Diversity & Inclusion</h1>
+        <PageTitle>Diversity & Inclusion</PageTitle>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
           illo blanditiis minima dolor cumque quia eos fugiat omnis aliquid
@@ -78,15 +79,19 @@ const About = () => {
           exercitationem expedita velit iusto ea praesentium?
         </p>
 
-        <h1>Sponsors</h1>
-        {sponsorData.map((sponsor) => (
-          <SponsorCard
-            key={sponsor.sponsorName}
-            sponsorLogo={sponsor.sponsorLogo}
-            sponsorName={sponsor.sponsorName}
-          />
-        ))}
-      </AboutWrapper>
+        <PageTitle>Sponsors</PageTitle>
+        <ListContainer>
+          {sponsorData ? (
+            <>
+              <ListContainer>
+                <List Component={SponsorCard} data={sponsorData} />
+              </ListContainer>
+            </>
+          ) : (
+            <Spinner />
+          )}
+        </ListContainer>
+      </MainContainer>
     </DefaultPageLayout>
   );
 };
