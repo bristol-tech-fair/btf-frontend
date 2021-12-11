@@ -53,4 +53,16 @@ export const ListContainer = styled.div`
   flex-wrap: wrap;
   margin: var(--small-space) 0 var(--large-space) 0;
   width: 100%;
+
+  //* Style for List component
+  & > div {
+    padding: var(--smallest-space);
+    & > ul {
+      gap: var(--medium-space);
+      ${mediaQuery.desktop} {
+        grid-template-columns: repeat(3, 1fr);
+        padding: var(--small-space);
+      }
+    }
+  }
 `;
