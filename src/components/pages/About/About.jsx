@@ -82,11 +82,7 @@ const About = () => {
         <PageTitle>Sponsors</PageTitle>
         <ListContainer>
           {sponsorData ? (
-            <>
-              <ListContainer>
-                <List Component={SponsorCard} data={sponsorData} />
-              </ListContainer>
-            </>
+            <List Component={SponsorCard} data={sponsorData} />
           ) : (
             <Spinner />
           )}

@@ -20,7 +20,7 @@ export const ListContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: var(--small-space) 0 var(--large-space) 0;
+  margin-bottom: var(--large-space);
   width: 100%;
 
   //* Style for List component
