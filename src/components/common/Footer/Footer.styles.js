@@ -31,6 +31,10 @@ export const Paragraph = styled.p`
   align-self: center;
   color: var(--white);
 
+  > span {
+    color: var(--white);
+  }
+
   ${mediaQuery.tablet} {
     align-self: flex-start;
   }

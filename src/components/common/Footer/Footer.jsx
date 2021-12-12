@@ -43,7 +43,10 @@ const Footer = () => {
           </RightLinks>
         </LinksWrapper>
 
-        <Paragraph>All rights reserved. Bristol Tech Fair 2020</Paragraph>
+        <Paragraph>
+          All rights reserved. Bristol Tech Fair&nbsp;{' '}
+          <span>{new Date().getFullYear()}</span>
+        </Paragraph>
       </LeftColumn>
       <RightColumn>
         <Robot />
