@@ -1,6 +1,12 @@
 import styled from 'styled-components';
+import mediaQuery from 'utils/mediaQuery';
 
-export const CompetitionsWrapper = styled.div`
-  padding: var(--small-space);
-  border: 0.1rem solid var(--logopink);
+export const EventCardWrapper = styled.div`
+  padding-top: var(--small-space);
+  width: 95%;
+  margin: auto;
+  ${mediaQuery.desktop} {
+    width: 80%;
+    margin: auto;
+  }
 `;
