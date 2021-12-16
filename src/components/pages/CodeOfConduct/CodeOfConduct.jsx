@@ -1,21 +1,42 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import DefaultPageLayout from 'components/common/Layout/DefaultPageLayout';
 import { CodeOfConductWrapper } from './CodeOfConduct.styles';
 
-const CodeOfConduct = ({ value }) => {
+const CodeOfConduct = () => {
   return (
     <DefaultPageLayout>
       <CodeOfConductWrapper>
-        <p>{value}</p>
-        <h1>Conduct the interrogation.</h1>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+          assumenda quibusdam deleniti sapiente. Quidem aperiam, qui pariatur
+          recusandae esse veritatis maiores assumenda earum, consequuntur
+          suscipit expedita laboriosam animi corporis eos?
+        </p>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+          assumenda quibusdam deleniti sapiente. Quidem aperiam, qui pariatur
+          recusandae esse veritatis maiores assumenda earum, consequuntur
+          suscipit expedita laboriosam animi corporis eos?
+        </p>
+        <h3>Lorem, ipsum.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+          assumenda quibusdam deleniti sapiente. Quidem aperiam, qui pariatur
+          recusandae esse veritatis maiores assumenda earum, consequuntur
+          suscipit expedita laboriosam animi corporis eos?
+        </p>
+        <h3>Lorem ipsum dolor sit.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+          assumenda quibusdam deleniti sapiente. Quidem aperiam, qui pariatur
+          recusandae esse veritatis maiores assumenda earum, consequuntur
+          suscipit expedita laboriosam animi corporis eos?
+        </p>
       </CodeOfConductWrapper>
     </DefaultPageLayout>
   );
-};
-
-CodeOfConduct.propTypes = {
-  value: PropTypes.string.isRequired
 };
 
 export default CodeOfConduct;
