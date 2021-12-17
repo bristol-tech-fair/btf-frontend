@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import mediaQuery from 'utils/mediaQuery';
 
 export const EventCardWrapper = styled.div`
+  border: 2px solid red;
   padding-top: var(--small-space);
   width: 95%;
   margin: auto;
