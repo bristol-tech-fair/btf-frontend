@@ -6,4 +6,4 @@ export default {
   component: Competitions
 };
 
-export const HelloWorld = () => <Competitions value="Hello world!" />;
+export const CompetitionsPage = () => <Competitions />;

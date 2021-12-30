@@ -26,7 +26,7 @@ const EventCard = (props) => {
         <a href="www.twitter.com">
           <Twitter />
         </a>
-        <a href="www.bristoltechfair.com">
+        <a href="https://github.com/bristol-tech-fair">
           <Bookmark />
         </a>
       </div>
