@@ -82,17 +82,6 @@ export const CardWrapper = styled.div`
   }
 `;
 
-export const TabletEventCardWrapper = styled.div`
-  & > div {
-    width: 100%;
-    margin: auto;
-    padding-bottom: var(--largest-space);
-  }
-  ${mediaQuery.tablet} {
-    justify-content: space-around;
-  }
-`;
-
 export const EventCardWrapper = styled.div`
   padding-top: var(--small-space);
   width: 95%;
